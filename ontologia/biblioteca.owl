@@ -1,0 +1,1970 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca"
+     xml:base="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ontologies="http://www.semanticweb.org/miche/ontologies/2024/8/"
+     xmlns:webprotege="http://webprotege.stanford.edu/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaadministraLa -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaadministraLa">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersonalBiblioteca"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaBiblioteca"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecadescarga -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecadescarga">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDocente"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaEstudiante"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaRecursoAcademico"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaperteneceA -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaperteneceA">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaColaborador"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaCentroInvestigacion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaposee -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaposee">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaCarrera"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaAmbientes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecapublica -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecapublica">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaColaborador"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersonalBiblioteca"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaRecursoAcademico"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaquita -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaquita">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaColaborador"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersonalBiblioteca"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaRecursoAcademico"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaseInformaEn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaseInformaEn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDocente"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaEstudiante"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaBiblioteca"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecasolicitaSubir -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecasolicitaSubir">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDocente"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaEstudiante"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaRecursoAcademico"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatiene -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatiene">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaBiblioteca"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaRecursoAcademico"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneDiferentes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneDiferentes">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaBiblioteca"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/R9JttmJ5oSIjMe4WwJq7KGj"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF -->
+
+    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaRecursoAcademico"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>tieneTema</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBOhMIpsFZmn9JCeGXA9k6d -->
+
+    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/RBOhMIpsFZmn9JCeGXA9k6d">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaAmbientes"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:label>tieneCodigoAmbiente</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RCvb4sKjUwYIuuewGQUK495 -->
+
+    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/RCvb4sKjUwYIuuewGQUK495">
+        <rdfs:label>isbn</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaRecursoAcademico"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAreaColaboracion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAreaColaboracion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaColaborador"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAreaEstudio -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAreaEstudio">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaRecursoAcademico"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAreaInvestigacion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAreaInvestigacion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaCentroInvestigacion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaRecursoAcademico"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAñoIngreso -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAñoIngreso">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaEstudiante"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAñoIngresoDocente -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAñoIngresoDocente">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDocente"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAñoPublicacion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAñoPublicacion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaFisico"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCantidadVisualizaciones -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCantidadVisualizaciones">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCapacidad -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCapacidad">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaAmbientes"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCargo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCargo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersonalBiblioteca"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCarnet -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCarnet">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCodigoCarrera -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCodigoCarrera">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaCarrera"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCodigoSis -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCodigoSis">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaEstudiante"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneConfirmacion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneConfirmacion">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceDescarga"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneDepartamento -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneDepartamento">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersonalAcademico"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneDescipcionCentroInv -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneDescipcionCentroInv">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaCentroInvestigacion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEmail -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEmail">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceDescarga -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceDescarga">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaRecursoAcademico"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEspecializacion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEspecializacion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersonalBiblioteca"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEstado -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEstado">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaRecursoAcademico"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaInicioColaboracion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaInicioColaboracion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaColaborador"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaRecursoAcademico"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaRegistro -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaRegistro">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaLector"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaRegistro"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneGenero -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneGenero">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneHorarioDisponibilidad -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneHorarioDisponibilidad">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaAmbientes"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneISBN -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneISBN">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaRecursoAcademico"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaRecursoAcademico"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneInstitucion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneInstitucion"/>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNivelAcademico -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNivelAcademico">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaRecursoAcademico"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNombre -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNombre">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNombreAmbiente -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNombreAmbiente">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaAmbientes"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNombreCarrera -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNombreCarrera">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaCarrera"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNormas -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNormas">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaBiblioteca"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumeroColaborador -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumeroColaborador">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaColaborador"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumeroEmpleado -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumeroEmpleado">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersonalAcademico"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumeroLector -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumeroLector">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaLector"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumerodeEjemplares -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumerodeEjemplares">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaFisico"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumerodeEstante -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumerodeEstante">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaFisico"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumerodeSalas -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumerodeSalas">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaBiblioteca"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaRecursoAcademico"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneRecomendacion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneRecomendacion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaRecursoAcademico"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneReglaUso -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneReglaUso">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/R9JttmJ5oSIjMe4WwJq7KGj"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneResumen -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneResumen">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaRecursoAcademico"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTelefono -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTelefono">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo">
+        <rdfs:subPropertyOf rdf:resource="http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaRecursoAcademico"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTituloAcademico -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTituloAcademico">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersonalAcademico"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTurno -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTurno">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersonalBiblioteca"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneUbicación -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneUbicación">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaAmbientes"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaRecursoAcademico"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://webprotege.stanford.edu/R9JttmJ5oSIjMe4WwJq7KGj -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/R9JttmJ5oSIjMe4WwJq7KGj">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaAmbientes"/>
+        <rdfs:label>Sala</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaAmbientes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaAmbientes"/>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaBiblioteca -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaBiblioteca">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaAmbientes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaCarrera -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaCarrera">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaCentroInvestigacion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaCentroInvestigacion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaAmbientes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaColaborador -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaColaborador">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaEstudiante"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaRecursoAcademico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDocente -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDocente">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersonalAcademico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaEstudiante -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaEstudiante">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersona"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaFisico -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaFisico">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaRecursoAcademico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaLector -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaLector">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaEstudiante"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersona -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersona">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersonalAcademico -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersonalAcademico">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersona"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersonalBiblioteca -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersonalBiblioteca">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersonalAcademico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaRecursoAcademico -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaRecursoAcademico">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://webprotege.stanford.edu/R7KISuc44MAxIs1QJjjmOks -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/R7KISuc44MAxIs1QJjjmOks">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"/>
+        <webprotege:R9ToXPXs2LRtdVnNbP2UgGF>Programacion</webprotege:R9ToXPXs2LRtdVnNbP2UgGF>
+        <ontologies:OntologiaBibliotecaTieneCategoría>Libro</ontologies:OntologiaBibliotecaTieneCategoría>
+        <ontologies:OntologiaBibliotecatieneAreaEstudio>Informatica</ontologies:OntologiaBibliotecatieneAreaEstudio>
+        <ontologies:OntologiaBibliotecatieneAreaEstudio>Sistemas</ontologies:OntologiaBibliotecatieneAreaEstudio>
+        <ontologies:OntologiaBibliotecatieneAutor>Mark Zuckerberg</ontologies:OntologiaBibliotecatieneAutor>
+        <ontologies:OntologiaBibliotecatieneCantidadVisualizaciones rdf:datatype="http://www.w3.org/2001/XMLSchema#int">39</ontologies:OntologiaBibliotecatieneCantidadVisualizaciones>
+        <ontologies:OntologiaBibliotecatieneEnlaceAcceso>https://biblio.edu/libros/1000Java.pdf</ontologies:OntologiaBibliotecatieneEnlaceAcceso>
+        <ontologies:OntologiaBibliotecatieneEstado>Acceso Libre</ontologies:OntologiaBibliotecatieneEstado>
+        <ontologies:OntologiaBibliotecatieneFechaPublicacion>13/08/16</ontologies:OntologiaBibliotecatieneFechaPublicacion>
+        <ontologies:OntologiaBibliotecatieneFormato>PDF</ontologies:OntologiaBibliotecatieneFormato>
+        <ontologies:OntologiaBibliotecatieneISBN>9856-3-15-4</ontologies:OntologiaBibliotecatieneISBN>
+        <ontologies:OntologiaBibliotecatieneIdioma>Ingles</ontologies:OntologiaBibliotecatieneIdioma>
+        <ontologies:OntologiaBibliotecatieneNivelAcademico>pregrado</ontologies:OntologiaBibliotecatieneNivelAcademico>
+        <ontologies:OntologiaBibliotecatienePalabraClave>Java</ontologies:OntologiaBibliotecatienePalabraClave>
+        <ontologies:OntologiaBibliotecatieneResumen>Sintaxis Basica de Java con teoria basica del lenguaje.</ontologies:OntologiaBibliotecatieneResumen>
+        <ontologies:OntologiaBibliotecatieneTamañoArchivo>1700kb</ontologies:OntologiaBibliotecatieneTamañoArchivo>
+        <ontologies:OntologiaBibliotecatieneTitulo>1000 Forms of Java</ontologies:OntologiaBibliotecatieneTitulo>
+        <ontologies:OntologiaBibliotecatieneVersion>v1.0</ontologies:OntologiaBibliotecatieneVersion>
+        <rdfs:label>recDigital003</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R7dfUdi2zCBZZxZLyUWtsok -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/R7dfUdi2zCBZZxZLyUWtsok">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDocente"/>
+        <ontologies:OntologiaBibliotecatieneAñoIngresoDocente rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2010</ontologies:OntologiaBibliotecatieneAñoIngresoDocente>
+        <ontologies:OntologiaBibliotecatieneCarnet>5961487</ontologies:OntologiaBibliotecatieneCarnet>
+        <ontologies:OntologiaBibliotecatieneDepartamento>Informática y Sistemas</ontologies:OntologiaBibliotecatieneDepartamento>
+        <ontologies:OntologiaBibliotecatieneEmail>marcelo123@gmail.com</ontologies:OntologiaBibliotecatieneEmail>
+        <ontologies:OntologiaBibliotecatieneGenero>Masculino</ontologies:OntologiaBibliotecatieneGenero>
+        <ontologies:OntologiaBibliotecatieneNombre>Marcelo Antezana</ontologies:OntologiaBibliotecatieneNombre>
+        <ontologies:OntologiaBibliotecatieneNumeroEmpleado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ontologies:OntologiaBibliotecatieneNumeroEmpleado>
+        <ontologies:OntologiaBibliotecatieneTelefono>68952322</ontologies:OntologiaBibliotecatieneTelefono>
+        <ontologies:OntologiaBibliotecatieneTituloAcademico>Ingeniería de Sistemas</ontologies:OntologiaBibliotecatieneTituloAcademico>
+        <rdfs:label>docente001</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R7sdFxNwn6AUYTDkSNufrtv -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/R7sdFxNwn6AUYTDkSNufrtv">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/R9JttmJ5oSIjMe4WwJq7KGj"/>
+        <ontologies:OntologiaBibliotecatieneCapacidad rdf:datatype="http://www.w3.org/2001/XMLSchema#int">50</ontologies:OntologiaBibliotecatieneCapacidad>
+        <ontologies:OntologiaBibliotecatieneHorarioDisponibilidad>8:30-16:00</ontologies:OntologiaBibliotecatieneHorarioDisponibilidad>
+        <ontologies:OntologiaBibliotecatieneNombreAmbiente>Sala de Lectura</ontologies:OntologiaBibliotecatieneNombreAmbiente>
+        <ontologies:OntologiaBibliotecatieneReglaUso>Prohibido entrar con comida</ontologies:OntologiaBibliotecatieneReglaUso>
+        <ontologies:OntologiaBibliotecatieneUbicación>Primer piso de la biblioteca</ontologies:OntologiaBibliotecatieneUbicación>
+        <rdfs:label>sala001</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R8JYup5yft5ZOJLFDiXY1Jc -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/R8JYup5yft5ZOJLFDiXY1Jc">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersonalBiblioteca"/>
+        <ontologies:OntologiaBibliotecatieneCargo>Archivista</ontologies:OntologiaBibliotecatieneCargo>
+        <ontologies:OntologiaBibliotecatieneCarnet>129987</ontologies:OntologiaBibliotecatieneCarnet>
+        <ontologies:OntologiaBibliotecatieneDepartamento>Informatica y Sistemas</ontologies:OntologiaBibliotecatieneDepartamento>
+        <ontologies:OntologiaBibliotecatieneEmail>margaritCas@gmail.com</ontologies:OntologiaBibliotecatieneEmail>
+        <ontologies:OntologiaBibliotecatieneEspecializacion>Catalogacion</ontologies:OntologiaBibliotecatieneEspecializacion>
+        <ontologies:OntologiaBibliotecatieneGenero>Femenino</ontologies:OntologiaBibliotecatieneGenero>
+        <ontologies:OntologiaBibliotecatieneNombre>Margarita Castillo</ontologies:OntologiaBibliotecatieneNombre>
+        <ontologies:OntologiaBibliotecatieneNumeroEmpleado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ontologies:OntologiaBibliotecatieneNumeroEmpleado>
+        <ontologies:OntologiaBibliotecatieneTelefono>78965542</ontologies:OntologiaBibliotecatieneTelefono>
+        <ontologies:OntologiaBibliotecatieneTituloAcademico>Licenciado en Sistemas</ontologies:OntologiaBibliotecatieneTituloAcademico>
+        <ontologies:OntologiaBibliotecatieneTurno>Mañana</ontologies:OntologiaBibliotecatieneTurno>
+        <rdfs:label>perBiblioteca001</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R8ZGDRlqVYx34X2QNpFamfM -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/R8ZGDRlqVYx34X2QNpFamfM">
+        <webprotege:R9ToXPXs2LRtdVnNbP2UgGF>Teoria de la computacion</webprotege:R9ToXPXs2LRtdVnNbP2UgGF>
+        <ontologies:OntologiaBibliotecaTieneCategoría>Libro</ontologies:OntologiaBibliotecaTieneCategoría>
+        <ontologies:OntologiaBibliotecatieneAutor>Edgar Jaldin</ontologies:OntologiaBibliotecatieneAutor>
+        <ontologies:OntologiaBibliotecatieneEnlaceAcceso>https://biblio.edu/investigacion/basescomputo.pdf</ontologies:OntologiaBibliotecatieneEnlaceAcceso>
+        <ontologies:OntologiaBibliotecatieneEstado>Acceso libre</ontologies:OntologiaBibliotecatieneEstado>
+        <ontologies:OntologiaBibliotecatieneFechaPublicacion>08/04/23</ontologies:OntologiaBibliotecatieneFechaPublicacion>
+        <ontologies:OntologiaBibliotecatieneFormato>PDF</ontologies:OntologiaBibliotecatieneFormato>
+        <ontologies:OntologiaBibliotecatieneISBN>9952 21445 12023 1210</ontologies:OntologiaBibliotecatieneISBN>
+        <ontologies:OntologiaBibliotecatieneIdioma>Ingles</ontologies:OntologiaBibliotecatieneIdioma>
+        <ontologies:OntologiaBibliotecatienePalabraClave>computadoras</ontologies:OntologiaBibliotecatienePalabraClave>
+        <ontologies:OntologiaBibliotecatieneTamañoArchivo>523kb</ontologies:OntologiaBibliotecatieneTamañoArchivo>
+        <ontologies:OntologiaBibliotecatieneTitulo>Bases de computacion</ontologies:OntologiaBibliotecatieneTitulo>
+        <ontologies:OntologiaBibliotecatieneVersion>v2.3</ontologies:OntologiaBibliotecatieneVersion>
+        <rdfs:label>recDigital026</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R8l4H4sGMTO7UjhPKdjI18t -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/R8l4H4sGMTO7UjhPKdjI18t">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaColaborador"/>
+        <ontologies:OntologiaBibliotecapublica rdf:resource="http://webprotege.stanford.edu/RDoS0HZKolFyDyQyacIS5yd"/>
+        <ontologies:OntologiaBibliotecapublica rdf:resource="http://webprotege.stanford.edu/RXbng7AH87cHW5YxgDUT03"/>
+        <ontologies:OntologiaBibliotecapublica rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital016"/>
+        <ontologies:OntologiaBibliotecatieneAreaColaboracion>Base de datos</ontologies:OntologiaBibliotecatieneAreaColaboracion>
+        <ontologies:OntologiaBibliotecatieneAñoIngreso rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2019</ontologies:OntologiaBibliotecatieneAñoIngreso>
+        <ontologies:OntologiaBibliotecatieneCarnet>6503256</ontologies:OntologiaBibliotecatieneCarnet>
+        <ontologies:OntologiaBibliotecatieneCodigoSis>201900201</ontologies:OntologiaBibliotecatieneCodigoSis>
+        <ontologies:OntologiaBibliotecatieneEmail>esteban123@gmail.com</ontologies:OntologiaBibliotecatieneEmail>
+        <ontologies:OntologiaBibliotecatieneFechaInicioColaboracion>01/01/24</ontologies:OntologiaBibliotecatieneFechaInicioColaboracion>
+        <ontologies:OntologiaBibliotecatieneGenero>Masculino</ontologies:OntologiaBibliotecatieneGenero>
+        <ontologies:OntologiaBibliotecatieneNombre>Esteban Quito</ontologies:OntologiaBibliotecatieneNombre>
+        <ontologies:OntologiaBibliotecatieneNumeroColaborador rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ontologies:OntologiaBibliotecatieneNumeroColaborador>
+        <ontologies:OntologiaBibliotecatieneTelefono>77452986</ontologies:OntologiaBibliotecatieneTelefono>
+        <rdfs:label>estColab002</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBCurMIeWX26myG7W4z1aCF -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RBCurMIeWX26myG7W4z1aCF">
+        <webprotege:R9ToXPXs2LRtdVnNbP2UgGF>Simulacion</webprotege:R9ToXPXs2LRtdVnNbP2UgGF>
+        <ontologies:OntologiaBibliotecaTieneCategoría>Trabajo practico</ontologies:OntologiaBibliotecaTieneCategoría>
+        <ontologies:OntologiaBibliotecatieneAutor>Anonimo</ontologies:OntologiaBibliotecatieneAutor>
+        <ontologies:OntologiaBibliotecatieneEnlaceAcceso>https://biblio.edu/practica/simulacion.pdf</ontologies:OntologiaBibliotecatieneEnlaceAcceso>
+        <ontologies:OntologiaBibliotecatieneEstado>Acceso libre</ontologies:OntologiaBibliotecatieneEstado>
+        <ontologies:OntologiaBibliotecatieneFechaPublicacion>12/05/22</ontologies:OntologiaBibliotecatieneFechaPublicacion>
+        <ontologies:OntologiaBibliotecatieneFormato>PDF</ontologies:OntologiaBibliotecatieneFormato>
+        <ontologies:OntologiaBibliotecatieneIdioma>Español</ontologies:OntologiaBibliotecatieneIdioma>
+        <ontologies:OntologiaBibliotecatienePalabraClave>Transformada Inversa</ontologies:OntologiaBibliotecatienePalabraClave>
+        <ontologies:OntologiaBibliotecatieneTamañoArchivo>120kb</ontologies:OntologiaBibliotecatieneTamañoArchivo>
+        <ontologies:OntologiaBibliotecatieneTitulo>Practica I - Transformada Inversa</ontologies:OntologiaBibliotecatieneTitulo>
+        <ontologies:OntologiaBibliotecatieneVersion>v1.0</ontologies:OntologiaBibliotecatieneVersion>
+        <rdfs:label>recDigital023</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBInF8WwoCzHgZgoq29s25U -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RBInF8WwoCzHgZgoq29s25U">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaLector"/>
+        <ontologies:OntologiaBibliotecatieneAñoIngreso rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2020</ontologies:OntologiaBibliotecatieneAñoIngreso>
+        <ontologies:OntologiaBibliotecatieneCarnet>983774</ontologies:OntologiaBibliotecatieneCarnet>
+        <ontologies:OntologiaBibliotecatieneCodigoSis>202000710</ontologies:OntologiaBibliotecatieneCodigoSis>
+        <ontologies:OntologiaBibliotecatieneEmail>figueroalopez@gmail.com</ontologies:OntologiaBibliotecatieneEmail>
+        <ontologies:OntologiaBibliotecatieneFechaRegistro>01/01/2022</ontologies:OntologiaBibliotecatieneFechaRegistro>
+        <ontologies:OntologiaBibliotecatieneGenero>Femenino</ontologies:OntologiaBibliotecatieneGenero>
+        <ontologies:OntologiaBibliotecatieneNombre>Michelle Figueroa</ontologies:OntologiaBibliotecatieneNombre>
+        <ontologies:OntologiaBibliotecatieneNumeroLector rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ontologies:OntologiaBibliotecatieneNumeroLector>
+        <ontologies:OntologiaBibliotecatieneTelefono>69542902</ontologies:OntologiaBibliotecatieneTelefono>
+        <rdfs:label>estLector001</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBVcS8CcndmK52cHH5Bmarw -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RBVcS8CcndmK52cHH5Bmarw">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersonalBiblioteca"/>
+        <ontologies:OntologiaBibliotecatieneCargo>Bibliotecario</ontologies:OntologiaBibliotecatieneCargo>
+        <ontologies:OntologiaBibliotecatieneCarnet>783661</ontologies:OntologiaBibliotecatieneCarnet>
+        <ontologies:OntologiaBibliotecatieneDepartamento>Informatica y Sistemas</ontologies:OntologiaBibliotecatieneDepartamento>
+        <ontologies:OntologiaBibliotecatieneEmail>GonzaMija@gmail.com</ontologies:OntologiaBibliotecatieneEmail>
+        <ontologies:OntologiaBibliotecatieneEspecializacion>Archivos</ontologies:OntologiaBibliotecatieneEspecializacion>
+        <ontologies:OntologiaBibliotecatieneGenero>Masculino</ontologies:OntologiaBibliotecatieneGenero>
+        <ontologies:OntologiaBibliotecatieneNombre>Mijael Gonzales</ontologies:OntologiaBibliotecatieneNombre>
+        <ontologies:OntologiaBibliotecatieneNumeroEmpleado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ontologies:OntologiaBibliotecatieneNumeroEmpleado>
+        <ontologies:OntologiaBibliotecatieneTelefono>76354271</ontologies:OntologiaBibliotecatieneTelefono>
+        <ontologies:OntologiaBibliotecatieneTituloAcademico>Licenciado en Informatica</ontologies:OntologiaBibliotecatieneTituloAcademico>
+        <ontologies:OntologiaBibliotecatieneTurno>Tarde</ontologies:OntologiaBibliotecatieneTurno>
+        <rdfs:label>perBiblioteca002</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBhvr8IvIyOG3nXrilCqSjK -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RBhvr8IvIyOG3nXrilCqSjK">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaBiblioteca"/>
+        <ontologies:OntologiaBibliotecatieneDiferentes rdf:resource="http://webprotege.stanford.edu/R7sdFxNwn6AUYTDkSNufrtv"/>
+        <ontologies:OntologiaBibliotecatieneDiferentes rdf:resource="http://webprotege.stanford.edu/RSaYYZWxfcDaLAY42Vexne"/>
+        <ontologies:OntologiaBibliotecatieneDiferentes rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecasala003"/>
+        <ontologies:OntologiaBibliotecatieneDiferentes rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecasala004"/>
+        <ontologies:OntologiaBibliotecatieneDiferentes rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecasala005"/>
+        <webprotege:RBOhMIpsFZmn9JCeGXA9k6d rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1234</webprotege:RBOhMIpsFZmn9JCeGXA9k6d>
+        <ontologies:OntologiaBibliotecatieneCapacidad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ontologies:OntologiaBibliotecatieneCapacidad>
+        <ontologies:OntologiaBibliotecatieneHorarioDisponibilidad>8:00 - 18:30</ontologies:OntologiaBibliotecatieneHorarioDisponibilidad>
+        <ontologies:OntologiaBibliotecatieneNombreAmbiente>BiblioGPT</ontologies:OntologiaBibliotecatieneNombreAmbiente>
+        <ontologies:OntologiaBibliotecatieneNormas>Reglas para acceder a los recursos digitales de la biblioteca digital</ontologies:OntologiaBibliotecatieneNormas>
+        <ontologies:OntologiaBibliotecatieneNormas>Reglas para acceder a los recursos fisicos de la biblioteca</ontologies:OntologiaBibliotecatieneNormas>
+        <ontologies:OntologiaBibliotecatieneNormas>Reglas para convertirse en colaborador</ontologies:OntologiaBibliotecatieneNormas>
+        <ontologies:OntologiaBibliotecatieneUbicación>Frente a fotocopiadora de Matematicas</ontologies:OntologiaBibliotecatieneUbicación>
+        <rdfs:label>biblioteca001</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBsvY8BEuUPrLxhlssltM2w -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RBsvY8BEuUPrLxhlssltM2w">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaCentroInvestigacion"/>
+        <webprotege:RBOhMIpsFZmn9JCeGXA9k6d rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</webprotege:RBOhMIpsFZmn9JCeGXA9k6d>
+        <ontologies:OntologiaBibliotecatieneAreaInvestigacion>Sistemas Informatica</ontologies:OntologiaBibliotecatieneAreaInvestigacion>
+        <ontologies:OntologiaBibliotecatieneCapacidad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</ontologies:OntologiaBibliotecatieneCapacidad>
+        <ontologies:OntologiaBibliotecatieneDescipcionCentroInv>Sociedad Cientifica Estudiantil de Sistemas Informatica</ontologies:OntologiaBibliotecatieneDescipcionCentroInv>
+        <ontologies:OntologiaBibliotecatieneHorarioDisponibilidad>9:00-14:00</ontologies:OntologiaBibliotecatieneHorarioDisponibilidad>
+        <ontologies:OntologiaBibliotecatieneNombreAmbiente>SCESI</ontologies:OntologiaBibliotecatieneNombreAmbiente>
+        <ontologies:OntologiaBibliotecatieneUbicación>En el edificio Multiacademico</ontologies:OntologiaBibliotecatieneUbicación>
+        <rdfs:label>centroInves001</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBzCnQGjyfLkVp8K9gKWQoB -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RBzCnQGjyfLkVp8K9gKWQoB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaCarrera"/>
+        <ontologies:OntologiaBibliotecaposee rdf:resource="http://webprotege.stanford.edu/RBhvr8IvIyOG3nXrilCqSjK"/>
+        <ontologies:OntologiaBibliotecaposee rdf:resource="http://webprotege.stanford.edu/RBsvY8BEuUPrLxhlssltM2w"/>
+        <ontologies:OntologiaBibliotecatieneCodigoCarrera>411702</ontologies:OntologiaBibliotecatieneCodigoCarrera>
+        <ontologies:OntologiaBibliotecatieneNombreCarrera>Licenciatura en Ingeniería de Sistemas</ontologies:OntologiaBibliotecatieneNombreCarrera>
+        <rdfs:label>carrera001</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RCPWezfXPL26iBkPMF6XGbr -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RCPWezfXPL26iBkPMF6XGbr">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaLector"/>
+        <ontologies:OntologiaBibliotecatieneAñoIngreso rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2020</ontologies:OntologiaBibliotecatieneAñoIngreso>
+        <ontologies:OntologiaBibliotecatieneCarnet>784538</ontologies:OntologiaBibliotecatieneCarnet>
+        <ontologies:OntologiaBibliotecatieneCodigoSis>20209937</ontologies:OntologiaBibliotecatieneCodigoSis>
+        <ontologies:OntologiaBibliotecatieneEmail>hola@gmail.com</ontologies:OntologiaBibliotecatieneEmail>
+        <ontologies:OntologiaBibliotecatieneFechaRegistro>05/07/2022</ontologies:OntologiaBibliotecatieneFechaRegistro>
+        <ontologies:OntologiaBibliotecatieneGenero>Masculino</ontologies:OntologiaBibliotecatieneGenero>
+        <ontologies:OntologiaBibliotecatieneNombre>Cristian Fernandez</ontologies:OntologiaBibliotecatieneNombre>
+        <ontologies:OntologiaBibliotecatieneNumeroLector rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ontologies:OntologiaBibliotecatieneNumeroLector>
+        <ontologies:OntologiaBibliotecatieneTelefono>78890003</ontologies:OntologiaBibliotecatieneTelefono>
+        <rdfs:label>estLector002</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RDKNnCSU14gotmTPRBtDuoZ -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RDKNnCSU14gotmTPRBtDuoZ">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaCarrera"/>
+        <ontologies:OntologiaBibliotecaposee rdf:resource="http://webprotege.stanford.edu/RBhvr8IvIyOG3nXrilCqSjK"/>
+        <ontologies:OntologiaBibliotecaposee rdf:resource="http://webprotege.stanford.edu/RBsvY8BEuUPrLxhlssltM2w"/>
+        <ontologies:OntologiaBibliotecatieneCodigoCarrera>134111</ontologies:OntologiaBibliotecatieneCodigoCarrera>
+        <ontologies:OntologiaBibliotecatieneNombreCarrera>Licenciatura en ingenieria en Informatica</ontologies:OntologiaBibliotecatieneNombreCarrera>
+        <rdfs:label>carrera002</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RDoS0HZKolFyDyQyacIS5yd -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RDoS0HZKolFyDyQyacIS5yd">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"/>
+        <webprotege:R9ToXPXs2LRtdVnNbP2UgGF>Base de Datos</webprotege:R9ToXPXs2LRtdVnNbP2UgGF>
+        <ontologies:OntologiaBibliotecaTieneCategoría>Apuntes</ontologies:OntologiaBibliotecaTieneCategoría>
+        <ontologies:OntologiaBibliotecatieneAutor>Oscar Flores</ontologies:OntologiaBibliotecatieneAutor>
+        <ontologies:OntologiaBibliotecatieneEnlaceAcceso>https://biblio.edu/BaseDeDatosEnPostgress.com</ontologies:OntologiaBibliotecatieneEnlaceAcceso>
+        <ontologies:OntologiaBibliotecatieneEstado>en Revision</ontologies:OntologiaBibliotecatieneEstado>
+        <ontologies:OntologiaBibliotecatieneFechaPublicacion>01-06-2021</ontologies:OntologiaBibliotecatieneFechaPublicacion>
+        <ontologies:OntologiaBibliotecatieneFormato>PPTX</ontologies:OntologiaBibliotecatieneFormato>
+        <ontologies:OntologiaBibliotecatieneIdioma>Español</ontologies:OntologiaBibliotecatieneIdioma>
+        <ontologies:OntologiaBibliotecatienePalabraClave>Base de datos</ontologies:OntologiaBibliotecatienePalabraClave>
+        <ontologies:OntologiaBibliotecatienePalabraClave>Postgress</ontologies:OntologiaBibliotecatienePalabraClave>
+        <ontologies:OntologiaBibliotecatieneRecomendacion>Si</ontologies:OntologiaBibliotecatieneRecomendacion>
+        <ontologies:OntologiaBibliotecatieneResumen>Explicacion de como crear una base de datos en postgress</ontologies:OntologiaBibliotecatieneResumen>
+        <ontologies:OntologiaBibliotecatieneTamañoArchivo>450Kb</ontologies:OntologiaBibliotecatieneTamañoArchivo>
+        <ontologies:OntologiaBibliotecatieneTitulo>Base de datos en Postgress</ontologies:OntologiaBibliotecatieneTitulo>
+        <ontologies:OntologiaBibliotecatieneVersion>v1.0</ontologies:OntologiaBibliotecatieneVersion>
+        <rdfs:label>recDigital004</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RNppMUS1KPpezuXE67a3PP -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RNppMUS1KPpezuXE67a3PP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDocente"/>
+        <ontologies:OntologiaBibliotecatieneAñoIngresoDocente rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2005</ontologies:OntologiaBibliotecatieneAñoIngresoDocente>
+        <ontologies:OntologiaBibliotecatieneCarnet>6152371</ontologies:OntologiaBibliotecatieneCarnet>
+        <ontologies:OntologiaBibliotecatieneDepartamento>Informática y sistemas</ontologies:OntologiaBibliotecatieneDepartamento>
+        <ontologies:OntologiaBibliotecatieneEmail>carmen123@gmail.com</ontologies:OntologiaBibliotecatieneEmail>
+        <ontologies:OntologiaBibliotecatieneGenero>Femenino</ontologies:OntologiaBibliotecatieneGenero>
+        <ontologies:OntologiaBibliotecatieneNombre>Carmen Rosa</ontologies:OntologiaBibliotecatieneNombre>
+        <ontologies:OntologiaBibliotecatieneNumeroEmpleado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ontologies:OntologiaBibliotecatieneNumeroEmpleado>
+        <ontologies:OntologiaBibliotecatieneTelefono>70711425</ontologies:OntologiaBibliotecatieneTelefono>
+        <ontologies:OntologiaBibliotecatieneTituloAcademico>Ing. Informático</ontologies:OntologiaBibliotecatieneTituloAcademico>
+        <rdfs:label>docente002</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RSaYYZWxfcDaLAY42Vexne -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RSaYYZWxfcDaLAY42Vexne">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/R9JttmJ5oSIjMe4WwJq7KGj"/>
+        <ontologies:OntologiaBibliotecatieneCapacidad rdf:datatype="http://www.w3.org/2001/XMLSchema#int">20</ontologies:OntologiaBibliotecatieneCapacidad>
+        <ontologies:OntologiaBibliotecatieneHorarioDisponibilidad>14:00-18:00</ontologies:OntologiaBibliotecatieneHorarioDisponibilidad>
+        <ontologies:OntologiaBibliotecatieneNombreAmbiente>Sala de Computadoras</ontologies:OntologiaBibliotecatieneNombreAmbiente>
+        <ontologies:OntologiaBibliotecatieneReglaUso>Prohibido mover las sillas</ontologies:OntologiaBibliotecatieneReglaUso>
+        <ontologies:OntologiaBibliotecatieneUbicación>segundo piso lado derecho ultima sala</ontologies:OntologiaBibliotecatieneUbicación>
+        <rdfs:label>sala002</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RXbng7AH87cHW5YxgDUT03 -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RXbng7AH87cHW5YxgDUT03">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"/>
+        <webprotege:R9ToXPXs2LRtdVnNbP2UgGF>Introduccion a la programación</webprotege:R9ToXPXs2LRtdVnNbP2UgGF>
+        <ontologies:OntologiaBibliotecaTieneCategoría>Diapositivas</ontologies:OntologiaBibliotecaTieneCategoría>
+        <ontologies:OntologiaBibliotecatieneAreaEstudio>Informatica</ontologies:OntologiaBibliotecatieneAreaEstudio>
+        <ontologies:OntologiaBibliotecatieneAreaEstudio>Sistemas</ontologies:OntologiaBibliotecatieneAreaEstudio>
+        <ontologies:OntologiaBibliotecatieneAutor>Esteban Quito</ontologies:OntologiaBibliotecatieneAutor>
+        <ontologies:OntologiaBibliotecatieneCantidadVisualizaciones rdf:datatype="http://www.w3.org/2001/XMLSchema#int">54</ontologies:OntologiaBibliotecatieneCantidadVisualizaciones>
+        <ontologies:OntologiaBibliotecatieneEnlaceAcceso>https://biblio.edu/DispositivasRecursividadPasoAPaso.com</ontologies:OntologiaBibliotecatieneEnlaceAcceso>
+        <ontologies:OntologiaBibliotecatieneEstado>acceso abierto</ontologies:OntologiaBibliotecatieneEstado>
+        <ontologies:OntologiaBibliotecatieneFechaPublicacion>21/05/2022</ontologies:OntologiaBibliotecatieneFechaPublicacion>
+        <ontologies:OntologiaBibliotecatieneFormato>PDF</ontologies:OntologiaBibliotecatieneFormato>
+        <ontologies:OntologiaBibliotecatieneIdioma>Español</ontologies:OntologiaBibliotecatieneIdioma>
+        <ontologies:OntologiaBibliotecatienePalabraClave>Recursividad</ontologies:OntologiaBibliotecatienePalabraClave>
+        <ontologies:OntologiaBibliotecatieneRecomendacion>Java</ontologies:OntologiaBibliotecatieneRecomendacion>
+        <ontologies:OntologiaBibliotecatieneResumen>Diapositivas de recursividad 2022</ontologies:OntologiaBibliotecatieneResumen>
+        <ontologies:OntologiaBibliotecatieneTamañoArchivo>255kb</ontologies:OntologiaBibliotecatieneTamañoArchivo>
+        <ontologies:OntologiaBibliotecatieneTitulo>Recursividad paso a paso</ontologies:OntologiaBibliotecatieneTitulo>
+        <ontologies:OntologiaBibliotecatieneVersion>v1.0</ontologies:OntologiaBibliotecatieneVersion>
+        <rdfs:label>recDigital002</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RaiFoPyv3hbiUqmS6E6BVc -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RaiFoPyv3hbiUqmS6E6BVc">
+        <webprotege:R9ToXPXs2LRtdVnNbP2UgGF>Simulacion</webprotege:R9ToXPXs2LRtdVnNbP2UgGF>
+        <ontologies:OntologiaBibliotecaTieneCategoría>Trabajo practico</ontologies:OntologiaBibliotecaTieneCategoría>
+        <ontologies:OntologiaBibliotecatieneAutor>Anonimo</ontologies:OntologiaBibliotecatieneAutor>
+        <ontologies:OntologiaBibliotecatieneEnlaceAcceso>https://biblio.edu/practica/simulacion2.pdf</ontologies:OntologiaBibliotecatieneEnlaceAcceso>
+        <ontologies:OntologiaBibliotecatieneEstado>Acceso libre</ontologies:OntologiaBibliotecatieneEstado>
+        <ontologies:OntologiaBibliotecatieneFechaPublicacion>02/06/15</ontologies:OntologiaBibliotecatieneFechaPublicacion>
+        <ontologies:OntologiaBibliotecatieneFormato>xls</ontologies:OntologiaBibliotecatieneFormato>
+        <ontologies:OntologiaBibliotecatieneIdioma>Español</ontologies:OntologiaBibliotecatieneIdioma>
+        <ontologies:OntologiaBibliotecatienePalabraClave>Distribucion</ontologies:OntologiaBibliotecatienePalabraClave>
+        <ontologies:OntologiaBibliotecatienePalabraClave>Uniforme</ontologies:OntologiaBibliotecatienePalabraClave>
+        <ontologies:OntologiaBibliotecatieneTamañoArchivo>53kb</ontologies:OntologiaBibliotecatieneTamañoArchivo>
+        <ontologies:OntologiaBibliotecatieneTitulo>Practica II - Distribucion Uniforme</ontologies:OntologiaBibliotecatieneTitulo>
+        <ontologies:OntologiaBibliotecatieneVersion>v1.3</ontologies:OntologiaBibliotecatieneVersion>
+        <rdfs:label>recDigital024</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RefeKh7LBuuKBrlgN4REkO -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RefeKh7LBuuKBrlgN4REkO">
+        <webprotege:R9ToXPXs2LRtdVnNbP2UgGF>Historia de computadoras</webprotege:R9ToXPXs2LRtdVnNbP2UgGF>
+        <ontologies:OntologiaBibliotecaTieneCategoría>Proyecto de Investigacion</ontologies:OntologiaBibliotecaTieneCategoría>
+        <ontologies:OntologiaBibliotecatieneAutor>Esteban Quito</ontologies:OntologiaBibliotecatieneAutor>
+        <ontologies:OntologiaBibliotecatieneEnlaceAcceso>https://biblio.edu/proyecto/invesitgacion/histcompu.pdf</ontologies:OntologiaBibliotecatieneEnlaceAcceso>
+        <ontologies:OntologiaBibliotecatieneEstado>Acceso libre</ontologies:OntologiaBibliotecatieneEstado>
+        <ontologies:OntologiaBibliotecatieneFechaPublicacion>25/04/21</ontologies:OntologiaBibliotecatieneFechaPublicacion>
+        <ontologies:OntologiaBibliotecatieneFormato>PDF</ontologies:OntologiaBibliotecatieneFormato>
+        <ontologies:OntologiaBibliotecatieneIdioma>Español</ontologies:OntologiaBibliotecatieneIdioma>
+        <ontologies:OntologiaBibliotecatienePalabraClave>computadoras</ontologies:OntologiaBibliotecatienePalabraClave>
+        <ontologies:OntologiaBibliotecatieneResumen>Relata como se crearon las computadoras sus autores y la forma en la que surgieron</ontologies:OntologiaBibliotecatieneResumen>
+        <ontologies:OntologiaBibliotecatieneTamañoArchivo>64kb</ontologies:OntologiaBibliotecatieneTamañoArchivo>
+        <ontologies:OntologiaBibliotecatieneTitulo>Historia de las Computadoras</ontologies:OntologiaBibliotecatieneTitulo>
+        <ontologies:OntologiaBibliotecatieneVersion>v1.0</ontologies:OntologiaBibliotecatieneVersion>
+        <rdfs:label>recDigital025</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RuNZF5RHPctjyYhq01e1xS -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RuNZF5RHPctjyYhq01e1xS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"/>
+        <webprotege:R9ToXPXs2LRtdVnNbP2UgGF>Calculo I</webprotege:R9ToXPXs2LRtdVnNbP2UgGF>
+        <ontologies:OntologiaBibliotecaTieneCategoría>Examen pasado</ontologies:OntologiaBibliotecaTieneCategoría>
+        <ontologies:OntologiaBibliotecatieneAreaEstudio>Sistemas</ontologies:OntologiaBibliotecatieneAreaEstudio>
+        <ontologies:OntologiaBibliotecatieneAutor>Jhosemar Vallejos</ontologies:OntologiaBibliotecatieneAutor>
+        <ontologies:OntologiaBibliotecatieneCantidadVisualizaciones rdf:datatype="http://www.w3.org/2001/XMLSchema#int">23</ontologies:OntologiaBibliotecatieneCantidadVisualizaciones>
+        <ontologies:OntologiaBibliotecatieneEnlaceAcceso>https://biblio.edu/examenpasado/calculoI</ontologies:OntologiaBibliotecatieneEnlaceAcceso>
+        <ontologies:OntologiaBibliotecatieneEstado>Acceso Abierto</ontologies:OntologiaBibliotecatieneEstado>
+        <ontologies:OntologiaBibliotecatieneFechaPublicacion>01/02/24</ontologies:OntologiaBibliotecatieneFechaPublicacion>
+        <ontologies:OntologiaBibliotecatieneFormato>PDF</ontologies:OntologiaBibliotecatieneFormato>
+        <ontologies:OntologiaBibliotecatieneIdioma>Español</ontologies:OntologiaBibliotecatieneIdioma>
+        <ontologies:OntologiaBibliotecatienePalabraClave>Calculo I</ontologies:OntologiaBibliotecatienePalabraClave>
+        <ontologies:OntologiaBibliotecatieneTamañoArchivo>321kb</ontologies:OntologiaBibliotecatieneTamañoArchivo>
+        <ontologies:OntologiaBibliotecatieneTitulo>Examen 2do parcial Calculo I</ontologies:OntologiaBibliotecatieneTitulo>
+        <ontologies:OntologiaBibliotecatieneVersion>v2014</ontologies:OntologiaBibliotecatieneVersion>
+        <rdfs:label>recDigital001</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RyPZdJMHqyoJBWJthPPJsA -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RyPZdJMHqyoJBWJthPPJsA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaColaborador"/>
+        <ontologies:OntologiaBibliotecapublica rdf:resource="http://webprotege.stanford.edu/RuNZF5RHPctjyYhq01e1xS"/>
+        <ontologies:OntologiaBibliotecatieneAreaColaboracion>Ciberseguridad</ontologies:OntologiaBibliotecatieneAreaColaboracion>
+        <ontologies:OntologiaBibliotecatieneAñoIngreso rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2020</ontologies:OntologiaBibliotecatieneAñoIngreso>
+        <ontologies:OntologiaBibliotecatieneCarnet>6503485</ontologies:OntologiaBibliotecatieneCarnet>
+        <ontologies:OntologiaBibliotecatieneCodigoSis>202000218</ontologies:OntologiaBibliotecatieneCodigoSis>
+        <ontologies:OntologiaBibliotecatieneEmail>jhoten703@gmail.com</ontologies:OntologiaBibliotecatieneEmail>
+        <ontologies:OntologiaBibliotecatieneFechaInicioColaboracion>01/01/24</ontologies:OntologiaBibliotecatieneFechaInicioColaboracion>
+        <ontologies:OntologiaBibliotecatieneGenero>Masculino</ontologies:OntologiaBibliotecatieneGenero>
+        <ontologies:OntologiaBibliotecatieneNombre>Jhosemar Vallejos</ontologies:OntologiaBibliotecatieneNombre>
+        <ontologies:OntologiaBibliotecatieneNumeroColaborador rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ontologies:OntologiaBibliotecatieneNumeroColaborador>
+        <ontologies:OntologiaBibliotecatieneTelefono>70390098</ontologies:OntologiaBibliotecatieneTelefono>
+        <rdfs:label>estColab001</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecadocente003 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecadocente003">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDocente"/>
+        <ontologies:OntologiaBibliotecatieneAñoIngresoDocente rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2009</ontologies:OntologiaBibliotecatieneAñoIngresoDocente>
+        <ontologies:OntologiaBibliotecatieneCarnet>17823499</ontologies:OntologiaBibliotecatieneCarnet>
+        <ontologies:OntologiaBibliotecatieneDepartamento>Informática y sistemas</ontologies:OntologiaBibliotecatieneDepartamento>
+        <ontologies:OntologiaBibliotecatieneEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">patyrodriguez@gmail.com</ontologies:OntologiaBibliotecatieneEmail>
+        <ontologies:OntologiaBibliotecatieneGenero>Femenino</ontologies:OntologiaBibliotecatieneGenero>
+        <ontologies:OntologiaBibliotecatieneNombre>Patricia Erika Rodriguez Bilbao</ontologies:OntologiaBibliotecatieneNombre>
+        <ontologies:OntologiaBibliotecatieneNumeroEmpleado rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</ontologies:OntologiaBibliotecatieneNumeroEmpleado>
+        <ontologies:OntologiaBibliotecatieneTelefono>72705886</ontologies:OntologiaBibliotecatieneTelefono>
+        <ontologies:OntologiaBibliotecatieneTituloAcademico>Ing. Informático</ontologies:OntologiaBibliotecatieneTituloAcademico>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecadocente004 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecadocente004">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDocente"/>
+        <ontologies:OntologiaBibliotecatieneAñoIngresoDocente rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</ontologies:OntologiaBibliotecatieneAñoIngresoDocente>
+        <ontologies:OntologiaBibliotecatieneCarnet>18902343</ontologies:OntologiaBibliotecatieneCarnet>
+        <ontologies:OntologiaBibliotecatieneDepartamento>Informática y sistemas</ontologies:OntologiaBibliotecatieneDepartamento>
+        <ontologies:OntologiaBibliotecatieneEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lecitia70sblanco@gmail.com</ontologies:OntologiaBibliotecatieneEmail>
+        <ontologies:OntologiaBibliotecatieneGenero>Femenino</ontologies:OntologiaBibliotecatieneGenero>
+        <ontologies:OntologiaBibliotecatieneNombre>Maria Leticia Blanco</ontologies:OntologiaBibliotecatieneNombre>
+        <ontologies:OntologiaBibliotecatieneNumeroEmpleado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ontologies:OntologiaBibliotecatieneNumeroEmpleado>
+        <ontologies:OntologiaBibliotecatieneTelefono>78904532</ontologies:OntologiaBibliotecatieneTelefono>
+        <ontologies:OntologiaBibliotecatieneTituloAcademico>Ing. Informática</ontologies:OntologiaBibliotecatieneTituloAcademico>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecadocente005 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecadocente005">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDocente"/>
+        <ontologies:OntologiaBibliotecatieneAñoIngresoDocente rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1999</ontologies:OntologiaBibliotecatieneAñoIngresoDocente>
+        <ontologies:OntologiaBibliotecatieneCarnet>876454</ontologies:OntologiaBibliotecatieneCarnet>
+        <ontologies:OntologiaBibliotecatieneDepartamento>Informática y Sistemas</ontologies:OntologiaBibliotecatieneDepartamento>
+        <ontologies:OntologiaBibliotecatieneEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rose129@gmail.com</ontologies:OntologiaBibliotecatieneEmail>
+        <ontologies:OntologiaBibliotecatieneGenero>Femenino</ontologies:OntologiaBibliotecatieneGenero>
+        <ontologies:OntologiaBibliotecatieneNombre>Rosemary Bascopé</ontologies:OntologiaBibliotecatieneNombre>
+        <ontologies:OntologiaBibliotecatieneNumeroEmpleado rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</ontologies:OntologiaBibliotecatieneNumeroEmpleado>
+        <ontologies:OntologiaBibliotecatieneTelefono>67232176</ontologies:OntologiaBibliotecatieneTelefono>
+        <ontologies:OntologiaBibliotecatieneTituloAcademico>Ing. Sistemático</ontologies:OntologiaBibliotecatieneTituloAcademico>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecadocente006 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecadocente006">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDocente"/>
+        <ontologies:OntologiaBibliotecatieneAñoIngresoDocente rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2013</ontologies:OntologiaBibliotecatieneAñoIngresoDocente>
+        <ontologies:OntologiaBibliotecatieneCarnet>9823412</ontologies:OntologiaBibliotecatieneCarnet>
+        <ontologies:OntologiaBibliotecatieneDepartamento>Informática y Sistemas</ontologies:OntologiaBibliotecatieneDepartamento>
+        <ontologies:OntologiaBibliotecatieneEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">marcmont@gmail.com</ontologies:OntologiaBibliotecatieneEmail>
+        <ontologies:OntologiaBibliotecatieneGenero>Masculino</ontologies:OntologiaBibliotecatieneGenero>
+        <ontologies:OntologiaBibliotecatieneNombre>Marco Antonio Montecinos</ontologies:OntologiaBibliotecatieneNombre>
+        <ontologies:OntologiaBibliotecatieneNumeroEmpleado rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6</ontologies:OntologiaBibliotecatieneNumeroEmpleado>
+        <ontologies:OntologiaBibliotecatieneTelefono>68123355</ontologies:OntologiaBibliotecatieneTelefono>
+        <ontologies:OntologiaBibliotecatieneTituloAcademico>Ing. Informático</ontologies:OntologiaBibliotecatieneTituloAcademico>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaestColab003 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaestColab003">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaColaborador"/>
+        <ontologies:OntologiaBibliotecapublica rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital005"/>
+        <ontologies:OntologiaBibliotecatieneAreaColaboracion>Inteligencia Artifical</ontologies:OntologiaBibliotecatieneAreaColaboracion>
+        <ontologies:OntologiaBibliotecatieneAñoIngreso rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2022</ontologies:OntologiaBibliotecatieneAñoIngreso>
+        <ontologies:OntologiaBibliotecatieneCarnet>14833490</ontologies:OntologiaBibliotecatieneCarnet>
+        <ontologies:OntologiaBibliotecatieneCodigoSis>202256349</ontologies:OntologiaBibliotecatieneCodigoSis>
+        <ontologies:OntologiaBibliotecatieneEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">carlastorrez@gmail.com</ontologies:OntologiaBibliotecatieneEmail>
+        <ontologies:OntologiaBibliotecatieneFechaInicioColaboracion>02/09/24</ontologies:OntologiaBibliotecatieneFechaInicioColaboracion>
+        <ontologies:OntologiaBibliotecatieneGenero>Femenino</ontologies:OntologiaBibliotecatieneGenero>
+        <ontologies:OntologiaBibliotecatieneNombre>Carla Torrez</ontologies:OntologiaBibliotecatieneNombre>
+        <ontologies:OntologiaBibliotecatieneNumeroColaborador rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ontologies:OntologiaBibliotecatieneNumeroColaborador>
+        <ontologies:OntologiaBibliotecatieneTelefono>72705990</ontologies:OntologiaBibliotecatieneTelefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaestColab004 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaestColab004">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaColaborador"/>
+        <ontologies:OntologiaBibliotecapublica rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital006"/>
+        <ontologies:OntologiaBibliotecapublica rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital009"/>
+        <ontologies:OntologiaBibliotecapublica rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital010"/>
+        <ontologies:OntologiaBibliotecatieneAreaColaboracion>Algoritmos Avanzados</ontologies:OntologiaBibliotecatieneAreaColaboracion>
+        <ontologies:OntologiaBibliotecatieneAñoIngreso rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2021</ontologies:OntologiaBibliotecatieneAñoIngreso>
+        <ontologies:OntologiaBibliotecatieneCarnet>14578329</ontologies:OntologiaBibliotecatieneCarnet>
+        <ontologies:OntologiaBibliotecatieneCodigoSis>202189744</ontologies:OntologiaBibliotecatieneCodigoSis>
+        <ontologies:OntologiaBibliotecatieneEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">marioterrazas@gmail.com</ontologies:OntologiaBibliotecatieneEmail>
+        <ontologies:OntologiaBibliotecatieneFechaInicioColaboracion>01/03/23</ontologies:OntologiaBibliotecatieneFechaInicioColaboracion>
+        <ontologies:OntologiaBibliotecatieneGenero>Masculino</ontologies:OntologiaBibliotecatieneGenero>
+        <ontologies:OntologiaBibliotecatieneNombre>Mario Terrazas</ontologies:OntologiaBibliotecatieneNombre>
+        <ontologies:OntologiaBibliotecatieneNumeroColaborador rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ontologies:OntologiaBibliotecatieneNumeroColaborador>
+        <ontologies:OntologiaBibliotecatieneTelefono>79095643</ontologies:OntologiaBibliotecatieneTelefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaestColab005 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaestColab005">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaColaborador"/>
+        <ontologies:OntologiaBibliotecapublica rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital007"/>
+        <ontologies:OntologiaBibliotecapublica rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital013"/>
+        <ontologies:OntologiaBibliotecatieneAreaColaboracion>Redes</ontologies:OntologiaBibliotecatieneAreaColaboracion>
+        <ontologies:OntologiaBibliotecatieneAñoIngreso rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2021</ontologies:OntologiaBibliotecatieneAñoIngreso>
+        <ontologies:OntologiaBibliotecatieneCarnet>9441231</ontologies:OntologiaBibliotecatieneCarnet>
+        <ontologies:OntologiaBibliotecatieneCodigoSis>202103731</ontologies:OntologiaBibliotecatieneCodigoSis>
+        <ontologies:OntologiaBibliotecatieneEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">monicarocha123@gmail.com</ontologies:OntologiaBibliotecatieneEmail>
+        <ontologies:OntologiaBibliotecatieneFechaInicioColaboracion>06/08/2024</ontologies:OntologiaBibliotecatieneFechaInicioColaboracion>
+        <ontologies:OntologiaBibliotecatieneGenero>Femenino</ontologies:OntologiaBibliotecatieneGenero>
+        <ontologies:OntologiaBibliotecatieneNombre>Monica Rocha Perez</ontologies:OntologiaBibliotecatieneNombre>
+        <ontologies:OntologiaBibliotecatieneNumeroColaborador rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</ontologies:OntologiaBibliotecatieneNumeroColaborador>
+        <ontologies:OntologiaBibliotecatieneTelefono>72212312</ontologies:OntologiaBibliotecatieneTelefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaestColab006 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaestColab006">
+        <ontologies:OntologiaBibliotecapublica rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital008"/>
+        <ontologies:OntologiaBibliotecapublica rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital012"/>
+        <ontologies:OntologiaBibliotecapublica rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital015"/>
+        <ontologies:OntologiaBibliotecapublica rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecFisico01"/>
+        <ontologies:OntologiaBibliotecatieneAreaColaboracion>Introducción a la Programación</ontologies:OntologiaBibliotecatieneAreaColaboracion>
+        <ontologies:OntologiaBibliotecatieneAñoIngreso rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2018</ontologies:OntologiaBibliotecatieneAñoIngreso>
+        <ontologies:OntologiaBibliotecatieneCarnet>91218555</ontologies:OntologiaBibliotecatieneCarnet>
+        <ontologies:OntologiaBibliotecatieneCodigoSis>201829244</ontologies:OntologiaBibliotecatieneCodigoSis>
+        <ontologies:OntologiaBibliotecatieneEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mauricioquispe@gmail.com</ontologies:OntologiaBibliotecatieneEmail>
+        <ontologies:OntologiaBibliotecatieneFechaInicioColaboracion>02/05/2019</ontologies:OntologiaBibliotecatieneFechaInicioColaboracion>
+        <ontologies:OntologiaBibliotecatieneGenero>Masculino</ontologies:OntologiaBibliotecatieneGenero>
+        <ontologies:OntologiaBibliotecatieneNombre>Mauricio Juan Quispe</ontologies:OntologiaBibliotecatieneNombre>
+        <ontologies:OntologiaBibliotecatieneNumeroColaborador rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6</ontologies:OntologiaBibliotecatieneNumeroColaborador>
+        <ontologies:OntologiaBibliotecatieneTelefono>67211212</ontologies:OntologiaBibliotecatieneTelefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaestColab007 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaestColab007">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaColaborador"/>
+        <ontologies:OntologiaBibliotecapublica rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital011"/>
+        <ontologies:OntologiaBibliotecatieneAreaColaboracion>Base de datos</ontologies:OntologiaBibliotecatieneAreaColaboracion>
+        <ontologies:OntologiaBibliotecatieneAñoIngreso rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2020</ontologies:OntologiaBibliotecatieneAñoIngreso>
+        <ontologies:OntologiaBibliotecatieneCarnet>9359253</ontologies:OntologiaBibliotecatieneCarnet>
+        <ontologies:OntologiaBibliotecatieneCodigoSis>202000710</ontologies:OntologiaBibliotecatieneCodigoSis>
+        <ontologies:OntologiaBibliotecatieneEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jazminlopez7774@gmail.com</ontologies:OntologiaBibliotecatieneEmail>
+        <ontologies:OntologiaBibliotecatieneFechaInicioColaboracion>16/02/2022</ontologies:OntologiaBibliotecatieneFechaInicioColaboracion>
+        <ontologies:OntologiaBibliotecatieneGenero>Femenino</ontologies:OntologiaBibliotecatieneGenero>
+        <ontologies:OntologiaBibliotecatieneNombre>Jazmin Lopez</ontologies:OntologiaBibliotecatieneNombre>
+        <ontologies:OntologiaBibliotecatieneNumeroColaborador rdf:datatype="http://www.w3.org/2001/XMLSchema#int">7</ontologies:OntologiaBibliotecatieneNumeroColaborador>
+        <ontologies:OntologiaBibliotecatieneTelefono>69542902</ontologies:OntologiaBibliotecatieneTelefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaestColab008 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaestColab008">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaColaborador"/>
+        <ontologies:OntologiaBibliotecapublica rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital014"/>
+        <ontologies:OntologiaBibliotecatieneAreaColaboracion>Ciberseguridad</ontologies:OntologiaBibliotecatieneAreaColaboracion>
+        <ontologies:OntologiaBibliotecatieneAñoIngreso rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2020</ontologies:OntologiaBibliotecatieneAñoIngreso>
+        <ontologies:OntologiaBibliotecatieneCarnet>14863498</ontologies:OntologiaBibliotecatieneCarnet>
+        <ontologies:OntologiaBibliotecatieneCodigoSis>202054729</ontologies:OntologiaBibliotecatieneCodigoSis>
+        <ontologies:OntologiaBibliotecatieneEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lauralopez7774@gmail.com</ontologies:OntologiaBibliotecatieneEmail>
+        <ontologies:OntologiaBibliotecatieneFechaInicioColaboracion>13/02/24</ontologies:OntologiaBibliotecatieneFechaInicioColaboracion>
+        <ontologies:OntologiaBibliotecatieneGenero>Femenino</ontologies:OntologiaBibliotecatieneGenero>
+        <ontologies:OntologiaBibliotecatieneNumeroColaborador rdf:datatype="http://www.w3.org/2001/XMLSchema#int">8</ontologies:OntologiaBibliotecatieneNumeroColaborador>
+        <ontologies:OntologiaBibliotecatieneTelefono>67843526</ontologies:OntologiaBibliotecatieneTelefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaestColab009 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaestColab009">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaColaborador"/>
+        <ontologies:OntologiaBibliotecapublica rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital016"/>
+        <ontologies:OntologiaBibliotecatieneAreaColaboracion>Desarrollo de software</ontologies:OntologiaBibliotecatieneAreaColaboracion>
+        <ontologies:OntologiaBibliotecatieneAñoIngreso rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2021</ontologies:OntologiaBibliotecatieneAñoIngreso>
+        <ontologies:OntologiaBibliotecatieneCarnet>78456324</ontologies:OntologiaBibliotecatieneCarnet>
+        <ontologies:OntologiaBibliotecatieneCodigoSis>202174522</ontologies:OntologiaBibliotecatieneCodigoSis>
+        <ontologies:OntologiaBibliotecatieneEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pabloguzman@gmail.com</ontologies:OntologiaBibliotecatieneEmail>
+        <ontologies:OntologiaBibliotecatieneFechaInicioColaboracion>13/09/23</ontologies:OntologiaBibliotecatieneFechaInicioColaboracion>
+        <ontologies:OntologiaBibliotecatieneGenero>Masculino</ontologies:OntologiaBibliotecatieneGenero>
+        <ontologies:OntologiaBibliotecatieneNombre>Pablo Guzman</ontologies:OntologiaBibliotecatieneNombre>
+        <ontologies:OntologiaBibliotecatieneNumeroColaborador rdf:datatype="http://www.w3.org/2001/XMLSchema#int">9</ontologies:OntologiaBibliotecatieneNumeroColaborador>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaestLector003 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaestLector003">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaLector"/>
+        <ontologies:OntologiaBibliotecatieneAñoIngreso rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2023</ontologies:OntologiaBibliotecatieneAñoIngreso>
+        <ontologies:OntologiaBibliotecatieneCarnet>14832980</ontologies:OntologiaBibliotecatieneCarnet>
+        <ontologies:OntologiaBibliotecatieneCodigoSis>202308756</ontologies:OntologiaBibliotecatieneCodigoSis>
+        <ontologies:OntologiaBibliotecatieneEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">analopez@gmail.com</ontologies:OntologiaBibliotecatieneEmail>
+        <ontologies:OntologiaBibliotecatieneFechaRegistro>03/08/23</ontologies:OntologiaBibliotecatieneFechaRegistro>
+        <ontologies:OntologiaBibliotecatieneGenero>Femenino</ontologies:OntologiaBibliotecatieneGenero>
+        <ontologies:OntologiaBibliotecatieneNombre>Ana Lopez</ontologies:OntologiaBibliotecatieneNombre>
+        <ontologies:OntologiaBibliotecatieneNumeroLector rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ontologies:OntologiaBibliotecatieneNumeroLector>
+        <ontologies:OntologiaBibliotecatieneTelefono>68903425</ontologies:OntologiaBibliotecatieneTelefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaestLector004 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaestLector004">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaLector"/>
+        <ontologies:OntologiaBibliotecatieneAñoIngreso rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2021</ontologies:OntologiaBibliotecatieneAñoIngreso>
+        <ontologies:OntologiaBibliotecatieneCarnet>1009786</ontologies:OntologiaBibliotecatieneCarnet>
+        <ontologies:OntologiaBibliotecatieneCodigoSis>202103731</ontologies:OntologiaBibliotecatieneCodigoSis>
+        <ontologies:OntologiaBibliotecatieneEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ayleng@gmail.com</ontologies:OntologiaBibliotecatieneEmail>
+        <ontologies:OntologiaBibliotecatieneFechaRegistro>02/27/2022</ontologies:OntologiaBibliotecatieneFechaRegistro>
+        <ontologies:OntologiaBibliotecatieneGenero>Femenino</ontologies:OntologiaBibliotecatieneGenero>
+        <ontologies:OntologiaBibliotecatieneNombre>Aylen Gonzáles</ontologies:OntologiaBibliotecatieneNombre>
+        <ontologies:OntologiaBibliotecatieneNumeroLector rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</ontologies:OntologiaBibliotecatieneNumeroLector>
+        <ontologies:OntologiaBibliotecatieneTelefono>72254007</ontologies:OntologiaBibliotecatieneTelefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaestLector005 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaestLector005">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaLector"/>
+        <ontologies:OntologiaBibliotecatieneAñoIngreso rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2019</ontologies:OntologiaBibliotecatieneAñoIngreso>
+        <ontologies:OntologiaBibliotecatieneCarnet>9121035</ontologies:OntologiaBibliotecatieneCarnet>
+        <ontologies:OntologiaBibliotecatieneCodigoSis>201927241</ontologies:OntologiaBibliotecatieneCodigoSis>
+        <ontologies:OntologiaBibliotecatieneEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">homero123@gmail.com</ontologies:OntologiaBibliotecatieneEmail>
+        <ontologies:OntologiaBibliotecatieneFechaRegistro>02/23/2021</ontologies:OntologiaBibliotecatieneFechaRegistro>
+        <ontologies:OntologiaBibliotecatieneGenero>Masculino</ontologies:OntologiaBibliotecatieneGenero>
+        <ontologies:OntologiaBibliotecatieneNombre>Homero Vidaurre</ontologies:OntologiaBibliotecatieneNombre>
+        <ontologies:OntologiaBibliotecatieneNumeroLector rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</ontologies:OntologiaBibliotecatieneNumeroLector>
+        <ontologies:OntologiaBibliotecatieneTelefono>67182227</ontologies:OntologiaBibliotecatieneTelefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaperBiblioteca003 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaperBiblioteca003">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersonalBiblioteca"/>
+        <ontologies:OntologiaBibliotecatieneCargo>Bibliotecaria</ontologies:OntologiaBibliotecatieneCargo>
+        <ontologies:OntologiaBibliotecatieneCarnet>14567823</ontologies:OntologiaBibliotecatieneCarnet>
+        <ontologies:OntologiaBibliotecatieneDepartamento>Informatica y Sistemas</ontologies:OntologiaBibliotecatieneDepartamento>
+        <ontologies:OntologiaBibliotecatieneEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mariamontecinos@gmail.com</ontologies:OntologiaBibliotecatieneEmail>
+        <ontologies:OntologiaBibliotecatieneEspecializacion>Documentos</ontologies:OntologiaBibliotecatieneEspecializacion>
+        <ontologies:OntologiaBibliotecatieneGenero>Femenino</ontologies:OntologiaBibliotecatieneGenero>
+        <ontologies:OntologiaBibliotecatieneNombre>Maria Montecinos</ontologies:OntologiaBibliotecatieneNombre>
+        <ontologies:OntologiaBibliotecatieneNumeroEmpleado rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</ontologies:OntologiaBibliotecatieneNumeroEmpleado>
+        <ontologies:OntologiaBibliotecatieneTelefono>75688734</ontologies:OntologiaBibliotecatieneTelefono>
+        <ontologies:OntologiaBibliotecatieneTituloAcademico>Licenciado en Informatica</ontologies:OntologiaBibliotecatieneTituloAcademico>
+        <ontologies:OntologiaBibliotecatieneTurno>Tarde</ontologies:OntologiaBibliotecatieneTurno>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaperBiblioteca004 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaperBiblioteca004">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersonalBiblioteca"/>
+        <ontologies:OntologiaBibliotecatieneCargo>Bibliotecaria</ontologies:OntologiaBibliotecatieneCargo>
+        <ontologies:OntologiaBibliotecatieneCarnet>987212</ontologies:OntologiaBibliotecatieneCarnet>
+        <ontologies:OntologiaBibliotecatieneDepartamento>Informática y Sistemas</ontologies:OntologiaBibliotecatieneDepartamento>
+        <ontologies:OntologiaBibliotecatieneEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">floreng@gmail.com</ontologies:OntologiaBibliotecatieneEmail>
+        <ontologies:OntologiaBibliotecatieneEspecializacion>Archivos</ontologies:OntologiaBibliotecatieneEspecializacion>
+        <ontologies:OntologiaBibliotecatieneGenero>Femenino</ontologies:OntologiaBibliotecatieneGenero>
+        <ontologies:OntologiaBibliotecatieneNombre>Florence Gerstel</ontologies:OntologiaBibliotecatieneNombre>
+        <ontologies:OntologiaBibliotecatieneNumeroEmpleado rdf:datatype="http://www.w3.org/2001/XMLSchema#int">8</ontologies:OntologiaBibliotecatieneNumeroEmpleado>
+        <ontologies:OntologiaBibliotecatieneTelefono>73434559</ontologies:OntologiaBibliotecatieneTelefono>
+        <ontologies:OntologiaBibliotecatieneTituloAcademico>Lic. Administrativo</ontologies:OntologiaBibliotecatieneTituloAcademico>
+        <ontologies:OntologiaBibliotecatieneTurno>Noche</ontologies:OntologiaBibliotecatieneTurno>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital005 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital005">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"/>
+        <webprotege:R9ToXPXs2LRtdVnNbP2UgGF>Inteligencia Artificial</webprotege:R9ToXPXs2LRtdVnNbP2UgGF>
+        <ontologies:OntologiaBibliotecaTieneCategoría>PDF</ontologies:OntologiaBibliotecaTieneCategoría>
+        <ontologies:OntologiaBibliotecatieneAreaEstudio>Informatica</ontologies:OntologiaBibliotecatieneAreaEstudio>
+        <ontologies:OntologiaBibliotecatieneAreaEstudio>Sistemas</ontologies:OntologiaBibliotecatieneAreaEstudio>
+        <ontologies:OntologiaBibliotecatieneAutor>Peter Norvig y Stuart J. Russell</ontologies:OntologiaBibliotecatieneAutor>
+        <ontologies:OntologiaBibliotecatieneConfirmacion>Si</ontologies:OntologiaBibliotecatieneConfirmacion>
+        <ontologies:OntologiaBibliotecatieneEnlaceAcceso>https://biblio.edu/libros/1000InteligenciaArtificial.pdf</ontologies:OntologiaBibliotecatieneEnlaceAcceso>
+        <ontologies:OntologiaBibliotecatieneEnlaceDescarga>https://biblio.edu/libros/InteligenciaArtificial.pdf</ontologies:OntologiaBibliotecatieneEnlaceDescarga>
+        <ontologies:OntologiaBibliotecatieneEstado>Acceso Libre</ontologies:OntologiaBibliotecatieneEstado>
+        <ontologies:OntologiaBibliotecatieneFechaPublicacion>14/04/24</ontologies:OntologiaBibliotecatieneFechaPublicacion>
+        <ontologies:OntologiaBibliotecatieneFormato>PDF</ontologies:OntologiaBibliotecatieneFormato>
+        <ontologies:OntologiaBibliotecatieneIdioma>Español</ontologies:OntologiaBibliotecatieneIdioma>
+        <ontologies:OntologiaBibliotecatienePalabraClave>Agente</ontologies:OntologiaBibliotecatienePalabraClave>
+        <ontologies:OntologiaBibliotecatienePalabraClave>Inteligencia artificial</ontologies:OntologiaBibliotecatienePalabraClave>
+        <ontologies:OntologiaBibliotecatieneResumen>Es un texto clave que cubre conceptos fundamentales de la IA, técnicas de aprendizaje, algoritmos de búsqueda y aplicaciones prácticas, además de abordar desafíos éticos y el futuro del campo.</ontologies:OntologiaBibliotecatieneResumen>
+        <ontologies:OntologiaBibliotecatieneTamañoArchivo>500kb</ontologies:OntologiaBibliotecatieneTamañoArchivo>
+        <ontologies:OntologiaBibliotecatieneTitulo>Inteligencia Artificial Un Enfoque Moderno</ontologies:OntologiaBibliotecatieneTitulo>
+        <ontologies:OntologiaBibliotecatieneVersion>v2.0</ontologies:OntologiaBibliotecatieneVersion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital006 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital006">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"/>
+        <webprotege:R9ToXPXs2LRtdVnNbP2UgGF>Estructura de datos</webprotege:R9ToXPXs2LRtdVnNbP2UgGF>
+        <ontologies:OntologiaBibliotecaTieneCategoría>Apuntes</ontologies:OntologiaBibliotecaTieneCategoría>
+        <ontologies:OntologiaBibliotecatieneAreaEstudio>Informatica</ontologies:OntologiaBibliotecatieneAreaEstudio>
+        <ontologies:OntologiaBibliotecatieneEnlaceAcceso>https://biblio.edu/AlgoritmosAvanzados.com</ontologies:OntologiaBibliotecatieneEnlaceAcceso>
+        <ontologies:OntologiaBibliotecatieneEstado>Acceso Libre</ontologies:OntologiaBibliotecatieneEstado>
+        <ontologies:OntologiaBibliotecatieneFechaPublicacion>03/06/2023</ontologies:OntologiaBibliotecatieneFechaPublicacion>
+        <ontologies:OntologiaBibliotecatieneFormato>PDF</ontologies:OntologiaBibliotecatieneFormato>
+        <ontologies:OntologiaBibliotecatieneIdioma>Español</ontologies:OntologiaBibliotecatieneIdioma>
+        <ontologies:OntologiaBibliotecatienePalabraClave>Programación</ontologies:OntologiaBibliotecatienePalabraClave>
+        <ontologies:OntologiaBibliotecatienePalabraClave>Steve Halim</ontologies:OntologiaBibliotecatienePalabraClave>
+        <ontologies:OntologiaBibliotecatieneRecomendacion>Java</ontologies:OntologiaBibliotecatieneRecomendacion>
+        <ontologies:OntologiaBibliotecatieneResumen>Es una guía para mejorar en programación competitiva, cubriendo algoritmos, estructuras de datos y técnicas de resolución de problemas, con ejemplos y estrategias para competiciones.</ontologies:OntologiaBibliotecatieneResumen>
+        <ontologies:OntologiaBibliotecatieneTamañoArchivo>5070kb</ontologies:OntologiaBibliotecatieneTamañoArchivo>
+        <ontologies:OntologiaBibliotecatieneTitulo>Competitive Programming</ontologies:OntologiaBibliotecatieneTitulo>
+        <ontologies:OntologiaBibliotecatieneVersion>v1.0</ontologies:OntologiaBibliotecatieneVersion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital007 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital007">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"/>
+        <webprotege:R9ToXPXs2LRtdVnNbP2UgGF>Introduccion a las redes</webprotege:R9ToXPXs2LRtdVnNbP2UgGF>
+        <ontologies:OntologiaBibliotecaTieneCategoría>Libro</ontologies:OntologiaBibliotecaTieneCategoría>
+        <ontologies:OntologiaBibliotecatieneAreaEstudio>Informatica</ontologies:OntologiaBibliotecatieneAreaEstudio>
+        <ontologies:OntologiaBibliotecatieneAreaEstudio>Sistemas</ontologies:OntologiaBibliotecatieneAreaEstudio>
+        <ontologies:OntologiaBibliotecatieneAutor>Jorge Walter Orellana Araoz</ontologies:OntologiaBibliotecatieneAutor>
+        <ontologies:OntologiaBibliotecatieneEnlaceAcceso>https://drive.google.com/file/d/1RIhBkuYQ2xnjNNUSorYzr8FACMQujG3a/view?hl=es</ontologies:OntologiaBibliotecatieneEnlaceAcceso>
+        <ontologies:OntologiaBibliotecatieneEstado>acceso abierto</ontologies:OntologiaBibliotecatieneEstado>
+        <ontologies:OntologiaBibliotecatieneFechaPublicacion>15/02/2022</ontologies:OntologiaBibliotecatieneFechaPublicacion>
+        <ontologies:OntologiaBibliotecatieneFormato>PDF</ontologies:OntologiaBibliotecatieneFormato>
+        <ontologies:OntologiaBibliotecatieneIdioma>Español</ontologies:OntologiaBibliotecatieneIdioma>
+        <ontologies:OntologiaBibliotecatieneInstitucion>Universidad Mayor de San Simón</ontologies:OntologiaBibliotecatieneInstitucion>
+        <ontologies:OntologiaBibliotecatienePalabraClave>Redes</ontologies:OntologiaBibliotecatienePalabraClave>
+        <ontologies:OntologiaBibliotecatieneRecomendacion>Redes</ontologies:OntologiaBibliotecatieneRecomendacion>
+        <ontologies:OntologiaBibliotecatieneResumen>Libro de redes de 2022</ontologies:OntologiaBibliotecatieneResumen>
+        <ontologies:OntologiaBibliotecatieneTamañoArchivo>13000Kb</ontologies:OntologiaBibliotecatieneTamañoArchivo>
+        <ontologies:OntologiaBibliotecatieneTitulo>Redes Conmutadas</ontologies:OntologiaBibliotecatieneTitulo>
+        <ontologies:OntologiaBibliotecatieneVersion>5.0</ontologies:OntologiaBibliotecatieneVersion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital008 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital008">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"/>
+        <webprotege:R9ToXPXs2LRtdVnNbP2UgGF>Introducción a la programación con Java</webprotege:R9ToXPXs2LRtdVnNbP2UgGF>
+        <ontologies:OntologiaBibliotecaTieneCategoría>Libro</ontologies:OntologiaBibliotecaTieneCategoría>
+        <ontologies:OntologiaBibliotecatieneAutor>Ing. Jesus David Gomez</ontologies:OntologiaBibliotecatieneAutor>
+        <ontologies:OntologiaBibliotecatieneEnlaceAcceso>https://drive.google.com/file/d/1wWyOCQ1oPvEP6GhHu9fqa5kuszMmUum7/view?hl=es</ontologies:OntologiaBibliotecatieneEnlaceAcceso>
+        <ontologies:OntologiaBibliotecatieneEstado>acceso abierto</ontologies:OntologiaBibliotecatieneEstado>
+        <ontologies:OntologiaBibliotecatieneFechaPublicacion>13/04/2020</ontologies:OntologiaBibliotecatieneFechaPublicacion>
+        <ontologies:OntologiaBibliotecatieneFormato>PDF</ontologies:OntologiaBibliotecatieneFormato>
+        <ontologies:OntologiaBibliotecatieneIdioma>Español</ontologies:OntologiaBibliotecatieneIdioma>
+        <ontologies:OntologiaBibliotecatienePalabraClave>Introducción a la programación</ontologies:OntologiaBibliotecatienePalabraClave>
+        <ontologies:OntologiaBibliotecatienePalabraClave>Java</ontologies:OntologiaBibliotecatienePalabraClave>
+        <ontologies:OntologiaBibliotecatieneRecomendacion>Java</ontologies:OntologiaBibliotecatieneRecomendacion>
+        <ontologies:OntologiaBibliotecatieneRecomendacion>Si</ontologies:OntologiaBibliotecatieneRecomendacion>
+        <ontologies:OntologiaBibliotecatieneResumen>Libro de java del 2020</ontologies:OntologiaBibliotecatieneResumen>
+        <ontologies:OntologiaBibliotecatieneTamañoArchivo>6000Kb</ontologies:OntologiaBibliotecatieneTamañoArchivo>
+        <ontologies:OntologiaBibliotecatieneTitulo>Java 2020</ontologies:OntologiaBibliotecatieneTitulo>
+        <ontologies:OntologiaBibliotecatieneVersion>1.0</ontologies:OntologiaBibliotecatieneVersion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital009 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital009">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"/>
+        <webprotege:R9ToXPXs2LRtdVnNbP2UgGF>Programación</webprotege:R9ToXPXs2LRtdVnNbP2UgGF>
+        <ontologies:OntologiaBibliotecaTieneCategoría>Practica</ontologies:OntologiaBibliotecaTieneCategoría>
+        <ontologies:OntologiaBibliotecatieneAutor>Anonimo</ontologies:OntologiaBibliotecatieneAutor>
+        <ontologies:OntologiaBibliotecatieneEnlaceAcceso>https://biblioteca.onu/programacion/algortimosAvanzados.com</ontologies:OntologiaBibliotecatieneEnlaceAcceso>
+        <ontologies:OntologiaBibliotecatieneEstado>Acceso abierto</ontologies:OntologiaBibliotecatieneEstado>
+        <ontologies:OntologiaBibliotecatieneFechaPublicacion>21/02/2022</ontologies:OntologiaBibliotecatieneFechaPublicacion>
+        <ontologies:OntologiaBibliotecatieneFormato>PDF</ontologies:OntologiaBibliotecatieneFormato>
+        <ontologies:OntologiaBibliotecatieneIdioma>Español</ontologies:OntologiaBibliotecatieneIdioma>
+        <ontologies:OntologiaBibliotecatienePalabraClave>Algoritmos avanzados</ontologies:OntologiaBibliotecatienePalabraClave>
+        <ontologies:OntologiaBibliotecatieneResumen>Practica 2do parcial materia algoritmos avanzados</ontologies:OntologiaBibliotecatieneResumen>
+        <ontologies:OntologiaBibliotecatieneTamañoArchivo>20kb</ontologies:OntologiaBibliotecatieneTamañoArchivo>
+        <ontologies:OntologiaBibliotecatieneTitulo>Ejercicios de algoritmos avanzados</ontologies:OntologiaBibliotecatieneTitulo>
+        <ontologies:OntologiaBibliotecatieneVersion>v1.0</ontologies:OntologiaBibliotecatieneVersion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital010">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"/>
+        <webprotege:R9ToXPXs2LRtdVnNbP2UgGF>Programación</webprotege:R9ToXPXs2LRtdVnNbP2UgGF>
+        <ontologies:OntologiaBibliotecaTieneCategoría>Trabajo práctico</ontologies:OntologiaBibliotecaTieneCategoría>
+        <ontologies:OntologiaBibliotecatieneAutor>Anonimo</ontologies:OntologiaBibliotecatieneAutor>
+        <ontologies:OntologiaBibliotecatieneConfirmacion>Si</ontologies:OntologiaBibliotecatieneConfirmacion>
+        <ontologies:OntologiaBibliotecatieneEnlaceAcceso>https://libreria.onu/programacion/practicaAlgoritmosAvanzados.com</ontologies:OntologiaBibliotecatieneEnlaceAcceso>
+        <ontologies:OntologiaBibliotecatieneEnlaceDescarga>https://liblio/programacion/practicaAlgoritmosav.pdf</ontologies:OntologiaBibliotecatieneEnlaceDescarga>
+        <ontologies:OntologiaBibliotecatieneEstado>Acceso abierto</ontologies:OntologiaBibliotecatieneEstado>
+        <ontologies:OntologiaBibliotecatieneFechaPublicacion>12/07/2023</ontologies:OntologiaBibliotecatieneFechaPublicacion>
+        <ontologies:OntologiaBibliotecatieneFormato>DOCX</ontologies:OntologiaBibliotecatieneFormato>
+        <ontologies:OntologiaBibliotecatieneIdioma>Español</ontologies:OntologiaBibliotecatieneIdioma>
+        <ontologies:OntologiaBibliotecatienePalabraClave>Algoritmos avanzados</ontologies:OntologiaBibliotecatienePalabraClave>
+        <ontologies:OntologiaBibliotecatienePalabraClave>Algortimos</ontologies:OntologiaBibliotecatienePalabraClave>
+        <ontologies:OntologiaBibliotecatieneTamañoArchivo>237kb</ontologies:OntologiaBibliotecatieneTamañoArchivo>
+        <ontologies:OntologiaBibliotecatieneTitulo>Practica 3 Algortimos avanzados</ontologies:OntologiaBibliotecatieneTitulo>
+        <ontologies:OntologiaBibliotecatieneVersion>v2.0</ontologies:OntologiaBibliotecatieneVersion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital011 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital011">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"/>
+        <webprotege:R9ToXPXs2LRtdVnNbP2UgGF>Data base</webprotege:R9ToXPXs2LRtdVnNbP2UgGF>
+        <ontologies:OntologiaBibliotecaTieneCategoría>Libro</ontologies:OntologiaBibliotecaTieneCategoría>
+        <ontologies:OntologiaBibliotecatieneAutor>Michael J. Hernandez</ontologies:OntologiaBibliotecatieneAutor>
+        <ontologies:OntologiaBibliotecatieneEstado>Acceso abierto</ontologies:OntologiaBibliotecatieneEstado>
+        <ontologies:OntologiaBibliotecatieneFechaPublicacion>10/10/2023</ontologies:OntologiaBibliotecatieneFechaPublicacion>
+        <ontologies:OntologiaBibliotecatieneFormato>PDF</ontologies:OntologiaBibliotecatieneFormato>
+        <ontologies:OntologiaBibliotecatieneIdioma>Español</ontologies:OntologiaBibliotecatieneIdioma>
+        <ontologies:OntologiaBibliotecatieneIdioma>Ingles</ontologies:OntologiaBibliotecatieneIdioma>
+        <ontologies:OntologiaBibliotecatienePalabraClave>Data Base</ontologies:OntologiaBibliotecatienePalabraClave>
+        <ontologies:OntologiaBibliotecatieneTamañoArchivo>500kb</ontologies:OntologiaBibliotecatieneTamañoArchivo>
+        <ontologies:OntologiaBibliotecatieneTitulo>Database Design for Mere Mortals</ontologies:OntologiaBibliotecatieneTitulo>
+        <ontologies:OntologiaBibliotecatieneVersion>v2.4</ontologies:OntologiaBibliotecatieneVersion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"/>
+        <webprotege:R9ToXPXs2LRtdVnNbP2UgGF>Algorithms</webprotege:R9ToXPXs2LRtdVnNbP2UgGF>
+        <ontologies:OntologiaBibliotecaTieneCategoría>Libro</ontologies:OntologiaBibliotecaTieneCategoría>
+        <ontologies:OntologiaBibliotecatieneAreaEstudio>Informatica</ontologies:OntologiaBibliotecatieneAreaEstudio>
+        <ontologies:OntologiaBibliotecatieneAutor>Tomas M. Corner</ontologies:OntologiaBibliotecatieneAutor>
+        <ontologies:OntologiaBibliotecatieneEnlaceAcceso>https://biblio.edu/algorithms.com</ontologies:OntologiaBibliotecatieneEnlaceAcceso>
+        <ontologies:OntologiaBibliotecatieneEstado>Acceso abierto</ontologies:OntologiaBibliotecatieneEstado>
+        <ontologies:OntologiaBibliotecatieneFechaPublicacion>01/03/2024</ontologies:OntologiaBibliotecatieneFechaPublicacion>
+        <ontologies:OntologiaBibliotecatieneFormato>PDF</ontologies:OntologiaBibliotecatieneFormato>
+        <ontologies:OntologiaBibliotecatieneIdioma>Ingles</ontologies:OntologiaBibliotecatieneIdioma>
+        <ontologies:OntologiaBibliotecatienePalabraClave>Algorithms</ontologies:OntologiaBibliotecatienePalabraClave>
+        <ontologies:OntologiaBibliotecatienePalabraClave>introduction to algorithms</ontologies:OntologiaBibliotecatienePalabraClave>
+        <ontologies:OntologiaBibliotecatieneRecomendacion>Programacion</ontologies:OntologiaBibliotecatieneRecomendacion>
+        <ontologies:OntologiaBibliotecatieneTamañoArchivo>400kb</ontologies:OntologiaBibliotecatieneTamañoArchivo>
+        <ontologies:OntologiaBibliotecatieneTitulo>introduction to algorithms</ontologies:OntologiaBibliotecatieneTitulo>
+        <ontologies:OntologiaBibliotecatieneVersion>v3.0</ontologies:OntologiaBibliotecatieneVersion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital013 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital013">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"/>
+        <webprotege:R9ToXPXs2LRtdVnNbP2UgGF>Redes avanzadas de computadoras</webprotege:R9ToXPXs2LRtdVnNbP2UgGF>
+        <ontologies:OntologiaBibliotecaTieneCategoría>Trabajo práctico</ontologies:OntologiaBibliotecaTieneCategoría>
+        <ontologies:OntologiaBibliotecatieneAutor>Michelle Figueroa</ontologies:OntologiaBibliotecatieneAutor>
+        <ontologies:OntologiaBibliotecatieneEnlaceAcceso>https://biblio.edu/redes/practicaredes.com</ontologies:OntologiaBibliotecatieneEnlaceAcceso>
+        <ontologies:OntologiaBibliotecatieneEstado>Acceso abierto</ontologies:OntologiaBibliotecatieneEstado>
+        <ontologies:OntologiaBibliotecatieneFechaPublicacion>17/03/2024</ontologies:OntologiaBibliotecatieneFechaPublicacion>
+        <ontologies:OntologiaBibliotecatieneFormato>PDF</ontologies:OntologiaBibliotecatieneFormato>
+        <ontologies:OntologiaBibliotecatieneIdioma>Español</ontologies:OntologiaBibliotecatieneIdioma>
+        <ontologies:OntologiaBibliotecatieneInstitucion>Universidad Mayor de San Simón</ontologies:OntologiaBibliotecatieneInstitucion>
+        <ontologies:OntologiaBibliotecatienePalabraClave>Redes</ontologies:OntologiaBibliotecatienePalabraClave>
+        <ontologies:OntologiaBibliotecatienePalabraClave>Redes avanzadas</ontologies:OntologiaBibliotecatienePalabraClave>
+        <ontologies:OntologiaBibliotecatieneResumen>practica 1er parcial de redes avanzadas</ontologies:OntologiaBibliotecatieneResumen>
+        <ontologies:OntologiaBibliotecatieneTamañoArchivo>600kb</ontologies:OntologiaBibliotecatieneTamañoArchivo>
+        <ontologies:OntologiaBibliotecatieneTitulo>Practica 1er parcial redes avanzadas</ontologies:OntologiaBibliotecatieneTitulo>
+        <ontologies:OntologiaBibliotecatieneVersion>v2.0</ontologies:OntologiaBibliotecatieneVersion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital014 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital014">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"/>
+        <webprotege:R9ToXPXs2LRtdVnNbP2UgGF>Ciberseguridad</webprotege:R9ToXPXs2LRtdVnNbP2UgGF>
+        <ontologies:OntologiaBibliotecaTieneCategoría>Libro</ontologies:OntologiaBibliotecaTieneCategoría>
+        <ontologies:OntologiaBibliotecatieneAreaEstudio>Informatica</ontologies:OntologiaBibliotecatieneAreaEstudio>
+        <ontologies:OntologiaBibliotecatieneAreaEstudio>Sistemas</ontologies:OntologiaBibliotecatieneAreaEstudio>
+        <ontologies:OntologiaBibliotecatieneAutor>William Stallings</ontologies:OntologiaBibliotecatieneAutor>
+        <ontologies:OntologiaBibliotecatieneConfirmacion>Si</ontologies:OntologiaBibliotecatieneConfirmacion>
+        <ontologies:OntologiaBibliotecatieneEnlaceAcceso>https://biblio.edu/ciberseguridad1.com</ontologies:OntologiaBibliotecatieneEnlaceAcceso>
+        <ontologies:OntologiaBibliotecatieneEnlaceDescarga>https://biblio.edu/libros/ciberseguridad/computersecurity.pdf</ontologies:OntologiaBibliotecatieneEnlaceDescarga>
+        <ontologies:OntologiaBibliotecatieneEstado>acceso abierto</ontologies:OntologiaBibliotecatieneEstado>
+        <ontologies:OntologiaBibliotecatieneFechaPublicacion>05/04/24</ontologies:OntologiaBibliotecatieneFechaPublicacion>
+        <ontologies:OntologiaBibliotecatieneFormato>PDF</ontologies:OntologiaBibliotecatieneFormato>
+        <ontologies:OntologiaBibliotecatieneNivelAcademico>Posgrado</ontologies:OntologiaBibliotecatieneNivelAcademico>
+        <ontologies:OntologiaBibliotecatienePalabraClave>Ciberseguridad</ontologies:OntologiaBibliotecatienePalabraClave>
+        <ontologies:OntologiaBibliotecatieneResumen>Este texto abarca los principios y las prácticas fundamentales en seguridad informática, ideal para estudiantes de posgrado</ontologies:OntologiaBibliotecatieneResumen>
+        <ontologies:OntologiaBibliotecatieneTamañoArchivo>668kb</ontologies:OntologiaBibliotecatieneTamañoArchivo>
+        <ontologies:OntologiaBibliotecatieneTitulo>Computer Security: Principles and Practice</ontologies:OntologiaBibliotecatieneTitulo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital015 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital015">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"/>
+        <webprotege:R9ToXPXs2LRtdVnNbP2UgGF>Programacion en Java</webprotege:R9ToXPXs2LRtdVnNbP2UgGF>
+        <ontologies:OntologiaBibliotecaTieneCategoría>Libro</ontologies:OntologiaBibliotecaTieneCategoría>
+        <ontologies:OntologiaBibliotecatieneAreaEstudio>Informatica</ontologies:OntologiaBibliotecatieneAreaEstudio>
+        <ontologies:OntologiaBibliotecatieneAreaEstudio>Sistemas</ontologies:OntologiaBibliotecatieneAreaEstudio>
+        <ontologies:OntologiaBibliotecatieneAutor>Herbert Schildt</ontologies:OntologiaBibliotecatieneAutor>
+        <ontologies:OntologiaBibliotecatieneConfirmacion>Si</ontologies:OntologiaBibliotecatieneConfirmacion>
+        <ontologies:OntologiaBibliotecatieneEnlaceAcceso>https://biblio.edu/libros/java/javadescarga.pdf</ontologies:OntologiaBibliotecatieneEnlaceAcceso>
+        <ontologies:OntologiaBibliotecatieneEnlaceDescarga>https://biblio.edu/libros/java/javabeginnersguide.pdf</ontologies:OntologiaBibliotecatieneEnlaceDescarga>
+        <ontologies:OntologiaBibliotecatieneEstado>acceso abierto</ontologies:OntologiaBibliotecatieneEstado>
+        <ontologies:OntologiaBibliotecatieneFechaPublicacion>02/04/23</ontologies:OntologiaBibliotecatieneFechaPublicacion>
+        <ontologies:OntologiaBibliotecatieneFormato>PDF</ontologies:OntologiaBibliotecatieneFormato>
+        <ontologies:OntologiaBibliotecatieneIdioma>Ingles</ontologies:OntologiaBibliotecatieneIdioma>
+        <ontologies:OntologiaBibliotecatienePalabraClave>Java</ontologies:OntologiaBibliotecatienePalabraClave>
+        <ontologies:OntologiaBibliotecatieneRecomendacion>Java</ontologies:OntologiaBibliotecatieneRecomendacion>
+        <ontologies:OntologiaBibliotecatieneResumen>El libro aborda conceptos clave de la programación orientada a objetos</ontologies:OntologiaBibliotecatieneResumen>
+        <ontologies:OntologiaBibliotecatieneTamañoArchivo>5000Kb</ontologies:OntologiaBibliotecatieneTamañoArchivo>
+        <ontologies:OntologiaBibliotecatieneTitulo>Java: A Beginner&apos;s Guide</ontologies:OntologiaBibliotecatieneTitulo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital016">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"/>
+        <webprotege:R9ToXPXs2LRtdVnNbP2UgGF>Metodologias Agiles</webprotege:R9ToXPXs2LRtdVnNbP2UgGF>
+        <ontologies:OntologiaBibliotecaTieneCategoría>Libro</ontologies:OntologiaBibliotecaTieneCategoría>
+        <ontologies:OntologiaBibliotecatieneAutor>Mike Cohn</ontologies:OntologiaBibliotecatieneAutor>
+        <ontologies:OntologiaBibliotecatieneConfirmacion>Si</ontologies:OntologiaBibliotecatieneConfirmacion>
+        <ontologies:OntologiaBibliotecatieneEnlaceAcceso>https://biblio.edu/libros/agile/agileestimating.pdf</ontologies:OntologiaBibliotecatieneEnlaceAcceso>
+        <ontologies:OntologiaBibliotecatieneEnlaceDescarga>https://biblio.edu/libros/agile/agileplanning.pdf</ontologies:OntologiaBibliotecatieneEnlaceDescarga>
+        <ontologies:OntologiaBibliotecatieneEstado>acceso abierto</ontologies:OntologiaBibliotecatieneEstado>
+        <ontologies:OntologiaBibliotecatieneFechaPublicacion>15/05/20</ontologies:OntologiaBibliotecatieneFechaPublicacion>
+        <ontologies:OntologiaBibliotecatieneFormato>PDF</ontologies:OntologiaBibliotecatieneFormato>
+        <ontologies:OntologiaBibliotecatieneIdioma>Ingles</ontologies:OntologiaBibliotecatieneIdioma>
+        <ontologies:OntologiaBibliotecatieneNivelAcademico>pregrado</ontologies:OntologiaBibliotecatieneNivelAcademico>
+        <ontologies:OntologiaBibliotecatienePalabraClave>Metodologia</ontologies:OntologiaBibliotecatienePalabraClave>
+        <ontologies:OntologiaBibliotecatieneRecomendacion>Metodologias Agiles</ontologies:OntologiaBibliotecatieneRecomendacion>
+        <ontologies:OntologiaBibliotecatieneResumen>El libro proporciona herramientas y técnicas para estimar y planificar proyectos en entornos ágiles.</ontologies:OntologiaBibliotecatieneResumen>
+        <ontologies:OntologiaBibliotecatieneTamañoArchivo>3000Kb</ontologies:OntologiaBibliotecatieneTamañoArchivo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital017 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital017">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"/>
+        <webprotege:R9ToXPXs2LRtdVnNbP2UgGF>Desarrollo web</webprotege:R9ToXPXs2LRtdVnNbP2UgGF>
+        <ontologies:OntologiaBibliotecaTieneCategoría>Libro</ontologies:OntologiaBibliotecaTieneCategoría>
+        <ontologies:OntologiaBibliotecatieneAutor>Mike Fong</ontologies:OntologiaBibliotecatieneAutor>
+        <ontologies:OntologiaBibliotecatieneConfirmacion>Sí</ontologies:OntologiaBibliotecatieneConfirmacion>
+        <ontologies:OntologiaBibliotecatieneEnlaceAcceso>https://www.misitio.com/recursos/desarrollo-web-guia-avanzada.pdf</ontologies:OntologiaBibliotecatieneEnlaceAcceso>
+        <ontologies:OntologiaBibliotecatieneEnlaceDescarga>https://www.misitio.com/descargas/desarrollo-web-guia-dooms.pdf</ontologies:OntologiaBibliotecatieneEnlaceDescarga>
+        <ontologies:OntologiaBibliotecatieneEstado>acceso abierto</ontologies:OntologiaBibliotecatieneEstado>
+        <ontologies:OntologiaBibliotecatieneFechaPublicacion>10/10/2012</ontologies:OntologiaBibliotecatieneFechaPublicacion>
+        <ontologies:OntologiaBibliotecatieneFormato>PDF</ontologies:OntologiaBibliotecatieneFormato>
+        <ontologies:OntologiaBibliotecatieneIdioma>Español</ontologies:OntologiaBibliotecatieneIdioma>
+        <ontologies:OntologiaBibliotecatieneNivelAcademico>Principiantes</ontologies:OntologiaBibliotecatieneNivelAcademico>
+        <ontologies:OntologiaBibliotecatienePalabraClave>Web</ontologies:OntologiaBibliotecatienePalabraClave>
+        <ontologies:OntologiaBibliotecatieneRecomendacion>Desarrollo web</ontologies:OntologiaBibliotecatieneRecomendacion>
+        <ontologies:OntologiaBibliotecatieneResumen>Guía para principiantes que se quieran meter al mundo del desarrollo web.</ontologies:OntologiaBibliotecatieneResumen>
+        <ontologies:OntologiaBibliotecatieneTamañoArchivo>5400 Kb</ontologies:OntologiaBibliotecatieneTamañoArchivo>
+        <ontologies:OntologiaBibliotecatieneTitulo>Desarrollo web para dooms</ontologies:OntologiaBibliotecatieneTitulo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital018 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital018">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"/>
+        <webprotege:R9ToXPXs2LRtdVnNbP2UgGF>Aplicación de Sistemas Operativos</webprotege:R9ToXPXs2LRtdVnNbP2UgGF>
+        <ontologies:OntologiaBibliotecaTieneCategoría>Trabajo práctico</ontologies:OntologiaBibliotecaTieneCategoría>
+        <ontologies:OntologiaBibliotecatieneAutor>Grover Cussi</ontologies:OntologiaBibliotecatieneAutor>
+        <ontologies:OntologiaBibliotecatieneEnlaceAcceso>https://www.umss-aso.com/libros/asopractica.doc</ontologies:OntologiaBibliotecatieneEnlaceAcceso>
+        <ontologies:OntologiaBibliotecatieneEnlaceDescarga>https://www.umss-aso.com/download/asopractica.doc</ontologies:OntologiaBibliotecatieneEnlaceDescarga>
+        <ontologies:OntologiaBibliotecatieneEstado>acceso abierto</ontologies:OntologiaBibliotecatieneEstado>
+        <ontologies:OntologiaBibliotecatieneFormato>doc</ontologies:OntologiaBibliotecatieneFormato>
+        <ontologies:OntologiaBibliotecatieneIdioma>Quechua</ontologies:OntologiaBibliotecatieneIdioma>
+        <ontologies:OntologiaBibliotecatienePalabraClave>sistemas</ontologies:OntologiaBibliotecatienePalabraClave>
+        <ontologies:OntologiaBibliotecatieneTamañoArchivo>2500Kb</ontologies:OntologiaBibliotecatieneTamañoArchivo>
+        <ontologies:OntologiaBibliotecatieneTitulo>Aprendiendo de Aplicación de Sistemas Operativos</ontologies:OntologiaBibliotecatieneTitulo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital019 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital019">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"/>
+        <webprotege:R9ToXPXs2LRtdVnNbP2UgGF>Aplicación de Sistemas Operativos</webprotege:R9ToXPXs2LRtdVnNbP2UgGF>
+        <ontologies:OntologiaBibliotecaTieneCategoría>Trabajo práctico</ontologies:OntologiaBibliotecaTieneCategoría>
+        <ontologies:OntologiaBibliotecatieneAutor>Frank Paco</ontologies:OntologiaBibliotecatieneAutor>
+        <ontologies:OntologiaBibliotecatieneEnlaceDescarga>https://www.harvardfake.com/descarga/asopractice.pdf</ontologies:OntologiaBibliotecatieneEnlaceDescarga>
+        <ontologies:OntologiaBibliotecatieneEnlaceDescarga>https://www.harvardfake.com/libros/asopractice.pdf</ontologies:OntologiaBibliotecatieneEnlaceDescarga>
+        <ontologies:OntologiaBibliotecatieneFormato>PDF</ontologies:OntologiaBibliotecatieneFormato>
+        <ontologies:OntologiaBibliotecatieneIdioma>Inglés</ontologies:OntologiaBibliotecatieneIdioma>
+        <ontologies:OntologiaBibliotecatienePalabraClave>operativos</ontologies:OntologiaBibliotecatienePalabraClave>
+        <ontologies:OntologiaBibliotecatieneTamañoArchivo>3200Kb</ontologies:OntologiaBibliotecatieneTamañoArchivo>
+        <ontologies:OntologiaBibliotecatieneTitulo>Práctica para dominar el sistema operativo de Red Hat</ontologies:OntologiaBibliotecatieneTitulo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital020 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital020">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"/>
+        <webprotege:R9ToXPXs2LRtdVnNbP2UgGF>Taller de Sistemas Operativos</webprotege:R9ToXPXs2LRtdVnNbP2UgGF>
+        <ontologies:OntologiaBibliotecaTieneCategoría>Examen pasado</ontologies:OntologiaBibliotecaTieneCategoría>
+        <ontologies:OntologiaBibliotecatieneAutor>Jhoan Perredo</ontologies:OntologiaBibliotecatieneAutor>
+        <ontologies:OntologiaBibliotecatieneEnlaceAcceso>https://www/practicas.com/recursos/taller-so.pdf</ontologies:OntologiaBibliotecatieneEnlaceAcceso>
+        <ontologies:OntologiaBibliotecatieneEnlaceDescarga>https://www/practicas.com/descarga/taller-so.pdf</ontologies:OntologiaBibliotecatieneEnlaceDescarga>
+        <ontologies:OntologiaBibliotecatieneEstado>acceso abierto</ontologies:OntologiaBibliotecatieneEstado>
+        <ontologies:OntologiaBibliotecatieneFechaPublicacion>12/09/2002</ontologies:OntologiaBibliotecatieneFechaPublicacion>
+        <ontologies:OntologiaBibliotecatieneIdioma>Español</ontologies:OntologiaBibliotecatieneIdioma>
+        <ontologies:OntologiaBibliotecatieneInstitucion>Universidad Mayor de San Simón</ontologies:OntologiaBibliotecatieneInstitucion>
+        <ontologies:OntologiaBibliotecatieneNivelAcademico>Principiante</ontologies:OntologiaBibliotecatieneNivelAcademico>
+        <ontologies:OntologiaBibliotecatienePalabraClave>taller</ontologies:OntologiaBibliotecatienePalabraClave>
+        <ontologies:OntologiaBibliotecatieneResumen>Examen pasado de Taller de Sistemas Operativos del semestres 2-2021</ontologies:OntologiaBibliotecatieneResumen>
+        <ontologies:OntologiaBibliotecatieneTamañoArchivo>2000Kb</ontologies:OntologiaBibliotecatieneTamañoArchivo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital021 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital021">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"/>
+        <webprotege:R9ToXPXs2LRtdVnNbP2UgGF>Taller de Sistemas Operativos</webprotege:R9ToXPXs2LRtdVnNbP2UgGF>
+        <ontologies:OntologiaBibliotecaTieneCategoría>Examen pasado</ontologies:OntologiaBibliotecaTieneCategoría>
+        <ontologies:OntologiaBibliotecatieneAutor>Mike Folks</ontologies:OntologiaBibliotecatieneAutor>
+        <ontologies:OntologiaBibliotecatieneEnlaceAcceso>https://www.harvard.com/recursos/os.pdf</ontologies:OntologiaBibliotecatieneEnlaceAcceso>
+        <ontologies:OntologiaBibliotecatieneEnlaceDescarga>https://www/harvard.com/download/taller-so.pdf</ontologies:OntologiaBibliotecatieneEnlaceDescarga>
+        <ontologies:OntologiaBibliotecatieneEstado>acceso abierto</ontologies:OntologiaBibliotecatieneEstado>
+        <ontologies:OntologiaBibliotecatieneFechaPublicacion>15/12/2001</ontologies:OntologiaBibliotecatieneFechaPublicacion>
+        <ontologies:OntologiaBibliotecatieneIdioma>Inglés</ontologies:OntologiaBibliotecatieneIdioma>
+        <ontologies:OntologiaBibliotecatieneInstitucion>Harvard</ontologies:OntologiaBibliotecatieneInstitucion>
+        <ontologies:OntologiaBibliotecatieneNivelAcademico>Principiante</ontologies:OntologiaBibliotecatieneNivelAcademico>
+        <ontologies:OntologiaBibliotecatienePalabraClave>sistemas</ontologies:OntologiaBibliotecatienePalabraClave>
+        <ontologies:OntologiaBibliotecatieneResumen>Test of  2-2021</ontologies:OntologiaBibliotecatieneResumen>
+        <ontologies:OntologiaBibliotecatieneTamañoArchivo>3100Kb</ontologies:OntologiaBibliotecatieneTamañoArchivo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital022 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital022">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"/>
+        <webprotege:R9ToXPXs2LRtdVnNbP2UgGF>Desarrollo de software con calidad</webprotege:R9ToXPXs2LRtdVnNbP2UgGF>
+        <ontologies:OntologiaBibliotecaTieneCategoría>Libro</ontologies:OntologiaBibliotecaTieneCategoría>
+        <ontologies:OntologiaBibliotecatieneAutor>Roger S. Pressman</ontologies:OntologiaBibliotecatieneAutor>
+        <ontologies:OntologiaBibliotecatieneEnlaceAcceso>https://www.javier8a.com/itc/bd1/ld-Ingenieria.de.software.enfoque.practico.7ed.Pressman.PDF</ontologies:OntologiaBibliotecatieneEnlaceAcceso>
+        <ontologies:OntologiaBibliotecatieneEstado>acceso abierto</ontologies:OntologiaBibliotecatieneEstado>
+        <ontologies:OntologiaBibliotecatieneFechaPublicacion>04/03/2010</ontologies:OntologiaBibliotecatieneFechaPublicacion>
+        <ontologies:OntologiaBibliotecatieneHorarioDisponibilidad>Español</ontologies:OntologiaBibliotecatieneHorarioDisponibilidad>
+        <ontologies:OntologiaBibliotecatienePalabraClave>Ingeniería de Software</ontologies:OntologiaBibliotecatienePalabraClave>
+        <ontologies:OntologiaBibliotecatieneResumen>Proceso de desarrollo de software por metodologias</ontologies:OntologiaBibliotecatieneResumen>
+        <ontologies:OntologiaBibliotecatieneTamañoArchivo>665kb</ontologies:OntologiaBibliotecatieneTamañoArchivo>
+        <ontologies:OntologiaBibliotecatieneTituloAcademico>Ingenieria de Software</ontologies:OntologiaBibliotecatieneTituloAcademico>
+        <ontologies:OntologiaBibliotecatieneVersion>7.0</ontologies:OntologiaBibliotecatieneVersion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecFisico01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecFisico01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaFisico"/>
+        <webprotege:R9ToXPXs2LRtdVnNbP2UgGF>Programación</webprotege:R9ToXPXs2LRtdVnNbP2UgGF>
+        <ontologies:OntologiaBibliotecaTieneCategoría>Libro</ontologies:OntologiaBibliotecaTieneCategoría>
+        <ontologies:OntologiaBibliotecatieneAutor>Sebastián Ossandón</ontologies:OntologiaBibliotecatieneAutor>
+        <ontologies:OntologiaBibliotecatieneAñoPublicacion rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2019</ontologies:OntologiaBibliotecatieneAñoPublicacion>
+        <ontologies:OntologiaBibliotecatieneEstado>acceso abierto</ontologies:OntologiaBibliotecatieneEstado>
+        <ontologies:OntologiaBibliotecatieneISBN>8793-26-38</ontologies:OntologiaBibliotecatieneISBN>
+        <ontologies:OntologiaBibliotecatieneIdioma>Español</ontologies:OntologiaBibliotecatieneIdioma>
+        <ontologies:OntologiaBibliotecatieneNumerodeEjemplares rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</ontologies:OntologiaBibliotecatieneNumerodeEjemplares>
+        <ontologies:OntologiaBibliotecatieneNumerodeEstante>2-B</ontologies:OntologiaBibliotecatieneNumerodeEstante>
+        <ontologies:OntologiaBibliotecatienePalabraClave>Algoritmo</ontologies:OntologiaBibliotecatienePalabraClave>
+        <ontologies:OntologiaBibliotecatienePalabraClave>Algoritmos avanzados</ontologies:OntologiaBibliotecatienePalabraClave>
+        <ontologies:OntologiaBibliotecatieneResumen>Este documento compara diferentes funciones de complejidad de tiempo de algoritmos. Aunque las funciones tienen tiempos de ejecución similares para valores pequeños de n, los tiempos cambian significativamente a medida que n aumenta, lo que significa que el algoritmo apropiado depende del tamaño de la entrada</ontologies:OntologiaBibliotecatieneResumen>
+        <ontologies:OntologiaBibliotecatieneTitulo>Algoritmos avanzados</ontologies:OntologiaBibliotecatieneTitulo>
+        <ontologies:OntologiaBibliotecatieneVersion>v3.0</ontologies:OntologiaBibliotecatieneVersion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecasala003 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecasala003">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/R9JttmJ5oSIjMe4WwJq7KGj"/>
+        <ontologies:OntologiaBibliotecatieneCapacidad rdf:datatype="http://www.w3.org/2001/XMLSchema#int">50</ontologies:OntologiaBibliotecatieneCapacidad>
+        <ontologies:OntologiaBibliotecatieneHorarioDisponibilidad>8:30-16:00</ontologies:OntologiaBibliotecatieneHorarioDisponibilidad>
+        <ontologies:OntologiaBibliotecatieneNombreAmbiente>Sala de Lectura</ontologies:OntologiaBibliotecatieneNombreAmbiente>
+        <ontologies:OntologiaBibliotecatieneReglaUso>Hablar en voz baja, por favor.</ontologies:OntologiaBibliotecatieneReglaUso>
+        <ontologies:OntologiaBibliotecatieneUbicación>Planta baja de la biblioteca</ontologies:OntologiaBibliotecatieneUbicación>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecasala004 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecasala004">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/R9JttmJ5oSIjMe4WwJq7KGj"/>
+        <ontologies:OntologiaBibliotecatieneCapacidad rdf:datatype="http://www.w3.org/2001/XMLSchema#int">15</ontologies:OntologiaBibliotecatieneCapacidad>
+        <ontologies:OntologiaBibliotecatieneHorarioDisponibilidad>09:00 - 18:00</ontologies:OntologiaBibliotecatieneHorarioDisponibilidad>
+        <ontologies:OntologiaBibliotecatieneNombreAmbiente>Sala de reuniones</ontologies:OntologiaBibliotecatieneNombreAmbiente>
+        <ontologies:OntologiaBibliotecatieneReglaUso>Haber realizado una reserva previa</ontologies:OntologiaBibliotecatieneReglaUso>
+        <ontologies:OntologiaBibliotecatieneUbicación>Primer piso al lado izquierdo de las gradas</ontologies:OntologiaBibliotecatieneUbicación>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecasala005 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecasala005">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/R9JttmJ5oSIjMe4WwJq7KGj"/>
+        <ontologies:OntologiaBibliotecatieneCapacidad rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</ontologies:OntologiaBibliotecatieneCapacidad>
+        <ontologies:OntologiaBibliotecatieneHorarioDisponibilidad>08:00 - 19:00</ontologies:OntologiaBibliotecatieneHorarioDisponibilidad>
+        <ontologies:OntologiaBibliotecatieneNombreAmbiente>Sala de préstamos</ontologies:OntologiaBibliotecatieneNombreAmbiente>
+        <ontologies:OntologiaBibliotecatieneReglaUso>Portar carnet universitario para el préstamo de libros</ontologies:OntologiaBibliotecatieneReglaUso>
+        <ontologies:OntologiaBibliotecatieneUbicación>Planta Baja</ontologies:OntologiaBibliotecatieneUbicación>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

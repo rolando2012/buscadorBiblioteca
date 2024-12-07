@@ -49,7 +49,8 @@ def details(instance):
     }} 
     """ 
     results = graph.query(sparql_query) 
-    return render_template('details.html', instance=instance, results=results)
+    simplified_results = [(str(row.predicate).split("/")[-1], row.object) for row in results]
+    return render_template('details.html', instance=instance, results=simplified_results)
 
 if __name__ == '__main__':
     app.run(debug=True)

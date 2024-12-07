@@ -26,7 +26,9 @@ def search():
     }}
     """
     results = g.query(sparql_query)
-    return render_template('results.html', results=results)
+    # Extraer solo la parte final de las URLs 
+    simplified_results = [str(row.subject).split("/")[-1] for row in results]
+    return render_template('results.html', results=simplified_results)
 
 if __name__ == '__main__':
     app.run(debug=True)

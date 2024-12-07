@@ -8,8 +8,8 @@
 <body>
     <h1>Resultados de la Búsqueda</h1>
     <ul>
-        {% for row in results %}
-            <li>{{ row.subject }} {{ row.predicate }} {{ row.object }}</li>
+        {% for result in results %}
+            <li>{{ result }}</li>
         {% endfor %}
     </ul>
     <a href="/">Volver</a>

@@ -19,12 +19,11 @@ def search():
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
-    SELECT ?subject ?predicate ?object
+    SELECT DISTINCT ?subject 
     WHERE {{
         ?subject ?predicate ?object .
         FILTER (regex(str(?subject), "{query}", "i") || regex(str(?object), "{query}", "i"))
     }}
-    LIMIT 10
     """
     results = g.query(sparql_query)
     return render_template('results.html', results=results)

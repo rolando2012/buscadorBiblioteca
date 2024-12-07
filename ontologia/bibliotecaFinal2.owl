@@ -1,0 +1,1515 @@
+@prefix : <http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca> .
+
+<http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#administraLa
+:administraLa rdf:type owl:ObjectProperty ;
+              rdfs:domain :PersonalBiblioteca ;
+              rdfs:range :Biblioteca .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#descarga
+:descarga rdf:type owl:ObjectProperty ;
+          rdfs:domain :Docente ,
+                      :Estudiante ;
+          rdfs:range :RecursoAcademico .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#perteneceA
+:perteneceA rdf:type owl:ObjectProperty ;
+            rdfs:domain :Colaborador ;
+            rdfs:range :CentroInvestigacion .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#posee
+:posee rdf:type owl:ObjectProperty ;
+       rdfs:domain :Carrera ;
+       rdfs:range :Ambientes .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#publica
+:publica rdf:type owl:ObjectProperty ;
+         rdfs:domain :Colaborador ,
+                     :PersonalBiblioteca ;
+         rdfs:range :RecursoAcademico .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#quita
+:quita rdf:type owl:ObjectProperty ;
+       rdfs:domain :Colaborador ,
+                   :PersonalBiblioteca ;
+       rdfs:range :RecursoAcademico .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#seInformaEn
+:seInformaEn rdf:type owl:ObjectProperty ;
+             rdfs:domain :Docente ,
+                         :Estudiante ;
+             rdfs:range :Biblioteca .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#solicitaSubir
+:solicitaSubir rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdfs:domain :Docente ,
+                           :Estudiante ;
+               rdfs:range :RecursoAcademico .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tiene
+:tiene rdf:type owl:ObjectProperty ;
+       rdfs:domain :Biblioteca ;
+       rdfs:range :RecursoAcademico .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneDiferentes
+:tieneDiferentes rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty ;
+                 rdfs:domain :Biblioteca ;
+                 rdfs:range <http://webprotege.stanford.edu/R9JttmJ5oSIjMe4WwJq7KGj> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF
+<http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF> rdf:type owl:DatatypeProperty ;
+                                                         rdfs:subPropertyOf owl:topDataProperty ;
+                                                         rdfs:domain :RecursoAcademico ;
+                                                         rdfs:range xsd:string ;
+                                                         rdfs:label "tieneTema" .
+
+
+###  http://webprotege.stanford.edu/RBOhMIpsFZmn9JCeGXA9k6d
+<http://webprotege.stanford.edu/RBOhMIpsFZmn9JCeGXA9k6d> rdf:type owl:DatatypeProperty ;
+                                                         rdfs:subPropertyOf owl:topDataProperty ;
+                                                         rdfs:domain :Ambientes ;
+                                                         rdfs:range xsd:int ;
+                                                         rdfs:label "tieneCodigoAmbiente" .
+
+
+###  http://webprotege.stanford.edu/RCvb4sKjUwYIuuewGQUK495
+<http://webprotege.stanford.edu/RCvb4sKjUwYIuuewGQUK495> rdf:type owl:DatatypeProperty ;
+                                                         rdfs:label "isbn" .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#TieneCategoría
+:TieneCategoría rdf:type owl:DatatypeProperty ;
+                rdfs:domain :RecursoAcademico ;
+                rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneAreaColaboracion
+:tieneAreaColaboracion rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :Colaborador ;
+                       rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneAreaEstudio
+:tieneAreaEstudio rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :RecursoAcademico ;
+                  rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneAreaInvestigacion
+:tieneAreaInvestigacion rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :CentroInvestigacion ;
+                        rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneAutor
+:tieneAutor rdf:type owl:DatatypeProperty ;
+            rdfs:domain :RecursoAcademico ;
+            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneAñoIngreso
+:tieneAñoIngreso rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Estudiante ;
+                 rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneAñoIngresoDocente
+:tieneAñoIngresoDocente rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :Docente ;
+                        rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneAñoPublicacion
+:tieneAñoPublicacion rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :Fisico ;
+                     rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneCantidadVisualizaciones
+:tieneCantidadVisualizaciones rdf:type owl:DatatypeProperty ;
+                              rdfs:domain :Digital ;
+                              rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneCapacidad
+:tieneCapacidad rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Ambientes ;
+                rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneCargo
+:tieneCargo rdf:type owl:DatatypeProperty ;
+            rdfs:domain :PersonalBiblioteca ;
+            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneCarnet
+:tieneCarnet rdf:type owl:DatatypeProperty ,
+                      owl:FunctionalProperty ;
+             rdfs:domain :Persona ;
+             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneCodigoCarrera
+:tieneCodigoCarrera rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Carrera ;
+                    rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneCodigoSis
+:tieneCodigoSis rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Estudiante ;
+                rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneConfirmacion
+:tieneConfirmacion rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf :tieneEnlaceDescarga ;
+                   rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneDepartamento
+:tieneDepartamento rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :PersonalAcademico ;
+                   rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneDescipcionCentroInv
+:tieneDescipcionCentroInv rdf:type owl:DatatypeProperty ;
+                          rdfs:domain :CentroInvestigacion ;
+                          rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneEmail
+:tieneEmail rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Persona ;
+            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneEnlaceAcceso
+:tieneEnlaceAcceso rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Digital ;
+                   rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneEnlaceDescarga
+:tieneEnlaceDescarga rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :RecursoAcademico .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneEspecializacion
+:tieneEspecializacion rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :PersonalBiblioteca ;
+                      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneEstado
+:tieneEstado rdf:type owl:DatatypeProperty ;
+             rdfs:domain :RecursoAcademico ;
+             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneFechaInicioColaboracion
+:tieneFechaInicioColaboracion rdf:type owl:DatatypeProperty ;
+                              rdfs:domain :Colaborador ;
+                              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneFechaPublicacion
+:tieneFechaPublicacion rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :RecursoAcademico ;
+                       rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneFechaRegistro
+:tieneFechaRegistro rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Lector ;
+                    rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneFormato
+:tieneFormato rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :tieneFechaRegistro ;
+              rdfs:domain :Digital ;
+              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneGenero
+:tieneGenero rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Persona ;
+             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneHorarioDisponibilidad
+:tieneHorarioDisponibilidad rdf:type owl:DatatypeProperty ;
+                            rdfs:domain :Ambientes ;
+                            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneISBN
+:tieneISBN rdf:type owl:DatatypeProperty ;
+           rdfs:domain :RecursoAcademico ;
+           rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneIdioma
+:tieneIdioma rdf:type owl:DatatypeProperty ;
+             rdfs:domain :RecursoAcademico ;
+             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneInstitucion
+:tieneInstitucion rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneNivelAcademico
+:tieneNivelAcademico rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :RecursoAcademico ;
+                     rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneNombre
+:tieneNombre rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Persona ;
+             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneNombreAmbiente
+:tieneNombreAmbiente rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :Ambientes ;
+                     rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneNombreCarrera
+:tieneNombreCarrera rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Carrera ;
+                    rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneNormas
+:tieneNormas rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Biblioteca ;
+             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneNumeroColaborador
+:tieneNumeroColaborador rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :Colaborador ;
+                        rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneNumeroEmpleado
+:tieneNumeroEmpleado rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :PersonalAcademico ;
+                     rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneNumeroLector
+:tieneNumeroLector rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Lector ;
+                   rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneNumerodeEjemplares
+:tieneNumerodeEjemplares rdf:type owl:DatatypeProperty ;
+                         rdfs:domain :Fisico ;
+                         rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneNumerodeEstante
+:tieneNumerodeEstante rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :Fisico ;
+                      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneNumerodeSalas
+:tieneNumerodeSalas rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain :Biblioteca ;
+                    rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tienePalabraClave
+:tienePalabraClave rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :RecursoAcademico ;
+                   rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneRecomendacion
+:tieneRecomendacion rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :RecursoAcademico ;
+                    rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneReglaUso
+:tieneReglaUso rdf:type owl:DatatypeProperty ;
+               rdfs:domain <http://webprotege.stanford.edu/R9JttmJ5oSIjMe4WwJq7KGj> ;
+               rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneResumen
+:tieneResumen rdf:type owl:DatatypeProperty ;
+              rdfs:domain :RecursoAcademico ;
+              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneTamañoArchivo
+:tieneTamañoArchivo rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Digital ;
+                    rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneTelefono
+:tieneTelefono rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Persona ;
+               rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneTitulo
+:tieneTitulo rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf <http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF> ;
+             rdfs:domain :RecursoAcademico ;
+             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneTituloAcademico
+:tieneTituloAcademico rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :PersonalAcademico ;
+                      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneTurno
+:tieneTurno rdf:type owl:DatatypeProperty ;
+            rdfs:domain :PersonalBiblioteca ;
+            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneUbicación
+:tieneUbicación rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Ambientes ;
+                rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#tieneVersion
+:tieneVersion rdf:type owl:DatatypeProperty ;
+              rdfs:domain :RecursoAcademico ;
+              rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://webprotege.stanford.edu/R9JttmJ5oSIjMe4WwJq7KGj
+<http://webprotege.stanford.edu/R9JttmJ5oSIjMe4WwJq7KGj> rdf:type owl:Class ;
+                                                         rdfs:subClassOf :Ambientes ;
+                                                         rdfs:label "Sala" .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#Ambientes
+:Ambientes rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#Biblioteca
+:Biblioteca rdf:type owl:Class ;
+            rdfs:subClassOf :Ambientes .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#Carrera
+:Carrera rdf:type owl:Class ;
+         rdfs:subClassOf owl:Thing .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#CentroInvestigacion
+:CentroInvestigacion rdf:type owl:Class ;
+                     rdfs:subClassOf :Ambientes .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#Colaborador
+:Colaborador rdf:type owl:Class ;
+             rdfs:subClassOf :Estudiante .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#Digital
+:Digital rdf:type owl:Class ;
+         rdfs:subClassOf :RecursoAcademico .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#Docente
+:Docente rdf:type owl:Class ;
+         rdfs:subClassOf :PersonalAcademico .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#Estudiante
+:Estudiante rdf:type owl:Class ;
+            rdfs:subClassOf :Persona .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#Fisico
+:Fisico rdf:type owl:Class ;
+        rdfs:subClassOf :RecursoAcademico .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#Lector
+:Lector rdf:type owl:Class ;
+        rdfs:subClassOf :Estudiante .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#Persona
+:Persona rdf:type owl:Class ;
+         rdfs:subClassOf owl:Thing .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#PersonalAcademico
+:PersonalAcademico rdf:type owl:Class ;
+                   rdfs:subClassOf :Persona .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#PersonalBiblioteca
+:PersonalBiblioteca rdf:type owl:Class ;
+                    rdfs:subClassOf :PersonalAcademico .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#RecursoAcademico
+:RecursoAcademico rdf:type owl:Class ;
+                  rdfs:subClassOf owl:Thing .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://webprotege.stanford.edu/R7KISuc44MAxIs1QJjjmOks
+<http://webprotege.stanford.edu/R7KISuc44MAxIs1QJjjmOks> rdf:type owl:NamedIndividual ,
+                                                                  :Digital ;
+                                                         <http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF> "Programacion" ;
+                                                         :TieneCategoría "Libro" ;
+                                                         :tieneAreaEstudio "Informatica" ,
+                                                                           "Sistemas" ;
+                                                         :tieneAutor "Mark Zuckerberg" ;
+                                                         :tieneCantidadVisualizaciones "39"^^xsd:int ;
+                                                         :tieneEnlaceAcceso "https://biblio.edu/libros/1000Java.pdf" ;
+                                                         :tieneEstado "Acceso Libre" ;
+                                                         :tieneFechaPublicacion "13/08/16" ;
+                                                         :tieneFormato "PDF" ;
+                                                         :tieneISBN "9856-3-15-4" ;
+                                                         :tieneIdioma "Ingles" ;
+                                                         :tieneNivelAcademico "pregrado" ;
+                                                         :tienePalabraClave "Java" ;
+                                                         :tieneResumen "Sintaxis Basica de Java con teoria basica del lenguaje." ;
+                                                         :tieneTamañoArchivo "1700kb" ;
+                                                         :tieneTitulo "1000 Forms of Java" ;
+                                                         :tieneVersion "v1.0" ;
+                                                         rdfs:label "recDigital003" .
+
+
+###  http://webprotege.stanford.edu/R7dfUdi2zCBZZxZLyUWtsok
+<http://webprotege.stanford.edu/R7dfUdi2zCBZZxZLyUWtsok> rdf:type owl:NamedIndividual ,
+                                                                  :Docente ;
+                                                         :tieneAñoIngresoDocente 2010 ;
+                                                         :tieneCarnet "5961487" ;
+                                                         :tieneDepartamento "Informática y Sistemas" ;
+                                                         :tieneEmail "marcelo123@gmail.com" ;
+                                                         :tieneGenero "Masculino" ;
+                                                         :tieneNombre "Marcelo Antezana" ;
+                                                         :tieneNumeroEmpleado 1 ;
+                                                         :tieneTelefono "68952322" ;
+                                                         :tieneTituloAcademico "Ingeniería de Sistemas" ;
+                                                         rdfs:label "docente001" .
+
+
+###  http://webprotege.stanford.edu/R7sdFxNwn6AUYTDkSNufrtv
+<http://webprotege.stanford.edu/R7sdFxNwn6AUYTDkSNufrtv> rdf:type owl:NamedIndividual ,
+                                                                  <http://webprotege.stanford.edu/R9JttmJ5oSIjMe4WwJq7KGj> ;
+                                                         :tieneCapacidad "50"^^xsd:int ;
+                                                         :tieneHorarioDisponibilidad "8:30-16:00" ;
+                                                         :tieneNombreAmbiente "Sala de Lectura" ;
+                                                         :tieneReglaUso "Prohibido entrar con comida" ;
+                                                         :tieneUbicación "Primer piso de la biblioteca" ;
+                                                         rdfs:label "sala001" .
+
+
+###  http://webprotege.stanford.edu/R8JYup5yft5ZOJLFDiXY1Jc
+<http://webprotege.stanford.edu/R8JYup5yft5ZOJLFDiXY1Jc> rdf:type owl:NamedIndividual ,
+                                                                  :PersonalBiblioteca ;
+                                                         :tieneCargo "Archivista" ;
+                                                         :tieneCarnet "129987" ;
+                                                         :tieneDepartamento "Informatica y Sistemas" ;
+                                                         :tieneEmail "margaritCas@gmail.com" ;
+                                                         :tieneEspecializacion "Catalogacion" ;
+                                                         :tieneGenero "Femenino" ;
+                                                         :tieneNombre "Margarita Castillo" ;
+                                                         :tieneNumeroEmpleado 3 ;
+                                                         :tieneTelefono "78965542" ;
+                                                         :tieneTituloAcademico "Licenciado en Sistemas" ;
+                                                         :tieneTurno "Mañana" ;
+                                                         rdfs:label "perBiblioteca001" .
+
+
+###  http://webprotege.stanford.edu/R8ZGDRlqVYx34X2QNpFamfM
+<http://webprotege.stanford.edu/R8ZGDRlqVYx34X2QNpFamfM> rdf:type owl:NamedIndividual ;
+                                                         <http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF> "Teoria de la computacion" ;
+                                                         :TieneCategoría "Libro" ;
+                                                         :tieneAutor "Edgar Jaldin" ;
+                                                         :tieneEnlaceAcceso "https://biblio.edu/investigacion/basescomputo.pdf" ;
+                                                         :tieneEstado "Acceso libre" ;
+                                                         :tieneFechaPublicacion "08/04/23" ;
+                                                         :tieneFormato "PDF" ;
+                                                         :tieneISBN "9952 21445 12023 1210" ;
+                                                         :tieneIdioma "Ingles" ;
+                                                         :tienePalabraClave "computadoras" ;
+                                                         :tieneTamañoArchivo "523kb" ;
+                                                         :tieneTitulo "Bases de computacion" ;
+                                                         :tieneVersion "v2.3" ;
+                                                         rdfs:label "recDigital026" .
+
+
+###  http://webprotege.stanford.edu/R8l4H4sGMTO7UjhPKdjI18t
+<http://webprotege.stanford.edu/R8l4H4sGMTO7UjhPKdjI18t> rdf:type owl:NamedIndividual ,
+                                                                  :Colaborador ;
+                                                         :publica <http://webprotege.stanford.edu/RDoS0HZKolFyDyQyacIS5yd> ,
+                                                                  <http://webprotege.stanford.edu/RXbng7AH87cHW5YxgDUT03> ,
+                                                                  :recDigital016 ;
+                                                         :tieneAreaColaboracion "Base de datos" ;
+                                                         :tieneAñoIngreso 2019 ;
+                                                         :tieneCarnet "6503256" ;
+                                                         :tieneCodigoSis "201900201" ;
+                                                         :tieneEmail "esteban123@gmail.com" ;
+                                                         :tieneFechaInicioColaboracion "01/01/24" ;
+                                                         :tieneGenero "Masculino" ;
+                                                         :tieneNombre "Esteban Quito" ;
+                                                         :tieneNumeroColaborador 2 ;
+                                                         :tieneTelefono "77452986" ;
+                                                         rdfs:label "estColab002" .
+
+
+###  http://webprotege.stanford.edu/RBCurMIeWX26myG7W4z1aCF
+<http://webprotege.stanford.edu/RBCurMIeWX26myG7W4z1aCF> rdf:type owl:NamedIndividual ;
+                                                         <http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF> "Simulacion" ;
+                                                         :TieneCategoría "Trabajo practico" ;
+                                                         :tieneAutor "Anonimo" ;
+                                                         :tieneEnlaceAcceso "https://biblio.edu/practica/simulacion.pdf" ;
+                                                         :tieneEstado "Acceso libre" ;
+                                                         :tieneFechaPublicacion "12/05/22" ;
+                                                         :tieneFormato "PDF" ;
+                                                         :tieneIdioma "Español" ;
+                                                         :tienePalabraClave "Transformada Inversa" ;
+                                                         :tieneTamañoArchivo "120kb" ;
+                                                         :tieneTitulo "Practica I - Transformada Inversa" ;
+                                                         :tieneVersion "v1.0" ;
+                                                         rdfs:label "recDigital023" .
+
+
+###  http://webprotege.stanford.edu/RBInF8WwoCzHgZgoq29s25U
+<http://webprotege.stanford.edu/RBInF8WwoCzHgZgoq29s25U> rdf:type owl:NamedIndividual ,
+                                                                  :Lector ;
+                                                         :tieneAñoIngreso 2020 ;
+                                                         :tieneCarnet "983774" ;
+                                                         :tieneCodigoSis "202000710" ;
+                                                         :tieneEmail "figueroalopez@gmail.com" ;
+                                                         :tieneFechaRegistro "01/01/2022" ;
+                                                         :tieneGenero "Femenino" ;
+                                                         :tieneNombre "Michelle Figueroa" ;
+                                                         :tieneNumeroLector 1 ;
+                                                         :tieneTelefono "69542902" ;
+                                                         rdfs:label "estLector001" .
+
+
+###  http://webprotege.stanford.edu/RBVcS8CcndmK52cHH5Bmarw
+<http://webprotege.stanford.edu/RBVcS8CcndmK52cHH5Bmarw> rdf:type owl:NamedIndividual ,
+                                                                  :PersonalBiblioteca ;
+                                                         :tieneCargo "Bibliotecario" ;
+                                                         :tieneCarnet "783661" ;
+                                                         :tieneDepartamento "Informatica y Sistemas" ;
+                                                         :tieneEmail "GonzaMija@gmail.com" ;
+                                                         :tieneEspecializacion "Archivos" ;
+                                                         :tieneGenero "Masculino" ;
+                                                         :tieneNombre "Mijael Gonzales" ;
+                                                         :tieneNumeroEmpleado 4 ;
+                                                         :tieneTelefono "76354271" ;
+                                                         :tieneTituloAcademico "Licenciado en Informatica" ;
+                                                         :tieneTurno "Tarde" ;
+                                                         rdfs:label "perBiblioteca002" .
+
+
+###  http://webprotege.stanford.edu/RBhvr8IvIyOG3nXrilCqSjK
+<http://webprotege.stanford.edu/RBhvr8IvIyOG3nXrilCqSjK> rdf:type owl:NamedIndividual ,
+                                                                  :Biblioteca ;
+                                                         :tieneDiferentes <http://webprotege.stanford.edu/R7sdFxNwn6AUYTDkSNufrtv> ,
+                                                                          <http://webprotege.stanford.edu/RSaYYZWxfcDaLAY42Vexne> ,
+                                                                          :sala003 ,
+                                                                          :sala004 ,
+                                                                          :sala005 ;
+                                                         <http://webprotege.stanford.edu/RBOhMIpsFZmn9JCeGXA9k6d> 1234 ;
+                                                         :tieneCapacidad 150 ;
+                                                         :tieneHorarioDisponibilidad "8:00 - 18:30" ;
+                                                         :tieneNombreAmbiente "BiblioGPT" ;
+                                                         :tieneNormas "Reglas para acceder a los recursos digitales de la biblioteca digital" ,
+                                                                      "Reglas para acceder a los recursos fisicos de la biblioteca" ,
+                                                                      "Reglas para convertirse en colaborador" ;
+                                                         :tieneUbicación "Frente a fotocopiadora de Matematicas" ;
+                                                         rdfs:label "biblioteca001" .
+
+
+###  http://webprotege.stanford.edu/RBsvY8BEuUPrLxhlssltM2w
+<http://webprotege.stanford.edu/RBsvY8BEuUPrLxhlssltM2w> rdf:type owl:NamedIndividual ,
+                                                                  :CentroInvestigacion ;
+                                                         <http://webprotege.stanford.edu/RBOhMIpsFZmn9JCeGXA9k6d> 2 ;
+                                                         :tieneAreaInvestigacion "Sistemas Informatica" ;
+                                                         :tieneCapacidad 70 ;
+                                                         :tieneDescipcionCentroInv "Sociedad Cientifica Estudiantil de Sistemas Informatica" ;
+                                                         :tieneHorarioDisponibilidad "9:00-14:00" ;
+                                                         :tieneNombreAmbiente "SCESI" ;
+                                                         :tieneUbicación "En el edificio Multiacademico" ;
+                                                         rdfs:label "centroInves001" .
+
+
+###  http://webprotege.stanford.edu/RBzCnQGjyfLkVp8K9gKWQoB
+<http://webprotege.stanford.edu/RBzCnQGjyfLkVp8K9gKWQoB> rdf:type owl:NamedIndividual ,
+                                                                  :Carrera ;
+                                                         :posee <http://webprotege.stanford.edu/RBhvr8IvIyOG3nXrilCqSjK> ,
+                                                                <http://webprotege.stanford.edu/RBsvY8BEuUPrLxhlssltM2w> ;
+                                                         :tieneCodigoCarrera "411702" ;
+                                                         :tieneNombreCarrera "Licenciatura en Ingeniería de Sistemas" ;
+                                                         rdfs:label "carrera001" .
+
+
+###  http://webprotege.stanford.edu/RCPWezfXPL26iBkPMF6XGbr
+<http://webprotege.stanford.edu/RCPWezfXPL26iBkPMF6XGbr> rdf:type owl:NamedIndividual ,
+                                                                  :Lector ;
+                                                         :tieneAñoIngreso 2020 ;
+                                                         :tieneCarnet "784538" ;
+                                                         :tieneCodigoSis "20209937" ;
+                                                         :tieneEmail "hola@gmail.com" ;
+                                                         :tieneFechaRegistro "05/07/2022" ;
+                                                         :tieneGenero "Masculino" ;
+                                                         :tieneNombre "Cristian Fernandez" ;
+                                                         :tieneNumeroLector 2 ;
+                                                         :tieneTelefono "78890003" ;
+                                                         rdfs:label "estLector002" .
+
+
+###  http://webprotege.stanford.edu/RDKNnCSU14gotmTPRBtDuoZ
+<http://webprotege.stanford.edu/RDKNnCSU14gotmTPRBtDuoZ> rdf:type owl:NamedIndividual ,
+                                                                  :Carrera ;
+                                                         :posee <http://webprotege.stanford.edu/RBhvr8IvIyOG3nXrilCqSjK> ,
+                                                                <http://webprotege.stanford.edu/RBsvY8BEuUPrLxhlssltM2w> ;
+                                                         :tieneCodigoCarrera "134111" ;
+                                                         :tieneNombreCarrera "Licenciatura en ingenieria en Informatica" ;
+                                                         rdfs:label "carrera002" .
+
+
+###  http://webprotege.stanford.edu/RDoS0HZKolFyDyQyacIS5yd
+<http://webprotege.stanford.edu/RDoS0HZKolFyDyQyacIS5yd> rdf:type owl:NamedIndividual ,
+                                                                  :Digital ;
+                                                         <http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF> "Base de Datos" ;
+                                                         :TieneCategoría "Apuntes" ;
+                                                         :tieneAutor "Oscar Flores" ;
+                                                         :tieneEnlaceAcceso "https://biblio.edu/BaseDeDatosEnPostgress.com" ;
+                                                         :tieneEstado "en Revision" ;
+                                                         :tieneFechaPublicacion "01-06-2021" ;
+                                                         :tieneFormato "PPTX" ;
+                                                         :tieneIdioma "Español" ;
+                                                         :tienePalabraClave "Base de datos" ,
+                                                                            "Postgress" ;
+                                                         :tieneRecomendacion "Si" ;
+                                                         :tieneResumen "Explicacion de como crear una base de datos en postgress" ;
+                                                         :tieneTamañoArchivo "450Kb" ;
+                                                         :tieneTitulo "Base de datos en Postgress" ;
+                                                         :tieneVersion "v1.0" ;
+                                                         rdfs:label "recDigital004" .
+
+
+###  http://webprotege.stanford.edu/RNppMUS1KPpezuXE67a3PP
+<http://webprotege.stanford.edu/RNppMUS1KPpezuXE67a3PP> rdf:type owl:NamedIndividual ,
+                                                                 :Docente ;
+                                                        :tieneAñoIngresoDocente 2005 ;
+                                                        :tieneCarnet "6152371" ;
+                                                        :tieneDepartamento "Informática y sistemas" ;
+                                                        :tieneEmail "carmen123@gmail.com" ;
+                                                        :tieneGenero "Femenino" ;
+                                                        :tieneNombre "Carmen Rosa" ;
+                                                        :tieneNumeroEmpleado 2 ;
+                                                        :tieneTelefono "70711425" ;
+                                                        :tieneTituloAcademico "Ing. Informático" ;
+                                                        rdfs:label "docente002" .
+
+
+###  http://webprotege.stanford.edu/RSaYYZWxfcDaLAY42Vexne
+<http://webprotege.stanford.edu/RSaYYZWxfcDaLAY42Vexne> rdf:type owl:NamedIndividual ,
+                                                                 <http://webprotege.stanford.edu/R9JttmJ5oSIjMe4WwJq7KGj> ;
+                                                        :tieneCapacidad "20"^^xsd:int ;
+                                                        :tieneHorarioDisponibilidad "14:00-18:00" ;
+                                                        :tieneNombreAmbiente "Sala de Computadoras" ;
+                                                        :tieneReglaUso "Prohibido mover las sillas" ;
+                                                        :tieneUbicación "segundo piso lado derecho ultima sala" ;
+                                                        rdfs:label "sala002" .
+
+
+###  http://webprotege.stanford.edu/RXbng7AH87cHW5YxgDUT03
+<http://webprotege.stanford.edu/RXbng7AH87cHW5YxgDUT03> rdf:type owl:NamedIndividual ,
+                                                                 :Digital ;
+                                                        <http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF> "Introduccion a la programación" ;
+                                                        :TieneCategoría "Diapositivas" ;
+                                                        :tieneAreaEstudio "Informatica" ,
+                                                                          "Sistemas" ;
+                                                        :tieneAutor "Esteban Quito" ;
+                                                        :tieneCantidadVisualizaciones "54"^^xsd:int ;
+                                                        :tieneEnlaceAcceso "https://biblio.edu/DispositivasRecursividadPasoAPaso.com" ;
+                                                        :tieneEstado "acceso abierto" ;
+                                                        :tieneFechaPublicacion "21/05/2022" ;
+                                                        :tieneFormato "PDF" ;
+                                                        :tieneIdioma "Español" ;
+                                                        :tienePalabraClave "Recursividad" ;
+                                                        :tieneRecomendacion "Java" ;
+                                                        :tieneResumen "Diapositivas de recursividad 2022" ;
+                                                        :tieneTamañoArchivo "255kb" ;
+                                                        :tieneTitulo "Recursividad paso a paso" ;
+                                                        :tieneVersion "v1.0" ;
+                                                        rdfs:label "recDigital002" .
+
+
+###  http://webprotege.stanford.edu/RaiFoPyv3hbiUqmS6E6BVc
+<http://webprotege.stanford.edu/RaiFoPyv3hbiUqmS6E6BVc> rdf:type owl:NamedIndividual ;
+                                                        <http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF> "Simulacion" ;
+                                                        :TieneCategoría "Trabajo practico" ;
+                                                        :tieneAutor "Anonimo" ;
+                                                        :tieneEnlaceAcceso "https://biblio.edu/practica/simulacion2.pdf" ;
+                                                        :tieneEstado "Acceso libre" ;
+                                                        :tieneFechaPublicacion "02/06/15" ;
+                                                        :tieneFormato "xls" ;
+                                                        :tieneIdioma "Español" ;
+                                                        :tienePalabraClave "Distribucion" ,
+                                                                           "Uniforme" ;
+                                                        :tieneTamañoArchivo "53kb" ;
+                                                        :tieneTitulo "Practica II - Distribucion Uniforme" ;
+                                                        :tieneVersion "v1.3" ;
+                                                        rdfs:label "recDigital024" .
+
+
+###  http://webprotege.stanford.edu/RefeKh7LBuuKBrlgN4REkO
+<http://webprotege.stanford.edu/RefeKh7LBuuKBrlgN4REkO> rdf:type owl:NamedIndividual ;
+                                                        <http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF> "Historia de computadoras" ;
+                                                        :TieneCategoría "Proyecto de Investigacion" ;
+                                                        :tieneAutor "Esteban Quito" ;
+                                                        :tieneEnlaceAcceso "https://biblio.edu/proyecto/invesitgacion/histcompu.pdf" ;
+                                                        :tieneEstado "Acceso libre" ;
+                                                        :tieneFechaPublicacion "25/04/21" ;
+                                                        :tieneFormato "PDF" ;
+                                                        :tieneIdioma "Español" ;
+                                                        :tienePalabraClave "computadoras" ;
+                                                        :tieneResumen "Relata como se crearon las computadoras sus autores y la forma en la que surgieron" ;
+                                                        :tieneTamañoArchivo "64kb" ;
+                                                        :tieneTitulo "Historia de las Computadoras" ;
+                                                        :tieneVersion "v1.0" ;
+                                                        rdfs:label "recDigital025" .
+
+
+###  http://webprotege.stanford.edu/RuNZF5RHPctjyYhq01e1xS
+<http://webprotege.stanford.edu/RuNZF5RHPctjyYhq01e1xS> rdf:type owl:NamedIndividual ,
+                                                                 :Digital ;
+                                                        <http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF> "Calculo I" ;
+                                                        :TieneCategoría "Examen pasado" ;
+                                                        :tieneAreaEstudio "Sistemas" ;
+                                                        :tieneAutor "Jhosemar Vallejos" ;
+                                                        :tieneCantidadVisualizaciones "23"^^xsd:int ;
+                                                        :tieneEnlaceAcceso "https://biblio.edu/examenpasado/calculoI" ;
+                                                        :tieneEstado "Acceso Abierto" ;
+                                                        :tieneFechaPublicacion "01/02/24" ;
+                                                        :tieneFormato "PDF" ;
+                                                        :tieneIdioma "Español" ;
+                                                        :tienePalabraClave "Calculo I" ;
+                                                        :tieneTamañoArchivo "321kb" ;
+                                                        :tieneTitulo "Examen 2do parcial Calculo I" ;
+                                                        :tieneVersion "v2014" ;
+                                                        rdfs:label "recDigital001" .
+
+
+###  http://webprotege.stanford.edu/RyPZdJMHqyoJBWJthPPJsA
+<http://webprotege.stanford.edu/RyPZdJMHqyoJBWJthPPJsA> rdf:type owl:NamedIndividual ,
+                                                                 :Colaborador ;
+                                                        :publica <http://webprotege.stanford.edu/RuNZF5RHPctjyYhq01e1xS> ;
+                                                        :tieneAreaColaboracion "Ciberseguridad" ;
+                                                        :tieneAñoIngreso 2020 ;
+                                                        :tieneCarnet "6503485" ;
+                                                        :tieneCodigoSis "202000218" ;
+                                                        :tieneEmail "jhoten703@gmail.com" ;
+                                                        :tieneFechaInicioColaboracion "01/01/24" ;
+                                                        :tieneGenero "Masculino" ;
+                                                        :tieneNombre "Jhosemar Vallejos" ;
+                                                        :tieneNumeroColaborador 1 ;
+                                                        :tieneTelefono "70390098" ;
+                                                        rdfs:label "estColab001" .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#docente003
+:docente003 rdf:type owl:NamedIndividual ,
+                     :Docente ;
+            :tieneAñoIngresoDocente 2009 ;
+            :tieneCarnet "17823499" ;
+            :tieneDepartamento "Informática y sistemas" ;
+            :tieneEmail "patyrodriguez@gmail.com"^^xsd:string ;
+            :tieneGenero "Femenino" ;
+            :tieneNombre "Patricia Erika Rodriguez Bilbao" ;
+            :tieneNumeroEmpleado "3"^^xsd:int ;
+            :tieneTelefono "72705886" ;
+            :tieneTituloAcademico "Ing. Informático" .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#docente004
+:docente004 rdf:type owl:NamedIndividual ,
+                     :Docente ;
+            :tieneAñoIngresoDocente 2000 ;
+            :tieneCarnet "18902343" ;
+            :tieneDepartamento "Informática y sistemas" ;
+            :tieneEmail "lecitia70sblanco@gmail.com"^^xsd:string ;
+            :tieneGenero "Femenino" ;
+            :tieneNombre "Maria Leticia Blanco" ;
+            :tieneNumeroEmpleado 4 ;
+            :tieneTelefono "78904532" ;
+            :tieneTituloAcademico "Ing. Informática" .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#docente005
+:docente005 rdf:type owl:NamedIndividual ,
+                     :Docente ;
+            :tieneAñoIngresoDocente "1999"^^xsd:int ;
+            :tieneCarnet "876454" ;
+            :tieneDepartamento "Informática y Sistemas" ;
+            :tieneEmail "rose129@gmail.com"^^xsd:string ;
+            :tieneGenero "Femenino" ;
+            :tieneNombre "Rosemary Bascopé" ;
+            :tieneNumeroEmpleado "5"^^xsd:int ;
+            :tieneTelefono "67232176" ;
+            :tieneTituloAcademico "Ing. Sistemático" .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#docente006
+:docente006 rdf:type owl:NamedIndividual ,
+                     :Docente ;
+            :tieneAñoIngresoDocente "2013"^^xsd:int ;
+            :tieneCarnet "9823412" ;
+            :tieneDepartamento "Informática y Sistemas" ;
+            :tieneEmail "marcmont@gmail.com"^^xsd:string ;
+            :tieneGenero "Masculino" ;
+            :tieneNombre "Marco Antonio Montecinos" ;
+            :tieneNumeroEmpleado "6"^^xsd:int ;
+            :tieneTelefono "68123355" ;
+            :tieneTituloAcademico "Ing. Informático" .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#estColab003
+:estColab003 rdf:type owl:NamedIndividual ,
+                      :Colaborador ;
+             :publica :recDigital005 ;
+             :tieneAreaColaboracion "Inteligencia Artifical" ;
+             :tieneAñoIngreso 2022 ;
+             :tieneCarnet "14833490" ;
+             :tieneCodigoSis "202256349" ;
+             :tieneEmail "carlastorrez@gmail.com"^^xsd:string ;
+             :tieneFechaInicioColaboracion "02/09/24" ;
+             :tieneGenero "Femenino" ;
+             :tieneNombre "Carla Torrez" ;
+             :tieneNumeroColaborador 3 ;
+             :tieneTelefono "72705990" .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#estColab004
+:estColab004 rdf:type owl:NamedIndividual ,
+                      :Colaborador ;
+             :publica :recDigital006 ,
+                      :recDigital009 ,
+                      :recDigital010 ;
+             :tieneAreaColaboracion "Algoritmos Avanzados" ;
+             :tieneAñoIngreso 2021 ;
+             :tieneCarnet "14578329" ;
+             :tieneCodigoSis "202189744" ;
+             :tieneEmail "marioterrazas@gmail.com"^^xsd:string ;
+             :tieneFechaInicioColaboracion "01/03/23" ;
+             :tieneGenero "Masculino" ;
+             :tieneNombre "Mario Terrazas" ;
+             :tieneNumeroColaborador 4 ;
+             :tieneTelefono "79095643" .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#estColab005
+:estColab005 rdf:type owl:NamedIndividual ,
+                      :Colaborador ;
+             :publica :recDigital007 ,
+                      :recDigital013 ;
+             :tieneAreaColaboracion "Redes" ;
+             :tieneAñoIngreso "2021"^^xsd:int ;
+             :tieneCarnet "9441231" ;
+             :tieneCodigoSis "202103731" ;
+             :tieneEmail "monicarocha123@gmail.com"^^xsd:string ;
+             :tieneFechaInicioColaboracion "06/08/2024" ;
+             :tieneGenero "Femenino" ;
+             :tieneNombre "Monica Rocha Perez" ;
+             :tieneNumeroColaborador "5"^^xsd:int ;
+             :tieneTelefono "72212312" .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#estColab006
+:estColab006 rdf:type owl:NamedIndividual ;
+             :publica :recDigital008 ,
+                      :recDigital012 ,
+                      :recDigital015 ,
+                      :recFisico01 ;
+             :tieneAreaColaboracion "Introducción a la Programación" ;
+             :tieneAñoIngreso "2018"^^xsd:int ;
+             :tieneCarnet "91218555" ;
+             :tieneCodigoSis "201829244" ;
+             :tieneEmail "mauricioquispe@gmail.com"^^xsd:string ;
+             :tieneFechaInicioColaboracion "02/05/2019" ;
+             :tieneGenero "Masculino" ;
+             :tieneNombre "Mauricio Juan Quispe" ;
+             :tieneNumeroColaborador "6"^^xsd:int ;
+             :tieneTelefono "67211212" .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#estColab007
+:estColab007 rdf:type owl:NamedIndividual ,
+                      :Colaborador ;
+             :publica :recDigital011 ;
+             :tieneAreaColaboracion "Base de datos" ;
+             :tieneAñoIngreso 2020 ;
+             :tieneCarnet "9359253" ;
+             :tieneCodigoSis "202000710" ;
+             :tieneEmail "jazminlopez7774@gmail.com"^^xsd:string ;
+             :tieneFechaInicioColaboracion "16/02/2022" ;
+             :tieneGenero "Femenino" ;
+             :tieneNombre "Jazmin Lopez" ;
+             :tieneNumeroColaborador "7"^^xsd:int ;
+             :tieneTelefono "69542902" .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#estColab008
+:estColab008 rdf:type owl:NamedIndividual ,
+                      :Colaborador ;
+             :publica :recDigital014 ;
+             :tieneAreaColaboracion "Ciberseguridad" ;
+             :tieneAñoIngreso "2020"^^xsd:int ;
+             :tieneCarnet "14863498" ;
+             :tieneCodigoSis "202054729" ;
+             :tieneEmail "lauralopez7774@gmail.com"^^xsd:string ;
+             :tieneFechaInicioColaboracion "13/02/24" ;
+             :tieneGenero "Femenino" ;
+             :tieneNumeroColaborador "8"^^xsd:int ;
+             :tieneTelefono "67843526" .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#estColab009
+:estColab009 rdf:type owl:NamedIndividual ,
+                      :Colaborador ;
+             :publica :recDigital016 ;
+             :tieneAreaColaboracion "Desarrollo de software" ;
+             :tieneAñoIngreso "2021"^^xsd:int ;
+             :tieneCarnet "78456324" ;
+             :tieneCodigoSis "202174522" ;
+             :tieneEmail "pabloguzman@gmail.com"^^xsd:string ;
+             :tieneFechaInicioColaboracion "13/09/23" ;
+             :tieneGenero "Masculino" ;
+             :tieneNombre "Pablo Guzman" ;
+             :tieneNumeroColaborador "9"^^xsd:int .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#estLector003
+:estLector003 rdf:type owl:NamedIndividual ,
+                       :Lector ;
+              :tieneAñoIngreso 2023 ;
+              :tieneCarnet "14832980" ;
+              :tieneCodigoSis "202308756" ;
+              :tieneEmail "analopez@gmail.com"^^xsd:string ;
+              :tieneFechaRegistro "03/08/23" ;
+              :tieneGenero "Femenino" ;
+              :tieneNombre "Ana Lopez" ;
+              :tieneNumeroLector 3 ;
+              :tieneTelefono "68903425" .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#estLector004
+:estLector004 rdf:type owl:NamedIndividual ,
+                       :Lector ;
+              :tieneAñoIngreso "2021"^^xsd:int ;
+              :tieneCarnet "1009786" ;
+              :tieneCodigoSis "202103731" ;
+              :tieneEmail "ayleng@gmail.com"^^xsd:string ;
+              :tieneFechaRegistro "02/27/2022" ;
+              :tieneGenero "Femenino" ;
+              :tieneNombre "Aylen Gonzáles" ;
+              :tieneNumeroLector "4"^^xsd:int ;
+              :tieneTelefono "72254007" .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#estLector005
+:estLector005 rdf:type owl:NamedIndividual ,
+                       :Lector ;
+              :tieneAñoIngreso "2019"^^xsd:int ;
+              :tieneCarnet "9121035" ;
+              :tieneCodigoSis "201927241" ;
+              :tieneEmail "homero123@gmail.com"^^xsd:string ;
+              :tieneFechaRegistro "02/23/2021" ;
+              :tieneGenero "Masculino" ;
+              :tieneNombre "Homero Vidaurre" ;
+              :tieneNumeroLector "5"^^xsd:int ;
+              :tieneTelefono "67182227" .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#perBiblioteca003
+:perBiblioteca003 rdf:type owl:NamedIndividual ,
+                           :PersonalBiblioteca ;
+                  :tieneCargo "Bibliotecaria" ;
+                  :tieneCarnet "14567823" ;
+                  :tieneDepartamento "Informatica y Sistemas" ;
+                  :tieneEmail "mariamontecinos@gmail.com"^^xsd:string ;
+                  :tieneEspecializacion "Documentos" ;
+                  :tieneGenero "Femenino" ;
+                  :tieneNombre "Maria Montecinos" ;
+                  :tieneNumeroEmpleado 6 ;
+                  :tieneTelefono "75688734" ;
+                  :tieneTituloAcademico "Licenciado en Informatica" ;
+                  :tieneTurno "Tarde" .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#perBiblioteca004
+:perBiblioteca004 rdf:type owl:NamedIndividual ,
+                           :PersonalBiblioteca ;
+                  :tieneCargo "Bibliotecaria" ;
+                  :tieneCarnet "987212" ;
+                  :tieneDepartamento "Informática y Sistemas" ;
+                  :tieneEmail "floreng@gmail.com"^^xsd:string ;
+                  :tieneEspecializacion "Archivos" ;
+                  :tieneGenero "Femenino" ;
+                  :tieneNombre "Florence Gerstel" ;
+                  :tieneNumeroEmpleado "8"^^xsd:int ;
+                  :tieneTelefono "73434559" ;
+                  :tieneTituloAcademico "Lic. Administrativo" ;
+                  :tieneTurno "Noche" .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#recDigital005
+:recDigital005 rdf:type owl:NamedIndividual ,
+                        :Digital ;
+               <http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF> "Inteligencia Artificial" ;
+               :TieneCategoría "PDF" ;
+               :tieneAreaEstudio "Informatica" ,
+                                 "Sistemas" ;
+               :tieneAutor "Peter Norvig y Stuart J. Russell" ;
+               :tieneConfirmacion "Si" ;
+               :tieneEnlaceAcceso "https://biblio.edu/libros/1000InteligenciaArtificial.pdf" ;
+               :tieneEnlaceDescarga "https://biblio.edu/libros/InteligenciaArtificial.pdf" ;
+               :tieneEstado "Acceso Libre" ;
+               :tieneFechaPublicacion "14/04/24" ;
+               :tieneFormato "PDF" ;
+               :tieneIdioma "Español" ;
+               :tienePalabraClave "Agente" ,
+                                  "Inteligencia artificial" ;
+               :tieneResumen "Es un texto clave que cubre conceptos fundamentales de la IA, técnicas de aprendizaje, algoritmos de búsqueda y aplicaciones prácticas, además de abordar desafíos éticos y el futuro del campo." ;
+               :tieneTamañoArchivo "500kb" ;
+               :tieneTitulo "Inteligencia Artificial Un Enfoque Moderno" ;
+               :tieneVersion "v2.0" .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#recDigital006
+:recDigital006 rdf:type owl:NamedIndividual ,
+                        :Digital ;
+               <http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF> "Estructura de datos" ;
+               :TieneCategoría "Apuntes" ;
+               :tieneAreaEstudio "Informatica" ;
+               :tieneEnlaceAcceso "https://biblio.edu/AlgoritmosAvanzados.com" ;
+               :tieneEstado "Acceso Libre" ;
+               :tieneFechaPublicacion "03/06/2023" ;
+               :tieneFormato "PDF" ;
+               :tieneIdioma "Español" ;
+               :tienePalabraClave "Programación" ,
+                                  "Steve Halim" ;
+               :tieneRecomendacion "Java" ;
+               :tieneResumen "Es una guía para mejorar en programación competitiva, cubriendo algoritmos, estructuras de datos y técnicas de resolución de problemas, con ejemplos y estrategias para competiciones." ;
+               :tieneTamañoArchivo "5070kb" ;
+               :tieneTitulo "Competitive Programming" ;
+               :tieneVersion "v1.0" .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#recDigital007
+:recDigital007 rdf:type owl:NamedIndividual ,
+                        :Digital ;
+               <http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF> "Introduccion a las redes" ;
+               :TieneCategoría "Libro" ;
+               :tieneAreaEstudio "Informatica" ,
+                                 "Sistemas" ;
+               :tieneAutor "Jorge Walter Orellana Araoz" ;
+               :tieneEnlaceAcceso "https://drive.google.com/file/d/1RIhBkuYQ2xnjNNUSorYzr8FACMQujG3a/view?hl=es" ;
+               :tieneEstado "acceso abierto" ;
+               :tieneFechaPublicacion "15/02/2022" ;
+               :tieneFormato "PDF" ;
+               :tieneIdioma "Español" ;
+               :tieneInstitucion "Universidad Mayor de San Simón" ;
+               :tienePalabraClave "Redes" ;
+               :tieneRecomendacion "Redes" ;
+               :tieneResumen "Libro de redes de 2022" ;
+               :tieneTamañoArchivo "13000Kb" ;
+               :tieneTitulo "Redes Conmutadas" ;
+               :tieneVersion "5.0" .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#recDigital008
+:recDigital008 rdf:type owl:NamedIndividual ,
+                        :Digital ;
+               <http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF> "Introducción a la programación con Java" ;
+               :TieneCategoría "Libro" ;
+               :tieneAutor "Ing. Jesus David Gomez" ;
+               :tieneEnlaceAcceso "https://drive.google.com/file/d/1wWyOCQ1oPvEP6GhHu9fqa5kuszMmUum7/view?hl=es" ;
+               :tieneEstado "acceso abierto" ;
+               :tieneFechaPublicacion "13/04/2020" ;
+               :tieneFormato "PDF" ;
+               :tieneIdioma "Español" ;
+               :tienePalabraClave "Introducción a la programación" ,
+                                  "Java" ;
+               :tieneRecomendacion "Java" ,
+                                   "Si" ;
+               :tieneResumen "Libro de java del 2020" ;
+               :tieneTamañoArchivo "6000Kb" ;
+               :tieneTitulo "Java 2020" ;
+               :tieneVersion "1.0" .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#recDigital009
+:recDigital009 rdf:type owl:NamedIndividual ,
+                        :Digital ;
+               <http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF> "Programación" ;
+               :TieneCategoría "Practica" ;
+               :tieneAutor "Anonimo" ;
+               :tieneEnlaceAcceso "https://biblioteca.onu/programacion/algortimosAvanzados.com" ;
+               :tieneEstado "Acceso abierto" ;
+               :tieneFechaPublicacion "21/02/2022" ;
+               :tieneFormato "PDF" ;
+               :tieneIdioma "Español" ;
+               :tienePalabraClave "Algoritmos avanzados" ;
+               :tieneResumen "Practica 2do parcial materia algoritmos avanzados" ;
+               :tieneTamañoArchivo "20kb" ;
+               :tieneTitulo "Ejercicios de algoritmos avanzados" ;
+               :tieneVersion "v1.0" .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#recDigital010
+:recDigital010 rdf:type owl:NamedIndividual ,
+                        :Digital ;
+               <http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF> "Programación" ;
+               :TieneCategoría "Trabajo práctico" ;
+               :tieneAutor "Anonimo" ;
+               :tieneConfirmacion "Si" ;
+               :tieneEnlaceAcceso "https://libreria.onu/programacion/practicaAlgoritmosAvanzados.com" ;
+               :tieneEnlaceDescarga "https://liblio/programacion/practicaAlgoritmosav.pdf" ;
+               :tieneEstado "Acceso abierto" ;
+               :tieneFechaPublicacion "12/07/2023" ;
+               :tieneFormato "DOCX" ;
+               :tieneIdioma "Español" ;
+               :tienePalabraClave "Algoritmos avanzados" ,
+                                  "Algortimos" ;
+               :tieneTamañoArchivo "237kb" ;
+               :tieneTitulo "Practica 3 Algortimos avanzados" ;
+               :tieneVersion "v2.0" .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#recDigital011
+:recDigital011 rdf:type owl:NamedIndividual ,
+                        :Digital ;
+               <http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF> "Data base" ;
+               :TieneCategoría "Libro" ;
+               :tieneAutor "Michael J. Hernandez" ;
+               :tieneEstado "Acceso abierto" ;
+               :tieneFechaPublicacion "10/10/2023" ;
+               :tieneFormato "PDF" ;
+               :tieneIdioma "Español" ,
+                            "Ingles" ;
+               :tienePalabraClave "Data Base" ;
+               :tieneTamañoArchivo "500kb" ;
+               :tieneTitulo "Database Design for Mere Mortals" ;
+               :tieneVersion "v2.4" .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#recDigital012
+:recDigital012 rdf:type owl:NamedIndividual ,
+                        :Digital ;
+               <http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF> "Algorithms" ;
+               :TieneCategoría "Libro" ;
+               :tieneAreaEstudio "Informatica" ;
+               :tieneAutor "Tomas M. Corner" ;
+               :tieneEnlaceAcceso "https://biblio.edu/algorithms.com" ;
+               :tieneEstado "Acceso abierto" ;
+               :tieneFechaPublicacion "01/03/2024" ;
+               :tieneFormato "PDF" ;
+               :tieneIdioma "Ingles" ;
+               :tienePalabraClave "Algorithms" ,
+                                  "introduction to algorithms" ;
+               :tieneRecomendacion "Programacion" ;
+               :tieneTamañoArchivo "400kb" ;
+               :tieneTitulo "introduction to algorithms" ;
+               :tieneVersion "v3.0" .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#recDigital013
+:recDigital013 rdf:type owl:NamedIndividual ,
+                        :Digital ;
+               <http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF> "Redes avanzadas de computadoras" ;
+               :TieneCategoría "Trabajo práctico" ;
+               :tieneAutor "Michelle Figueroa" ;
+               :tieneEnlaceAcceso "https://biblio.edu/redes/practicaredes.com" ;
+               :tieneEstado "Acceso abierto" ;
+               :tieneFechaPublicacion "17/03/2024" ;
+               :tieneFormato "PDF" ;
+               :tieneIdioma "Español" ;
+               :tieneInstitucion "Universidad Mayor de San Simón" ;
+               :tienePalabraClave "Redes" ,
+                                  "Redes avanzadas" ;
+               :tieneResumen "practica 1er parcial de redes avanzadas" ;
+               :tieneTamañoArchivo "600kb" ;
+               :tieneTitulo "Practica 1er parcial redes avanzadas" ;
+               :tieneVersion "v2.0" .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#recDigital014
+:recDigital014 rdf:type owl:NamedIndividual ,
+                        :Digital ;
+               <http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF> "Ciberseguridad" ;
+               :TieneCategoría "Libro" ;
+               :tieneAreaEstudio "Informatica" ,
+                                 "Sistemas" ;
+               :tieneAutor "William Stallings" ;
+               :tieneConfirmacion "Si" ;
+               :tieneEnlaceAcceso "https://biblio.edu/ciberseguridad1.com" ;
+               :tieneEnlaceDescarga "https://biblio.edu/libros/ciberseguridad/computersecurity.pdf" ;
+               :tieneEstado "acceso abierto" ;
+               :tieneFechaPublicacion "05/04/24" ;
+               :tieneFormato "PDF" ;
+               :tieneNivelAcademico "Posgrado" ;
+               :tienePalabraClave "Ciberseguridad" ;
+               :tieneResumen "Este texto abarca los principios y las prácticas fundamentales en seguridad informática, ideal para estudiantes de posgrado" ;
+               :tieneTamañoArchivo "668kb" ;
+               :tieneTitulo "Computer Security: Principles and Practice" .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#recDigital015
+:recDigital015 rdf:type owl:NamedIndividual ,
+                        :Digital ;
+               <http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF> "Programacion en Java" ;
+               :TieneCategoría "Libro" ;
+               :tieneAreaEstudio "Informatica" ,
+                                 "Sistemas" ;
+               :tieneAutor "Herbert Schildt" ;
+               :tieneConfirmacion "Si" ;
+               :tieneEnlaceAcceso "https://biblio.edu/libros/java/javadescarga.pdf" ;
+               :tieneEnlaceDescarga "https://biblio.edu/libros/java/javabeginnersguide.pdf" ;
+               :tieneEstado "acceso abierto" ;
+               :tieneFechaPublicacion "02/04/23" ;
+               :tieneFormato "PDF" ;
+               :tieneIdioma "Ingles" ;
+               :tienePalabraClave "Java" ;
+               :tieneRecomendacion "Java" ;
+               :tieneResumen "El libro aborda conceptos clave de la programación orientada a objetos" ;
+               :tieneTamañoArchivo "5000Kb" ;
+               :tieneTitulo "Java: A Beginner's Guide" .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#recDigital016
+:recDigital016 rdf:type owl:NamedIndividual ,
+                        :Digital ;
+               <http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF> "Metodologias Agiles" ;
+               :TieneCategoría "Libro" ;
+               :tieneAutor "Mike Cohn" ;
+               :tieneConfirmacion "Si" ;
+               :tieneEnlaceAcceso "https://biblio.edu/libros/agile/agileestimating.pdf" ;
+               :tieneEnlaceDescarga "https://biblio.edu/libros/agile/agileplanning.pdf" ;
+               :tieneEstado "acceso abierto" ;
+               :tieneFechaPublicacion "15/05/20" ;
+               :tieneFormato "PDF" ;
+               :tieneIdioma "Ingles" ;
+               :tieneNivelAcademico "pregrado" ;
+               :tienePalabraClave "Metodologia" ;
+               :tieneRecomendacion "Metodologias Agiles" ;
+               :tieneResumen "El libro proporciona herramientas y técnicas para estimar y planificar proyectos en entornos ágiles." ;
+               :tieneTamañoArchivo "3000Kb" .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#recDigital017
+:recDigital017 rdf:type owl:NamedIndividual ,
+                        :Digital ;
+               <http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF> "Desarrollo web" ;
+               :TieneCategoría "Libro" ;
+               :tieneAutor "Mike Fong" ;
+               :tieneConfirmacion "Sí" ;
+               :tieneEnlaceAcceso "https://www.misitio.com/recursos/desarrollo-web-guia-avanzada.pdf" ;
+               :tieneEnlaceDescarga "https://www.misitio.com/descargas/desarrollo-web-guia-dooms.pdf" ;
+               :tieneEstado "acceso abierto" ;
+               :tieneFechaPublicacion "10/10/2012" ;
+               :tieneFormato "PDF" ;
+               :tieneIdioma "Español" ;
+               :tieneNivelAcademico "Principiantes" ;
+               :tienePalabraClave "Web" ;
+               :tieneRecomendacion "Desarrollo web" ;
+               :tieneResumen "Guía para principiantes que se quieran meter al mundo del desarrollo web." ;
+               :tieneTamañoArchivo "5400 Kb" ;
+               :tieneTitulo "Desarrollo web para dooms" .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#recDigital018
+:recDigital018 rdf:type owl:NamedIndividual ,
+                        :Digital ;
+               <http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF> "Aplicación de Sistemas Operativos" ;
+               :TieneCategoría "Trabajo práctico" ;
+               :tieneAutor "Grover Cussi" ;
+               :tieneEnlaceAcceso "https://www.umss-aso.com/libros/asopractica.doc" ;
+               :tieneEnlaceDescarga "https://www.umss-aso.com/download/asopractica.doc" ;
+               :tieneEstado "acceso abierto" ;
+               :tieneFormato "doc" ;
+               :tieneIdioma "Quechua" ;
+               :tienePalabraClave "sistemas" ;
+               :tieneTamañoArchivo "2500Kb" ;
+               :tieneTitulo "Aprendiendo de Aplicación de Sistemas Operativos" .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#recDigital019
+:recDigital019 rdf:type owl:NamedIndividual ,
+                        :Digital ;
+               <http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF> "Aplicación de Sistemas Operativos" ;
+               :TieneCategoría "Trabajo práctico" ;
+               :tieneAutor "Frank Paco" ;
+               :tieneEnlaceDescarga "https://www.harvardfake.com/descarga/asopractice.pdf" ,
+                                    "https://www.harvardfake.com/libros/asopractice.pdf" ;
+               :tieneFormato "PDF" ;
+               :tieneIdioma "Inglés" ;
+               :tienePalabraClave "operativos" ;
+               :tieneTamañoArchivo "3200Kb" ;
+               :tieneTitulo "Práctica para dominar el sistema operativo de Red Hat" .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#recDigital020
+:recDigital020 rdf:type owl:NamedIndividual ,
+                        :Digital ;
+               <http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF> "Taller de Sistemas Operativos" ;
+               :TieneCategoría "Examen pasado" ;
+               :tieneAutor "Jhoan Perredo" ;
+               :tieneEnlaceAcceso "https://www/practicas.com/recursos/taller-so.pdf" ;
+               :tieneEnlaceDescarga "https://www/practicas.com/descarga/taller-so.pdf" ;
+               :tieneEstado "acceso abierto" ;
+               :tieneFechaPublicacion "12/09/2002" ;
+               :tieneIdioma "Español" ;
+               :tieneInstitucion "Universidad Mayor de San Simón" ;
+               :tieneNivelAcademico "Principiante" ;
+               :tienePalabraClave "taller" ;
+               :tieneResumen "Examen pasado de Taller de Sistemas Operativos del semestres 2-2021" ;
+               :tieneTamañoArchivo "2000Kb" .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#recDigital021
+:recDigital021 rdf:type owl:NamedIndividual ,
+                        :Digital ;
+               <http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF> "Taller de Sistemas Operativos" ;
+               :TieneCategoría "Examen pasado" ;
+               :tieneAutor "Mike Folks" ;
+               :tieneEnlaceAcceso "https://www.harvard.com/recursos/os.pdf" ;
+               :tieneEnlaceDescarga "https://www/harvard.com/download/taller-so.pdf" ;
+               :tieneEstado "acceso abierto" ;
+               :tieneFechaPublicacion "15/12/2001" ;
+               :tieneIdioma "Inglés" ;
+               :tieneInstitucion "Harvard" ;
+               :tieneNivelAcademico "Principiante" ;
+               :tienePalabraClave "sistemas" ;
+               :tieneResumen "Test of  2-2021" ;
+               :tieneTamañoArchivo "3100Kb" .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#recDigital022
+:recDigital022 rdf:type owl:NamedIndividual ,
+                        :Digital ;
+               <http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF> "Desarrollo de software con calidad" ;
+               :TieneCategoría "Libro" ;
+               :tieneAutor "Roger S. Pressman" ;
+               :tieneEnlaceAcceso "https://www.javier8a.com/itc/bd1/ld-Ingenieria.de.software.enfoque.practico.7ed.Pressman.PDF" ;
+               :tieneEstado "acceso abierto" ;
+               :tieneFechaPublicacion "04/03/2010" ;
+               :tieneHorarioDisponibilidad "Español" ;
+               :tienePalabraClave "Ingeniería de Software" ;
+               :tieneResumen "Proceso de desarrollo de software por metodologias" ;
+               :tieneTamañoArchivo "665kb" ;
+               :tieneTituloAcademico "Ingenieria de Software" ;
+               :tieneVersion "7.0" .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#recFisico01
+:recFisico01 rdf:type owl:NamedIndividual ,
+                      :Fisico ;
+             <http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF> "Programación" ;
+             :TieneCategoría "Libro" ;
+             :tieneAutor "Sebastián Ossandón" ;
+             :tieneAñoPublicacion "2019"^^xsd:int ;
+             :tieneEstado "acceso abierto" ;
+             :tieneISBN "8793-26-38" ;
+             :tieneIdioma "Español" ;
+             :tieneNumerodeEjemplares "10"^^xsd:int ;
+             :tieneNumerodeEstante "2-B" ;
+             :tienePalabraClave "Algoritmo" ,
+                                "Algoritmos avanzados" ;
+             :tieneResumen "Este documento compara diferentes funciones de complejidad de tiempo de algoritmos. Aunque las funciones tienen tiempos de ejecución similares para valores pequeños de n, los tiempos cambian significativamente a medida que n aumenta, lo que significa que el algoritmo apropiado depende del tamaño de la entrada" ;
+             :tieneTitulo "Algoritmos avanzados" ;
+             :tieneVersion "v3.0" .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#sala003
+:sala003 rdf:type owl:NamedIndividual ,
+                  <http://webprotege.stanford.edu/R9JttmJ5oSIjMe4WwJq7KGj> ;
+         :tieneCapacidad "50"^^xsd:int ;
+         :tieneHorarioDisponibilidad "8:30-16:00" ;
+         :tieneNombreAmbiente "Sala de Lectura" ;
+         :tieneReglaUso "Hablar en voz baja, por favor." ;
+         :tieneUbicación "Planta baja de la biblioteca" .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#sala004
+:sala004 rdf:type owl:NamedIndividual ,
+                  <http://webprotege.stanford.edu/R9JttmJ5oSIjMe4WwJq7KGj> ;
+         :tieneCapacidad "15"^^xsd:int ;
+         :tieneHorarioDisponibilidad "09:00 - 18:00" ;
+         :tieneNombreAmbiente "Sala de reuniones" ;
+         :tieneReglaUso "Haber realizado una reserva previa" ;
+         :tieneUbicación "Primer piso al lado izquierdo de las gradas" .
+
+
+###  http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#sala005
+:sala005 rdf:type owl:NamedIndividual ,
+                  <http://webprotege.stanford.edu/R9JttmJ5oSIjMe4WwJq7KGj> ;
+         :tieneCapacidad "5"^^xsd:int ;
+         :tieneHorarioDisponibilidad "08:00 - 19:00" ;
+         :tieneNombreAmbiente "Sala de préstamos" ;
+         :tieneReglaUso "Portar carnet universitario para el préstamo de libros" ;
+         :tieneUbicación "Planta Baja" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

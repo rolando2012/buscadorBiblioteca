@@ -1,11 +1,15 @@
 from flask import Flask, request, render_template
 from rdflib import Graph
+from owlready2 import *
 
 app = Flask(__name__)
 
-# Cargar la ontología desde un archivo .owl
-g = Graph()
-g.parse("ontologia/biblioteca.owl", format="xml")
+
+# Cargar la ontología con OWLready2 
+onto_path.append("ontologia/biblioteca") 
+onto = get_ontology("ontologia/biblioteca.owl").load()
+# Convertir la ontología a un grafo RDFlib 
+graph = default_world.as_rdflib_graph()
 
 @app.route('/')
 def index():
@@ -25,10 +29,27 @@ def search():
         FILTER (regex(str(?subject), "{query}", "i") || regex(str(?object), "{query}", "i"))
     }}
     """
-    results = g.query(sparql_query)
+    results = graph.query(sparql_query)
     # Extraer solo la parte final de las URLs 
     simplified_results = [str(row.subject).split("/")[-1] for row in results]
+
     return render_template('results.html', results=simplified_results)
+
+@app.route('/details/<instance>') 
+def details(instance): 
+    sparql_query = f""" 
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+    PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+    
+    SELECT ?predicate ?object 
+    WHERE {{ 
+        ?subject ?predicate ?object . 
+        FILTER (str(?subject) = "http://www.semanticweb.org/miche/ontologies/2024/8/{instance}") 
+    }} 
+    """ 
+    results = graph.query(sparql_query) 
+    return render_template('details.html', instance=instance, results=results)
 
 if __name__ == '__main__':
     app.run(debug=True)

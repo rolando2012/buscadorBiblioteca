@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resultados de la Búsqueda</title>
+    <title>Detalles de {{ instance }}</title>
 </head>
 <body>
-    <h1>Resultados de la Búsqueda</h1>
+    <h1>Detalles de {{ instance }}</h1>
     <ul>
-        {% for result in results %}
-            <li><a href="/details/{{ result }}">{{ result }}</a></li>
+        {% for row in results %}
+            <li>{{ row.predicate }}: {{ row.object }}</li>
         {% endfor %}
     </ul>
     <a href="/">Volver</a>

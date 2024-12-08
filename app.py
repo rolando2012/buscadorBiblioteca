@@ -13,7 +13,7 @@ graph = default_world.as_rdflib_graph()
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('start.html')
 
 @app.route('/search', methods=['POST'])
 def search():

@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f3f3c8; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 20px; 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.header .titulo {
+    display: block;
+    margin: 0 auto 20px;
+    width: 80%; 
+    max-width: 350px;
+}
+
+.content .descripcion {
+    font-size: 18px;
+    margin: 20px 0;
+    line-height: 1.6; 
+    color: #555; 
+}
+
+.content .gato {
+    margin: 20px 0;
+    width: 140px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer .boton {
+    background-color: #93573d;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer .boton:hover {
+    background-color: #7a4430;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}

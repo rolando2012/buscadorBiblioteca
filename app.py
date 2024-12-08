@@ -21,19 +21,20 @@ def search():
     sparql_query = f"""
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-    PREFIX owl: <http://www.w3.org/2002/07/owl#>
+    PREFIX ontologies: <http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital#>
 
-    SELECT DISTINCT ?subject 
+    SELECT ?label
     WHERE {{
-        ?subject ?predicate ?object .
-        FILTER (regex(str(?subject), "{query}", "i") || regex(str(?object), "{query}", "i"))
+      ?individual rdfs:label ?label .
+      ?individual ?property ?value .
+      FILTER(CONTAINS(LCASE(STR(?value)), LCASE("{query}")))
     }}
     """
     results = graph.query(sparql_query)
     # Extraer solo la parte final de las URLs 
-    simplified_results = [str(row.subject).split("/")[-1] for row in results]
+    
 
-    return render_template('results.html', results=simplified_results,query=query)
+    return render_template('results.html', results=results,query=query)
 
 @app.route('/details/<instance>') 
 def details(instance): 

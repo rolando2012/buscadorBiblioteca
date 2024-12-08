@@ -1,19 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultados de la Búsqueda</title>
+    <link rel="stylesheet" href="../static/css/results.css">
 </head>
 <body>
-    <h1>Resultados de la Búsqueda:  {{query}} </h1>
-    {% if results %}
-    <ul>
-            {% for result in results %}
-                <li><a href="/details/{{ result }}">{{ result }}</a></li>
-            {% endfor %}
-    </ul>
-    {% else %} <p>No se encontraron resultados.</p> {% endif %}
-    <a href="/">Volver</a>
+    <div class="container">
+        <header class="header">
+            <img src="../static/images/titulo.png" alt="ONTOFLOW" class="titulo">
+        </header>
+        <main class="content">
+            <h1>Resultados de la Búsqueda: {{ query }}</h1>
+            {% if results %}
+                <ul>
+                    {% for result in results %}
+                        <li><a href="/details/{{ result }}">{{ result }}</a></li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>No se encontraron resultados.</p>
+            {% endif %}
+            <a href="/" class="button">Volver</a>
+        </main>
+    </div>
 </body>
 </html>

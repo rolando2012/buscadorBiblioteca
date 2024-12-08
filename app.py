@@ -33,7 +33,7 @@ def search():
     # Extraer solo la parte final de las URLs 
     simplified_results = [str(row.subject).split("/")[-1] for row in results]
 
-    return render_template('results.html', results=simplified_results)
+    return render_template('results.html', results=simplified_results,query=query)
 
 @app.route('/details/<instance>') 
 def details(instance): 

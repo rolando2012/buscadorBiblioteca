@@ -12,8 +12,14 @@ onto = get_ontology("ontologia/biblioteca.owl").load()
 graph = default_world.as_rdflib_graph()
 
 @app.route('/')
-def index():
+def start():
     return render_template('start.html')
+
+
+@app.route('/index', methods=['GET'])
+def search_page():
+    return render_template('index.html')
+
 
 @app.route('/search', methods=['POST'])
 def search():

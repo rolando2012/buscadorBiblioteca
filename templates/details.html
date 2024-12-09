@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/details.css"> 
     <title>Detalles de {{ instance }}</title>
 </head>
 <body>
-    <h1>Detalles de {{ instance }}</h1>
-    <ul>
-        {% for predicate, object in results %}
-            <li>{{ predicate }}: {{ object }}</li>
-        {% endfor %}
-    </ul>
-    <a href="/">Volver</a>
+    <div class="cabecera"></div>
+    <div class="contenedor">
+        <h1>Detalles de: {{ instance }} </h1>
+        <ul>
+            {% for predicate, object in results %}
+                <li>{{ predicate }}: {{ object }}</li>
+            {% endfor %}
+        </ul>
+        <a href="/index" class="button">Volver</a>
+    </div>
 </body>
 </html>

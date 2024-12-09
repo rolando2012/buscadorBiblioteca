@@ -4,14 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalles de {{ instance }}</title>
+    <link rel="stylesheet" href="../static/css/details.css">
 </head>
 <body>
-    <h1>Detalles de {{ instance }}</h1>
-    <ul>
-        {% for predicate, object in results %}
-            <li>{{ predicate }}: {{ object }}</li>
-        {% endfor %}
-    </ul>
-    <a href="/">Volver</a>
+    <div class="header">
+        <img class="titulo" src="/static/images/Biblioteca.jpg" alt="OntoFlow Logo">
+    </div>
+    <div class="container">
+        <h1>Detalles de: {{ instance }}</h1>
+        <div class="content">
+            <ul>
+                {% for predicate, object in results %}
+                <li><strong>{{ predicate }}:</strong> {{ object }}</li>
+                {% endfor %}
+            </ul>
+            <a class="button" href="/results">Volver</a>
+        </div>
+    </div>
 </body>
 </html>

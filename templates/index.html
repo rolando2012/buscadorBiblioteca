@@ -4,13 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/index.css"> 
-    <title>Motor de Búsqueda de Ontología</title>
+    <title>Ontoflow:Ontologia de biblioteca digital</title>
 </head>
 <body>
-    <h1>Motor de Búsqueda de Ontología</h1>
-    <form action="/search" method="post">
-        <input type="text" name="query" placeholder="Ingrese su búsqueda">
-        <button type="submit">Buscar</button>
-    </form>
+    <header class="cabecera"></header>
+    <div class="contenedor">
+            <div class="Titulo">
+                <img src="../static/images/libros.png" alt="iconolibro" id="libros">
+                <img src="../static/images/titulosinfondo.png" alt="ONTOFLOW">
+            </div>
+            <form action="/search" method="post">
+                <input type="text" name="query" placeholder="¿Qué es lo que desea buscar?">
+                <button type="submit">Buscar</button>
+            </form>
+    </div>
+    
 </body>
 </html>

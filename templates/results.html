@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="../static/css/results.css">
 </head>
 <body>
-    <div class="container">
+    <div class="cabecera"></div>
+   <div class="contenedor">
         <header class="header">
-            <img src="../static/images/titulo.png" alt="ONTOFLOW" class="titulo">
+            <img src="../static/images/libros.png" alt="iconolibro" id="libros">
+            <img src="../static/images/titulosinfondo.png" alt="ONTOFLOW" id="titulo">
         </header>
-        <main class="content">
+        <main class="container">
             <h1>Resultados de la Búsqueda: {{ query }}</h1>
             {% if results %}
                 <ul>

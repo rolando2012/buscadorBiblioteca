@@ -19,6 +19,7 @@ def start():
 @app.route('/index', methods=['GET'])
 def search_page():
     return render_template('index.html')
+    
 
 
 @app.route('/search', methods=['POST'])

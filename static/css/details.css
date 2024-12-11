@@ -21,11 +21,22 @@ body {
 .contenedor{
     width: 70%;
     height: auto;
-    
+    margin-top: 10px;
 }
 .contenedor h1{
     font-size: 24px;
 }
+
+.container {
+    width: 100%;
+    /* min-height: 380px; */
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 20px; 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+   /* text-align: center;*/
+}
+
 .button {
     display: inline-block;
     margin-top: 20px;

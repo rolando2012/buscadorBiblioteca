@@ -24,24 +24,29 @@
                 </form>
             </div>
             <main class="container">
-                <h1>Resultados de la Búsqueda: {{ query }}</h1>
-                {% if results %}
-                    <h2>Resultados Locales</h2>
+                
+                <h2>Local</h2>
+                {% if results.local %}
                     <ul>
                         {% for result in results.local %}
                         <li><a href="/details/{{ result }}"> {{result}} </a></li>
                     {% endfor %}
                     </ul>
+                {% else %}
+                <p>No se encontraron resultados.</p>
+                {% endif %}
 
-                    <h2>Resultados de DBpedia</h2>
+                <h2>DBpedia</h2>
+                {% if results.dbpedia %}
                     <ul>
                     {% for result in results.dbpedia %}
                     <li><a href="{{ result.resource }}">{{ result.label }}</a></li>
                     {% endfor %}
                     </ul>
                 {% else %}
-                    <p>No se encontraron resultados.</p>
+                <p>No se encontraron resultados.</p>
                 {% endif %}
+                
                 <div class="contCastor">
                     <img src="../static/images/castor.png" alt="castorcito" id="castor">
                 </div>

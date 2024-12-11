@@ -1,7 +1,9 @@
 from flask import Flask, request, render_template
 from rdflib import Graph
 from owlready2 import *
+from SPARQLWrapper import SPARQLWrapper, JSON
 
+DBPEDIA_ENDPOINT = "http://dbpedia.org/sparql"
 app = Flask(__name__)
 
 
@@ -31,11 +33,11 @@ def search():
       FILTER(CONTAINS(LCASE(STR(?value)), LCASE("{query}")))
     }}
     """
-    results = graph.query(sparql_query)
+    results_local = graph.query(sparql_query)
 
     # Extraer identificador de las URLs
     resultado_simplificado = []
-    for row in results:
+    for row in results_local:
         identifier = str(row.identifier)
         if identifier.startswith("http://www.semanticweb.org/miche/ontologies/2024/8/"):
             # Extraer la parte final del IRI
@@ -45,9 +47,41 @@ def search():
         else:
             # Procesar casos que no sean URL (e.g., estLector001)
             literal_value = identifier.split("'")[0]  # Ajusta si cambia el patrón
-            resultado_simplificado.append(f"OntologiaBiblioteca{literal_value}")
+            resultado_simplificado.append(f"{literal_value}")
+    
+    # Consulta a DBpedia
+    sparql_query_dbpedia = f"""
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-    return render_template('results.html', results=resultado_simplificado,query=query)
+    SELECT ?resource ?label
+    WHERE {{
+      ?resource rdfs:label ?label .
+      FILTER(LANG(?label) = "es")  # Etiquetas en español
+      FILTER(CONTAINS(LCASE(STR(?label)), LCASE("{query}")))
+    }}
+    LIMIT 10
+    """
+    sparql = SPARQLWrapper(DBPEDIA_ENDPOINT)
+    sparql.setQuery(sparql_query_dbpedia)
+    sparql.setReturnFormat(JSON)
+    results_dbpedia = sparql.query().convert()
+
+    # Procesar resultados de DBpedia
+    results_dbpedia_processed = [
+        {
+            "resource": result["resource"]["value"],
+            "label": result["label"]["value"]
+        }
+        for result in results_dbpedia["results"]["bindings"]
+    ]
+
+    # Combinar ambos resultados
+    combined_results = {
+        "local": resultado_simplificado,
+        "dbpedia": results_dbpedia_processed
+    }
+
+    return render_template('results.html', results=combined_results,query=query)
 
 @app.route('/details/<instance>') 
 def details(instance): 
@@ -59,7 +93,8 @@ def details(instance):
     SELECT ?predicate ?object 
     WHERE {{ 
         ?subject ?predicate ?object . 
-        FILTER (str(?subject) = "http://www.semanticweb.org/miche/ontologies/2024/8/{instance}") 
+        ?subject rdfs:label ?label . 
+        FILTER (str(?subject) = "http://www.semanticweb.org/miche/ontologies/2024/8/{instance}" || str(?label)="{instance}") 
     }} 
     """ 
     results = graph.query(sparql_query) 

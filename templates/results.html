@@ -7,25 +7,39 @@
     <link rel="stylesheet" href="../static/css/results.css">
 </head>
 <body>
-    <div class="cabecera"></div>
-   <div class="contenedor">
-        <header class="header">
-            <img src="../static/images/libros.png" alt="iconolibro" id="libros">
-            <img src="../static/images/titulosinfondo.png" alt="ONTOFLOW" id="titulo">
-        </header>
-        <main class="container">
-            <h1>Resultados de la Búsqueda: {{ query }}</h1>
-            {% if results %}
-                <ul>
-                    {% for result in results %}
-                        <li><a href="/details/{{ result }}">{{ result }}</a></li>
-                    {% endfor %}
-                </ul>
-            {% else %}
-                <p>No se encontraron resultados.</p>
-            {% endif %}
-            <a href="/index" class="button">Volver</a>
-        </main>
+    <header class="cabecera"></header>
+    <div class="contenedor">
+        <aside class="izquierda"> 
+            <div class="header">
+                <img src="../static/images/libros.png" alt="iconolibro" id="libros">
+                <img src="../static/images/titulosinfondo.png" alt="ONTOFLOW" id="titulo">
+            </div>
+            
+        </aside>
+        <section class="derecha">
+            <div class="buscador">
+                <form action="/search" method="post">
+                    <input type="text" name="query" placeholder="¿Qué es lo que desea buscar?">
+                    <button type="submit">Buscar</button>
+                </form>
+            </div>
+            <main class="container">
+                <h1>Resultados de la Búsqueda: {{ query }}</h1>
+                {% if results %}
+                    <ul>
+                        {% for result in results %}
+                            <li><a href="/details/{{ result }}">{{ result }}</a></li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p>No se encontraron resultados.</p>
+                {% endif %}
+                <div class="contCastor">
+                    <img src="../static/images/castor.png" alt="castorcito" id="castor">
+                </div>
+            </main>
+        </section>
+        
     </div>
 </body>
 </html>

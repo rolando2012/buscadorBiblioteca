@@ -23,16 +23,16 @@ def search():
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX ontologies: <http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital#>
 
-    SELECT ?label
+    SELECT ?identifier
     WHERE {{
-      ?individual rdfs:label ?label .
       ?individual ?property ?value .
+      OPTIONAL {{ ?individual rdfs:label ?label }}
+      BIND(COALESCE(?label, STR(?individual)) AS ?identifier)
       FILTER(CONTAINS(LCASE(STR(?value)), LCASE("{query}")))
     }}
     """
     results = graph.query(sparql_query)
     # Extraer solo la parte final de las URLs 
-    
 
     return render_template('results.html', results=results,query=query)
 

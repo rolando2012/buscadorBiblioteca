@@ -32,9 +32,22 @@ def search():
     }}
     """
     results = graph.query(sparql_query)
-    # Extraer solo la parte final de las URLs 
 
-    return render_template('results.html', results=results,query=query)
+    # Extraer identificador de las URLs
+    resultado_simplificado = []
+    for row in results:
+        identifier = str(row.identifier)
+        if identifier.startswith("http://www.semanticweb.org/miche/ontologies/2024/8/"):
+            # Extraer la parte final del IRI
+            suffix = identifier.split("/")[-1]
+            # Concatenar con "OntologiaBiblioteca"
+            resultado_simplificado.append(f"{suffix}")
+        else:
+            # Procesar casos que no sean URL (e.g., estLector001)
+            literal_value = identifier.split("'")[0]  # Ajusta si cambia el patrón
+            resultado_simplificado.append(f"OntologiaBiblioteca{literal_value}")
+
+    return render_template('results.html', results=resultado_simplificado,query=query)
 
 @app.route('/details/<instance>') 
 def details(instance): 

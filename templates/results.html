@@ -26,10 +26,18 @@
             <main class="container">
                 <h1>Resultados de la Búsqueda: {{ query }}</h1>
                 {% if results %}
+                    <h2>Resultados Locales</h2>
                     <ul>
-                        {% for result in results %}
-                            <li><a href="/details/{{ result }}">{{ result }}</a></li>
-                        {% endfor %}
+                        {% for result in results.local %}
+                        <li><a href="/details/{{ result }}"> {{result}} </a></li>
+                    {% endfor %}
+                    </ul>
+
+                    <h2>Resultados de DBpedia</h2>
+                    <ul>
+                    {% for result in results.dbpedia %}
+                    <li><a href="{{ result.resource }}">{{ result.label }}</a></li>
+                    {% endfor %}
                     </ul>
                 {% else %}
                     <p>No se encontraron resultados.</p>

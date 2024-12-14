@@ -2,15 +2,15 @@ from flask import Flask, request, render_template
 from rdflib import Graph
 from owlready2 import *
 from SPARQLWrapper import SPARQLWrapper, JSON
+import time
 
 DBPEDIA_ENDPOINT = "http://dbpedia.org/sparql"
 app = Flask(__name__)
 
-
-# Cargar la ontología con OWLready2 
-onto_path.append("ontologia/biblioteca") 
+# Cargar la ontología con OWLready2
+onto_path.append("ontologia/biblioteca")
 onto = get_ontology("ontologia/biblioteca.owl").load()
-# Convertir la ontología a un grafo RDFlib 
+# Convertir la ontología a un grafo RDFlib
 graph = default_world.as_rdflib_graph()
 
 @app.route('/')
@@ -40,71 +40,56 @@ def search():
       FILTER(CONTAINS(LCASE(STR(?value)), LCASE("{query}")))
     }}
     """
-    results_local = graph.query(sparql_query)
+    results = graph.query(sparql_query)
+    # Extraer solo la parte final de las URLs
+    simplified_results = [str(row.subject).split("/")[-1] for row in results]
 
-    # Extraer identificador de las URLs
-    resultado_simplificado = []
-    for row in results_local:
-        identifier = str(row.identifier)
-        if identifier.startswith("http://www.semanticweb.org/miche/ontologies/2024/8/"):
-            # Extraer la parte final del IRI
-            suffix = identifier.split("/")[-1]
-            # Concatenar con "OntologiaBiblioteca"
-            resultado_simplificado.append(f"{suffix}")
-        else:
-            # Procesar casos que no sean URL (e.g., estLector001)
-            literal_value = identifier.split("'")[0]  # Ajusta si cambia el patrón
-            resultado_simplificado.append(f"{literal_value}")
-    
-    # Consulta a DBpedia
-    sparql_query_dbpedia = f"""
+    res = []
+
+    for result in simplified_results:
+        if result[0:1] != 'R':
+            res.append(result)
+
+    # Si no se encuentran resultados en la ontología local, consultar DBpedia
+    if not res:
+        sparql = SPARQLWrapper("http://dbpedia.org/sparql")
+        sparql.setQuery(f"""
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+        SELECT DISTINCT ?subject 
+        WHERE {{
+            ?subject ?predicate ?object .
+            FILTER (regex(str(?subject), "{query}", "i") || regex(str(?object), "{query}", "i"))
+        }}
+        LIMIT 10
+        """)
+        sparql.setReturnFormat(JSON)
+        start_time = time.time()
+        dbpedia_results = sparql.query().convert()
+        end_time = time.time()
+        print(f"Tiempo de ejecución: {end_time - start_time} segundos")
+
+        for result in dbpedia_results["results"]["bindings"]:
+            res.append(result["subject"]["value"].split("/")[-1])
+
+    return render_template('results.html', results=res, query=query)
+
+@app.route('/details/<instance>')
+def details(instance):
+    sparql_query = f"""
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
-    SELECT ?resource ?label
+    SELECT ?predicate ?object
     WHERE {{
-      ?resource rdfs:label ?label .
-      FILTER(LANG(?label) = "es")  # Etiquetas en español
-      FILTER(CONTAINS(LCASE(STR(?label)), LCASE("{query}")))
+        ?subject ?predicate ?object .
+        FILTER (str(?subject) = "http://www.semanticweb.org/miche/ontologies/2024/8/{instance}")
     }}
-    LIMIT 10
     """
-    sparql = SPARQLWrapper(DBPEDIA_ENDPOINT)
-    sparql.setQuery(sparql_query_dbpedia)
-    sparql.setReturnFormat(JSON)
-    results_dbpedia = sparql.query().convert()
-
-    # Procesar resultados de DBpedia
-    results_dbpedia_processed = [
-        {
-            "resource": result["resource"]["value"],
-            "label": result["label"]["value"]
-        }
-        for result in results_dbpedia["results"]["bindings"]
-    ]
-
-    # Combinar ambos resultados
-    combined_results = {
-        "local": resultado_simplificado,
-        "dbpedia": results_dbpedia_processed
-    }
-
-    return render_template('results.html', results=combined_results,query=query)
-
-@app.route('/details/<instance>') 
-def details(instance): 
-    sparql_query = f""" 
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
-    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
-    PREFIX owl: <http://www.w3.org/2002/07/owl#> 
-    
-    SELECT ?predicate ?object 
-    WHERE {{ 
-        ?subject ?predicate ?object . 
-        OPTIONAL {{ ?subject rdfs:label ?label }} 
-        FILTER (str(?subject) = "http://www.semanticweb.org/miche/ontologies/2024/8/{instance}" || str(?label)="{instance}") 
-    }} 
-    """ 
-    results = graph.query(sparql_query) 
+    results = graph.query(sparql_query)
     simplified_results = [(str(row.predicate).split("/")[-1], row.object) for row in results]
     return render_template('details.html', instance=instance, results=simplified_results)
 

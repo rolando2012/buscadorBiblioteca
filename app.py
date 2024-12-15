@@ -100,7 +100,7 @@ def details(instance):
     SELECT ?predicate ?object 
     WHERE {{ 
         ?subject ?predicate ?object . 
-        ?subject rdfs:label ?label . 
+        OPTIONAL {{ ?subject rdfs:label ?label }} 
         FILTER (str(?subject) = "http://www.semanticweb.org/miche/ontologies/2024/8/{instance}" || str(?label)="{instance}") 
     }} 
     """ 

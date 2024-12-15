@@ -10,13 +10,15 @@
 <body>
     <div class="cabecera"></div>
     <div class="contenedor">
-        <h1>Detalles de: {{ instance }} </h1>
-        <ul>
-            {% for predicate, object in results %}
-                <li>{{ predicate }}: {{ object }}</li>
-            {% endfor %}
-        </ul>
-        <a href="/index" class="button">Volver</a>
+        <div class="container">
+            <h1>Detalles de: {{ instance }} </h1>
+            <ul>
+                {% for predicate, object in results %}
+                    <li>{{ predicate }}: {{ object }}</li>
+                {% endfor %}
+            </ul>
+            <a href="javascript:window.history.back();" class="button">Volver</a>
+        </div>
     </div>
 </body>
 </html>

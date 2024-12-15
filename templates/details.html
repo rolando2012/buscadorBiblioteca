@@ -8,8 +8,8 @@
 <body>
     <h1>Detalles de {{ instance }}</h1>
     <ul>
-        {% for predicate, object in results %}
-            <li>{{ predicate }}: {{ object }}</li>
+        {% for row in results %}
+            <li>{{ row.predicate }}: {{ row.object }}</li>
         {% endfor %}
     </ul>
     <a href="/">Volver</a>

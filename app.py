@@ -1,6 +1,7 @@
 from flask import Flask, request, render_template
 from rdflib import Graph
 from owlready2 import *
+import pandas as pd
 from SPARQLWrapper import SPARQLWrapper, JSON
 import time
 
@@ -12,6 +13,15 @@ onto_path.append("ontologia/biblioteca")
 onto = get_ontology("ontologia/biblioteca.owl").load()
 # Convertir la ontología a un grafo RDFlib
 graph = default_world.as_rdflib_graph()
+
+# Cargar la lista de libros desde el archivo CSV
+libros_csv_path = "csv/books.csv"
+
+def cargar_libros_csv():
+    libros_df = pd.read_csv(libros_csv_path)
+    return libros_df
+
+libros_df = cargar_libros_csv()
 
 @app.route('/')
 def start():
@@ -26,32 +36,24 @@ def search_page():
 
 @app.route('/search', methods=['POST'])
 def search():
-    query = request.form['query']
-    sparql_query = f"""
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-    PREFIX ontologies: <http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital#>
+    query = request.form['query'].lower()
+    results = []
 
-    SELECT ?identifier
-    WHERE {{
-      ?individual ?property ?value .
-      OPTIONAL {{ ?individual rdfs:label ?label }}
-      BIND(COALESCE(?label, STR(?individual)) AS ?identifier)
-      FILTER(CONTAINS(LCASE(STR(?value)), LCASE("{query}")))
-    }}
-    """
-    results = graph.query(sparql_query)
-    # Extraer solo la parte final de las URLs
-    simplified_results = [str(row.subject).split("/")[-1] for row in results]
+    # Buscar coincidencias en la ontología
+    for cls in onto.classes():
+        if query in cls.name.lower():
+            results.append(cls.name)
 
-    res = []
+    # Si no hay resultados en la ontología, buscar en el CSV
+    if not results:
+        results = libros_df[libros_df['title'].str.lower().str.contains(query, na=False)]['title'].tolist()
 
-    for result in simplified_results:
-        if result[0:1] != 'R':
-            res.append(result)
+    # Si no se encuentran resultados en ninguna parte
+    if not results:
+        results.append("No se encontraron resultados.")
 
-    # Si no se encuentran resultados en la ontología local, consultar DBpedia
-    if not res:
+    # Si se encuentran resultados, consulta en DBpedia para obtener más detalles
+    if results[0] != "No se encontraron resultados.":
         sparql = SPARQLWrapper("http://dbpedia.org/sparql")
         sparql.setQuery(f"""
         PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -69,12 +71,12 @@ def search():
         start_time = time.time()
         dbpedia_results = sparql.query().convert()
         end_time = time.time()
-        print(f"Tiempo de ejecución: {end_time - start_time} segundos")
+        print(f"Tiempo de ejecución en DBpedia: {end_time - start_time} segundos")
 
         for result in dbpedia_results["results"]["bindings"]:
-            res.append(result["subject"]["value"].split("/")[-1])
+            results.append(result["subject"]["value"].split("/")[-1])
 
-    return render_template('results.html', results=res, query=query)
+    return render_template('results.html', results=results, query=query)
 
 @app.route('/details/<instance>')
 def details(instance):

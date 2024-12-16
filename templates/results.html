@@ -26,16 +26,27 @@
             <main class="container">
                 
                 <h2>Local</h2>
-                {% if results.local %}
-                    <ul>
-                        {% for result in results.local %}
-                        <li><a href="/details/{{ result }}"> {{result}} </a></li>
+                {% if results %}
+                <ul>
+                    {% for result in results.local %}
+                    <li>
+                        <div class="opcion" onclick="clickA(this)">
+                            <a href="/details/{{result.Instancia}}">{{ result.Titulo }}</a><br>
+                            <small>Instancia: {{ result.Instancia }}</small>
+                            <ul class="detalles">
+                                {% for info in result.MasInformacion %}
+                                <li>{{ info }}</li>
+                                {% endfor %}
+                                <p>...</p>
+                            </ul>
+                        </div>
+                    </li>
                     {% endfor %}
-                    </ul>
-                {% else %}
-                <p>No se encontraron resultados.</p>
+                </ul>
+                {% else %} 
+                <p>No se encontraron resultados.</p> 
                 {% endif %}
-
+                
                 <h2>DBpedia</h2>
                 {% if results.dbpedia %}
                     <ul>
@@ -54,5 +65,13 @@
         </section>
         
     </div>
+    <script>
+        function clickA(div){
+            const link = div.querySelector('a');
+            if (link) {
+            window.location.href = link.href;
+            }
+        }
+    </script>
 </body>
 </html>

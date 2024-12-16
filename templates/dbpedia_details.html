@@ -3,19 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/details.css">
     <title>Detalles de {{ title }}</title>
 </head>
 <body>
-    <h1>Detalles de {{ title }}</h1>
-    {% if details %}
-        <ul>
-            {% for key, value in details.items() %}
-            <li><strong>{{ key }}:</strong> {{ value }}</li>
-            {% endfor %}
-        </ul>
-    {% else %}
-        <p>No se encontraron detalles para este título.</p>
-    {% endif %}
-    <a href="/">Volver al inicio</a>
+    <div class="cabecera"></div>
+    <div class="contenedor">
+        <div class="container">
+            <h1>Detalles de {{ title }}</h1>
+            {% if details %}
+                <ul>
+                    {% for key, value in details.items() %}
+                    <li><strong>{{ key }}:</strong> {{ value }}</li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>No se encontraron detalles para este título.</p>
+            {% endif %}
+            <a href="javascript:window.history.back();" class="button">Volver al inicio</a>
+        </div>
+    </div>
 </body>
 </html>

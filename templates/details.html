@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/details.css"> 
     <title>Detalles de {{ instance }}</title>
-    <link rel="stylesheet" href="../static/css/details.css">
 </head>
 <body>
     <div class="cabecera"></div>
@@ -13,8 +12,8 @@
         <div class="container">
             <h1>Detalles de: {{ instance }} </h1>
             <ul>
-                {% for predicate, object in results %}
-                    <li>{{ predicate }}: {{ object }}</li>
+                {% for label, value in results %}
+                    <li><strong>{{ label }}:</strong> {{ value }}</li>
                 {% endfor %}
             </ul>
             <a href="javascript:window.history.back();" class="button">Volver</a>

@@ -136,7 +136,7 @@ def dbpedia_details(title):
         (book for book in books if book.get("name", {}).get("value", "").lower() == title.lower()),
         None
     )
-    
+
     # Si no se encuentra el libro
     if not book_details:
         return render_template("dbpedia_details.html", title=title, details=None)
@@ -146,6 +146,16 @@ def dbpedia_details(title):
         "Título": book_details.get("name", {}).get("value", "N/A"),
         "Autor": book_details.get("author", {}).get("value", "N/A"),
         "Resumen": book_details.get("abstract", {}).get("value", "N/A"),
+        "ID de Página": book_details.get("number", {}).get("value", "N/A"),
+        "Título Alternativo": book_details.get("title", {}).get("value", "N/A"),
+        "Editorial": book_details.get("publisher", {}).get("value", "N/A"),
+        "Fecha de Publicación": book_details.get("publicationDate", {}).get("value", "N/A"),
+        "Edición": book_details.get("edition", {}).get("value", "N/A"),
+        "ISBN": book_details.get("isbn", {}).get("value", "N/A"),
+        "Número de Páginas": book_details.get("numberOfPages", {}).get("value", "N/A"),
+        "Género": book_details.get("genre", {}).get("value", "N/A"),
+        "Idioma": book_details.get("language", {}).get("value", "N/A"),
+        "URL del Recurso": book_details.get("url", {}).get("value", "N/A"),
     }
 
     return render_template("dbpedia_details.html", title=title, details=processed_details)

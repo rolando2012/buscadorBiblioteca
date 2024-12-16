@@ -30,19 +30,37 @@ def search():
 
 @app.route('/details/<instance>')
 def details(instance):
-    sparql_query = f"""
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-    PREFIX owl: <http://www.w3.org/2002/07/owl#>
+    # Buscar la instancia correspondiente
+    matching_instance = None
+    for entry in ontology_data:
+        # Extraer el identificador de la instancia desde "@id"
+        instance_id = entry["@id"].split("/")[-1]
+        if instance_id == instance:
+            matching_instance = entry
+            break
 
-    SELECT ?predicate ?object
-    WHERE {{
-        ?subject ?predicate ?object .
-        FILTER (str(?subject) = "http://www.semanticweb.org/miche/ontologies/2024/8/{instance}")
-    }}
-    """
-    results = graph.query(sparql_query)
-    simplified_results = [(str(row.predicate).split("/")[-1], row.object) for row in results]
+     # Si no se encuentra, buscar por el rdfs:label
+    if not matching_instance:
+        for entry in ontology_data:
+            labels = entry.get("http://www.w3.org/2000/01/rdf-schema#label", [])
+            for label in labels:
+                if label.get("@value") == instance:
+                    matching_instance = entry
+                    break
+            if matching_instance:
+                break
+
+    # Manejar caso donde no se encuentra la instancia
+    if not matching_instance:
+        return f"No se encontró la instancia: {instance}", 404
+
+    # Simplificar los detalles de la instancia
+    simplified_results = []
+    for predicate, values in matching_instance.items():
+        if isinstance(values, list) and "@value" in values[0]:
+            label = predicate.split("/")[-1]  # Obtener la última parte del URI como etiqueta
+            value = values[0]["@value"]  # Obtener el valor
+            simplified_results.append((label, value))
     return render_template('details.html', instance=instance, results=simplified_results)
 
 #funcion buscar en json

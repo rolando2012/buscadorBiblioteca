@@ -40,7 +40,7 @@
                 {% if results.dbpedia %}
                     <ul>
                     {% for result in results.dbpedia %}
-                    <li><a href="{{ result.resource }}">{{ result.label }}</a></li>
+                    <p>{{ result }}</p>
                     {% endfor %}
                     </ul>
                 {% else %}

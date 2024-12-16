@@ -2,6 +2,7 @@ from flask import Flask, request, render_template
 from rdflib import Graph
 from owlready2 import *
 from SPARQLWrapper import SPARQLWrapper, JSON
+import json
 
 DBPEDIA_ENDPOINT = "http://dbpedia.org/sparql"
 app = Flask(__name__)
@@ -73,19 +74,33 @@ def search():
     sparql.setReturnFormat(JSON)
     results_dbpedia = sparql.query().convert()
 
-    # Procesar resultados de DBpedia
-    results_dbpedia_processed = [
-        {
-            "resource": result["resource"]["value"],
-            "label": result["label"]["value"]
-        }
-        for result in results_dbpedia["results"]["bindings"]
-    ]
+    # Consulta al archivo JSON (DBpedia)
+    json_file = "./ontologia/dbpedia_books.json"  # Archivo JSON local
 
-    # Combinar ambos resultados
+    try:
+        with open(json_file, "r", encoding="utf-8") as f:
+            data = json.load(f)
+            books = data["results"]["bindings"]
+    except (FileNotFoundError, json.JSONDecodeError):
+        books = []
+
+    # Realizar búsqueda en JSON local
+    results_dbpedia_processed = set()
+    query_lower = query.lower()
+    for book in books:
+        title = book.get("name", {}).get("value", "").lower()
+        author = book.get("author", {}).get("value", "").lower()
+        abstract = book.get("abstract", {}).get("value", "").lower()
+
+        if query_lower in title or query_lower in author or query_lower in abstract:
+            results_dbpedia_processed.add(title)
+
+    results_dbpedia = sorted(results_dbpedia_processed)
+
+    # Combinar resultados locales y JSON
     combined_results = {
         "local": resultado_simplificado,
-        "dbpedia": results_dbpedia_processed
+        "dbpedia": results_dbpedia
     }
 
     return render_template('results.html', results=combined_results,query=query)

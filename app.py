@@ -95,7 +95,13 @@ def search():
         if query_lower in title or query_lower in author or query_lower in abstract:
             results_dbpedia_processed.add(title)
 
-    results_dbpedia = sorted(results_dbpedia_processed)
+    results_dbpedia = [
+        {
+            "title": title,
+            "url": f"/dbpedia_details/{title.replace(' ', '%20')}"
+        }
+        for title in sorted(results_dbpedia_processed)
+    ]
 
     # Combinar resultados locales y JSON
     combined_results = {
@@ -122,6 +128,36 @@ def details(instance):
     results = graph.query(sparql_query) 
     simplified_results = [(str(row.predicate).split("/")[-1], row.object) for row in results]
     return render_template('details.html', instance=instance, results=simplified_results)
+
+@app.route('/dbpedia_details/<title>')
+def dbpedia_details(title):
+    json_file = "./ontologia/dbpedia_books.json"  # Archivo JSON local
+    try:
+        with open(json_file, "r", encoding="utf-8") as f:
+            data = json.load(f)
+            books = data["results"]["bindings"]
+    except (FileNotFoundError, json.JSONDecodeError):
+        books = []
+
+    # Buscar detalles del libro según el título
+    book_details = next(
+        (book for book in books if book.get("name", {}).get("value", "").lower() == title.lower()),
+        None
+    )
+    
+    # Si no se encuentra el libro
+    if not book_details:
+        return render_template("dbpedia_details.html", title=title, details=None)
+
+    # Detalles procesados para mostrar en el HTML
+    processed_details = {
+        "Título": book_details.get("name", {}).get("value", "N/A"),
+        "Autor": book_details.get("author", {}).get("value", "N/A"),
+        "Resumen": book_details.get("abstract", {}).get("value", "N/A"),
+    }
+
+    return render_template("dbpedia_details.html", title=title, details=processed_details)
+
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles de {{ title }}</title>
+</head>
+<body>
+    <h1>Detalles de {{ title }}</h1>
+    {% if details %}
+        <ul>
+            {% for key, value in details.items() %}
+            <li><strong>{{ key }}:</strong> {{ value }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No se encontraron detalles para este título.</p>
+    {% endif %}
+    <a href="/">Volver al inicio</a>
+</body>
+</html>

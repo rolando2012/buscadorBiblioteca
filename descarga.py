@@ -6,7 +6,7 @@ SPARQL_ENDPOINT = "http://dbpedia.org/sparql"
 
 # Consulta SPARQL
 query = """
-SELECT DISTINCT ?book ?number ?abstract ?name ?author
+SELECT DISTINCT ?book ?number ?abstract ?name ?author ?title ?publisher ?publicationDate ?edition ?isbn ?numberOfPages ?genre ?language ?url
 WHERE
 {
   ?book dbo:wikiPageWikiLink ?topic .
@@ -20,11 +20,28 @@ WHERE
     dbr:Data_mining 
     dbr:Operating_system 
   }
+  
+  # Información básica
   ?book dbo:wikiPageID ?number .
   ?book rdfs:comment ?abstract .
   ?book dbp:name ?name .
-  ?book dbp:author ?author .
-  FILTER ( LANG ( ?abstract ) = 'es' )
+  OPTIONAL { ?book dbp:author ?author . }
+  
+  # Información adicional
+  OPTIONAL { ?book dbp:title ?title . }
+  OPTIONAL { ?book dbo:publisher ?publisher . }
+  OPTIONAL { ?book dbo:publicationDate ?publicationDate . }
+  OPTIONAL { ?book dbp:edition ?edition . }
+  OPTIONAL { ?book dbo:isbn ?isbn . }
+  OPTIONAL { ?book dbo:numberOfPages ?numberOfPages . }
+  OPTIONAL { ?book dbo:literaryGenre ?genre . }
+  OPTIONAL { ?book dbo:language ?language . }
+  
+  # Metadatos
+  OPTIONAL { ?book foaf:isPrimaryTopicOf ?url . }
+
+  # Filtro por idioma español
+  FILTER ( LANG(?abstract) = 'es' )
 }
 """
 

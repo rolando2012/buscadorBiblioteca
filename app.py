@@ -1,9 +1,7 @@
 from flask import Flask, request, render_template
 from rdflib import Graph
 from owlready2 import *
-import pandas as pd
 from SPARQLWrapper import SPARQLWrapper, JSON
-import time
 import json
 
 app = Flask(__name__)

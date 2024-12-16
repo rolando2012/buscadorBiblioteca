@@ -6,12 +6,23 @@
     <title>Resultados de la Búsqueda</title>
 </head>
 <body>
-    <h1>Resultados de la Búsqueda:  {{query}} </h1>
+    <h1>Búsqueda:  {{query}} </h1>
     {% if results %}
     <ul>
-            {% for result in results %}
-                <li><a href="/details/{{ result }}">{{ result }}</a></li>
-            {% endfor %}
+        {% for result in results %}
+        <li>
+            <div class="opcion">
+                <a href="/details/{{result.Instancia}}">{{ result.Titulo }}</a><br>
+                <small>Instancia: {{ result.Instancia }}</small>
+                <ul>
+                    {% for info in result.MasInformacion %}
+                    <li>{{ info }}</li>
+                    {% endfor %}
+                    <p>...</p>
+                </ul>
+            </div>
+        </li>
+        {% endfor %}
     </ul>
     {% else %} <p>No se encontraron resultados.</p> {% endif %}
     <a href="/">Volver</a>

@@ -1,0 +1,3215 @@
+[ {
+  "@id" : "http://webprotege.stanford.edu/R7KISuc44MAxIs1QJjjmOks",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF" : [ {
+    "@value" : "Programacion"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría" : [ {
+    "@value" : "Libro"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAreaEstudio" : [ {
+    "@value" : "Informatica"
+  }, {
+    "@value" : "Sistemas"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor" : [ {
+    "@value" : "Mark Zuckerberg"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCantidadVisualizaciones" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "39"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso" : [ {
+    "@value" : "https://biblio.edu/libros/1000Java.pdf"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEstado" : [ {
+    "@value" : "Acceso Libre"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion" : [ {
+    "@value" : "13/08/16"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato" : [ {
+    "@value" : "PDF"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneISBN" : [ {
+    "@value" : "9856-3-15-4"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma" : [ {
+    "@value" : "Ingles"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNivelAcademico" : [ {
+    "@value" : "pregrado"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave" : [ {
+    "@value" : "Java"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneResumen" : [ {
+    "@value" : "Sintaxis Basica de Java con teoria basica del lenguaje."
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo" : [ {
+    "@value" : "1700kb"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo" : [ {
+    "@value" : "1000 Forms of Java"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion" : [ {
+    "@value" : "v1.0"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "recDigital003"
+  } ]
+}, {
+  "@id" : "http://webprotege.stanford.edu/R7dfUdi2zCBZZxZLyUWtsok",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAñoIngresoDocente" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "2010"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCarnet" : [ {
+    "@value" : "5961487"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneDepartamento" : [ {
+    "@value" : "Informática y Sistemas"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEmail" : [ {
+    "@value" : "marcelo123@gmail.com"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneGenero" : [ {
+    "@value" : "Masculino"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNombre" : [ {
+    "@value" : "Marcelo Antezana"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumeroEmpleado" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTelefono" : [ {
+    "@value" : "68952322"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTituloAcademico" : [ {
+    "@value" : "Ingeniería de Sistemas"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDocente"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "docente001"
+  } ]
+}, {
+  "@id" : "http://webprotege.stanford.edu/R7sdFxNwn6AUYTDkSNufrtv",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCapacidad" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "50"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneHorarioDisponibilidad" : [ {
+    "@value" : "8:30-16:00"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNombreAmbiente" : [ {
+    "@value" : "Sala de Lectura"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneReglaUso" : [ {
+    "@value" : "Prohibido entrar con comida"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneUbicación" : [ {
+    "@value" : "Primer piso de la biblioteca"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://webprotege.stanford.edu/R9JttmJ5oSIjMe4WwJq7KGj"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "sala001"
+  } ]
+}, {
+  "@id" : "http://webprotege.stanford.edu/R8JYup5yft5ZOJLFDiXY1Jc",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCargo" : [ {
+    "@value" : "Archivista"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCarnet" : [ {
+    "@value" : "129987"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneDepartamento" : [ {
+    "@value" : "Informatica y Sistemas"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEmail" : [ {
+    "@value" : "margaritCas@gmail.com"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEspecializacion" : [ {
+    "@value" : "Catalogacion"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneGenero" : [ {
+    "@value" : "Femenino"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNombre" : [ {
+    "@value" : "Margarita Castillo"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumeroEmpleado" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "3"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTelefono" : [ {
+    "@value" : "78965542"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTituloAcademico" : [ {
+    "@value" : "Licenciado en Sistemas"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTurno" : [ {
+    "@value" : "Mañana"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersonalBiblioteca"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "perBiblioteca001"
+  } ]
+}, {
+  "@id" : "http://webprotege.stanford.edu/R8ZGDRlqVYx34X2QNpFamfM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF" : [ {
+    "@value" : "Teoria de la computacion"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría" : [ {
+    "@value" : "Libro"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor" : [ {
+    "@value" : "Edgar Jaldin"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso" : [ {
+    "@value" : "https://biblio.edu/investigacion/basescomputo.pdf"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEstado" : [ {
+    "@value" : "Acceso libre"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion" : [ {
+    "@value" : "08/04/23"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato" : [ {
+    "@value" : "PDF"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneISBN" : [ {
+    "@value" : "9952 21445 12023 1210"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma" : [ {
+    "@value" : "Ingles"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave" : [ {
+    "@value" : "computadoras"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo" : [ {
+    "@value" : "523kb"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo" : [ {
+    "@value" : "Bases de computacion"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion" : [ {
+    "@value" : "v2.3"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "recDigital026"
+  } ]
+}, {
+  "@id" : "http://webprotege.stanford.edu/R8l4H4sGMTO7UjhPKdjI18t",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecapublica" : [ {
+    "@id" : "http://webprotege.stanford.edu/RDoS0HZKolFyDyQyacIS5yd"
+  }, {
+    "@id" : "http://webprotege.stanford.edu/RXbng7AH87cHW5YxgDUT03"
+  }, {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital016"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAreaColaboracion" : [ {
+    "@value" : "Base de datos"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAñoIngreso" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "2019"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCarnet" : [ {
+    "@value" : "6503256"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCodigoSis" : [ {
+    "@value" : "201900201"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEmail" : [ {
+    "@value" : "esteban123@gmail.com"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaInicioColaboracion" : [ {
+    "@value" : "01/01/24"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneGenero" : [ {
+    "@value" : "Masculino"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNombre" : [ {
+    "@value" : "Esteban Quito"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumeroColaborador" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "2"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTelefono" : [ {
+    "@value" : "77452986"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaColaborador"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "estColab002"
+  } ]
+}, {
+  "@id" : "http://webprotege.stanford.edu/R9JttmJ5oSIjMe4WwJq7KGj",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Sala"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaAmbientes"
+  } ]
+}, {
+  "@id" : "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaRecursoAcademico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "tieneTema"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "http://webprotege.stanford.edu/RBCurMIeWX26myG7W4z1aCF",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF" : [ {
+    "@value" : "Simulacion"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría" : [ {
+    "@value" : "Trabajo practico"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor" : [ {
+    "@value" : "Anonimo"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso" : [ {
+    "@value" : "https://biblio.edu/practica/simulacion.pdf"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEstado" : [ {
+    "@value" : "Acceso libre"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion" : [ {
+    "@value" : "12/05/22"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato" : [ {
+    "@value" : "PDF"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma" : [ {
+    "@value" : "Español"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave" : [ {
+    "@value" : "Transformada Inversa"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo" : [ {
+    "@value" : "120kb"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo" : [ {
+    "@value" : "Practica I - Transformada Inversa"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion" : [ {
+    "@value" : "v1.0"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "recDigital023"
+  } ]
+}, {
+  "@id" : "http://webprotege.stanford.edu/RBInF8WwoCzHgZgoq29s25U",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAñoIngreso" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "2020"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCarnet" : [ {
+    "@value" : "983774"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCodigoSis" : [ {
+    "@value" : "202000710"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEmail" : [ {
+    "@value" : "figueroalopez@gmail.com"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaRegistro" : [ {
+    "@value" : "01/01/2022"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneGenero" : [ {
+    "@value" : "Femenino"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNombre" : [ {
+    "@value" : "Michelle Figueroa"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumeroLector" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTelefono" : [ {
+    "@value" : "69542902"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaLector"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "estLector001"
+  } ]
+}, {
+  "@id" : "http://webprotege.stanford.edu/RBOhMIpsFZmn9JCeGXA9k6d",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaAmbientes"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "tieneCodigoAmbiente"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "http://webprotege.stanford.edu/RBVcS8CcndmK52cHH5Bmarw",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCargo" : [ {
+    "@value" : "Bibliotecario"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCarnet" : [ {
+    "@value" : "783661"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneDepartamento" : [ {
+    "@value" : "Informatica y Sistemas"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEmail" : [ {
+    "@value" : "GonzaMija@gmail.com"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEspecializacion" : [ {
+    "@value" : "Archivos"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneGenero" : [ {
+    "@value" : "Masculino"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNombre" : [ {
+    "@value" : "Mijael Gonzales"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumeroEmpleado" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "4"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTelefono" : [ {
+    "@value" : "76354271"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTituloAcademico" : [ {
+    "@value" : "Licenciado en Informatica"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTurno" : [ {
+    "@value" : "Tarde"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersonalBiblioteca"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "perBiblioteca002"
+  } ]
+}, {
+  "@id" : "http://webprotege.stanford.edu/RBhvr8IvIyOG3nXrilCqSjK",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://webprotege.stanford.edu/RBOhMIpsFZmn9JCeGXA9k6d" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1234"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCapacidad" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "150"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneDiferentes" : [ {
+    "@id" : "http://webprotege.stanford.edu/R7sdFxNwn6AUYTDkSNufrtv"
+  }, {
+    "@id" : "http://webprotege.stanford.edu/RSaYYZWxfcDaLAY42Vexne"
+  }, {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecasala003"
+  }, {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecasala004"
+  }, {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecasala005"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneHorarioDisponibilidad" : [ {
+    "@value" : "8:00 - 18:30"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNombreAmbiente" : [ {
+    "@value" : "BiblioGPT"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNormas" : [ {
+    "@value" : "Reglas para acceder a los recursos digitales de la biblioteca digital"
+  }, {
+    "@value" : "Reglas para acceder a los recursos fisicos de la biblioteca"
+  }, {
+    "@value" : "Reglas para convertirse en colaborador"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneUbicación" : [ {
+    "@value" : "Frente a fotocopiadora de Matematicas"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaBiblioteca"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "biblioteca001"
+  } ]
+}, {
+  "@id" : "http://webprotege.stanford.edu/RBsvY8BEuUPrLxhlssltM2w",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://webprotege.stanford.edu/RBOhMIpsFZmn9JCeGXA9k6d" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "2"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAreaInvestigacion" : [ {
+    "@value" : "Sistemas Informatica"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCapacidad" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "70"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneDescipcionCentroInv" : [ {
+    "@value" : "Sociedad Cientifica Estudiantil de Sistemas Informatica"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneHorarioDisponibilidad" : [ {
+    "@value" : "9:00-14:00"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNombreAmbiente" : [ {
+    "@value" : "SCESI"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneUbicación" : [ {
+    "@value" : "En el edificio Multiacademico"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaCentroInvestigacion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "centroInves001"
+  } ]
+}, {
+  "@id" : "http://webprotege.stanford.edu/RBzCnQGjyfLkVp8K9gKWQoB",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaposee" : [ {
+    "@id" : "http://webprotege.stanford.edu/RBhvr8IvIyOG3nXrilCqSjK"
+  }, {
+    "@id" : "http://webprotege.stanford.edu/RBsvY8BEuUPrLxhlssltM2w"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCodigoCarrera" : [ {
+    "@value" : "411702"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNombreCarrera" : [ {
+    "@value" : "Licenciatura en Ingeniería de Sistemas"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaCarrera"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "carrera001"
+  } ]
+}, {
+  "@id" : "http://webprotege.stanford.edu/RCPWezfXPL26iBkPMF6XGbr",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAñoIngreso" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "2020"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCarnet" : [ {
+    "@value" : "784538"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCodigoSis" : [ {
+    "@value" : "20209937"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEmail" : [ {
+    "@value" : "hola@gmail.com"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaRegistro" : [ {
+    "@value" : "05/07/2022"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneGenero" : [ {
+    "@value" : "Masculino"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNombre" : [ {
+    "@value" : "Cristian Fernandez"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumeroLector" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "2"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTelefono" : [ {
+    "@value" : "78890003"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaLector"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "estLector002"
+  } ]
+}, {
+  "@id" : "http://webprotege.stanford.edu/RCvb4sKjUwYIuuewGQUK495",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "isbn"
+  } ]
+}, {
+  "@id" : "http://webprotege.stanford.edu/RDKNnCSU14gotmTPRBtDuoZ",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaposee" : [ {
+    "@id" : "http://webprotege.stanford.edu/RBhvr8IvIyOG3nXrilCqSjK"
+  }, {
+    "@id" : "http://webprotege.stanford.edu/RBsvY8BEuUPrLxhlssltM2w"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCodigoCarrera" : [ {
+    "@value" : "134111"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNombreCarrera" : [ {
+    "@value" : "Licenciatura en ingenieria en Informatica"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaCarrera"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "carrera002"
+  } ]
+}, {
+  "@id" : "http://webprotege.stanford.edu/RDoS0HZKolFyDyQyacIS5yd",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF" : [ {
+    "@value" : "Base de Datos"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría" : [ {
+    "@value" : "Apuntes"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor" : [ {
+    "@value" : "Oscar Flores"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso" : [ {
+    "@value" : "https://biblio.edu/BaseDeDatosEnPostgress.com"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEstado" : [ {
+    "@value" : "en Revision"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion" : [ {
+    "@value" : "01-06-2021"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato" : [ {
+    "@value" : "PPTX"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma" : [ {
+    "@value" : "Español"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave" : [ {
+    "@value" : "Base de datos"
+  }, {
+    "@value" : "Postgress"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneRecomendacion" : [ {
+    "@value" : "Si"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneResumen" : [ {
+    "@value" : "Explicacion de como crear una base de datos en postgress"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo" : [ {
+    "@value" : "450Kb"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo" : [ {
+    "@value" : "Base de datos en Postgress"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion" : [ {
+    "@value" : "v1.0"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "recDigital004"
+  } ]
+}, {
+  "@id" : "http://webprotege.stanford.edu/RNppMUS1KPpezuXE67a3PP",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAñoIngresoDocente" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "2005"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCarnet" : [ {
+    "@value" : "6152371"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneDepartamento" : [ {
+    "@value" : "Informática y sistemas"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEmail" : [ {
+    "@value" : "carmen123@gmail.com"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneGenero" : [ {
+    "@value" : "Femenino"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNombre" : [ {
+    "@value" : "Carmen Rosa"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumeroEmpleado" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "2"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTelefono" : [ {
+    "@value" : "70711425"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTituloAcademico" : [ {
+    "@value" : "Ing. Informático"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDocente"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "docente002"
+  } ]
+}, {
+  "@id" : "http://webprotege.stanford.edu/RSaYYZWxfcDaLAY42Vexne",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCapacidad" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "20"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneHorarioDisponibilidad" : [ {
+    "@value" : "14:00-18:00"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNombreAmbiente" : [ {
+    "@value" : "Sala de Computadoras"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneReglaUso" : [ {
+    "@value" : "Prohibido mover las sillas"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneUbicación" : [ {
+    "@value" : "segundo piso lado derecho ultima sala"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://webprotege.stanford.edu/R9JttmJ5oSIjMe4WwJq7KGj"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "sala002"
+  } ]
+}, {
+  "@id" : "http://webprotege.stanford.edu/RXbng7AH87cHW5YxgDUT03",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF" : [ {
+    "@value" : "Introduccion a la programación"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría" : [ {
+    "@value" : "Diapositivas"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAreaEstudio" : [ {
+    "@value" : "Informatica"
+  }, {
+    "@value" : "Sistemas"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor" : [ {
+    "@value" : "Esteban Quito"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCantidadVisualizaciones" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "54"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso" : [ {
+    "@value" : "https://biblio.edu/DispositivasRecursividadPasoAPaso.com"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEstado" : [ {
+    "@value" : "acceso abierto"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion" : [ {
+    "@value" : "21/05/2022"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato" : [ {
+    "@value" : "PDF"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma" : [ {
+    "@value" : "Español"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave" : [ {
+    "@value" : "Recursividad"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneRecomendacion" : [ {
+    "@value" : "Java"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneResumen" : [ {
+    "@value" : "Diapositivas de recursividad 2022"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo" : [ {
+    "@value" : "255kb"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo" : [ {
+    "@value" : "Recursividad paso a paso"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion" : [ {
+    "@value" : "v1.0"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "recDigital002"
+  } ]
+}, {
+  "@id" : "http://webprotege.stanford.edu/RaiFoPyv3hbiUqmS6E6BVc",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF" : [ {
+    "@value" : "Simulacion"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría" : [ {
+    "@value" : "Trabajo practico"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor" : [ {
+    "@value" : "Anonimo"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso" : [ {
+    "@value" : "https://biblio.edu/practica/simulacion2.pdf"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEstado" : [ {
+    "@value" : "Acceso libre"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion" : [ {
+    "@value" : "02/06/15"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato" : [ {
+    "@value" : "xls"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma" : [ {
+    "@value" : "Español"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave" : [ {
+    "@value" : "Distribucion"
+  }, {
+    "@value" : "Uniforme"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo" : [ {
+    "@value" : "53kb"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo" : [ {
+    "@value" : "Practica II - Distribucion Uniforme"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion" : [ {
+    "@value" : "v1.3"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "recDigital024"
+  } ]
+}, {
+  "@id" : "http://webprotege.stanford.edu/RefeKh7LBuuKBrlgN4REkO",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF" : [ {
+    "@value" : "Historia de computadoras"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría" : [ {
+    "@value" : "Proyecto de Investigacion"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor" : [ {
+    "@value" : "Esteban Quito"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso" : [ {
+    "@value" : "https://biblio.edu/proyecto/invesitgacion/histcompu.pdf"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEstado" : [ {
+    "@value" : "Acceso libre"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion" : [ {
+    "@value" : "25/04/21"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato" : [ {
+    "@value" : "PDF"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma" : [ {
+    "@value" : "Español"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave" : [ {
+    "@value" : "computadoras"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneResumen" : [ {
+    "@value" : "Relata como se crearon las computadoras sus autores y la forma en la que surgieron"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo" : [ {
+    "@value" : "64kb"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo" : [ {
+    "@value" : "Historia de las Computadoras"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion" : [ {
+    "@value" : "v1.0"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "recDigital025"
+  } ]
+}, {
+  "@id" : "http://webprotege.stanford.edu/RuNZF5RHPctjyYhq01e1xS",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF" : [ {
+    "@value" : "Calculo I"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría" : [ {
+    "@value" : "Examen pasado"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAreaEstudio" : [ {
+    "@value" : "Sistemas"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor" : [ {
+    "@value" : "Jhosemar Vallejos"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCantidadVisualizaciones" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "23"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso" : [ {
+    "@value" : "https://biblio.edu/examenpasado/calculoI"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEstado" : [ {
+    "@value" : "Acceso Abierto"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion" : [ {
+    "@value" : "01/02/24"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato" : [ {
+    "@value" : "PDF"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma" : [ {
+    "@value" : "Español"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave" : [ {
+    "@value" : "Calculo I"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo" : [ {
+    "@value" : "321kb"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo" : [ {
+    "@value" : "Examen 2do parcial Calculo I"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion" : [ {
+    "@value" : "v2014"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "recDigital001"
+  } ]
+}, {
+  "@id" : "http://webprotege.stanford.edu/RyPZdJMHqyoJBWJthPPJsA",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecapublica" : [ {
+    "@id" : "http://webprotege.stanford.edu/RuNZF5RHPctjyYhq01e1xS"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAreaColaboracion" : [ {
+    "@value" : "Ciberseguridad"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAñoIngreso" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "2020"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCarnet" : [ {
+    "@value" : "6503485"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCodigoSis" : [ {
+    "@value" : "202000218"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEmail" : [ {
+    "@value" : "jhoten703@gmail.com"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaInicioColaboracion" : [ {
+    "@value" : "01/01/24"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneGenero" : [ {
+    "@value" : "Masculino"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNombre" : [ {
+    "@value" : "Jhosemar Vallejos"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumeroColaborador" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTelefono" : [ {
+    "@value" : "70390098"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaColaborador"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "estColab001"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaAmbientes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaBiblioteca",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaAmbientes"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaCarrera",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaCentroInvestigacion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaAmbientes"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaColaborador",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaEstudiante"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaRecursoAcademico"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDocente",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersonalAcademico"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaEstudiante",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersona"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaFisico",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaRecursoAcademico"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaLector",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaEstudiante"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersona",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersonalAcademico",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersona"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersonalBiblioteca",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersonalAcademico"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaRecursoAcademico",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaRecursoAcademico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaadministraLa",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersonalBiblioteca"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaBiblioteca"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecadescarga",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDocente"
+  }, {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaEstudiante"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaRecursoAcademico"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecadocente003",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAñoIngresoDocente" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "2009"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCarnet" : [ {
+    "@value" : "17823499"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneDepartamento" : [ {
+    "@value" : "Informática y sistemas"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEmail" : [ {
+    "@value" : "patyrodriguez@gmail.com"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneGenero" : [ {
+    "@value" : "Femenino"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNombre" : [ {
+    "@value" : "Patricia Erika Rodriguez Bilbao"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumeroEmpleado" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "3"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTelefono" : [ {
+    "@value" : "72705886"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTituloAcademico" : [ {
+    "@value" : "Ing. Informático"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDocente"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecadocente004",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAñoIngresoDocente" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "2000"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCarnet" : [ {
+    "@value" : "18902343"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneDepartamento" : [ {
+    "@value" : "Informática y sistemas"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEmail" : [ {
+    "@value" : "lecitia70sblanco@gmail.com"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneGenero" : [ {
+    "@value" : "Femenino"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNombre" : [ {
+    "@value" : "Maria Leticia Blanco"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumeroEmpleado" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "4"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTelefono" : [ {
+    "@value" : "78904532"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTituloAcademico" : [ {
+    "@value" : "Ing. Informática"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDocente"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecadocente005",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAñoIngresoDocente" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "1999"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCarnet" : [ {
+    "@value" : "876454"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneDepartamento" : [ {
+    "@value" : "Informática y Sistemas"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEmail" : [ {
+    "@value" : "rose129@gmail.com"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneGenero" : [ {
+    "@value" : "Femenino"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNombre" : [ {
+    "@value" : "Rosemary Bascopé"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumeroEmpleado" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "5"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTelefono" : [ {
+    "@value" : "67232176"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTituloAcademico" : [ {
+    "@value" : "Ing. Sistemático"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDocente"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecadocente006",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAñoIngresoDocente" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "2013"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCarnet" : [ {
+    "@value" : "9823412"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneDepartamento" : [ {
+    "@value" : "Informática y Sistemas"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEmail" : [ {
+    "@value" : "marcmont@gmail.com"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneGenero" : [ {
+    "@value" : "Masculino"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNombre" : [ {
+    "@value" : "Marco Antonio Montecinos"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumeroEmpleado" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "6"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTelefono" : [ {
+    "@value" : "68123355"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTituloAcademico" : [ {
+    "@value" : "Ing. Informático"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDocente"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaestColab003",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecapublica" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital005"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAreaColaboracion" : [ {
+    "@value" : "Inteligencia Artifical"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAñoIngreso" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "2022"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCarnet" : [ {
+    "@value" : "14833490"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCodigoSis" : [ {
+    "@value" : "202256349"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEmail" : [ {
+    "@value" : "carlastorrez@gmail.com"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaInicioColaboracion" : [ {
+    "@value" : "02/09/24"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneGenero" : [ {
+    "@value" : "Femenino"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNombre" : [ {
+    "@value" : "Carla Torrez"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumeroColaborador" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "3"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTelefono" : [ {
+    "@value" : "72705990"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaColaborador"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaestColab004",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecapublica" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital006"
+  }, {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital009"
+  }, {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital010"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAreaColaboracion" : [ {
+    "@value" : "Algoritmos Avanzados"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAñoIngreso" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "2021"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCarnet" : [ {
+    "@value" : "14578329"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCodigoSis" : [ {
+    "@value" : "202189744"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEmail" : [ {
+    "@value" : "marioterrazas@gmail.com"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaInicioColaboracion" : [ {
+    "@value" : "01/03/23"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneGenero" : [ {
+    "@value" : "Masculino"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNombre" : [ {
+    "@value" : "Mario Terrazas"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumeroColaborador" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "4"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTelefono" : [ {
+    "@value" : "79095643"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaColaborador"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaestColab005",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecapublica" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital007"
+  }, {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital013"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAreaColaboracion" : [ {
+    "@value" : "Redes"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAñoIngreso" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "2021"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCarnet" : [ {
+    "@value" : "9441231"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCodigoSis" : [ {
+    "@value" : "202103731"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEmail" : [ {
+    "@value" : "monicarocha123@gmail.com"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaInicioColaboracion" : [ {
+    "@value" : "06/08/2024"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneGenero" : [ {
+    "@value" : "Femenino"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNombre" : [ {
+    "@value" : "Monica Rocha Perez"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumeroColaborador" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "5"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTelefono" : [ {
+    "@value" : "72212312"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaColaborador"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaestColab006",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecapublica" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital008"
+  }, {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital012"
+  }, {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital015"
+  }, {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecFisico01"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAreaColaboracion" : [ {
+    "@value" : "Introducción a la Programación"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAñoIngreso" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "2018"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCarnet" : [ {
+    "@value" : "91218555"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCodigoSis" : [ {
+    "@value" : "201829244"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEmail" : [ {
+    "@value" : "mauricioquispe@gmail.com"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaInicioColaboracion" : [ {
+    "@value" : "02/05/2019"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneGenero" : [ {
+    "@value" : "Masculino"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNombre" : [ {
+    "@value" : "Mauricio Juan Quispe"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumeroColaborador" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "6"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTelefono" : [ {
+    "@value" : "67211212"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaestColab007",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecapublica" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital011"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAreaColaboracion" : [ {
+    "@value" : "Base de datos"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAñoIngreso" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "2020"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCarnet" : [ {
+    "@value" : "9359253"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCodigoSis" : [ {
+    "@value" : "202000710"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEmail" : [ {
+    "@value" : "jazminlopez7774@gmail.com"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaInicioColaboracion" : [ {
+    "@value" : "16/02/2022"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneGenero" : [ {
+    "@value" : "Femenino"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNombre" : [ {
+    "@value" : "Jazmin Lopez"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumeroColaborador" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "7"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTelefono" : [ {
+    "@value" : "69542902"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaColaborador"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaestColab008",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecapublica" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital014"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAreaColaboracion" : [ {
+    "@value" : "Ciberseguridad"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAñoIngreso" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "2020"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCarnet" : [ {
+    "@value" : "14863498"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCodigoSis" : [ {
+    "@value" : "202054729"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEmail" : [ {
+    "@value" : "lauralopez7774@gmail.com"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaInicioColaboracion" : [ {
+    "@value" : "13/02/24"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneGenero" : [ {
+    "@value" : "Femenino"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumeroColaborador" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "8"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTelefono" : [ {
+    "@value" : "67843526"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaColaborador"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaestColab009",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecapublica" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital016"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAreaColaboracion" : [ {
+    "@value" : "Desarrollo de software"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAñoIngreso" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "2021"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCarnet" : [ {
+    "@value" : "78456324"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCodigoSis" : [ {
+    "@value" : "202174522"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEmail" : [ {
+    "@value" : "pabloguzman@gmail.com"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaInicioColaboracion" : [ {
+    "@value" : "13/09/23"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneGenero" : [ {
+    "@value" : "Masculino"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNombre" : [ {
+    "@value" : "Pablo Guzman"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumeroColaborador" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "9"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaColaborador"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaestLector003",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAñoIngreso" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "2023"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCarnet" : [ {
+    "@value" : "14832980"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCodigoSis" : [ {
+    "@value" : "202308756"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEmail" : [ {
+    "@value" : "analopez@gmail.com"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaRegistro" : [ {
+    "@value" : "03/08/23"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneGenero" : [ {
+    "@value" : "Femenino"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNombre" : [ {
+    "@value" : "Ana Lopez"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumeroLector" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "3"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTelefono" : [ {
+    "@value" : "68903425"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaLector"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaestLector004",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAñoIngreso" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "2021"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCarnet" : [ {
+    "@value" : "1009786"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCodigoSis" : [ {
+    "@value" : "202103731"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEmail" : [ {
+    "@value" : "ayleng@gmail.com"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaRegistro" : [ {
+    "@value" : "02/27/2022"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneGenero" : [ {
+    "@value" : "Femenino"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNombre" : [ {
+    "@value" : "Aylen Gonzáles"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumeroLector" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "4"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTelefono" : [ {
+    "@value" : "72254007"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaLector"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaestLector005",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAñoIngreso" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "2019"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCarnet" : [ {
+    "@value" : "9121035"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCodigoSis" : [ {
+    "@value" : "201927241"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEmail" : [ {
+    "@value" : "homero123@gmail.com"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaRegistro" : [ {
+    "@value" : "02/23/2021"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneGenero" : [ {
+    "@value" : "Masculino"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNombre" : [ {
+    "@value" : "Homero Vidaurre"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumeroLector" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "5"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTelefono" : [ {
+    "@value" : "67182227"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaLector"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaperBiblioteca003",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCargo" : [ {
+    "@value" : "Bibliotecaria"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCarnet" : [ {
+    "@value" : "14567823"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneDepartamento" : [ {
+    "@value" : "Informatica y Sistemas"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEmail" : [ {
+    "@value" : "mariamontecinos@gmail.com"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEspecializacion" : [ {
+    "@value" : "Documentos"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneGenero" : [ {
+    "@value" : "Femenino"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNombre" : [ {
+    "@value" : "Maria Montecinos"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumeroEmpleado" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "6"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTelefono" : [ {
+    "@value" : "75688734"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTituloAcademico" : [ {
+    "@value" : "Licenciado en Informatica"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTurno" : [ {
+    "@value" : "Tarde"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersonalBiblioteca"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaperBiblioteca004",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCargo" : [ {
+    "@value" : "Bibliotecaria"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCarnet" : [ {
+    "@value" : "987212"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneDepartamento" : [ {
+    "@value" : "Informática y Sistemas"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEmail" : [ {
+    "@value" : "floreng@gmail.com"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEspecializacion" : [ {
+    "@value" : "Archivos"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneGenero" : [ {
+    "@value" : "Femenino"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNombre" : [ {
+    "@value" : "Florence Gerstel"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumeroEmpleado" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "8"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTelefono" : [ {
+    "@value" : "73434559"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTituloAcademico" : [ {
+    "@value" : "Lic. Administrativo"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTurno" : [ {
+    "@value" : "Noche"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersonalBiblioteca"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaperteneceA",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaColaborador"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaCentroInvestigacion"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaposee",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaCarrera"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaAmbientes"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecapublica",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaColaborador"
+  }, {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersonalBiblioteca"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaRecursoAcademico"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaquita",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaColaborador"
+  }, {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersonalBiblioteca"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaRecursoAcademico"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital005",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF" : [ {
+    "@value" : "Inteligencia Artificial"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría" : [ {
+    "@value" : "PDF"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAreaEstudio" : [ {
+    "@value" : "Informatica"
+  }, {
+    "@value" : "Sistemas"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor" : [ {
+    "@value" : "Peter Norvig y Stuart J. Russell"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneConfirmacion" : [ {
+    "@value" : "Si"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso" : [ {
+    "@value" : "https://biblio.edu/libros/1000InteligenciaArtificial.pdf"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceDescarga" : [ {
+    "@value" : "https://biblio.edu/libros/InteligenciaArtificial.pdf"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEstado" : [ {
+    "@value" : "Acceso Libre"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion" : [ {
+    "@value" : "14/04/24"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato" : [ {
+    "@value" : "PDF"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma" : [ {
+    "@value" : "Español"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave" : [ {
+    "@value" : "Agente"
+  }, {
+    "@value" : "Inteligencia artificial"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneResumen" : [ {
+    "@value" : "Es un texto clave que cubre conceptos fundamentales de la IA, técnicas de aprendizaje, algoritmos de búsqueda y aplicaciones prácticas, además de abordar desafíos éticos y el futuro del campo."
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo" : [ {
+    "@value" : "500kb"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo" : [ {
+    "@value" : "Inteligencia Artificial Un Enfoque Moderno"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion" : [ {
+    "@value" : "v2.0"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital006",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF" : [ {
+    "@value" : "Estructura de datos"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría" : [ {
+    "@value" : "Apuntes"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAreaEstudio" : [ {
+    "@value" : "Informatica"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso" : [ {
+    "@value" : "https://biblio.edu/AlgoritmosAvanzados.com"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEstado" : [ {
+    "@value" : "Acceso Libre"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion" : [ {
+    "@value" : "03/06/2023"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato" : [ {
+    "@value" : "PDF"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma" : [ {
+    "@value" : "Español"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave" : [ {
+    "@value" : "Programación"
+  }, {
+    "@value" : "Steve Halim"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneRecomendacion" : [ {
+    "@value" : "Java"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneResumen" : [ {
+    "@value" : "Es una guía para mejorar en programación competitiva, cubriendo algoritmos, estructuras de datos y técnicas de resolución de problemas, con ejemplos y estrategias para competiciones."
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo" : [ {
+    "@value" : "5070kb"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo" : [ {
+    "@value" : "Competitive Programming"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion" : [ {
+    "@value" : "v1.0"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital007",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF" : [ {
+    "@value" : "Introduccion a las redes"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría" : [ {
+    "@value" : "Libro"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAreaEstudio" : [ {
+    "@value" : "Informatica"
+  }, {
+    "@value" : "Sistemas"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor" : [ {
+    "@value" : "Jorge Walter Orellana Araoz"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso" : [ {
+    "@value" : "https://drive.google.com/file/d/1RIhBkuYQ2xnjNNUSorYzr8FACMQujG3a/view?hl=es"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEstado" : [ {
+    "@value" : "acceso abierto"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion" : [ {
+    "@value" : "15/02/2022"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato" : [ {
+    "@value" : "PDF"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma" : [ {
+    "@value" : "Español"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneInstitucion" : [ {
+    "@value" : "Universidad Mayor de San Simón"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave" : [ {
+    "@value" : "Redes"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneRecomendacion" : [ {
+    "@value" : "Redes"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneResumen" : [ {
+    "@value" : "Libro de redes de 2022"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo" : [ {
+    "@value" : "13000Kb"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo" : [ {
+    "@value" : "Redes Conmutadas"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion" : [ {
+    "@value" : "5.0"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital008",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF" : [ {
+    "@value" : "Introducción a la programación con Java"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría" : [ {
+    "@value" : "Libro"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor" : [ {
+    "@value" : "Ing. Jesus David Gomez"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso" : [ {
+    "@value" : "https://drive.google.com/file/d/1wWyOCQ1oPvEP6GhHu9fqa5kuszMmUum7/view?hl=es"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEstado" : [ {
+    "@value" : "acceso abierto"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion" : [ {
+    "@value" : "13/04/2020"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato" : [ {
+    "@value" : "PDF"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma" : [ {
+    "@value" : "Español"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave" : [ {
+    "@value" : "Introducción a la programación"
+  }, {
+    "@value" : "Java"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneRecomendacion" : [ {
+    "@value" : "Java"
+  }, {
+    "@value" : "Si"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneResumen" : [ {
+    "@value" : "Libro de java del 2020"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo" : [ {
+    "@value" : "6000Kb"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo" : [ {
+    "@value" : "Java 2020"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion" : [ {
+    "@value" : "1.0"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital009",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF" : [ {
+    "@value" : "Programación"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría" : [ {
+    "@value" : "Practica"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor" : [ {
+    "@value" : "Anonimo"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso" : [ {
+    "@value" : "https://biblioteca.onu/programacion/algortimosAvanzados.com"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEstado" : [ {
+    "@value" : "Acceso abierto"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion" : [ {
+    "@value" : "21/02/2022"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato" : [ {
+    "@value" : "PDF"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma" : [ {
+    "@value" : "Español"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave" : [ {
+    "@value" : "Algoritmos avanzados"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneResumen" : [ {
+    "@value" : "Practica 2do parcial materia algoritmos avanzados"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo" : [ {
+    "@value" : "20kb"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo" : [ {
+    "@value" : "Ejercicios de algoritmos avanzados"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion" : [ {
+    "@value" : "v1.0"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital010",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF" : [ {
+    "@value" : "Programación"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría" : [ {
+    "@value" : "Trabajo práctico"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor" : [ {
+    "@value" : "Anonimo"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneConfirmacion" : [ {
+    "@value" : "Si"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso" : [ {
+    "@value" : "https://libreria.onu/programacion/practicaAlgoritmosAvanzados.com"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceDescarga" : [ {
+    "@value" : "https://liblio/programacion/practicaAlgoritmosav.pdf"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEstado" : [ {
+    "@value" : "Acceso abierto"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion" : [ {
+    "@value" : "12/07/2023"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato" : [ {
+    "@value" : "DOCX"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma" : [ {
+    "@value" : "Español"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave" : [ {
+    "@value" : "Algoritmos avanzados"
+  }, {
+    "@value" : "Algortimos"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo" : [ {
+    "@value" : "237kb"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo" : [ {
+    "@value" : "Practica 3 Algortimos avanzados"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion" : [ {
+    "@value" : "v2.0"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital011",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF" : [ {
+    "@value" : "Data base"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría" : [ {
+    "@value" : "Libro"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor" : [ {
+    "@value" : "Michael J. Hernandez"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEstado" : [ {
+    "@value" : "Acceso abierto"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion" : [ {
+    "@value" : "10/10/2023"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato" : [ {
+    "@value" : "PDF"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma" : [ {
+    "@value" : "Español"
+  }, {
+    "@value" : "Ingles"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave" : [ {
+    "@value" : "Data Base"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo" : [ {
+    "@value" : "500kb"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo" : [ {
+    "@value" : "Database Design for Mere Mortals"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion" : [ {
+    "@value" : "v2.4"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital012",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF" : [ {
+    "@value" : "Algorithms"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría" : [ {
+    "@value" : "Libro"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAreaEstudio" : [ {
+    "@value" : "Informatica"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor" : [ {
+    "@value" : "Tomas M. Corner"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso" : [ {
+    "@value" : "https://biblio.edu/algorithms.com"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEstado" : [ {
+    "@value" : "Acceso abierto"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion" : [ {
+    "@value" : "01/03/2024"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato" : [ {
+    "@value" : "PDF"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma" : [ {
+    "@value" : "Ingles"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave" : [ {
+    "@value" : "Algorithms"
+  }, {
+    "@value" : "introduction to algorithms"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneRecomendacion" : [ {
+    "@value" : "Programacion"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo" : [ {
+    "@value" : "400kb"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo" : [ {
+    "@value" : "introduction to algorithms"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion" : [ {
+    "@value" : "v3.0"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital013",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF" : [ {
+    "@value" : "Redes avanzadas de computadoras"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría" : [ {
+    "@value" : "Trabajo práctico"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor" : [ {
+    "@value" : "Michelle Figueroa"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso" : [ {
+    "@value" : "https://biblio.edu/redes/practicaredes.com"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEstado" : [ {
+    "@value" : "Acceso abierto"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion" : [ {
+    "@value" : "17/03/2024"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato" : [ {
+    "@value" : "PDF"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma" : [ {
+    "@value" : "Español"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneInstitucion" : [ {
+    "@value" : "Universidad Mayor de San Simón"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave" : [ {
+    "@value" : "Redes"
+  }, {
+    "@value" : "Redes avanzadas"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneResumen" : [ {
+    "@value" : "practica 1er parcial de redes avanzadas"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo" : [ {
+    "@value" : "600kb"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo" : [ {
+    "@value" : "Practica 1er parcial redes avanzadas"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion" : [ {
+    "@value" : "v2.0"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital014",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF" : [ {
+    "@value" : "Ciberseguridad"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría" : [ {
+    "@value" : "Libro"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAreaEstudio" : [ {
+    "@value" : "Informatica"
+  }, {
+    "@value" : "Sistemas"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor" : [ {
+    "@value" : "William Stallings"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneConfirmacion" : [ {
+    "@value" : "Si"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso" : [ {
+    "@value" : "https://biblio.edu/ciberseguridad1.com"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceDescarga" : [ {
+    "@value" : "https://biblio.edu/libros/ciberseguridad/computersecurity.pdf"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEstado" : [ {
+    "@value" : "acceso abierto"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion" : [ {
+    "@value" : "05/04/24"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato" : [ {
+    "@value" : "PDF"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNivelAcademico" : [ {
+    "@value" : "Posgrado"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave" : [ {
+    "@value" : "Ciberseguridad"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneResumen" : [ {
+    "@value" : "Este texto abarca los principios y las prácticas fundamentales en seguridad informática, ideal para estudiantes de posgrado"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo" : [ {
+    "@value" : "668kb"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo" : [ {
+    "@value" : "Computer Security: Principles and Practice"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital015",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF" : [ {
+    "@value" : "Programacion en Java"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría" : [ {
+    "@value" : "Libro"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAreaEstudio" : [ {
+    "@value" : "Informatica"
+  }, {
+    "@value" : "Sistemas"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor" : [ {
+    "@value" : "Herbert Schildt"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneConfirmacion" : [ {
+    "@value" : "Si"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso" : [ {
+    "@value" : "https://biblio.edu/libros/java/javadescarga.pdf"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceDescarga" : [ {
+    "@value" : "https://biblio.edu/libros/java/javabeginnersguide.pdf"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEstado" : [ {
+    "@value" : "acceso abierto"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion" : [ {
+    "@value" : "02/04/23"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato" : [ {
+    "@value" : "PDF"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma" : [ {
+    "@value" : "Ingles"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave" : [ {
+    "@value" : "Java"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneRecomendacion" : [ {
+    "@value" : "Java"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneResumen" : [ {
+    "@value" : "El libro aborda conceptos clave de la programación orientada a objetos"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo" : [ {
+    "@value" : "5000Kb"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo" : [ {
+    "@value" : "Java: A Beginner's Guide"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital016",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF" : [ {
+    "@value" : "Metodologias Agiles"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría" : [ {
+    "@value" : "Libro"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor" : [ {
+    "@value" : "Mike Cohn"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneConfirmacion" : [ {
+    "@value" : "Si"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso" : [ {
+    "@value" : "https://biblio.edu/libros/agile/agileestimating.pdf"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceDescarga" : [ {
+    "@value" : "https://biblio.edu/libros/agile/agileplanning.pdf"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEstado" : [ {
+    "@value" : "acceso abierto"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion" : [ {
+    "@value" : "15/05/20"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato" : [ {
+    "@value" : "PDF"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma" : [ {
+    "@value" : "Ingles"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNivelAcademico" : [ {
+    "@value" : "pregrado"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave" : [ {
+    "@value" : "Metodologia"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneRecomendacion" : [ {
+    "@value" : "Metodologias Agiles"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneResumen" : [ {
+    "@value" : "El libro proporciona herramientas y técnicas para estimar y planificar proyectos en entornos ágiles."
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo" : [ {
+    "@value" : "3000Kb"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital017",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF" : [ {
+    "@value" : "Desarrollo web"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría" : [ {
+    "@value" : "Libro"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor" : [ {
+    "@value" : "Mike Fong"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneConfirmacion" : [ {
+    "@value" : "Sí"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso" : [ {
+    "@value" : "https://www.misitio.com/recursos/desarrollo-web-guia-avanzada.pdf"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceDescarga" : [ {
+    "@value" : "https://www.misitio.com/descargas/desarrollo-web-guia-dooms.pdf"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEstado" : [ {
+    "@value" : "acceso abierto"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion" : [ {
+    "@value" : "10/10/2012"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato" : [ {
+    "@value" : "PDF"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma" : [ {
+    "@value" : "Español"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNivelAcademico" : [ {
+    "@value" : "Principiantes"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave" : [ {
+    "@value" : "Web"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneRecomendacion" : [ {
+    "@value" : "Desarrollo web"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneResumen" : [ {
+    "@value" : "Guía para principiantes que se quieran meter al mundo del desarrollo web."
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo" : [ {
+    "@value" : "5400 Kb"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo" : [ {
+    "@value" : "Desarrollo web para dooms"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital018",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF" : [ {
+    "@value" : "Aplicación de Sistemas Operativos"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría" : [ {
+    "@value" : "Trabajo práctico"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor" : [ {
+    "@value" : "Grover Cussi"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso" : [ {
+    "@value" : "https://www.umss-aso.com/libros/asopractica.doc"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceDescarga" : [ {
+    "@value" : "https://www.umss-aso.com/download/asopractica.doc"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEstado" : [ {
+    "@value" : "acceso abierto"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato" : [ {
+    "@value" : "doc"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma" : [ {
+    "@value" : "Quechua"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave" : [ {
+    "@value" : "sistemas"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo" : [ {
+    "@value" : "2500Kb"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo" : [ {
+    "@value" : "Aprendiendo de Aplicación de Sistemas Operativos"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital019",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF" : [ {
+    "@value" : "Aplicación de Sistemas Operativos"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría" : [ {
+    "@value" : "Trabajo práctico"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor" : [ {
+    "@value" : "Frank Paco"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceDescarga" : [ {
+    "@value" : "https://www.harvardfake.com/descarga/asopractice.pdf"
+  }, {
+    "@value" : "https://www.harvardfake.com/libros/asopractice.pdf"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato" : [ {
+    "@value" : "PDF"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma" : [ {
+    "@value" : "Inglés"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave" : [ {
+    "@value" : "operativos"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo" : [ {
+    "@value" : "3200Kb"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo" : [ {
+    "@value" : "Práctica para dominar el sistema operativo de Red Hat"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital020",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF" : [ {
+    "@value" : "Taller de Sistemas Operativos"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría" : [ {
+    "@value" : "Examen pasado"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor" : [ {
+    "@value" : "Jhoan Perredo"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso" : [ {
+    "@value" : "https://www/practicas.com/recursos/taller-so.pdf"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceDescarga" : [ {
+    "@value" : "https://www/practicas.com/descarga/taller-so.pdf"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEstado" : [ {
+    "@value" : "acceso abierto"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion" : [ {
+    "@value" : "12/09/2002"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma" : [ {
+    "@value" : "Español"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneInstitucion" : [ {
+    "@value" : "Universidad Mayor de San Simón"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNivelAcademico" : [ {
+    "@value" : "Principiante"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave" : [ {
+    "@value" : "taller"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneResumen" : [ {
+    "@value" : "Examen pasado de Taller de Sistemas Operativos del semestres 2-2021"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo" : [ {
+    "@value" : "2000Kb"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF" : [ {
+    "@value" : "Taller de Sistemas Operativos"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría" : [ {
+    "@value" : "Examen pasado"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor" : [ {
+    "@value" : "Mike Folks"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso" : [ {
+    "@value" : "https://www.harvard.com/recursos/os.pdf"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceDescarga" : [ {
+    "@value" : "https://www/harvard.com/download/taller-so.pdf"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEstado" : [ {
+    "@value" : "acceso abierto"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion" : [ {
+    "@value" : "15/12/2001"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma" : [ {
+    "@value" : "Inglés"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneInstitucion" : [ {
+    "@value" : "Harvard"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNivelAcademico" : [ {
+    "@value" : "Principiante"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave" : [ {
+    "@value" : "sistemas"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneResumen" : [ {
+    "@value" : "Test of  2-2021"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo" : [ {
+    "@value" : "3100Kb"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital022",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF" : [ {
+    "@value" : "Desarrollo de software con calidad"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría" : [ {
+    "@value" : "Libro"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor" : [ {
+    "@value" : "Roger S. Pressman"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso" : [ {
+    "@value" : "https://www.javier8a.com/itc/bd1/ld-Ingenieria.de.software.enfoque.practico.7ed.Pressman.PDF"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEstado" : [ {
+    "@value" : "acceso abierto"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion" : [ {
+    "@value" : "04/03/2010"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneHorarioDisponibilidad" : [ {
+    "@value" : "Español"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave" : [ {
+    "@value" : "Ingeniería de Software"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneResumen" : [ {
+    "@value" : "Proceso de desarrollo de software por metodologias"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo" : [ {
+    "@value" : "665kb"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTituloAcademico" : [ {
+    "@value" : "Ingenieria de Software"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion" : [ {
+    "@value" : "7.0"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecFisico01",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF" : [ {
+    "@value" : "Programación"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría" : [ {
+    "@value" : "Libro"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor" : [ {
+    "@value" : "Sebastián Ossandón"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAñoPublicacion" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "2019"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEstado" : [ {
+    "@value" : "acceso abierto"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneISBN" : [ {
+    "@value" : "8793-26-38"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma" : [ {
+    "@value" : "Español"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumerodeEjemplares" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "10"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumerodeEstante" : [ {
+    "@value" : "2-B"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave" : [ {
+    "@value" : "Algoritmo"
+  }, {
+    "@value" : "Algoritmos avanzados"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneResumen" : [ {
+    "@value" : "Este documento compara diferentes funciones de complejidad de tiempo de algoritmos. Aunque las funciones tienen tiempos de ejecución similares para valores pequeños de n, los tiempos cambian significativamente a medida que n aumenta, lo que significa que el algoritmo apropiado depende del tamaño de la entrada"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo" : [ {
+    "@value" : "Algoritmos avanzados"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion" : [ {
+    "@value" : "v3.0"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaFisico"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecasala003",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCapacidad" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "50"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneHorarioDisponibilidad" : [ {
+    "@value" : "8:30-16:00"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNombreAmbiente" : [ {
+    "@value" : "Sala de Lectura"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneReglaUso" : [ {
+    "@value" : "Hablar en voz baja, por favor."
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneUbicación" : [ {
+    "@value" : "Planta baja de la biblioteca"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://webprotege.stanford.edu/R9JttmJ5oSIjMe4WwJq7KGj"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecasala004",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCapacidad" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "15"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneHorarioDisponibilidad" : [ {
+    "@value" : "09:00 - 18:00"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNombreAmbiente" : [ {
+    "@value" : "Sala de reuniones"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneReglaUso" : [ {
+    "@value" : "Haber realizado una reserva previa"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneUbicación" : [ {
+    "@value" : "Primer piso al lado izquierdo de las gradas"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://webprotege.stanford.edu/R9JttmJ5oSIjMe4WwJq7KGj"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecasala005",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCapacidad" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "5"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneHorarioDisponibilidad" : [ {
+    "@value" : "08:00 - 19:00"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNombreAmbiente" : [ {
+    "@value" : "Sala de préstamos"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneReglaUso" : [ {
+    "@value" : "Portar carnet universitario para el préstamo de libros"
+  } ],
+  "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneUbicación" : [ {
+    "@value" : "Planta Baja"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://webprotege.stanford.edu/R9JttmJ5oSIjMe4WwJq7KGj"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaseInformaEn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDocente"
+  }, {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaEstudiante"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaBiblioteca"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecasolicitaSubir",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDocente"
+  }, {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaEstudiante"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaRecursoAcademico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatiene",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaBiblioteca"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaRecursoAcademico"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAreaColaboracion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaColaborador"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAreaEstudio",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaRecursoAcademico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAreaInvestigacion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaCentroInvestigacion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaRecursoAcademico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAñoIngreso",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaEstudiante"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAñoIngresoDocente",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDocente"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAñoPublicacion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaFisico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCantidadVisualizaciones",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCapacidad",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaAmbientes"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCargo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersonalBiblioteca"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCarnet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersona"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCodigoCarrera",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaCarrera"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCodigoSis",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaEstudiante"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneConfirmacion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceDescarga"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneDepartamento",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersonalAcademico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneDescipcionCentroInv",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaCentroInvestigacion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneDiferentes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaBiblioteca"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://webprotege.stanford.edu/R9JttmJ5oSIjMe4WwJq7KGj"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEmail",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersona"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceDescarga",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaRecursoAcademico"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEspecializacion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersonalBiblioteca"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEstado",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaRecursoAcademico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaInicioColaboracion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaColaborador"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaRecursoAcademico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaRegistro",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaLector"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaRegistro"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneGenero",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersona"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneHorarioDisponibilidad",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaAmbientes"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneISBN",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaRecursoAcademico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaRecursoAcademico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneInstitucion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNivelAcademico",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaRecursoAcademico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNombre",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersona"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNombreAmbiente",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaAmbientes"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNombreCarrera",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaCarrera"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNormas",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaBiblioteca"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumeroColaborador",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaColaborador"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumeroEmpleado",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersonalAcademico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumeroLector",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaLector"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumerodeEjemplares",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaFisico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumerodeEstante",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaFisico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumerodeSalas",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaBiblioteca"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaRecursoAcademico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneRecomendacion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaRecursoAcademico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneReglaUso",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://webprotege.stanford.edu/R9JttmJ5oSIjMe4WwJq7KGj"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneResumen",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaRecursoAcademico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTelefono",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersona"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaRecursoAcademico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTituloAcademico",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersonalAcademico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTurno",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaPersonalBiblioteca"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneUbicación",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaAmbientes"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaRecursoAcademico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+} ]

@@ -3,7 +3,7 @@ from rdflib import Graph
 from owlready2 import *
 import pandas as pd
 from SPARQLWrapper import SPARQLWrapper, JSON
-import time
+import json
 
 DBPEDIA_ENDPOINT = "http://dbpedia.org/sparql"
 app = Flask(__name__)
@@ -36,45 +36,87 @@ def search_page():
 
 @app.route('/search', methods=['POST'])
 def search():
-    query = request.form['query'].lower()
-    results = []
+    query = request.form['query']
+    sparql_query = f"""
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX ontologies: <http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital#>
 
-    # Buscar coincidencias en la ontología
-    for cls in onto.classes():
-        if query in cls.name.lower():
-            results.append(cls.name)
+    SELECT ?identifier
+    WHERE {{
+      ?individual ?property ?value .
+      OPTIONAL {{ ?individual rdfs:label ?label }}
+      BIND(COALESCE(?label, STR(?individual)) AS ?identifier)
+      FILTER(CONTAINS(LCASE(STR(?value)), LCASE("{query}")))
+    }}
+    """
+    results_local = graph.query(sparql_query)
 
-    # Si no hay resultados en la ontología, buscar en el CSV
-    if not results:
-        results = libros_df[libros_df['title'].str.lower().str.contains(query, na=False)]['title'].tolist()
+    # Extraer identificador de las URLs
+    resultado_simplificado = []
+    for row in results_local:
+        identifier = str(row.identifier)
+        if identifier.startswith("http://www.semanticweb.org/miche/ontologies/2024/8/"):
+            # Extraer la parte final del IRI
+            suffix = identifier.split("/")[-1]
+            # Concatenar con "OntologiaBiblioteca"
+            resultado_simplificado.append(f"{suffix}")
+        else:
+            # Procesar casos que no sean URL (e.g., estLector001)
+            literal_value = identifier.split("'")[0]  # Ajusta si cambia el patrón
+            resultado_simplificado.append(f"{literal_value}")
+    
+    # Consulta a DBpedia
+    sparql_query_dbpedia = f"""
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-    # Si no se encuentran resultados en ninguna parte
-    if not results:
-        results.append("No se encontraron resultados.")
+    SELECT ?resource ?label
+    WHERE {{
+      ?resource rdfs:label ?label .
+      FILTER(LANG(?label) = "es")  # Etiquetas en español
+      FILTER(CONTAINS(LCASE(STR(?label)), LCASE("{query}")))
+    }}
+    LIMIT 10
+    """
+    sparql = SPARQLWrapper(DBPEDIA_ENDPOINT)
+    sparql.setQuery(sparql_query_dbpedia)
+    sparql.setReturnFormat(JSON)
+    results_dbpedia = sparql.query().convert()
 
-    # Si se encuentran resultados, consulta en DBpedia para obtener más detalles
-    if results[0] != "No se encontraron resultados.":
-        sparql = SPARQLWrapper("http://dbpedia.org/sparql")
-        sparql.setQuery(f"""
-        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-        PREFIX owl: <http://www.w3.org/2002/07/owl#>
+    # Consulta al archivo JSON (DBpedia)
+    json_file = "./ontologia/dbpedia_books.json"  # Archivo JSON local
 
-        SELECT DISTINCT ?subject 
-        WHERE {{
-            ?subject ?predicate ?object .
-            FILTER (regex(str(?subject), "{query}", "i") || regex(str(?object), "{query}", "i"))
-        }}
-        LIMIT 10
-        """)
-        sparql.setReturnFormat(JSON)
-        start_time = time.time()
-        dbpedia_results = sparql.query().convert()
-        end_time = time.time()
-        print(f"Tiempo de ejecución en DBpedia: {end_time - start_time} segundos")
+    try:
+        with open(json_file, "r", encoding="utf-8") as f:
+            data = json.load(f)
+            books = data["results"]["bindings"]
+    except (FileNotFoundError, json.JSONDecodeError):
+        books = []
 
-        for result in dbpedia_results["results"]["bindings"]:
-            results.append(result["subject"]["value"].split("/")[-1])
+    # Realizar búsqueda en JSON local
+    results_dbpedia_processed = set()
+    query_lower = query.lower()
+    for book in books:
+        title = book.get("name", {}).get("value", "").lower()
+        author = book.get("author", {}).get("value", "").lower()
+        abstract = book.get("abstract", {}).get("value", "").lower()
+
+        if query_lower in title or query_lower in author or query_lower in abstract:
+            results_dbpedia_processed.add(title)
+
+    results_dbpedia = [
+        {
+            "title": title,
+            "url": f"/dbpedia_details/{title.replace(' ', '%20')}"
+        }
+        for title in sorted(results_dbpedia_processed)
+    ]
+
+    # Combinar resultados locales y JSON
+    combined_results = {
+        "local": resultado_simplificado,
+        "dbpedia": results_dbpedia
+    }
 
     return render_template('results.html', results=results, query=query)
 
@@ -94,6 +136,36 @@ def details(instance):
     results = graph.query(sparql_query)
     simplified_results = [(str(row.predicate).split("/")[-1], row.object) for row in results]
     return render_template('details.html', instance=instance, results=simplified_results)
+
+@app.route('/dbpedia_details/<title>')
+def dbpedia_details(title):
+    json_file = "./ontologia/dbpedia_books.json"  # Archivo JSON local
+    try:
+        with open(json_file, "r", encoding="utf-8") as f:
+            data = json.load(f)
+            books = data["results"]["bindings"]
+    except (FileNotFoundError, json.JSONDecodeError):
+        books = []
+
+    # Buscar detalles del libro según el título
+    book_details = next(
+        (book for book in books if book.get("name", {}).get("value", "").lower() == title.lower()),
+        None
+    )
+    
+    # Si no se encuentra el libro
+    if not book_details:
+        return render_template("dbpedia_details.html", title=title, details=None)
+
+    # Detalles procesados para mostrar en el HTML
+    processed_details = {
+        "Título": book_details.get("name", {}).get("value", "N/A"),
+        "Autor": book_details.get("author", {}).get("value", "N/A"),
+        "Resumen": book_details.get("abstract", {}).get("value", "N/A"),
+    }
+
+    return render_template("dbpedia_details.html", title=title, details=processed_details)
+
 
 if __name__ == '__main__':
     app.run(debug=True)

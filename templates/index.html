@@ -1,23 +1,102 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/index.css"> 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/css/index.css" />
     <title>Ontoflow:Ontologia de biblioteca digital</title>
-</head>
-<body>
+  </head>
+  <body>
     <header class="cabecera"></header>
     <div class="contenedor">
-            <div class="Titulo">
-                <img src="../static/images/libros.png" alt="iconolibro" id="libros">
-                <img src="../static/images/titulosinfondo.png" alt="ONTOFLOW">
+      <div class="Titulo">
+        <img src="../static/images/libros.png" alt="iconolibro" id="libros" />
+        <img src="../static/images/titulosinfondo.png" alt="ONTOFLOW" />
+      </div>
+      <form action="/search" method="post">
+        <input
+          type="text"
+          name="query"
+          placeholder="¿Qué es lo que desea buscar?"
+        />
+
+        <div class="custom-select">
+          <div class="selected-option" onclick="toggleDropdown()">
+            <img
+              src="../static/images/bandera.png"
+              alt="Español"
+              class="flag"
+            />
+            <span>Español</span>
+          </div>
+          <div class="options">
+            <div class="option" data-value="es">
+              <img
+                src="../static/images/bandera.png"
+                alt="Español"
+                class="flag"
+              />
+              Español
             </div>
-            <form action="/search" method="post">
-                <input type="text" name="query" placeholder="¿Qué es lo que desea buscar?">
-                <button type="submit">Buscar</button>
-            </form>
+            <div class="option" data-value="en">
+              <img
+                src="../static/images/reino-unido.png"
+                alt="English"
+                class="flag"
+              />
+              English
+            </div>
+          </div>
+        </div>
+        <input type="hidden" id="langInput" name="lang" value="es" />
+
+        <button type="submit" id="submitButton">Buscar</button>
+      </form>
     </div>
-    
-</body>
+    <script>
+      function toggleDropdown() {
+        document.querySelector(".custom-select").classList.toggle("open");
+      }
+
+      document.querySelectorAll(".option").forEach((option) => {
+        option.addEventListener("click", function () {
+          const lang = this.getAttribute("data-value");
+          const text = this.textContent.trim();
+          const flagSrc = this.querySelector("img").getAttribute("src");
+
+          document.querySelector(".selected-option span").textContent = text;
+          document
+            .querySelector(".selected-option img")
+            .setAttribute("src", flagSrc);
+          document.querySelector("#langInput").value = lang;
+
+          if (lang === "en") {
+            document.querySelector("button[type='submit']").textContent =
+              "Search";
+            document.querySelector('input[name="query"]').placeholder =
+              "What do you want to search for?";
+          } else {
+            document.querySelector("button[type='submit']").textContent =
+              "Buscar";
+            document.querySelector('input[name="query"]').placeholder =
+              "¿Qué es lo que desea buscar?";
+          }
+
+          const formAction = document.querySelector("form").action;
+          const searchUrl = new URL(formAction);
+          searchUrl.searchParams.set("lang", lang); // Añade el parámetro de idioma a la URL
+          document.querySelector("form").action = searchUrl.toString();
+
+          document.querySelector(".custom-select").classList.remove("open");
+        });
+      });
+
+      document.addEventListener("click", function (event) {
+        const customSelect = document.querySelector(".custom-select");
+        if (!customSelect.contains(event.target)) {
+          customSelect.classList.remove("open");
+        }
+      });
+    </script>
+  </body>
 </html>

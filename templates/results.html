@@ -1,77 +1,203 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Resultados de la Búsqueda</title>
-    <link rel="stylesheet" href="../static/css/results.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../static/css/results.css" />
+  </head>
+  <body>
     <header class="cabecera"></header>
     <div class="contenedor">
-        <aside class="izquierda"> 
-            <div class="header">
-                <img src="../static/images/libros.png" alt="iconolibro" id="libros">
-                <img src="../static/images/titulosinfondo.png" alt="ONTOFLOW" id="titulo">
-            </div>
-            
-        </aside>
-        <section class="derecha">
-            <div class="buscador">
-                <form action="/search" method="post">
-                    <input type="text" name="query" value="{{ query }}" placeholder="¿Qué es lo que desea buscar?">
-                    <button type="submit">Buscar</button>
-                </form>
-            </div>
-            <main class="container">
-                
-                <h2>Local</h2>
-                {% if results %}
-                <ul>
-                    {% for result in results.local %}
-                    <li>
-                        <div class="opcion" onclick="clickA(this)">
-                            <a href="/details/{{result.Instancia}}">{{ result.Titulo }}</a><br>
-                            <small>Instancia: {{ result.Instancia }}</small>
-                            <ul class="detalles">
-                                {% for info in result.MasInformacion %}
-                                <li>{{ info }}</li>
-                                {% endfor %}
-                                <p>...</p>
-                            </ul>
-                        </div>
-                    </li>
-                    {% endfor %}
-                </ul>
-                {% else %} 
-                <p>No se encontraron resultados.</p> 
-                {% endif %}
-                
-                <h2>DBpedia</h2>
-                {% if results.dbpedia %}
-                    <ul>
-                        {% for result in results.dbpedia %}
-                        <li><a href="{{ result.url }}">{{ result.title }}</a></li>
-                        {% endfor %}
-                    </ul>
-                {% else %}
-                    <p>No se encontraron resultados.</p>
-                {% endif %}
+      <aside class="izquierda">
+        <div class="header">
+          <img src="../static/images/libros.png" alt="iconolibro" id="libros" />
+          <img
+            src="../static/images/titulosinfondo.png"
+            alt="ONTOFLOW"
+            id="titulo"
+          />
+        </div>
+      </aside>
+      <section class="derecha">
+        <div class="buscador">
+          <form action="/search" method="POST">
+            <input
+              type="text"
+              name="query"
+              value="{{ query }}"
+              placeholder="¿Qué es lo que desea buscar?"
+            />
 
-                <div class="contCastor">
-                    <img src="../static/images/castor.png" alt="castorcito" id="castor">
+            <div class="custom-select">
+              <div class="selected-option" onclick="toggleDropdown()">
+                <img
+                  src="../static/images/bandera.png"
+                  alt="Español"
+                  class="flag"
+                />
+                <span>Español</span>
+              </div>
+              <div class="options">
+                <div class="option" data-value="es">
+                  <img
+                    src="../static/images/bandera.png"
+                    alt="Español"
+                    class="flag"
+                  />
+                  Español
                 </div>
-            </main>
-        </section>
-        
+                <div class="option" data-value="en">
+                  <img
+                    src="../static/images/reino-unido.png"
+                    alt="English"
+                    class="flag"
+                  />
+                  English
+                </div>
+              </div>
+            </div>
+            <input
+              type="hidden"
+              id="langInput"
+              name="lang"
+              value="{{ lang if lang else 'es' }}"
+            />
+
+            <button type="submit" id="search-button">Buscar</button>
+          </form>
+        </div>
+        <main class="container">
+          <h2 id="local-heading">Local</h2>
+          {% if results %}
+          <ul>
+            {% for result in results.local %}
+            <li>
+              <div class="opcion" onclick="clickA(this)">
+                <a href="/details/{{result.Instancia}}">{{ result.Titulo }}</a
+                ><br />
+                <small>Instancia: {{ result.Instancia }}</small>
+                <ul class="detalles">
+                  {% for info in result.MasInformacion %}
+                  <li>{{ info }}</li>
+                  {% endfor %}
+                  <p>...</p>
+                </ul>
+              </div>
+            </li>
+            {% endfor %}
+          </ul>
+          {% else %}
+          <p id="no-results-message">No se encontraron resultados.</p>
+          {% endif %}
+
+          <h2 id="dbpedia-heading">DBpedia</h2>
+          {% if results.dbpedia %}
+          <ul>
+            {% for result in results.dbpedia %}
+            <li><a href="{{ result.url }}">{{ result.title }}</a></li>
+            {% endfor %}
+          </ul>
+          {% else %}
+          <p id="no-results-db">No se encontraron resultados.</p>
+          {% endif %}
+
+          <div class="contCastor">
+            <img
+              src="../static/images/castor.png"
+              alt="castorcito"
+              id="castor"
+            />
+          </div>
+        </main>
+      </section>
     </div>
     <script>
-        function clickA(div){
-            const link = div.querySelector('a');
-            if (link) {
-            window.location.href = link.href;
-            }
+      document.addEventListener("DOMContentLoaded", function () {
+        // Asegura que el valor del campo langInput coincide con el idioma seleccionado
+        const langInput = document.getElementById("langInput");
+        const selectedOption = document.querySelector(".selected-option span");
+
+        // Si hay un valor en langInput, actualiza el selector
+        if (langInput.value) {
+          const option = document.querySelector(
+            `.option[data-value="${langInput.value}"]`
+          );
+          if (option) {
+            selectedOption.textContent = option.textContent;
+            document
+              .querySelector(".selected-option img")
+              .setAttribute(
+                "src",
+                option.querySelector("img").getAttribute("src")
+              );
+          }
         }
+      });
+
+      function toggleDropdown() {
+        document.querySelector(".custom-select").classList.toggle("open");
+      }
+
+      document.querySelectorAll(".option").forEach((option) => {
+        option.addEventListener("click", function () {
+          // Obtiene el idioma seleccionado
+          const lang = option.getAttribute("data-value");
+
+          // Actualiza el campo oculto en el formulario con el idioma seleccionado
+          const langInput = document.getElementById("langInput");
+          langInput.value = lang;
+
+          // Cambia el texto y el marcador de idioma según el idioma seleccionado
+          const selectedOption = document.querySelector(
+            ".selected-option span"
+          );
+          selectedOption.textContent = option.textContent;
+          document
+            .querySelector(".selected-option img")
+            .setAttribute(
+              "src",
+              option.querySelector("img").getAttribute("src")
+            );
+
+          // Actualiza los textos según el idioma seleccionado
+          const searchInput = document.querySelector('input[name="query"]');
+          if (lang === "en") {
+            document.querySelector("button[type='submit']").textContent =
+              "Search";
+            searchInput.placeholder = "What do you want to search for?";
+            document.getElementById("local-heading").textContent = "Local";
+            document.getElementById("dbpedia-heading").textContent = "DBpedia";
+            document.getElementById("no-results-message").textContent =
+              "No results found.";
+            document.getElementById("no-results-db").textContent =
+              "No results found.";
+          } else {
+            document.querySelector("button[type='submit']").textContent =
+              "Buscar";
+            searchInput.placeholder = "¿Qué es lo que desea buscar?";
+            document.getElementById("local-heading").textContent = "Local";
+            document.getElementById("dbpedia-heading").textContent = "DBpedia";
+            document.getElementById("no-results-message").textContent =
+              "No se encontraron resultados.";
+            document.getElementById("no-results-db").textContent =
+              "No se encontraron resultados.";
+          }
+
+          // Cierra el dropdown (modal)
+          document.querySelector(".custom-select").classList.remove("open");
+
+          // Evita el envío automático del formulario en algunos casos (dependiendo de cómo se implementa el formulario)
+          return false;
+        });
+      });
+
+      document.addEventListener("click", function (event) {
+        const customSelect = document.querySelector(".custom-select");
+        if (!customSelect.contains(event.target)) {
+          customSelect.classList.remove("open");
+        }
+      });
     </script>
-</body>
+  </body>
 </html>

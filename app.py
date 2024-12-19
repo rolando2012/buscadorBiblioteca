@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, redirect, url_for
 from rdflib import Graph
 from owlready2 import *
 from SPARQLWrapper import SPARQLWrapper, JSON
@@ -25,28 +25,12 @@ def start():
 @app.route('/index', methods=['GET'])
 def search_page():
     return render_template('index.html')
-    
 
 
 @app.route('/search', methods=['POST'])
 def search():
     query = request.form['query']
-    # Consulta a DBpedia
-    sparql_query_dbpedia = f"""
-    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-
-    SELECT ?resource ?label
-    WHERE {{
-      ?resource rdfs:label ?label .
-      FILTER(LANG(?label) = "es")  # Etiquetas en español
-      FILTER(CONTAINS(LCASE(STR(?label)), LCASE("{query}")))
-    }}
-    LIMIT 10
-    """
-    sparql = SPARQLWrapper(DBPEDIA_ENDPOINT)
-    sparql.setQuery(sparql_query_dbpedia)
-    sparql.setReturnFormat(JSON)
-    results_dbpedia = sparql.query().convert()
+    langSel = request.form.get('lang', 'es')  # ojoooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
     # Consulta al archivo JSON (DBpedia)
     json_file = "./ontologia/dbpedia_books.json"  # Archivo JSON local
@@ -58,16 +42,17 @@ def search():
     except (FileNotFoundError, json.JSONDecodeError):
         books = []
 
-    # Realizar búsqueda en JSON local
     results_dbpedia_processed = set()
     query_lower = query.lower()
     for book in books:
         title = book.get("name", {}).get("value", "").lower()
         author = book.get("author", {}).get("value", "").lower()
         abstract = book.get("abstract", {}).get("value", "").lower()
+        lang = book.get("abstract", {}).get("xml:lang", "").lower() # ojooooooooooooooooooooooooooooooooo
 
-        if query_lower in title or query_lower in author or query_lower in abstract:
-            results_dbpedia_processed.add(title)
+        if lang == langSel:
+            if query_lower in title or query_lower in author or query_lower in abstract:
+                results_dbpedia_processed.add(title)
 
     results_dbpedia = [
         {
@@ -76,7 +61,7 @@ def search():
         }
         for title in sorted(results_dbpedia_processed)
     ]
-    results = buscar_resultado(query, ontology_data)
+    results = buscar_resultado(query, ontology_data, langSel)
 
     # Combinar resultados locales y JSON
     combined_results = {
@@ -162,7 +147,14 @@ def dbpedia_details(title):
 
 
 #funcion buscar en json
-def buscar_resultado(query, data):
+def buscar_resultado(query, data, lang):
+    if lang == "es":
+        langSel = "Español"
+    elif lang == "en":
+        langSel = "Ingles"
+    else:
+        langSel = None
+        
     query = query.lower()
     results = []
 
@@ -170,7 +162,6 @@ def buscar_resultado(query, data):
     property_labels = {
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneColaborador": "Colaborador",
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNombre": "Nombre",
-
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCarnet": "Carnet",
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAreaColaboracion": "Área de colaboracion",
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAñoIngreso": "Año de Ingreso",
@@ -187,7 +178,6 @@ def buscar_resultado(query, data):
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCapacidad": "Capacidad",
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave": "Palabra Clave",
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCantidadVisualizaciones": "Visualizaciones",
-
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneResumen": "Resumen",
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo": "Tamaño de archivo",
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo": "Titulo",
@@ -199,6 +189,12 @@ def buscar_resultado(query, data):
     }
 
     for instance in data:
+        # Filtrar por idioma si langSel está definido, pero no descartar si el campo no existe
+        idiomas = instance.get("http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma", [])
+        idioma_instancia = idiomas[0]["@value"].lower() if idiomas else None
+        if langSel and idioma_instancia != langSel.lower():
+            continue
+
         # Obtener el label de la instancia o extraer desde @id si no existe
         instance_label = instance.get("http://www.w3.org/2000/01/rdf-schema#label", [{"@value": ""}])[0]["@value"]
         if not instance_label:
@@ -219,7 +215,6 @@ def buscar_resultado(query, data):
                     context = property_labels.get(property, "Relacionado")
                     title = f"{value['@value']} - {context}"
                     
-                    # Agregar valores adicionales con etiquetas descriptivas
                 elif property in property_labels:
                     label = property_labels[property]
                     descriptive_value = f"{label}: {value['@value']}"

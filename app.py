@@ -3,6 +3,7 @@ from rdflib import Graph
 from owlready2 import *
 from SPARQLWrapper import SPARQLWrapper, JSON
 import json
+import unicodedata
 
 DBPEDIA_ENDPOINT = "http://dbpedia.org/sparql"
 app = Flask(__name__)
@@ -26,7 +27,7 @@ def search():
     query = request.form['query']
 
     results = buscar_resultado(query, ontology_data)
-    results_dbpedia = []
+    results_dbpedia = search_dbpedia(query)
 
     # Combinar resultados locales y JSON
     combined_results = {
@@ -73,42 +74,11 @@ def details(instance):
 
 @app.route('/dbpedia_details/<title>')
 def dbpedia_details(title):
-    json_file = "./ontologia/dbpedia_books.json"  # Archivo JSON local
-    try:
-        with open(json_file, "r", encoding="utf-8") as f:
-            data = json.load(f)
-            books = data["results"]["bindings"]
-    except (FileNotFoundError, json.JSONDecodeError):
-        books = []
-
-    # Buscar detalles del libro según el título
-    book_details = next(
-        (book for book in books if book.get("name", {}).get("value", "").lower() == title.lower()),
-        None
-    )
-
-    # Si no se encuentra el libro
-    if not book_details:
-        return render_template("dbpedia_details.html", title=title, details=None)
-
-    # Detalles procesados para mostrar en el HTML
-    processed_details = {
-        "Título": book_details.get("name", {}).get("value", "N/A"),
-        "Autor": book_details.get("author", {}).get("value", "N/A"),
-        "Resumen": book_details.get("abstract", {}).get("value", "N/A"),
-        "ID de Página": book_details.get("number", {}).get("value", "N/A"),
-        "Título Alternativo": book_details.get("title", {}).get("value", "N/A"),
-        "Editorial": book_details.get("publisher", {}).get("value", "N/A"),
-        "Fecha de Publicación": book_details.get("publicationDate", {}).get("value", "N/A"),
-        "Edición": book_details.get("edition", {}).get("value", "N/A"),
-        "ISBN": book_details.get("isbn", {}).get("value", "N/A"),
-        "Número de Páginas": book_details.get("numberOfPages", {}).get("value", "N/A"),
-        "Género": book_details.get("genre", {}).get("value", "N/A"),
-        "Idioma": book_details.get("language", {}).get("value", "N/A"),
-        "URL del Recurso": book_details.get("url", {}).get("value", "N/A"),
-    }
-
-    return render_template("dbpedia_details.html", title=title, details=processed_details)
+    book_details = get_book_details(title)
+    if book_details:
+        return render_template('dbpedia_details.html', book=book_details)
+    else:
+        return "No se encontraron detalles para este libro."
 
 
 #funcion buscar en json
@@ -185,7 +155,88 @@ def buscar_resultado(query, data):
 
     return results
 
+# Función para limpiar texto y eliminar caracteres no deseados
+def clean_text(text):
+    if text is None:
+        return "N/A"
+    cleaned_text = unicodedata.normalize("NFKC", text)
+    return cleaned_text
 
+# Función para consultar DBpedia y obtener los títulos
+def search_dbpedia(query):
+    sparql = SPARQLWrapper("http://dbpedia.org/sparql")
+    sparql_query = f"""
+    SELECT DISTINCT ?title
+    WHERE
+    {{
+      ?book dbo:wikiPageWikiLink ?topic .
+      VALUES ?topic {{ 
+        dbr:Software 
+        dbr:Networks_Concepts
+        dbr:Database 
+        dbr:Programming 
+        dbr:Algorithm 
+        dbr:Artificial_intelligence 
+        dbr:Data_mining 
+        dbr:Operating_system 
+      }}
+      
+      ?book rdfs:comment ?abstract .
+      OPTIONAL {{ ?book dbp:title ?title . }}
+
+      FILTER ( LANG(?abstract) = 'es' )
+      FILTER (CONTAINS(LCASE(?abstract), LCASE("{query}")))
+    }}
+    """
+    sparql.setQuery(sparql_query)
+    sparql.setReturnFormat(JSON)
+    results = sparql.query().convert()
+
+    # Procesar resultados
+    dbpedia_results = []
+    for result in results["results"]["bindings"]:
+        if 'title' in result:
+            title = clean_text(result['title']['value'])
+            dbpedia_results.append({"title": title})
+    
+    return dbpedia_results
+
+def get_book_details(title):
+    sparql = SPARQLWrapper("http://dbpedia.org/sparql")
+    sparql_query = f"""
+    SELECT DISTINCT ?book ?abstract ?author ?publisher ?publicationDate ?isbn ?numberOfPages ?language
+    WHERE
+    {{
+      ?book a dbo:Book .
+      ?book rdfs:label ?label .
+      FILTER (CONTAINS(LCASE(?label), LCASE("{title}")))
+      OPTIONAL {{ ?book rdfs:comment ?abstract . FILTER (LANG(?abstract) = 'es') }}
+      OPTIONAL {{ ?book dbp:author ?author . }}
+      OPTIONAL {{ ?book dbo:publisher ?publisher . }}
+      OPTIONAL {{ ?book dbo:publicationDate ?publicationDate . }}
+      OPTIONAL {{ ?book dbo:isbn ?isbn . }}
+      OPTIONAL {{ ?book dbo:numberOfPages ?numberOfPages . }}
+      OPTIONAL {{ ?book dbo:language ?language . }}
+    }}
+    """
+    sparql.setQuery(sparql_query)
+    sparql.setReturnFormat(JSON)
+    results = sparql.query().convert()
+
+    # Procesar resultados
+    if results["results"]["bindings"]:
+        result = results["results"]["bindings"][0]
+        return {
+            "title": title,
+            "abstract": clean_text(result.get('abstract', {}).get('value', 'N/A')),
+            "author": clean_text(result.get('author', {}).get('value', 'N/A')),
+            "publisher": clean_text(result.get('publisher', {}).get('value', 'N/A')),
+            "publicationDate": clean_text(result.get('publicationDate', {}).get('value', 'N/A')),
+            "isbn": clean_text(result.get('isbn', {}).get('value', 'N/A')),
+            "numberOfPages": clean_text(result.get('numberOfPages', {}).get('value', 'N/A')),
+            "language": clean_text(result.get('language', {}).get('value', 'N/A')),
+        }
+    return None
 
 if __name__ == '__main__':
     app.run(debug=True)

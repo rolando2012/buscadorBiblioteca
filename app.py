@@ -7,14 +7,8 @@ import json
 DBPEDIA_ENDPOINT = "http://dbpedia.org/sparql"
 app = Flask(__name__)
 
-# Cargar la ontología con OWLready2
-onto_path.append("ontologia/biblioteca")
-onto = get_ontology("ontologia/biblioteca.owl").load()
-# Convertir la ontología a un grafo RDFlib
-graph = default_world.as_rdflib_graph()
-
 # Cargar el archivo JSON
-with open('./ontologia/ontologia.jsonld', 'r', encoding='utf-8') as f:
+with open('./ontologia/ontologia_actualizada.jsonld', 'r', encoding='utf-8') as f:
     ontology_data = json.load(f)
 
 @app.route('/')
@@ -27,56 +21,12 @@ def search_page():
     return render_template('index.html')
     
 
-
 @app.route('/search', methods=['POST'])
 def search():
     query = request.form['query']
-    # Consulta a DBpedia
-    sparql_query_dbpedia = f"""
-    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-    SELECT ?resource ?label
-    WHERE {{
-      ?resource rdfs:label ?label .
-      FILTER(LANG(?label) = "es")  # Etiquetas en español
-      FILTER(CONTAINS(LCASE(STR(?label)), LCASE("{query}")))
-    }}
-    LIMIT 10
-    """
-    sparql = SPARQLWrapper(DBPEDIA_ENDPOINT)
-    sparql.setQuery(sparql_query_dbpedia)
-    sparql.setReturnFormat(JSON)
-    results_dbpedia = sparql.query().convert()
-
-    # Consulta al archivo JSON (DBpedia)
-    json_file = "./ontologia/dbpedia_books.json"  # Archivo JSON local
-
-    try:
-        with open(json_file, "r", encoding="utf-8") as f:
-            data = json.load(f)
-            books = data["results"]["bindings"]
-    except (FileNotFoundError, json.JSONDecodeError):
-        books = []
-
-    # Realizar búsqueda en JSON local
-    results_dbpedia_processed = set()
-    query_lower = query.lower()
-    for book in books:
-        title = book.get("name", {}).get("value", "").lower()
-        author = book.get("author", {}).get("value", "").lower()
-        abstract = book.get("abstract", {}).get("value", "").lower()
-
-        if query_lower in title or query_lower in author or query_lower in abstract:
-            results_dbpedia_processed.add(title)
-
-    results_dbpedia = [
-        {
-            "title": title,
-            "url": f"/dbpedia_details/{title.replace(' ', '%20')}"
-        }
-        for title in sorted(results_dbpedia_processed)
-    ]
     results = buscar_resultado(query, ontology_data)
+    results_dbpedia = []
 
     # Combinar resultados locales y JSON
     combined_results = {
@@ -234,6 +184,7 @@ def buscar_resultado(query, data):
             })
 
     return results
+
 
 
 if __name__ == '__main__':

@@ -1,10 +1,10 @@
 import json
 
 # Cargar ontología original y libros de DBpedia
-with open('./ontologia/ontologia.jsonld', 'r', encoding='utf-8') as file:
+with open('./ontologia/ontologia_prueba.jsonld', 'r', encoding='utf-8') as file:
     ontologia = json.load(file)
 
-with open('./ontologia/dbpedia_books.json', 'r', encoding='utf-8') as file:
+with open('./csv/dbpedia_books_en.json', 'r', encoding='utf-8') as file:
     dbpedia_books = json.load(file)
 
 # Extraer libros de DBpedia

@@ -1,3 +1,14 @@
+
+"""
+English
+Español
+
+"abstract": {
+          "type": "literal",
+          "xml:lang": "es",
+          "value": "Introducción a los algoritmos (Introduction to Algorithms en versión original) es un libro de Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest y Clifford Stein. Tiene tres ediciones en inglés, la primera 1990, sin Clifford Stein, una segunda en 2001, y una tercera en 2009. Se usa como libro de texto para enseñar algoritmos en algunas universidades. Cormen enseña en el Dartmouth College, Rivest y L
+esto es de dbpedia
+"""
 import json
 
 # Cargar ontología original y libros de DBpedia

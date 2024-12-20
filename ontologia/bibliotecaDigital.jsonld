@@ -60,7 +60,7 @@
         ],
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma": [
             {
-                "@value": "Ingles"
+                "@value": "Español"
             }
         ],
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNivelAcademico": [
@@ -282,82 +282,6 @@
         ]
     },
     {
-        "@id": "http://webprotege.stanford.edu/R8ZGDRlqVYx34X2QNpFamfM",
-        "@type": [
-            "http://www.w3.org/2002/07/owl#NamedIndividual"
-        ],
-        "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF": [
-            {
-                "@value": "Teoria de la computacion"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría": [
-            {
-                "@value": "Libro"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor": [
-            {
-                "@value": "Edgar Jaldin"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso": [
-            {
-                "@value": "https://biblio.edu/investigacion/basescomputo.pdf"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEstado": [
-            {
-                "@value": "Acceso libre"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion": [
-            {
-                "@value": "08/04/23"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato": [
-            {
-                "@value": "PDF"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneISBN": [
-            {
-                "@value": "9952 21445 12023 1210"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma": [
-            {
-                "@value": "Ingles"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave": [
-            {
-                "@value": "computadoras"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo": [
-            {
-                "@value": "523kb"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo": [
-            {
-                "@value": "Bases de computacion"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion": [
-            {
-                "@value": "v2.3"
-            }
-        ],
-        "http://www.w3.org/2000/01/rdf-schema#label": [
-            {
-                "@value": "recDigital026"
-            }
-        ]
-    },
-    {
         "@id": "http://webprotege.stanford.edu/R8l4H4sGMTO7UjhPKdjI18t",
         "@type": [
             "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -475,77 +399,6 @@
         "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
             {
                 "@id": "http://www.w3.org/2002/07/owl#topDataProperty"
-            }
-        ]
-    },
-    {
-        "@id": "http://webprotege.stanford.edu/RBCurMIeWX26myG7W4z1aCF",
-        "@type": [
-            "http://www.w3.org/2002/07/owl#NamedIndividual"
-        ],
-        "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF": [
-            {
-                "@value": "Simulacion"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría": [
-            {
-                "@value": "Trabajo practico"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor": [
-            {
-                "@value": "Anonimo"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso": [
-            {
-                "@value": "https://biblio.edu/practica/simulacion.pdf"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEstado": [
-            {
-                "@value": "Acceso libre"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion": [
-            {
-                "@value": "12/05/22"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato": [
-            {
-                "@value": "PDF"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma": [
-            {
-                "@value": "Español"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave": [
-            {
-                "@value": "Transformada Inversa"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo": [
-            {
-                "@value": "120kb"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo": [
-            {
-                "@value": "Practica I - Transformada Inversa"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion": [
-            {
-                "@value": "v1.0"
-            }
-        ],
-        "http://www.w3.org/2000/01/rdf-schema#label": [
-            {
-                "@value": "recDigital023"
             }
         ]
     },
@@ -1271,156 +1124,6 @@
         ]
     },
     {
-        "@id": "http://webprotege.stanford.edu/RaiFoPyv3hbiUqmS6E6BVc",
-        "@type": [
-            "http://www.w3.org/2002/07/owl#NamedIndividual"
-        ],
-        "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF": [
-            {
-                "@value": "Simulacion"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría": [
-            {
-                "@value": "Trabajo practico"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor": [
-            {
-                "@value": "Anonimo"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso": [
-            {
-                "@value": "https://biblio.edu/practica/simulacion2.pdf"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEstado": [
-            {
-                "@value": "Acceso libre"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion": [
-            {
-                "@value": "02/06/15"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato": [
-            {
-                "@value": "xls"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma": [
-            {
-                "@value": "Español"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave": [
-            {
-                "@value": "Distribucion"
-            },
-            {
-                "@value": "Uniforme"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo": [
-            {
-                "@value": "53kb"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo": [
-            {
-                "@value": "Practica II - Distribucion Uniforme"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion": [
-            {
-                "@value": "v1.3"
-            }
-        ],
-        "http://www.w3.org/2000/01/rdf-schema#label": [
-            {
-                "@value": "recDigital024"
-            }
-        ]
-    },
-    {
-        "@id": "http://webprotege.stanford.edu/RefeKh7LBuuKBrlgN4REkO",
-        "@type": [
-            "http://www.w3.org/2002/07/owl#NamedIndividual"
-        ],
-        "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF": [
-            {
-                "@value": "Historia de computadoras"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría": [
-            {
-                "@value": "Proyecto de Investigacion"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor": [
-            {
-                "@value": "Esteban Quito"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso": [
-            {
-                "@value": "https://biblio.edu/proyecto/invesitgacion/histcompu.pdf"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEstado": [
-            {
-                "@value": "Acceso libre"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion": [
-            {
-                "@value": "25/04/21"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato": [
-            {
-                "@value": "PDF"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma": [
-            {
-                "@value": "Español"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave": [
-            {
-                "@value": "computadoras"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneResumen": [
-            {
-                "@value": "Relata como se crearon las computadoras sus autores y la forma en la que surgieron"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo": [
-            {
-                "@value": "64kb"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo": [
-            {
-                "@value": "Historia de las Computadoras"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion": [
-            {
-                "@value": "v1.0"
-            }
-        ],
-        "http://www.w3.org/2000/01/rdf-schema#label": [
-            {
-                "@value": "recDigital025"
-            }
-        ]
-    },
-    {
         "@id": "http://webprotege.stanford.edu/RuNZF5RHPctjyYhq01e1xS",
         "@type": [
             "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -1587,6 +1290,1702 @@
         ]
     },
     {
+        "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#recDigital023",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#NamedIndividual"
+        ],
+        "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF": [
+            {
+                "@value": "Artificial Intelligence"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría": [
+            {
+                "@value": "Book"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAreaEstudio": [
+            {
+                "@value": "Computer Science"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor": [
+            {
+                "@value": "Jane Doe"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso": [
+            {
+                "@value": "https://library.edu/ml_introduction"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEstado": [
+            {
+                "@value": "Open access"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion": [
+            {
+                "@value": "08/22/2019"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato": [
+            {
+                "@value": "PDF"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma": [
+            {
+                "@value": "English"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave": [
+            {
+                "@value": "Machine learning"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneResumen": [
+            {
+                "@value": "Machine learning is based on the use of algorithms and statistical models so that computer systems can perform tasks without explicit instructions. Computer systems use these algorithms to process large amounts of historical data and identify data patterns.\nSome of the applications of machine learning are:\nIn the health field, to detect diseases early, predict a patient's readmission or prescribe the most appropriate treatment..."
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo": [
+            {
+                "@value": "1,2 MB"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo": [
+            {
+                "@value": "Introduction to machine learning"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion": [
+            {
+                "@value": "v1.2"
+            }
+        ],
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+            {
+                "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#recDigital024",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#NamedIndividual"
+        ],
+        "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF": [
+            {
+                "@value": "Calculus I"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría": [
+            {
+                "@value": "Past exams"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAreaEstudio": [
+            {
+                "@value": "Systems Engineering"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor": [
+            {
+                "@value": "John Smith"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso": [
+            {
+                "@value": "https://library.edu/midterm_calculus"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEstado": [
+            {
+                "@value": "Open access"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion": [
+            {
+                "@value": "03/15/2020"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato": [
+            {
+                "@value": "PDF"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma": [
+            {
+                "@value": "English"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave": [
+            {
+                "@value": "Calculus I"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneResumen": [
+            {
+                "@value": "First partial exam semester I-2020"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo": [
+            {
+                "@value": "321kb"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo": [
+            {
+                "@value": "Calculus I Exam"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion": [
+            {
+                "@value": "v2020"
+            }
+        ],
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+            {
+                "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#recDigital025",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#NamedIndividual"
+        ],
+        "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF": [
+            {
+                "@value": "Operating Systems"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría": [
+            {
+                "@value": "Book"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAreaEstudio": [
+            {
+                "@value": "Computer Science"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor": [
+            {
+                "@value": "Abraham Silberschatz"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEstado": [
+            {
+                "@value": "Open access"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion": [
+            {
+                "@value": "01/10/2021"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato": [
+            {
+                "@value": "PDF"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma": [
+            {
+                "@value": "English"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave": [
+            {
+                "@value": "Operating Systems"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneResumen": [
+            {
+                "@value": "An operating system (OS) is a set of programs that manages a device's resources, such as memory, disk, peripherals, and storage. Its function is to act as an intermediary between the hardware and the user, allowing applications to run and facilitating interaction with the device."
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo": [
+            {
+                "@value": "3 MB"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo": [
+            {
+                "@value": "Operating Systems Concepts"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion": [
+            {
+                "@value": "v10"
+            }
+        ],
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+            {
+                "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#recDigital026",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#NamedIndividual"
+        ],
+        "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF": [
+            {
+                "@value": "Cloud Computing"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría": [
+            {
+                "@value": "Book"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAreaEstudio": [
+            {
+                "@value": "Networks"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor": [
+            {
+                "@value": "Andrew Tanenbaum"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEstado": [
+            {
+                "@value": "800kb"
+            },
+            {
+                "@value": "Open access"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion": [
+            {
+                "@value": "04/15/2022"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato": [
+            {
+                "@value": "PDF"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma": [
+            {
+                "@value": "English"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave": [
+            {
+                "@value": "Cloud Computing"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneResumen": [
+            {
+                "@value": "Cloud computing is a technology that enables access to computing resources, such as storage, databases, applications, networks and analytics, over the Internet."
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo": [
+            {
+                "@value": "Introduction to Cloud Computing"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion": [
+            {
+                "@value": "v3.1"
+            }
+        ],
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+            {
+                "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#recDigital027",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#NamedIndividual"
+        ],
+        "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF": [
+            {
+                "@value": "Cybersecurity"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría": [
+            {
+                "@value": "Slides"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor": [
+            {
+                "@value": "Dra. Laura Wilson"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso": [
+            {
+                "@value": "https://library.edu/network_slides"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion": [
+            {
+                "@value": "2023-02-10"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato": [
+            {
+                "@value": "PPTX"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma": [
+            {
+                "@value": "English"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave": [
+            {
+                "@value": "Networks"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneResumen": [
+            {
+                "@value": "Cybersecurity, also known as digital security, is the practice of protecting your digital information, devices, and assets. This includes personal information, accounts, files, photos, and even money."
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo": [
+            {
+                "@value": "5 MB"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo": [
+            {
+                "@value": "Introduction to Network Security"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion": [
+            {
+                "@value": "v3.0"
+            }
+        ],
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+            {
+                "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#recDigital028",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#NamedIndividual"
+        ],
+        "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF": [
+            {
+                "@value": "Internet of Things"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría": [
+            {
+                "@value": "Degree Project"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor": [
+            {
+                "@value": "David Green"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso": [
+            {
+                "@value": "https://library.edu/iot_project"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion": [
+            {
+                "@value": "2022-12-05"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato": [
+            {
+                "@value": "DOC"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma": [
+            {
+                "@value": "English"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave": [
+            {
+                "@value": "IoT"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneResumen": [
+            {
+                "@value": "The Internet of Things (IoT) is a network of connected objects and devices (i.e., “things”) that are equipped with sensors (and other technologies) that enable them to transmit and receive data – to and from other things and systems."
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo": [
+            {
+                "@value": "1.1 MB"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo": [
+            {
+                "@value": "Degree Project: IoT in Smart Cities"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion": [
+            {
+                "@value": "v2.0"
+            }
+        ],
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+            {
+                "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#recDigital029",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#NamedIndividual"
+        ],
+        "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF": [
+            {
+                "@value": "Graphs"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría": [
+            {
+                "@value": "Notes"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor": [
+            {
+                "@value": "Professor Emily Carter"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso": [
+            {
+                "@value": "https://library.edu/graph_algorithms"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion": [
+            {
+                "@value": "2020-03-20"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato": [
+            {
+                "@value": "PDF"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma": [
+            {
+                "@value": "English"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave": [
+            {
+                "@value": "Algorithms"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneResumen": [
+            {
+                "@value": "In mathematics, logic, computer science, and related disciplines, an algorithm is a set of definite and unambiguous, ordered and finite instructions or rules that typically allows solving a problem, performing a computation, processing data, and carrying out other tasks or activities.1 It also serves to solve a Rubik's cube...."
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo": [
+            {
+                "@value": "1.8 MB"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo": [
+            {
+                "@value": "Lecture Notes on Advanced Graph Algorithms"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion": [
+            {
+                "@value": "v1.5"
+            }
+        ],
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+            {
+                "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#recDigital030",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#NamedIndividual"
+        ],
+        "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF": [
+            {
+                "@value": "Structured Query Language"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría": [
+            {
+                "@value": "Practical exercises"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor": [
+            {
+                "@value": "Professor Grace Hopper"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso": [
+            {
+                "@value": "https://library.edu/sql_practical"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion": [
+            {
+                "@value": "2021-05-15"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato": [
+            {
+                "@value": "DOC"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma": [
+            {
+                "@value": "English"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave": [
+            {
+                "@value": "SQL"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneResumen": [
+            {
+                "@value": "Third practice of the semester 2021"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo": [
+            {
+                "@value": "500 KB"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo": [
+            {
+                "@value": "Practical exercises on SQL queries"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion": [
+            {
+                "@value": "v2.1"
+            }
+        ],
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+            {
+                "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#recDigital031",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#NamedIndividual"
+        ],
+        "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF": [
+            {
+                "@value": "Relational database systems"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría": [
+            {
+                "@value": "Past exams"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor": [
+            {
+                "@value": "Dr. Edgar F. Codd"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso": [
+            {
+                "@value": "https://library.edu/relational_db_exam"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion": [
+            {
+                "@value": "2022-11-25"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato": [
+            {
+                "@value": "PDF"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma": [
+            {
+                "@value": "English"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave": [
+            {
+                "@value": "Relational databases"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneResumen": [
+            {
+                "@value": "Second part exam semester II-2022"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo": [
+            {
+                "@value": "900 KB"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo": [
+            {
+                "@value": "Exam: Relational databases"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion": [
+            {
+                "@value": "v2022"
+            }
+        ],
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+            {
+                "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#recDigital032",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#NamedIndividual"
+        ],
+        "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF": [
+            {
+                "@value": "Big Data Technologies"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría": [
+            {
+                "@value": "Book"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor": [
+            {
+                "@value": "John Smith"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso": [
+            {
+                "@value": "https://library.edu/big_data_hadoop_spark"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion": [
+            {
+                "@value": "2021-03-10"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato": [
+            {
+                "@value": "PDF"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma": [
+            {
+                "@value": "English"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave": [
+            {
+                "@value": "Hadoop"
+            },
+            {
+                "@value": "Spark"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneResumen": [
+            {
+                "@value": "Apache Hadoop is a free, open-source software framework for developing distributed applications that handle large volumes of data (big data). It allows applications to work with thousands of networked nodes and petabytes of data. Hadoop was inspired by Google's papers on MapReduce and the Google File System (GFS)."
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo": [
+            {
+                "@value": "6.8 MB"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo": [
+            {
+                "@value": "Big Data Processing with Hadoop and Spark"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion": [
+            {
+                "@value": "v3.0"
+            }
+        ],
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+            {
+                "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#recDigital033",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#NamedIndividual"
+        ],
+        "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF": [
+            {
+                "@value": "Object Oriented Programming"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría": [
+            {
+                "@value": "Notes"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor": [
+            {
+                "@value": "Emily Johnson"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso": [
+            {
+                "@value": "https://library.edu/java_basics_notes"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion": [
+            {
+                "@value": "2023-04-20"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato": [
+            {
+                "@value": "PDF"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma": [
+            {
+                "@value": "English"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave": [
+            {
+                "@value": "Java"
+            },
+            {
+                "@value": "Programming"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneResumen": [
+            {
+                "@value": "Provides a foundation for building and deploying network-centric enterprise applications ranging from a desktop PC to a workgroup server. Java SE is implemented using the Java Software Development Kit (SDK)."
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo": [
+            {
+                "@value": "3.5 MB"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo": [
+            {
+                "@value": "Java Basics of Programming"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion": [
+            {
+                "@value": "v2.1"
+            }
+        ],
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+            {
+                "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#recDigital034",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#NamedIndividual"
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría": [
+            {
+                "@value": "Practical Work"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor": [
+            {
+                "@value": "Michael Brown"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso": [
+            {
+                "@value": "https://library.edu/advanced_java_projects"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion": [
+            {
+                "@value": "2022-11-15"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato": [
+            {
+                "@value": "DOC"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma": [
+            {
+                "@value": "English"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave": [
+            {
+                "@value": "Java"
+            },
+            {
+                "@value": "Projects"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneResumen": [
+            {
+                "@value": "There are four platforms of the Java programming language: Java Platform, Standard Edition (Java SE), Java Platform, Enterprise Edition (Java EE), and Java Platform, Micro Edition (Java ME)."
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo": [
+            {
+                "@value": "1.9 MB"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo": [
+            {
+                "@value": "Advanced Java Projects"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion": [
+            {
+                "@value": "v1.0"
+            }
+        ],
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+            {
+                "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#recDigital035",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#NamedIndividual"
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría": [
+            {
+                "@value": "Computer Science"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor": [
+            {
+                "@value": "Thomas H. Cormen"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso": [
+            {
+                "@value": "https://library.edu/introduction_algorithms"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceDescarga": [
+            {
+                "@value": "https://library.edu/download/introduction_algorithms"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion": [
+            {
+                "@value": "2022-10-11"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato": [
+            {
+                "@value": "PDF"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma": [
+            {
+                "@value": "English"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave": [
+            {
+                "@value": "Algorithms"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneResumen": [
+            {
+                "@value": "This book offers a comprehensive introduction to the modern study of computer algorithms, covering a broad range of topics such as dynamic programming, graph algorithms, and data structures."
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo": [
+            {
+                "@value": "1.3 Gb"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo": [
+            {
+                "@value": "Introduction to Algorithms"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion": [
+            {
+                "@value": "v 3.0"
+            }
+        ],
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+            {
+                "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#recDigital036",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#NamedIndividual"
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría": [
+            {
+                "@value": "Investigation"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor": [
+            {
+                "@value": "James F. Kurose"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso": [
+            {
+                "@value": "https://www.pearson.com/store/p/computer-networking-a-top-down-approach/P100000178504"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion": [
+            {
+                "@value": "2020-04-28"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato": [
+            {
+                "@value": "eBook"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma": [
+            {
+                "@value": "English"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave": [
+            {
+                "@value": "Networking"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneResumen": [
+            {
+                "@value": "An in-depth exploration of computer networking protocols, applications, and architectures."
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo": [
+            {
+                "@value": "12.3 MB"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo": [
+            {
+                "@value": "Computer Networking: A Top-Down Approach"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion": [
+            {
+                "@value": "4th Edition"
+            }
+        ],
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+            {
+                "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#recDigital037",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#NamedIndividual"
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría": [
+            {
+                "@value": "Summary"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor": [
+            {
+                "@value": "Robert C. Martin"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso": [
+            {
+                "@value": "https://www.oreilly.com/library/view/clean-code/9780136083238/"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion": [
+            {
+                "@value": "2008-08-01"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato": [
+            {
+                "@value": "A guide to writing clean, maintainable, and professional-quality code."
+            },
+            {
+                "@value": "Hardcover"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma": [
+            {
+                "@value": "English"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave": [
+            {
+                "@value": "Software Development"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo": [
+            {
+                "@value": "9.2 MB"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo": [
+            {
+                "@value": "Clean Code: A Handbook of Agile Software Craftsmanship"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion": [
+            {
+                "@value": "1st Edition"
+            }
+        ],
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+            {
+                "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#recDigital038",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#NamedIndividual"
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría": [
+            {
+                "@value": "Investigation"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor": [
+            {
+                "@value": "Ian Goodfellow"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso": [
+            {
+                "@value": "https://www.deeplearningbook.org/"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion": [
+            {
+                "@value": "2016-11-18"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato": [
+            {
+                "@value": "PDF"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma": [
+            {
+                "@value": "English"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave": [
+            {
+                "@value": "Machine Learning"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneResumen": [
+            {
+                "@value": "A detailed introduction to deep learning methods and neural networks."
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo": [
+            {
+                "@value": "18.7 MB"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo": [
+            {
+                "@value": "Deep Learning"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion": [
+            {
+                "@value": "1st Edition"
+            }
+        ],
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+            {
+                "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#recDigital039",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#NamedIndividual"
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría": [
+            {
+                "@value": "Article"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor": [
+            {
+                "@value": "David Thomas"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso": [
+            {
+                "@value": "https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion": [
+            {
+                "@value": "2019-09-13"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato": [
+            {
+                "@value": "Paperback"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma": [
+            {
+                "@value": "English"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave": [
+            {
+                "@value": "Programming"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneResumen": [
+            {
+                "@value": "A practical guide to programming with strategies and techniques for efficient software development."
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo": [
+            {
+                "@value": "11.1 MB"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo": [
+            {
+                "@value": "The Pragmatic Programmer: Your Journey to Mastery"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion": [
+            {
+                "@value": "20th Anniversary Edition"
+            }
+        ],
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+            {
+                "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#recDigital040",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#NamedIndividual"
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría": [
+            {
+                "@value": "Book"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor": [
+            {
+                "@value": "Peter Flach"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso": [
+            {
+                "@value": "https://www.springer.com/gp/book/9783319504919"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion": [
+            {
+                "@value": "2016-10-01"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato": [
+            {
+                "@value": "Hardcover"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma": [
+            {
+                "@value": "English"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave": [
+            {
+                "@value": "Machine Learning"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneResumen": [
+            {
+                "@value": "An accessible introduction to machine learning concepts and algorithms for data analysis."
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo": [
+            {
+                "@value": "8.4 MB"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo": [
+            {
+                "@value": "Machine Learning: The Art and Science of Algorithms That Make Sense of Data"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion": [
+            {
+                "@value": "1st Edition"
+            }
+        ],
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+            {
+                "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#recDigital041",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#NamedIndividual"
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría": [
+            {
+                "@value": "Book"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor": [
+            {
+                "@value": "Aditya Bhargava"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceDescarga": [
+            {
+                "@value": "https://nostarch.com/grokkingalgorithms"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion": [
+            {
+                "@value": "2016-05-01"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato": [
+            {
+                "@value": "Paperback"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma": [
+            {
+                "@value": "English"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave": [
+            {
+                "@value": "Algorithms"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneResumen": [
+            {
+                "@value": "A friendly and illustrated introduction to algorithms for beginners, covering essential concepts."
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo": [
+            {
+                "@value": "7.1 MB"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo": [
+            {
+                "@value": "Grokking Algorithms: An Illustrated Guide for Programmers and Other Curious People"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion": [
+            {
+                "@value": "1st Edition"
+            }
+        ],
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+            {
+                "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#recDigital042",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#NamedIndividual"
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría": [
+            {
+                "@value": "Practices"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor": [
+            {
+                "@value": "Aurélien Géron"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso": [
+            {
+                "@value": "https://www.packtpub.com/product/hands-on-machine-learning-with-scikit-learn-keras-and-tensorflow/9781788993091"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion": [
+            {
+                "@value": "2019-10-15"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFormato": [
+            {
+                "@value": "eBook"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma": [
+            {
+                "@value": "English"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave": [
+            {
+                "@value": "Machine Learning"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneResumen": [
+            {
+                "@value": "Practical examples and projects to learn machine learning using Python libraries like Scikit-Learn, Keras, and TensorFlow."
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo": [
+            {
+                "@value": "20.3 MB"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo": [
+            {
+                "@value": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion": [
+            {
+                "@value": "2nd Edition"
+            }
+        ],
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+            {
+                "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaDigital"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#recFisico02",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#NamedIndividual"
+        ],
+        "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF": [
+            {
+                "@value": "Programación"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría": [
+            {
+                "@value": "Libro"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor": [
+            {
+                "@value": "Sebastián Ossandón"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAñoPublicacion": [
+            {
+                "@type": "http://www.w3.org/2001/XMLSchema#decimal",
+                "@value": "2019"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEstado": [
+            {
+                "@value": "Acceso abierto"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneISBN": [
+            {
+                "@value": "8793-26-38"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma": [
+            {
+                "@value": "Español"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumerodeEjemplares": [
+            {
+                "@type": "http://www.w3.org/2001/XMLSchema#integer",
+                "@value": "10"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumerodeEstante": [
+            {
+                "@value": "2-B"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave": [
+            {
+                "@value": "Algoritmo"
+            },
+            {
+                "@value": "Algoritmos avanzados"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneResumen": [
+            {
+                "@value": "Este libro compara diferentes funciones de complejidad algorítmica y explora cómo cambia el tiempo de ejecución en función del tamaño de entrada"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo": [
+            {
+                "@value": "Algoritmos avanzados"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion": [
+            {
+                "@value": "v3.0"
+            }
+        ],
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+            {
+                "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaFisico"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#recFisico03",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#NamedIndividual"
+        ],
+        "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF": [
+            {
+                "@value": "Networking"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría": [
+            {
+                "@value": "Book"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor": [
+            {
+                "@value": "Kurose Ross"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAñoPublicacion": [
+            {
+                "@type": "http://www.w3.org/2001/XMLSchema#int",
+                "@value": "2021"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneISBN": [
+            {
+                "@value": "978-0-13-359414-0"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumerodeEjemplares": [
+            {
+                "@type": "http://www.w3.org/2001/XMLSchema#integer",
+                "@value": "5"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumerodeEstante": [
+            {
+                "@value": "3-c"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave": [
+            {
+                "@value": "Computer Networks"
+            },
+            {
+                "@value": "Networking"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneResumen": [
+            {
+                "@value": "A comprehensive introduction to modern computer networking systems and protocols."
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo": [
+            {
+                "@value": "Computer Networks: A Top-Down Approach"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion": [
+            {
+                "@value": "Open access"
+            },
+            {
+                "@value": "v6.0"
+            }
+        ],
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+            {
+                "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaFisico"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#recFisico04",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#NamedIndividual"
+        ],
+        "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF": [
+            {
+                "@value": "Programming"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor": [
+            {
+                "@value": "Eric Matthes"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAñoPublicacion": [
+            {
+                "@type": "http://www.w3.org/2001/XMLSchema#int",
+                "@value": "2019"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneISBN": [
+            {
+                "@value": "978-1-59327-928-8"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumerodeEjemplares": [
+            {
+                "@type": "http://www.w3.org/2001/XMLSchema#int",
+                "@value": "10"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumerodeEstante": [
+            {
+                "@value": "5-A"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave": [
+            {
+                "@value": "Programming"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneResumen": [
+            {
+                "@value": "A comprehensive guide to Python programming for beginners and professionals."
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo": [
+            {
+                "@value": "Python Crash Course: A Hands-On, Project-Based Introduction to Programming"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion": [
+            {
+                "@value": "3rd Edition"
+            }
+        ],
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+            {
+                "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaFisico"
+            }
+        ]
+    },
+    {
+        "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBiblioteca#recFisico05",
+        "@type": [
+            "http://www.w3.org/2002/07/owl#NamedIndividual"
+        ],
+        "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF": [
+            {
+                "@value": "Machine Learning"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor": [
+            {
+                "@value": "Aurélien Géron"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAñoPublicacion": [
+            {
+                "@type": "http://www.w3.org/2001/XMLSchema#int",
+                "@value": "2013"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneISBN": [
+            {
+                "@value": "978-1-49203-729-4"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumerodeEjemplares": [
+            {
+                "@type": "http://www.w3.org/2001/XMLSchema#int",
+                "@value": "2"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumerodeEstante": [
+            {
+                "@value": "7-B"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave": [
+            {
+                "@value": "Machine Learning"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneResumen": [
+            {
+                "@value": "An introduction to machine learning concepts, techniques, and practical implementations."
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTitulo": [
+            {
+                "@value": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+            }
+        ],
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneVersion": [
+            {
+                "@value": "2nd Edition"
+            }
+        ],
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+            {
+                "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaFisico"
+            }
+        ]
+    },
+    {
         "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaAmbientes",
         "@type": [
             "http://www.w3.org/2002/07/owl#Class"
@@ -1748,6 +3147,11 @@
         "http://www.w3.org/2000/01/rdf-schema#range": [
             {
                 "@id": "http://www.w3.org/2001/XMLSchema#string"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            {
+                "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCodigoCarrera"
             }
         ]
     },
@@ -2228,78 +3632,6 @@
         "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
             {
                 "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaColaborador"
-            }
-        ]
-    },
-    {
-        "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaestColab006",
-        "@type": [
-            "http://www.w3.org/2002/07/owl#NamedIndividual"
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecapublica": [
-            {
-                "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital008"
-            },
-            {
-                "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital012"
-            },
-            {
-                "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecDigital015"
-            },
-            {
-                "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecarecFisico01"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAreaColaboracion": [
-            {
-                "@value": "Introducción a la Programación"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAñoIngreso": [
-            {
-                "@type": "http://www.w3.org/2001/XMLSchema#int",
-                "@value": "2018"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCarnet": [
-            {
-                "@value": "91218555"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneCodigoSis": [
-            {
-                "@value": "201829244"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEmail": [
-            {
-                "@value": "mauricioquispe@gmail.com"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaInicioColaboracion": [
-            {
-                "@value": "02/05/2019"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneGenero": [
-            {
-                "@value": "Masculino"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNombre": [
-            {
-                "@value": "Mauricio Juan Quispe"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNumeroColaborador": [
-            {
-                "@type": "http://www.w3.org/2001/XMLSchema#int",
-                "@value": "6"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTelefono": [
-            {
-                "@value": "67211212"
             }
         ]
     },
@@ -3370,10 +4702,10 @@
         ],
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave": [
             {
-                "@value": "Algoritmos avanzados"
+                "@value": "Algoritmos"
             },
             {
-                "@value": "Algortimos"
+                "@value": "Algoritmos avanzados"
             }
         ],
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo": [
@@ -3409,7 +4741,7 @@
         ],
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría": [
             {
-                "@value": "Libro"
+                "@value": "Book"
             }
         ],
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor": [
@@ -3419,7 +4751,7 @@
         ],
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEstado": [
             {
-                "@value": "Acceso abierto"
+                "@value": "Open access"
             }
         ],
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion": [
@@ -3434,10 +4766,7 @@
         ],
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma": [
             {
-                "@value": "Español"
-            },
-            {
-                "@value": "Ingles"
+                "@value": "English"
             }
         ],
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave": [
@@ -3478,12 +4807,12 @@
         ],
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría": [
             {
-                "@value": "Libro"
+                "@value": "Book"
             }
         ],
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAreaEstudio": [
             {
-                "@value": "Informatica"
+                "@value": "Computer Science"
             }
         ],
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor": [
@@ -3498,7 +4827,7 @@
         ],
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEstado": [
             {
-                "@value": "Acceso abierto"
+                "@value": "open access"
             }
         ],
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion": [
@@ -3513,7 +4842,7 @@
         ],
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma": [
             {
-                "@value": "Ingles"
+                "@value": "English"
             }
         ],
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave": [
@@ -3526,7 +4855,7 @@
         ],
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneRecomendacion": [
             {
-                "@value": "Programacion"
+                "@value": "programming"
             }
         ],
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo": [
@@ -3641,30 +4970,25 @@
         ],
         "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF": [
             {
-                "@value": "Ciberseguridad"
+                "@value": "cybersecurity"
             }
         ],
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecaTieneCategoría": [
             {
-                "@value": "Libro"
+                "@value": "Book"
             }
         ],
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAreaEstudio": [
             {
-                "@value": "Informatica"
+                "@value": "Computer science"
             },
             {
-                "@value": "Sistemas"
+                "@value": "systems engineering"
             }
         ],
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneAutor": [
             {
                 "@value": "William Stallings"
-            }
-        ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneConfirmacion": [
-            {
-                "@value": "Si"
             }
         ],
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso": [
@@ -3679,7 +5003,7 @@
         ],
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEstado": [
             {
-                "@value": "acceso abierto"
+                "@value": "Open access"
             }
         ],
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaPublicacion": [
@@ -3692,19 +5016,19 @@
                 "@value": "PDF"
             }
         ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNivelAcademico": [
+        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma": [
             {
-                "@value": "Posgrado"
+                "@value": "English"
             }
         ],
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave": [
             {
-                "@value": "Ciberseguridad"
+                "@value": "cybersecurity"
             }
         ],
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneResumen": [
             {
-                "@value": "Este texto abarca los principios y las prácticas fundamentales en seguridad informática, ideal para estudiantes de posgrado"
+                "@value": "This text covers fundamental principles and practices in computer security, ideal for graduate students."
             }
         ],
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneTamañoArchivo": [
@@ -3783,7 +5107,7 @@
         ],
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma": [
             {
-                "@value": "Ingles"
+                "@value": "Español"
             }
         ],
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave": [
@@ -3837,11 +5161,6 @@
                 "@value": "Mike Cohn"
             }
         ],
-        "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneConfirmacion": [
-            {
-                "@value": "Si"
-            }
-        ],
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceAcceso": [
             {
                 "@value": "https://biblio.edu/libros/agile/agileestimating.pdf"
@@ -3869,7 +5188,7 @@
         ],
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma": [
             {
-                "@value": "Ingles"
+                "@value": "Español"
             }
         ],
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneNivelAcademico": [
@@ -4036,7 +5355,7 @@
         ],
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma": [
             {
-                "@value": "Quechua"
+                "@value": "Español"
             }
         ],
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave": [
@@ -4095,7 +5414,7 @@
         ],
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma": [
             {
-                "@value": "Inglés"
+                "@value": "Español"
             }
         ],
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatienePalabraClave": [
@@ -4237,7 +5556,7 @@
         ],
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma": [
             {
-                "@value": "Inglés"
+                "@value": "Español"
             }
         ],
         "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneInstitucion": [
@@ -4811,11 +6130,6 @@
             {
                 "@id": "http://www.w3.org/2001/XMLSchema#string"
             }
-        ],
-        "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-            {
-                "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneEnlaceDescarga"
-            }
         ]
     },
     {
@@ -5011,7 +6325,7 @@
         ],
         "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
             {
-                "@id": "http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneFechaRegistro"
+                "@id": "http://www.w3.org/2002/07/owl#topDataProperty"
             }
         ]
     },
@@ -5379,7 +6693,7 @@
         ],
         "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
             {
-                "@id": "http://webprotege.stanford.edu/R9ToXPXs2LRtdVnNbP2UgGF"
+                "@id": "http://www.w3.org/2002/07/owl#topDataProperty"
             }
         ]
     },

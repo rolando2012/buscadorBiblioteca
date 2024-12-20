@@ -9,7 +9,7 @@ DBPEDIA_ENDPOINT = "http://dbpedia.org/sparql"
 app = Flask(__name__)
 
 # Cargar el archivo JSON
-with open('./ontologia/ontologia_actualizada.jsonld', 'r', encoding='utf-8') as f:
+with open('./ontologia/bibliotecaDigital.jsonld', 'r', encoding='utf-8') as f:
     ontology_data = json.load(f)
 
 @app.route('/')
@@ -75,8 +75,9 @@ def details(instance):
 @app.route('/dbpedia_details/<title>')
 def dbpedia_details(title):
     book_details = get_book_details(title)
+    print(book_details)
     if book_details:
-        return render_template('dbpedia_details.html', book=book_details)
+        return render_template('dbpedia_details.html', details=book_details, title=title)
     else:
         return "No se encontraron detalles para este libro."
 
@@ -162,13 +163,11 @@ def clean_text(text):
     cleaned_text = unicodedata.normalize("NFKC", text)
     return cleaned_text
 
-# Función para consultar DBpedia y obtener los títulos
 def search_dbpedia(query):
     sparql = SPARQLWrapper("http://dbpedia.org/sparql")
     sparql_query = f"""
     SELECT DISTINCT ?title
-    WHERE
-    {{
+    WHERE {{
       ?book dbo:wikiPageWikiLink ?topic .
       VALUES ?topic {{ 
         dbr:Software 
@@ -180,63 +179,93 @@ def search_dbpedia(query):
         dbr:Data_mining 
         dbr:Operating_system 
       }}
-      
       ?book rdfs:comment ?abstract .
-      OPTIONAL {{ ?book dbp:title ?title . }}
+      FILTER(LANG(?abstract) = 'es')    
+      FILTER(CONTAINS(LCASE(?abstract), LCASE("{query}")))
 
-      FILTER ( LANG(?abstract) = 'es' )
-      FILTER (CONTAINS(LCASE(?abstract), LCASE("{query}")))
+      # Intentar obtener título desde varias fuentes
+      
+      OPTIONAL {{
+        ?book dbo:title ?title .
+        FILTER(LANG(?title) = 'es')
+      }}
+      OPTIONAL {{
+        ?book rdfs:label ?title .
+        FILTER(LANG(?title) = 'es')
+      }}
     }}
+
     """
     sparql.setQuery(sparql_query)
     sparql.setReturnFormat(JSON)
-    results = sparql.query().convert()
 
-    # Procesar resultados
-    dbpedia_results = []
-    for result in results["results"]["bindings"]:
-        if 'title' in result:
-            title = clean_text(result['title']['value'])
-            dbpedia_results.append({"title": title})
-    
-    return dbpedia_results
+    try:
+        results = sparql.query().convert()
+        dbpedia_results = []
+
+        for result in results["results"]["bindings"]:
+            if 'title' in result:
+                title = clean_text(result['title']['value'])
+                dbpedia_results.append({"title": title})
+        
+        return dbpedia_results
+    except Exception as e:
+        print(f"Error al consultar DBpedia: {e}")
+        return []
+
 
 def get_book_details(title):
+    # Inicializar el wrapper de SPARQL para DBpedia
     sparql = SPARQLWrapper("http://dbpedia.org/sparql")
+    
+    # Consulta SPARQL adaptada
     sparql_query = f"""
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX dct: <http://purl.org/dc/terms/>
+
     SELECT DISTINCT ?book ?abstract ?author ?publisher ?publicationDate ?isbn ?numberOfPages ?language
-    WHERE
-    {{
-      ?book a dbo:Book .
-      ?book rdfs:label ?label .
-      FILTER (CONTAINS(LCASE(?label), LCASE("{title}")))
-      OPTIONAL {{ ?book rdfs:comment ?abstract . FILTER (LANG(?abstract) = 'es') }}
-      OPTIONAL {{ ?book dbp:author ?author . }}
+    WHERE {{
+      ?book rdfs:label "{title}"@es .
+      OPTIONAL {{ ?book rdfs:comment ?abstract . FILTER(LANG(?abstract) = 'es') }}
+      OPTIONAL {{ ?book dbo:author ?author . }}
       OPTIONAL {{ ?book dbo:publisher ?publisher . }}
       OPTIONAL {{ ?book dbo:publicationDate ?publicationDate . }}
-      OPTIONAL {{ ?book dbo:isbn ?isbn . }}
+      OPTIONAL {{ ?book dbp:isbn ?isbn . }}
       OPTIONAL {{ ?book dbo:numberOfPages ?numberOfPages . }}
-      OPTIONAL {{ ?book dbo:language ?language . }}
+      OPTIONAL {{ ?book dct:language ?language . FILTER(LANG(?language) = 'es') }}
     }}
     """
+    
+    # Configurar la consulta y el formato de respuesta
     sparql.setQuery(sparql_query)
     sparql.setReturnFormat(JSON)
-    results = sparql.query().convert()
-
-    # Procesar resultados
-    if results["results"]["bindings"]:
-        result = results["results"]["bindings"][0]
-        return {
-            "title": title,
-            "abstract": clean_text(result.get('abstract', {}).get('value', 'N/A')),
-            "author": clean_text(result.get('author', {}).get('value', 'N/A')),
-            "publisher": clean_text(result.get('publisher', {}).get('value', 'N/A')),
-            "publicationDate": clean_text(result.get('publicationDate', {}).get('value', 'N/A')),
-            "isbn": clean_text(result.get('isbn', {}).get('value', 'N/A')),
-            "numberOfPages": clean_text(result.get('numberOfPages', {}).get('value', 'N/A')),
-            "language": clean_text(result.get('language', {}).get('value', 'N/A')),
-        }
-    return None
+    
+    try:
+        # Ejecutar la consulta
+        results = sparql.query().convert()
+        details = {}
+        
+        # Procesar los resultados
+        for result in results["results"]["bindings"]:
+            details = {
+                "Libro": result.get("book", {}).get("value", ""),
+                "Resumen": result.get("abstract", {}).get("value", ""),
+                "Autor": result.get("author", {}).get("value", ""),
+                "publisher": result.get("publisher", {}).get("value", ""),
+                "Fecha de publicacion": result.get("publicationDate", {}).get("value", ""),
+                "isbn": result.get("isbn", {}).get("value", ""),
+                "Numero de paginas": result.get("numberOfPages", {}).get("value", ""),
+                "Languaje": "Español" if result.get("abstract", {}).get("xml:lang", "") == "es" else "English" if result.get("abstract", {}).get("xml:lang", "") == "en" else "Desconocido",
+            }
+            # Tomar solo el primer conjunto de resultados
+            break
+        
+        return details
+    except Exception as e:
+        print(f"Error al consultar detalles de DBpedia: {e}")
+        return {}
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -31,7 +31,10 @@ WHERE
   
   # Información básica
   ?book rdfs:comment ?abstract .
-  OPTIONAL { ?book dbp:title ?title . }
+ OPTIONAL { ?book dbp:title ?title . }
+ OPTIONAL { ?book dbo:title ?title . }
+ OPTIONAL { ?book rdfs:label ?title . }
+
 
   # Filtro por idioma español
   FILTER ( LANG(?abstract) = 'es' )
@@ -44,7 +47,7 @@ WHERE
 """
 
 # Reemplazar "QUERY" con el texto de búsqueda
-search_query = "inteligencia artificial"  # Cambia esto por tu consulta
+search_query = "IndexedDB"  # Cambia esto por tu consulta
 query = query.replace('"QUERY"', f'"{search_query}"')
 
 # Configurar la consulta

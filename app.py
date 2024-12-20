@@ -4,9 +4,19 @@ from owlready2 import *
 from SPARQLWrapper import SPARQLWrapper, JSON
 import json
 import unicodedata
+import spacy
+import nltk
+from nltk.corpus import stopwords
+import string
 
 DBPEDIA_ENDPOINT = "http://dbpedia.org/sparql"
 app = Flask(__name__)
+
+# Cargar el modelo de spaCy para español
+nlp = spacy.load("es_core_news_sm")
+
+#nltk.download('stopwords')
+stop_words = set(stopwords.words('spanish'))
 
 # Cargar el archivo JSON
 with open('./ontologia/bibliotecaDigital.jsonld', 'r', encoding='utf-8') as f:
@@ -25,6 +35,10 @@ def search_page():
 @app.route('/search', methods=['POST'])
 def search():
     query = request.form['query']
+
+    if query.find("?")>-1:
+        res = procesarPregunta(query)
+        query = res[0]
 
     results = buscar_resultado(query, ontology_data)
     results_dbpedia = search_dbpedia(query)
@@ -75,7 +89,6 @@ def details(instance):
 @app.route('/dbpedia_details/<title>')
 def dbpedia_details(title):
     book_details = get_book_details(title)
-    print(book_details)
     if book_details:
         return render_template('dbpedia_details.html', details=book_details, title=title)
     else:
@@ -266,6 +279,23 @@ def get_book_details(title):
     except Exception as e:
         print(f"Error al consultar detalles de DBpedia: {e}")
         return {}
+    
+
+# Función para extraer frases clave y entidades nombradas
+def procesarPregunta(text):
+    # Procesar el texto con spaCy
+    doc = nlp(text)
+
+    # Extraer entidades nombradas (NER)
+    entities = [ent.text.lower() for ent in doc.ents]
+
+    # Extraer palabras clave basadas en el análisis sintáctico
+    keywords = [token.text.lower() for token in doc if token.pos_ in ["NOUN", "PROPN"] and token.text not in string.punctuation]
+
+    # Combinar entidades y palabras clave
+    all_keywords = list(set(entities + keywords))
+
+    return all_keywords
 
 if __name__ == '__main__':
     app.run(debug=True)

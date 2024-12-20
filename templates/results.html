@@ -47,16 +47,18 @@
                 <p>No se encontraron resultados.</p> 
                 {% endif %}
                 
-                <h2>DBpedia</h2>
-                {% if results.dbpedia %}
-                    <ul>
-                        {% for result in results.dbpedia %}
-                        <li><a href="{{ result.url }}">{{ result.title }}</a></li>
-                        {% endfor %}
-                    </ul>
-                {% else %}
-                    <p>No se encontraron resultados.</p>
-                {% endif %}
+                <h2>En linea</h2>
+                    {% if results.dbpedia %}
+                        <ul>
+                            {% for result in results.dbpedia %}
+                            <li><a href="/dbpedia_details/{{ result.title }}">{{ result.title }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    {% elif offline %}
+                    <p>{{offline}}</p>
+                    {% else %}
+                        <p>No se encontraron resultados en DBpedia.</p>
+                    {% endif %}
 
                 <div class="contCastor">
                     <img src="../static/images/castor.png" alt="castorcito" id="castor">

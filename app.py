@@ -8,6 +8,7 @@ import spacy
 import nltk
 from nltk.corpus import stopwords
 import string
+import socket
 
 DBPEDIA_ENDPOINT = "http://dbpedia.org/sparql"
 app = Flask(__name__)
@@ -41,15 +42,19 @@ def search():
         query = res[0]
 
     results = buscar_resultado(query, ontology_data)
-    results_dbpedia = search_dbpedia(query)
-
+    if hay_conexion():
+        results_dbpedia = search_dbpedia(query)
+        offline = ""
+    else:
+        results_dbpedia = []
+        offline = "No se pudo conectar a DBpedia. Verifique su conexión a Internet."
     # Combinar resultados locales y JSON
     combined_results = {
         "local": results,
         "dbpedia": results_dbpedia
     }
 
-    return render_template('results.html', results=combined_results,query=query)
+    return render_template('results.html', results=combined_results,query=query,offline=offline)
 
 @app.route('/details/<instance>')
 def details(instance):
@@ -296,6 +301,14 @@ def procesarPregunta(text):
     all_keywords = list(set(entities + keywords))
 
     return all_keywords
+
+def hay_conexion():
+    try:
+        socket.create_connection(("8.8.8.8", 53), timeout=5)
+        return True
+    except OSError:
+        return False
+
 
 if __name__ == '__main__':
     app.run(debug=True)

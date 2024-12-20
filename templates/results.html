@@ -54,6 +54,8 @@
                             <li><a href="/dbpedia_details/{{ result.title }}">{{ result.title }}</a></li>
                             {% endfor %}
                         </ul>
+                    {% elif offline %}
+                    <p>{{offline}}</p>
                     {% else %}
                         <p>No se encontraron resultados en DBpedia.</p>
                     {% endif %}

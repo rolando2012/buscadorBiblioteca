@@ -3,18 +3,24 @@ from rdflib import Graph
 from owlready2 import *
 from SPARQLWrapper import SPARQLWrapper, JSON
 import json
+import unicodedata
+import spacy
+import nltk
+from nltk.corpus import stopwords
+import string
+import socket
 
 DBPEDIA_ENDPOINT = "http://dbpedia.org/sparql"
 app = Flask(__name__)
 
-# Cargar la ontología con OWLready2
-onto_path.append("ontologia/biblioteca")
-onto = get_ontology("ontologia/biblioteca.owl").load()
-# Convertir la ontología a un grafo RDFlib
-graph = default_world.as_rdflib_graph()
+# Cargar el modelo de spaCy para español
+nlp = spacy.load("es_core_news_sm")
+
+#nltk.download('stopwords')
+stop_words = set(stopwords.words('spanish'))
 
 # Cargar el archivo JSON
-with open('./ontologia/ontologia.jsonld', 'r', encoding='utf-8') as f:
+with open('./ontologia/bibliotecaDigital.jsonld', 'r', encoding='utf-8') as f:
     ontology_data = json.load(f)
 
 @app.route('/')
@@ -25,6 +31,7 @@ def start():
 @app.route('/index', methods=['GET'])
 def search_page():
     return render_template('index.html')
+    
 
 
 @app.route('/search', methods=['POST'])
@@ -32,7 +39,11 @@ def search():
     query = request.form['query']
     langSel = request.form.get('lang', 'es')  # ojoooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
-    # Consulta al archivo JSON (DBpedia)
+    if query.find("?")>-1:
+        res = procesarPregunta(query)
+        query = res[0]
+
+    # OJOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO NOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO Consulta al archivo JSON (DBpedia)
     json_file = "./ontologia/dbpedia_books.json"  # Archivo JSON local
 
     try:
@@ -52,7 +63,7 @@ def search():
 
         if lang == langSel:
             if query_lower in title or query_lower in author or query_lower in abstract:
-                results_dbpedia_processed.add(title)
+                results_dbpedia_processed.add(title) 
 
     results_dbpedia = [
         {
@@ -63,13 +74,25 @@ def search():
     ]
     results = buscar_resultado(query, ontology_data, langSel)
 
+
+    if query.find("?")>-1:
+        res = procesarPregunta(query)
+        query = res[0]
+
+    results = buscar_resultado(query, ontology_data)
+    if hay_conexion():
+        results_dbpedia = search_dbpedia(query)
+        offline = ""
+    else:
+        results_dbpedia = []
+        offline = "No se pudo conectar a DBpedia. Verifique su conexión a Internet."
     # Combinar resultados locales y JSON
     combined_results = {
         "local": results,
         "dbpedia": results_dbpedia
     }
 
-    return render_template('results.html', results=combined_results,query=query)
+    return render_template('results.html', results=combined_results,query=query,offline=offline)
 
 @app.route('/details/<instance>')
 def details(instance):
@@ -107,43 +130,12 @@ def details(instance):
     return render_template('details.html', instance=instance, results=simplified_results)
 
 @app.route('/dbpedia_details/<title>')
-def dbpedia_details(title):
-    json_file = "./ontologia/dbpedia_books.json"  # Archivo JSON local
-    try:
-        with open(json_file, "r", encoding="utf-8") as f:
-            data = json.load(f)
-            books = data["results"]["bindings"]
-    except (FileNotFoundError, json.JSONDecodeError):
-        books = []
-
-    # Buscar detalles del libro según el título
-    book_details = next(
-        (book for book in books if book.get("name", {}).get("value", "").lower() == title.lower()),
-        None
-    )
-
-    # Si no se encuentra el libro
-    if not book_details:
-        return render_template("dbpedia_details.html", title=title, details=None)
-
-    # Detalles procesados para mostrar en el HTML
-    processed_details = {
-        "Título": book_details.get("name", {}).get("value", "N/A"),
-        "Autor": book_details.get("author", {}).get("value", "N/A"),
-        "Resumen": book_details.get("abstract", {}).get("value", "N/A"),
-        "ID de Página": book_details.get("number", {}).get("value", "N/A"),
-        "Título Alternativo": book_details.get("title", {}).get("value", "N/A"),
-        "Editorial": book_details.get("publisher", {}).get("value", "N/A"),
-        "Fecha de Publicación": book_details.get("publicationDate", {}).get("value", "N/A"),
-        "Edición": book_details.get("edition", {}).get("value", "N/A"),
-        "ISBN": book_details.get("isbn", {}).get("value", "N/A"),
-        "Número de Páginas": book_details.get("numberOfPages", {}).get("value", "N/A"),
-        "Género": book_details.get("genre", {}).get("value", "N/A"),
-        "Idioma": book_details.get("language", {}).get("value", "N/A"),
-        "URL del Recurso": book_details.get("url", {}).get("value", "N/A"),
-    }
-
-    return render_template("dbpedia_details.html", title=title, details=processed_details)
+def dbpedia_details(title):  # OJOOOOOOOOOOOOOOOOOOOOOOOOOOOOO NOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+    book_details = get_book_details(title)
+    if book_details:
+        return render_template('dbpedia_details.html', details=book_details, title=title)
+    else:
+        return "No se encontraron detalles para este libro."
 
 
 #funcion buscar en json
@@ -229,6 +221,141 @@ def buscar_resultado(query, data, lang):
             })
 
     return results
+
+# Función para limpiar texto y eliminar caracteres no deseados
+def clean_text(text):
+    if text is None:
+        return "N/A"
+    cleaned_text = unicodedata.normalize("NFKC", text)
+    return cleaned_text
+
+def search_dbpedia(query):
+    sparql = SPARQLWrapper("http://dbpedia.org/sparql")
+    sparql_query = f"""
+    SELECT DISTINCT ?title
+    WHERE {{
+      ?book dbo:wikiPageWikiLink ?topic .
+      VALUES ?topic {{ 
+        dbr:Software 
+        dbr:Networks_Concepts
+        dbr:Database 
+        dbr:Programming 
+        dbr:Algorithm 
+        dbr:Artificial_intelligence 
+        dbr:Data_mining 
+        dbr:Operating_system 
+      }}
+      ?book rdfs:comment ?abstract .
+      FILTER(LANG(?abstract) = 'es')    
+      FILTER(CONTAINS(LCASE(?abstract), LCASE("{query}")))
+
+      # Intentar obtener título desde varias fuentes
+      
+      OPTIONAL {{
+        ?book dbo:title ?title .
+        FILTER(LANG(?title) = 'es')
+      }}
+      OPTIONAL {{
+        ?book rdfs:label ?title .
+        FILTER(LANG(?title) = 'es')
+      }}
+    }}
+
+    """
+    sparql.setQuery(sparql_query)
+    sparql.setReturnFormat(JSON)
+
+    try:
+        results = sparql.query().convert()
+        dbpedia_results = []
+
+        for result in results["results"]["bindings"]:
+            if 'title' in result:
+                title = clean_text(result['title']['value'])
+                dbpedia_results.append({"title": title})
+        
+        return dbpedia_results
+    except Exception as e:
+        print(f"Error al consultar DBpedia: {e}")
+        return []
+
+
+def get_book_details(title):
+    # Inicializar el wrapper de SPARQL para DBpedia
+    sparql = SPARQLWrapper("http://dbpedia.org/sparql")
+    
+    # Consulta SPARQL adaptada
+    sparql_query = f"""
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbp: <http://dbpedia.org/property/>
+    PREFIX dct: <http://purl.org/dc/terms/>
+
+    SELECT DISTINCT ?book ?abstract ?author ?publisher ?publicationDate ?isbn ?numberOfPages ?language
+    WHERE {{
+      ?book rdfs:label "{title}"@es .
+      OPTIONAL {{ ?book rdfs:comment ?abstract . FILTER(LANG(?abstract) = 'es') }}
+      OPTIONAL {{ ?book dbo:author ?author . }}
+      OPTIONAL {{ ?book dbo:publisher ?publisher . }}
+      OPTIONAL {{ ?book dbo:publicationDate ?publicationDate . }}
+      OPTIONAL {{ ?book dbp:isbn ?isbn . }}
+      OPTIONAL {{ ?book dbo:numberOfPages ?numberOfPages . }}
+      OPTIONAL {{ ?book dct:language ?language . FILTER(LANG(?language) = 'es') }}
+    }}
+    """
+    
+    # Configurar la consulta y el formato de respuesta
+    sparql.setQuery(sparql_query)
+    sparql.setReturnFormat(JSON)
+    
+    try:
+        # Ejecutar la consulta
+        results = sparql.query().convert()
+        details = {}
+        
+        # Procesar los resultados
+        for result in results["results"]["bindings"]:
+            details = {
+                "Libro": result.get("book", {}).get("value", ""),
+                "Resumen": result.get("abstract", {}).get("value", ""),
+                "Autor": result.get("author", {}).get("value", ""),
+                "publisher": result.get("publisher", {}).get("value", ""),
+                "Fecha de publicacion": result.get("publicationDate", {}).get("value", ""),
+                "isbn": result.get("isbn", {}).get("value", ""),
+                "Numero de paginas": result.get("numberOfPages", {}).get("value", ""),
+                "Languaje": "Español" if result.get("abstract", {}).get("xml:lang", "") == "es" else "English" if result.get("abstract", {}).get("xml:lang", "") == "en" else "Desconocido",
+            }
+            # Tomar solo el primer conjunto de resultados
+            break
+        
+        return details
+    except Exception as e:
+        print(f"Error al consultar detalles de DBpedia: {e}")
+        return {}
+    
+
+# Función para extraer frases clave y entidades nombradas
+def procesarPregunta(text):
+    # Procesar el texto con spaCy
+    doc = nlp(text)
+
+    # Extraer entidades nombradas (NER)
+    entities = [ent.text.lower() for ent in doc.ents]
+
+    # Extraer palabras clave basadas en el análisis sintáctico
+    keywords = [token.text.lower() for token in doc if token.pos_ in ["NOUN", "PROPN"] and token.text not in string.punctuation]
+
+    # Combinar entidades y palabras clave
+    all_keywords = list(set(entities + keywords))
+
+    return all_keywords
+
+def hay_conexion():
+    try:
+        socket.create_connection(("8.8.8.8", 53), timeout=5)
+        return True
+    except OSError:
+        return False
 
 
 if __name__ == '__main__':

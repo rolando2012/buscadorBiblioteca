@@ -21,54 +21,18 @@
       </aside>
       <section class="derecha">
         <div class="buscador">
-          <form action="/search" method="POST">
+          <form action="/search" method="post">
             <input
               type="text"
               name="query"
               value="{{ query }}"
               placeholder="¿Qué es lo que desea buscar?"
             />
-
-            <div class="custom-select">
-              <div class="selected-option" onclick="toggleDropdown()">
-                <img
-                  src="../static/images/bandera.png"
-                  alt="Español"
-                  class="flag"
-                />
-                <span>Español</span>
-              </div>
-              <div class="options">
-                <div class="option" data-value="es">
-                  <img
-                    src="../static/images/bandera.png"
-                    alt="Español"
-                    class="flag"
-                  />
-                  Español
-                </div>
-                <div class="option" data-value="en">
-                  <img
-                    src="../static/images/reino-unido.png"
-                    alt="English"
-                    class="flag"
-                  />
-                  English
-                </div>
-              </div>
-            </div>
-            <input
-              type="hidden"
-              id="langInput"
-              name="lang"
-              value="{{ lang if lang else 'es' }}"
-            />
-
-            <button type="submit" id="search-button">Buscar</button>
+            <button type="submit">Buscar</button>
           </form>
         </div>
         <main class="container">
-          <h2 id="local-heading">Local</h2>
+          <h2>Local</h2>
           {% if results %}
           <ul>
             {% for result in results.local %}
@@ -88,10 +52,10 @@
             {% endfor %}
           </ul>
           {% else %}
-          <p id="no-results-message">No se encontraron resultados.</p>
+          <p>No se encontraron resultados.</p>
           {% endif %}
 
-          <h2 id="dbpedia-heading">DBpedia</h2>
+          <h2>DBpedia</h2>
           {% if results.dbpedia %}
           <ul>
             {% for result in results.dbpedia %}
@@ -99,7 +63,23 @@
             {% endfor %}
           </ul>
           {% else %}
-          <p id="no-results-db">No se encontraron resultados.</p>
+          <p>No se encontraron resultados.</p>
+          {% endif %}
+          <h2>En linea</h2>
+          {% if results.dbpedia %}
+          <ul>
+            {% for result in results.dbpedia %}
+            <li>
+              <a href="/dbpedia_details/{{ result.title }}"
+                >{{ result.title }}</a
+              >
+            </li>
+            {% endfor %}
+          </ul>
+          {% elif offline %}
+          <p>{{offline}}</p>
+          {% else %}
+          <p>No se encontraron resultados en DBpedia.</p>
           {% endif %}
 
           <div class="contCastor">

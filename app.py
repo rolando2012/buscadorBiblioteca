@@ -7,12 +7,6 @@ import json
 DBPEDIA_ENDPOINT = "http://dbpedia.org/sparql"
 app = Flask(__name__)
 
-# Cargar la ontología con OWLready2
-onto_path.append("ontologia/biblioteca")
-onto = get_ontology("ontologia/biblioteca.owl").load()
-# Convertir la ontología a un grafo RDFlib
-graph = default_world.as_rdflib_graph()
-
 # Cargar el archivo JSON
 with open('./ontologia/ontologia.jsonld', 'r', encoding='utf-8') as f:
     ontology_data = json.load(f)
@@ -31,22 +25,6 @@ def search_page():
 @app.route('/search', methods=['POST'])
 def search():
     query = request.form['query']
-    # Consulta a DBpedia
-    sparql_query_dbpedia = f"""
-    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-
-    SELECT ?resource ?label
-    WHERE {{
-      ?resource rdfs:label ?label .
-      FILTER(LANG(?label) = "es")  # Etiquetas en español
-      FILTER(CONTAINS(LCASE(STR(?label)), LCASE("{query}")))
-    }}
-    LIMIT 10
-    """
-    sparql = SPARQLWrapper(DBPEDIA_ENDPOINT)
-    sparql.setQuery(sparql_query_dbpedia)
-    sparql.setReturnFormat(JSON)
-    results_dbpedia = sparql.query().convert()
 
     # Consulta al archivo JSON (DBpedia)
     json_file = "./ontologia/dbpedia_books.json"  # Archivo JSON local

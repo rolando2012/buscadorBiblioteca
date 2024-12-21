@@ -6,6 +6,7 @@ import json
 import unicodedata
 import spacy
 import nltk
+nltk.download('stopwords')
 from nltk.corpus import stopwords
 import string
 import socket
@@ -36,14 +37,15 @@ def search_page():
 @app.route('/search', methods=['POST'])
 def search():
     query = request.form['query']
+    langSel = request.form['lang']
 
     if query.find("?")>-1:
         res = procesarPregunta(query)
         query = res[0]
 
-    results = buscar_resultado(query, ontology_data)
+    results = buscar_resultado(query, ontology_data, langSel)
     if hay_conexion():
-        results_dbpedia = search_dbpedia(query)
+        results_dbpedia = search_dbpedia(query, langSel)
         offline = ""
     else:
         results_dbpedia = []
@@ -54,7 +56,7 @@ def search():
         "dbpedia": results_dbpedia
     }
 
-    return render_template('results.html', results=combined_results,query=query,offline=offline)
+    return render_template('results.html', results=combined_results, query=query, lang=langSel, offline=offline)
 
 @app.route('/details/<instance>')
 def details(instance):
@@ -101,7 +103,7 @@ def dbpedia_details(title):
 
 
 #funcion buscar en json
-def buscar_resultado(query, data):
+def buscar_resultado(query, data, langSel):
     query = query.lower()
     results = []
 
@@ -138,6 +140,11 @@ def buscar_resultado(query, data):
     }
 
     for instance in data:
+        idiomas = instance.get("http://www.semanticweb.org/miche/ontologies/2024/8/OntologiaBibliotecatieneIdioma", [])
+        idioma_instancia = idiomas[0]["@value"].lower() if idiomas else None
+        if langSel and idioma_instancia != langSel.lower():
+            continue 
+
         # Obtener el label de la instancia o extraer desde @id si no existe
         instance_label = instance.get("http://www.w3.org/2000/01/rdf-schema#label", [{"@value": ""}])[0]["@value"]
         if not instance_label:
@@ -181,7 +188,9 @@ def clean_text(text):
     cleaned_text = unicodedata.normalize("NFKC", text)
     return cleaned_text
 
-def search_dbpedia(query):
+def search_dbpedia(query, lang):
+    langSel = 'es' if lang == "Español" else 'en'
+    
     sparql = SPARQLWrapper("http://dbpedia.org/sparql")
     sparql_query = f"""
     SELECT DISTINCT ?title
@@ -198,21 +207,19 @@ def search_dbpedia(query):
         dbr:Operating_system 
       }}
       ?book rdfs:comment ?abstract .
-      FILTER(LANG(?abstract) = 'es')    
+      FILTER(LANG(?abstract) = '{langSel}')    
       FILTER(CONTAINS(LCASE(?abstract), LCASE("{query}")))
 
       # Intentar obtener título desde varias fuentes
-      
       OPTIONAL {{
         ?book dbo:title ?title .
-        FILTER(LANG(?title) = 'es')
+        FILTER(LANG(?title) = '{langSel}')
       }}
       OPTIONAL {{
         ?book rdfs:label ?title .
-        FILTER(LANG(?title) = 'es')
+        FILTER(LANG(?title) = '{langSel}')
       }}
     }}
-
     """
     sparql.setQuery(sparql_query)
     sparql.setReturnFormat(JSON)
@@ -230,6 +237,7 @@ def search_dbpedia(query):
     except Exception as e:
         print(f"Error al consultar DBpedia: {e}")
         return []
+
 
 
 def get_book_details(title):
@@ -312,3 +320,4 @@ def hay_conexion():
 
 if __name__ == '__main__':
     app.run(debug=True)
+    

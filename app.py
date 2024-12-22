@@ -6,7 +6,7 @@ import json
 import unicodedata
 import spacy
 import nltk
-nltk.download('stopwords')
+#nltk.download('stopwords')
 from nltk.corpus import stopwords
 import string
 import socket
@@ -23,117 +23,6 @@ stop_words = set(stopwords.words('spanish'))
 # Cargar el archivo JSON
 with open('./ontologia/bibliotecaDigital.jsonld', 'r', encoding='utf-8') as f:
     ontology_data = json.load(f)
-
-property_labels = {
-    "Colaborador": {
-        "Español": "Colaborador",
-        "English": "Collaborator"
-    },
-    "Instancia": {
-        "Español": "Instancia",
-        "English": "Instance"
-    },
-    "Nombre": {
-        "Español": "Nombre",
-        "English": "Name"
-    },
-    "Carnet": {
-        "Español": "Carnet",
-        "English": "Card"
-    },
-    "Área de colaboracion": {
-        "Español": "Área de colaboración",
-        "English": "Collaboration Area"
-    },
-    "Año de Ingreso": {
-        "Español": "Año de Ingreso",
-        "English": "Year of Admission"
-    },
-    "Código SIS": {
-        "Español": "Código SIS",
-        "English": "SIS Code"
-    },
-    "Email": {
-        "Español": "Email",
-        "English": "Email"
-    },
-    "Año de ingreso docente": {
-        "Español": "Año de ingreso docente",
-        "English": "Year of Faculty Admission"
-    },
-    "Departamento": {
-        "Español": "Departamento",
-        "English": "Department"
-    },
-    "Cargo": {
-        "Español": "Cargo",
-        "English": "Position"
-    },
-    "Categoria": {
-        "Español": "Categoría",
-        "English": "Category"
-    },
-    "Area de estudio": {
-        "Español": "Área de estudio",
-        "English": "Field of Study"
-    },
-    "Autor": {
-        "Español": "Autor",
-        "English": "Author"
-    },
-    "Institucion": {
-        "Español": "Institución",
-        "English": "Institution"
-    },
-    "Ubicacion": {
-        "Español": "Ubicación",
-        "English": "Location"
-    },
-    "Capacidad": {
-        "Español": "Capacidad",
-        "English": "Capacity"
-    },
-    "Palabra Clave": {
-        "Español": "Palabra Clave",
-        "English": "Keyword"
-    },
-    "Visualizaciones": {
-        "Español": "Visualizaciones",
-        "English": "Views"
-    },
-    "Resumen": {
-        "Español": "Resumen",
-        "English": "Summary"
-    },
-    "Tamaño de archivo": {
-        "Español": "Tamaño de archivo",
-        "English": "File Size"
-    },
-    "Titulo": {
-        "Español": "Título",
-        "English": "Title"
-    },
-    "Formato": {
-        "Español": "Formato",
-        "English": "Format"
-    },
-    "Fecha de publicacion": {
-        "Español": "Fecha de publicación",
-        "English": "Publication Date"
-    },
-    "Idioma": {
-        "Español": "Idioma",
-        "English": "Language"
-    },
-    "Estado": {
-        "Español": "Estado",
-        "English": "Status"
-    },
-    'No se encontraron resultados.': {
-        'Español': 'No se encontraron resultados.',
-        'English': 'No results found.'
-    }
-}
 
 
 @app.route('/')
@@ -354,6 +243,8 @@ def search_dbpedia(query, lang):
 
 
 def get_book_details(title, lang):
+    langSel = 'es' if lang == "Español" else 'en'
+
     # Inicializar el wrapper de SPARQL para DBpedia
     sparql = SPARQLWrapper("http://dbpedia.org/sparql")
     
@@ -366,14 +257,14 @@ def get_book_details(title, lang):
 
     SELECT DISTINCT ?book ?abstract ?author ?publisher ?publicationDate ?isbn ?numberOfPages ?language
     WHERE {{
-      ?book rdfs:label "{title}"@es .
-      OPTIONAL {{ ?book rdfs:comment ?abstract . FILTER(LANG(?abstract) = 'es') }}
+      ?book rdfs:label "{title}"@{langSel} .
+      OPTIONAL {{ ?book rdfs:comment ?abstract . FILTER(LANG(?abstract) = '{langSel}') }}
       OPTIONAL {{ ?book dbo:author ?author . }}
       OPTIONAL {{ ?book dbo:publisher ?publisher . }}
       OPTIONAL {{ ?book dbo:publicationDate ?publicationDate . }}
       OPTIONAL {{ ?book dbp:isbn ?isbn . }}
       OPTIONAL {{ ?book dbo:numberOfPages ?numberOfPages . }}
-      OPTIONAL {{ ?book dct:language ?language . FILTER(LANG(?language) = 'es') }}
+      OPTIONAL {{ ?book dct:language ?language . FILTER(LANG(?language) = '{langSel}') }}
     }}
     """
     
@@ -434,6 +325,116 @@ def hay_conexion():
     except OSError:
         return False
 
+property_labels = {
+    "Colaborador": {
+        "Español": "Colaborador",
+        "English": "Collaborator"
+    },
+    "Instancia": {
+        "Español": "Instancia",
+        "English": "Instance"
+    },
+    "Nombre": {
+        "Español": "Nombre",
+        "English": "Name"
+    },
+    "Carnet": {
+        "Español": "Carnet",
+        "English": "Card"
+    },
+    "Área de colaboracion": {
+        "Español": "Área de colaboración",
+        "English": "Collaboration Area"
+    },
+    "Año de Ingreso": {
+        "Español": "Año de Ingreso",
+        "English": "Year of Admission"
+    },
+    "Código SIS": {
+        "Español": "Código SIS",
+        "English": "SIS Code"
+    },
+    "Email": {
+        "Español": "Email",
+        "English": "Email"
+    },
+    "Año de ingreso docente": {
+        "Español": "Año de ingreso docente",
+        "English": "Year of Faculty Admission"
+    },
+    "Departamento": {
+        "Español": "Departamento",
+        "English": "Department"
+    },
+    "Cargo": {
+        "Español": "Cargo",
+        "English": "Position"
+    },
+    "Categoria": {
+        "Español": "Categoría",
+        "English": "Category"
+    },
+    "Area de estudio": {
+        "Español": "Área de estudio",
+        "English": "Field of Study"
+    },
+    "Autor": {
+        "Español": "Autor",
+        "English": "Author"
+    },
+    "Institucion": {
+        "Español": "Institución",
+        "English": "Institution"
+    },
+    "Ubicacion": {
+        "Español": "Ubicación",
+        "English": "Location"
+    },
+    "Capacidad": {
+        "Español": "Capacidad",
+        "English": "Capacity"
+    },
+    "Palabra Clave": {
+        "Español": "Palabra Clave",
+        "English": "Keyword"
+    },
+    "Visualizaciones": {
+        "Español": "Visualizaciones",
+        "English": "Views"
+    },
+    "Resumen": {
+        "Español": "Resumen",
+        "English": "Summary"
+    },
+    "Tamaño de archivo": {
+        "Español": "Tamaño de archivo",
+        "English": "File Size"
+    },
+    "Titulo": {
+        "Español": "Título",
+        "English": "Title"
+    },
+    "Formato": {
+        "Español": "Formato",
+        "English": "Format"
+    },
+    "Fecha de publicacion": {
+        "Español": "Fecha de publicación",
+        "English": "Publication Date"
+    },
+    "Idioma": {
+        "Español": "Idioma",
+        "English": "Language"
+    },
+    "Estado": {
+        "Español": "Estado",
+        "English": "Status"
+    },
+    'No se encontraron resultados.': {
+        'Español': 'No se encontraron resultados.',
+        'English': 'No results found.'
+    }
+}
 
 if __name__ == '__main__':
     app.run(debug=True)

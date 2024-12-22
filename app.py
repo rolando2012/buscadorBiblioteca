@@ -24,6 +24,118 @@ stop_words = set(stopwords.words('spanish'))
 with open('./ontologia/bibliotecaDigital.jsonld', 'r', encoding='utf-8') as f:
     ontology_data = json.load(f)
 
+property_labels = {
+    "Colaborador": {
+        "Español": "Colaborador",
+        "English": "Collaborator"
+    },
+    "Instancia": {
+        "Español": "Instancia",
+        "English": "Instance"
+    },
+    "Nombre": {
+        "Español": "Nombre",
+        "English": "Name"
+    },
+    "Carnet": {
+        "Español": "Carnet",
+        "English": "Card"
+    },
+    "Área de colaboracion": {
+        "Español": "Área de colaboración",
+        "English": "Collaboration Area"
+    },
+    "Año de Ingreso": {
+        "Español": "Año de Ingreso",
+        "English": "Year of Admission"
+    },
+    "Código SIS": {
+        "Español": "Código SIS",
+        "English": "SIS Code"
+    },
+    "Email": {
+        "Español": "Email",
+        "English": "Email"
+    },
+    "Año de ingreso docente": {
+        "Español": "Año de ingreso docente",
+        "English": "Year of Faculty Admission"
+    },
+    "Departamento": {
+        "Español": "Departamento",
+        "English": "Department"
+    },
+    "Cargo": {
+        "Español": "Cargo",
+        "English": "Position"
+    },
+    "Categoria": {
+        "Español": "Categoría",
+        "English": "Category"
+    },
+    "Area de estudio": {
+        "Español": "Área de estudio",
+        "English": "Field of Study"
+    },
+    "Autor": {
+        "Español": "Autor",
+        "English": "Author"
+    },
+    "Institucion": {
+        "Español": "Institución",
+        "English": "Institution"
+    },
+    "Ubicacion": {
+        "Español": "Ubicación",
+        "English": "Location"
+    },
+    "Capacidad": {
+        "Español": "Capacidad",
+        "English": "Capacity"
+    },
+    "Palabra Clave": {
+        "Español": "Palabra Clave",
+        "English": "Keyword"
+    },
+    "Visualizaciones": {
+        "Español": "Visualizaciones",
+        "English": "Views"
+    },
+    "Resumen": {
+        "Español": "Resumen",
+        "English": "Summary"
+    },
+    "Tamaño de archivo": {
+        "Español": "Tamaño de archivo",
+        "English": "File Size"
+    },
+    "Titulo": {
+        "Español": "Título",
+        "English": "Title"
+    },
+    "Formato": {
+        "Español": "Formato",
+        "English": "Format"
+    },
+    "Fecha de publicacion": {
+        "Español": "Fecha de publicación",
+        "English": "Publication Date"
+    },
+    "Idioma": {
+        "Español": "Idioma",
+        "English": "Language"
+    },
+    "Estado": {
+        "Español": "Estado",
+        "English": "Status"
+    },
+    'No se encontraron resultados.': {
+        'Español': 'No se encontraron resultados.',
+        'English': 'No results found.'
+    }
+}
+
+
 @app.route('/')
 def start():
     return render_template('start.html')
@@ -56,10 +168,11 @@ def search():
         "dbpedia": results_dbpedia
     }
 
-    return render_template('results.html', results=combined_results, query=query, lang=langSel, offline=offline)
+    return render_template('results.html', results=combined_results, query=query, lang=langSel, offline=offline, property_labels=property_labels)
 
 @app.route('/details/<instance>')
 def details(instance):
+    lang = request.args.get('lang')
     # Buscar la instancia correspondiente
     matching_instance = None
     for entry in ontology_data:
@@ -95,7 +208,8 @@ def details(instance):
 
 @app.route('/dbpedia_details/<title>')
 def dbpedia_details(title):
-    book_details = get_book_details(title)
+    lang = request.args.get('lang')
+    book_details = get_book_details(title, lang)
     if book_details:
         return render_template('dbpedia_details.html', details=book_details, title=title)
     else:
@@ -239,8 +353,7 @@ def search_dbpedia(query, lang):
         return []
 
 
-
-def get_book_details(title):
+def get_book_details(title, lang):
     # Inicializar el wrapper de SPARQL para DBpedia
     sparql = SPARQLWrapper("http://dbpedia.org/sparql")
     
@@ -276,14 +389,18 @@ def get_book_details(title):
         # Procesar los resultados
         for result in results["results"]["bindings"]:
             details = {
-                "Libro": result.get("book", {}).get("value", ""),
-                "Resumen": result.get("abstract", {}).get("value", ""),
-                "Autor": result.get("author", {}).get("value", ""),
-                "publisher": result.get("publisher", {}).get("value", ""),
-                "Fecha de publicacion": result.get("publicationDate", {}).get("value", ""),
-                "isbn": result.get("isbn", {}).get("value", ""),
-                "Numero de paginas": result.get("numberOfPages", {}).get("value", ""),
-                "Languaje": "Español" if result.get("abstract", {}).get("xml:lang", "") == "es" else "English" if result.get("abstract", {}).get("xml:lang", "") == "en" else "Desconocido",
+                ("Libro" if lang == "Español" else "Book"): result.get("book", {}).get("value", ""),
+                ("Resumen" if lang == "Español" else "Abstract"): result.get("abstract", {}).get("value", ""),
+                ("Autor" if lang == "Español" else "Author"): result.get("author", {}).get("value", ""),
+                ("Editorial" if lang == "Español" else "Publisher"): result.get("publisher", {}).get("value", ""),
+                ("Fecha de publicación" if lang == "Español" else "Publication Date"): result.get("publicationDate", {}).get("value", ""),
+                "ISBN": result.get("isbn", {}).get("value", ""),
+                ("Número de páginas" if lang == "Español" else "Number of Pages"): result.get("numberOfPages", {}).get("value", ""),
+                ("Idioma" if lang == "Español" else "Language"): (
+                    "Español" if result.get("abstract", {}).get("xml:lang", "") == "es" 
+                    else "English" if result.get("abstract", {}).get("xml:lang", "") == "en" 
+                    else "Desconocido"
+                ),
             }
             # Tomar solo el primer conjunto de resultados
             break
@@ -320,4 +437,3 @@ def hay_conexion():
 
 if __name__ == '__main__':
     app.run(debug=True)
-    

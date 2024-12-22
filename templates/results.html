@@ -196,6 +196,13 @@
           customSelect.classList.remove("open");
         }
       });
+
+      function clickA(div){
+          const link = div.querySelector('a');
+            if (link) {
+              window.location.href = link.href;
+            }
+      }
     </script>
   </body>
 </html>

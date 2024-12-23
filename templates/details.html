@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="{{ lang }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/details.css"> 
-    <title>Detalles de {{ instance }}</title>
+    <title>{{ 'Detalles de:' if lang == 'Español' else 'Details of:' }} {{ instance }}</title>
 </head>
 <body>
     <div class="cabecera"></div>
     <div class="contenedor">
         <div class="container">
-            <h1>Detalles de: {{ instance }} </h1>
+            <h1>{{ 'Detalles de:' if lang == 'Español' else 'Details of:' }} {{ instance }} </h1>
             <ul>
                 {% for label, value in results %}
                     <li><strong>{{ label }}:</strong> {{ value }}</li>
                 {% endfor %}
             </ul>
-            <a href="javascript:window.history.back();" class="button">Volver</a>
+            <a href="javascript:window.history.back();" class="button">{{ 'Volver' if lang == 'Español' else 'Back' }}</a>
         </div>
     </div>
 </body>

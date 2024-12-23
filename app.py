@@ -100,7 +100,7 @@ def details(instance):
             label = predicate.split("/")[-1]  # Obtener la última parte del URI como etiqueta
             value = values[0]["@value"]  # Obtener el valor
             simplified_results.append((label, value))
-    return render_template('details.html', instance=instance, results=simplified_results)
+    return render_template('details.html', instance=instance, results=simplified_results, lang=lang)
 
 @app.route('/dbpedia_details/<title>')
 def dbpedia_details(title):

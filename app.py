@@ -17,9 +17,6 @@ nlp = spacy.load("es_core_news_sm")
 # Cargar el modelo pequeño de spaCy en inglés
 nlp2 = spacy.load("en_core_web_sm")
 
-# Crear un Matcher
-matcher = Matcher(nlp.vocab)
-
 # Cargar el archivo JSONld
 # Es un archivo JSON con conceptos de ontología, usa la sintaxis de RFD
 with open('./ontologia/bibliotecaDigital.jsonld', 'r', encoding='utf-8') as f:
@@ -316,7 +313,9 @@ def hay_conexion():
     except OSError:
         return False
     
-def procesarPregunta(pregunta):
+def procesarPregunta(pregunta):    
+    # Crear un Matcher
+    matcher = Matcher(nlp.vocab)
     # Definir patrones para entidades clave
     patrones = [
         [{"LOWER": "sistemas"}, {"LOWER": "operativos"}],  # Detectar "sistemas operativos"

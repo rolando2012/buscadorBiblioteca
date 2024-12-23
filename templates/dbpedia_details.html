@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ lang }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/details.css">
-    <title>Detalles de {{ title }}</title>
+    <title>{{ 'Detalles de:' if lang == 'Español' else 'Details of:' }} {{ title }}</title>
 </head>
 <body>
     <div class="cabecera"></div>
     <div class="contenedor">
         <div class="container">
-            <h1>Detalles de {{ title }}</h1>
+            <h1>{{ 'Detalles de:' if lang == 'Español' else 'Details of:' }} {{ title }}</h1>
             {% if details %}
                 <ul>
                     {% for key, value in details.items() %}
@@ -20,7 +20,7 @@
             {% else %}
                 <p>No se encontraron detalles para este título.</p>
             {% endif %}
-            <a href="javascript:window.history.back();" class="button">Volver al inicio</a>
+            <a href="javascript:window.history.back();" class="button">{{ 'Volver' if lang == 'Español' else 'Back' }}</a>
         </div>
     </div>
 </body>

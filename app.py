@@ -104,7 +104,7 @@ def dbpedia_details(title):
     lang = request.args.get('lang')
     book_details = get_book_details(title, lang)
     if book_details:
-        return render_template('dbpedia_details.html', details=book_details, title=title)
+        return render_template('dbpedia_details.html', details=book_details, title=title,lang=lang)
     else:
         return "No se encontraron detalles para este libro."
 

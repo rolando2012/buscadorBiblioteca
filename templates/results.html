@@ -77,12 +77,16 @@
             {% for result in results.local %}
             <li>
               <div class="opcion" onclick="clickA(this)">
-                <a href="/details/{{result.Instancia}}">{{ result.Titulo }}</a
+                <a href="/details/{{ result.Instancia }}?lang={{ lang }}"
+                  >{{ result.Titulo }}</a
                 ><br />
-                <small>Instancia: {{ result.Instancia }}</small>
+                <small> {{ property_labels["Instancia"]["lang"] }} </small>
                 <ul class="detalles">
                   {% for info in result.MasInformacion %}
-                  <li>{{ info }}</li>
+                  <li>
+                    {{ (property_labels[info.split(':')[0]][lang]) ~ ':' ~
+                    info.split(':')[1] }}
+                  </li>
                   {% endfor %}
                   <p>...</p>
                 </ul>
@@ -91,15 +95,17 @@
             {% endfor %}
           </ul>
           {% else %}
-          <p>No se encontraron resultados.</p>
+          <p>{{ property_labels['No se encontraron resultados.'][lang] }}</p>
           {% endif %}
 
-          <h2>En linea</h2>
+          <h2 id="onlineHeader">
+            {{ 'En línea' if lang == 'Español' else 'Online' }}
+          </h2>
           {% if results.dbpedia %}
           <ul>
             {% for result in results.dbpedia %}
             <li>
-              <a href="/dbpedia_details/{{ result.title }}"
+              <a href="/dbpedia_details/{{ result.title }}?lang={{ lang }}"
                 >{{ result.title }}</a
               >
             </li>
@@ -128,24 +134,17 @@
         const selectedOption = document.querySelector(".selected-option span");
         const button = document.querySelector("button");
         const input = document.querySelector("input");
+        const onlineHeader = document.getElementById("onlineHeader");
 
-        const option = document.querySelector(`.option[data-value="${lang}"]`);
-        if (option) {
-          selectedOption.textContent = option.textContent.trim();
-          document
-            .querySelector(".selected-option img")
-            .setAttribute(
-              "src",
-              option.querySelector("img").getAttribute("src")
-            );
-        }
-
+        // Actualizar elementos al cargar la página según el idioma
         if (lang === "Español") {
           input.setAttribute("placeholder", "¿Qué es lo que desea buscar?");
           button.textContent = "Buscar";
+          onlineHeader.textContent = "En línea";
         } else {
           input.setAttribute("placeholder", "What do you want to search for?");
           button.textContent = "Search";
+          onlineHeader.textContent = "Online";
         }
 
         // Manejador para las opciones de idioma
@@ -153,8 +152,10 @@
           option.addEventListener("click", function () {
             const selectedLang = option.getAttribute("data-value");
 
+            // Actualiza el valor del campo oculto en el formulario
             langInput.value = selectedLang;
 
+            // Cambia el texto y el marcador de idioma según el idioma seleccionado
             selectedOption.textContent = option.textContent;
             document
               .querySelector(".selected-option img")
@@ -163,30 +164,24 @@
                 option.querySelector("img").getAttribute("src")
               );
 
-            // Actualizar el placeholder y el texto del botón al seleccionar el idioma
+            // Actualizar el placeholder, el texto del botón y el encabezado al seleccionar el idioma
             if (selectedLang === "Español") {
               input.setAttribute("placeholder", "¿Qué es lo que desea buscar?");
               button.textContent = "Buscar";
+              onlineHeader.textContent = "En línea";
             } else {
               input.setAttribute(
                 "placeholder",
                 "What do you want to search for?"
               );
               button.textContent = "Search";
+              onlineHeader.textContent = "Online";
             }
 
+            // Cierra el dropdown (modal)
             document.querySelector(".custom-select").classList.remove("open");
           });
         });
-
-        // Previene el envío del formulario hasta que el valor de langInput sea correcto
-        document
-          .getElementById("searchForm")
-          .addEventListener("submit", function (e) {
-            if (!langInput.value) {
-              langInput.value = "Español";
-            }
-          });
       });
 
       function toggleDropdown() {
@@ -200,11 +195,11 @@
         }
       });
 
-      function clickA(div){
-          const link = div.querySelector('a');
-            if (link) {
-              window.location.href = link.href;
-            }
+      function clickA(div) {
+        const link = div.querySelector("a");
+        if (link) {
+          window.location.href = link.href;
+        }
       }
 
       // Selecciona el formulario

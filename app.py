@@ -5,10 +5,7 @@ from SPARQLWrapper import SPARQLWrapper, JSON
 import json
 import unicodedata
 import spacy
-import nltk
-nltk.download('stopwords')
-from nltk.corpus import stopwords
-import string
+from spacy.matcher import Matcher
 import socket
 
 DBPEDIA_ENDPOINT = "http://dbpedia.org/sparql"
@@ -17,12 +14,17 @@ app = Flask(__name__)
 # Cargar el modelo de spaCy para español
 nlp = spacy.load("es_core_news_sm")
 
-#nltk.download('stopwords')
-stop_words = set(stopwords.words('spanish'))
+# Cargar el modelo pequeño de spaCy en inglés
+nlp2 = spacy.load("en_core_web_sm")
 
-# Cargar el archivo JSON
+# Crear un Matcher
+matcher = Matcher(nlp.vocab)
+
+# Cargar el archivo JSONld
+# Es un archivo JSON con conceptos de ontología, usa la sintaxis de RFD
 with open('./ontologia/bibliotecaDigital.jsonld', 'r', encoding='utf-8') as f:
     ontology_data = json.load(f)
+
 
 @app.route('/')
 def start():
@@ -39,9 +41,15 @@ def search():
     query = request.form['query']
     langSel = request.form['lang']
 
-    if query.find("?")>-1:
-        res = procesarPregunta(query)
-        query = res[0]
+    aux = len(query.split(" "))
+
+    if aux > 4:
+        if langSel == "Español":
+            res = procesarPregunta(query)
+            query = res[0]
+        else:
+            res = procesarPreguntaIngles(query)
+            query = res[0]
 
     results = buscar_resultado(query, ontology_data, langSel)
     if hay_conexion():
@@ -56,10 +64,11 @@ def search():
         "dbpedia": results_dbpedia
     }
 
-    return render_template('results.html', results=combined_results, query=query, lang=langSel, offline=offline)
+    return render_template('results.html', results=combined_results, query=query, lang=langSel, offline=offline, property_labels=property_labels)
 
 @app.route('/details/<instance>')
 def details(instance):
+    lang = request.args.get('lang')
     # Buscar la instancia correspondiente
     matching_instance = None
     for entry in ontology_data:
@@ -69,7 +78,7 @@ def details(instance):
             matching_instance = entry
             break
 
-     # Si no se encuentra, buscar por el rdfs:label
+    # Si no se encuentra, buscar por el rdfs:label
     if not matching_instance:
         for entry in ontology_data:
             labels = entry.get("http://www.w3.org/2000/01/rdf-schema#label", [])
@@ -95,14 +104,15 @@ def details(instance):
 
 @app.route('/dbpedia_details/<title>')
 def dbpedia_details(title):
-    book_details = get_book_details(title)
+    lang = request.args.get('lang')
+    book_details = get_book_details(title, lang)
     if book_details:
         return render_template('dbpedia_details.html', details=book_details, title=title)
     else:
         return "No se encontraron detalles para este libro."
 
 
-#funcion buscar en json
+# funcion buscar en json
 def buscar_resultado(query, data, langSel):
     query = query.lower()
     results = []
@@ -239,8 +249,9 @@ def search_dbpedia(query, lang):
         return []
 
 
+def get_book_details(title, lang):
+    langSel = 'es' if lang == "Español" else 'en'
 
-def get_book_details(title):
     # Inicializar el wrapper de SPARQL para DBpedia
     sparql = SPARQLWrapper("http://dbpedia.org/sparql")
     
@@ -253,14 +264,14 @@ def get_book_details(title):
 
     SELECT DISTINCT ?book ?abstract ?author ?publisher ?publicationDate ?isbn ?numberOfPages ?language
     WHERE {{
-      ?book rdfs:label "{title}"@es .
-      OPTIONAL {{ ?book rdfs:comment ?abstract . FILTER(LANG(?abstract) = 'es') }}
+      ?book rdfs:label "{title}"@{langSel} .
+      OPTIONAL {{ ?book rdfs:comment ?abstract . FILTER(LANG(?abstract) = '{langSel}') }}
       OPTIONAL {{ ?book dbo:author ?author . }}
       OPTIONAL {{ ?book dbo:publisher ?publisher . }}
       OPTIONAL {{ ?book dbo:publicationDate ?publicationDate . }}
       OPTIONAL {{ ?book dbp:isbn ?isbn . }}
       OPTIONAL {{ ?book dbo:numberOfPages ?numberOfPages . }}
-      OPTIONAL {{ ?book dct:language ?language . FILTER(LANG(?language) = 'es') }}
+      OPTIONAL {{ ?book dct:language ?language . FILTER(LANG(?language) = '{langSel}') }}
     }}
     """
     
@@ -276,14 +287,18 @@ def get_book_details(title):
         # Procesar los resultados
         for result in results["results"]["bindings"]:
             details = {
-                "Libro": result.get("book", {}).get("value", ""),
-                "Resumen": result.get("abstract", {}).get("value", ""),
-                "Autor": result.get("author", {}).get("value", ""),
-                "publisher": result.get("publisher", {}).get("value", ""),
-                "Fecha de publicacion": result.get("publicationDate", {}).get("value", ""),
-                "isbn": result.get("isbn", {}).get("value", ""),
-                "Numero de paginas": result.get("numberOfPages", {}).get("value", ""),
-                "Languaje": "Español" if result.get("abstract", {}).get("xml:lang", "") == "es" else "English" if result.get("abstract", {}).get("xml:lang", "") == "en" else "Desconocido",
+                ("Libro" if lang == "Español" else "Book"): result.get("book", {}).get("value", ""),
+                ("Resumen" if lang == "Español" else "Abstract"): result.get("abstract", {}).get("value", ""),
+                ("Autor" if lang == "Español" else "Author"): result.get("author", {}).get("value", ""),
+                ("Editorial" if lang == "Español" else "Publisher"): result.get("publisher", {}).get("value", ""),
+                ("Fecha de publicación" if lang == "Español" else "Publication Date"): result.get("publicationDate", {}).get("value", ""),
+                "ISBN": result.get("isbn", {}).get("value", ""),
+                ("Número de páginas" if lang == "Español" else "Number of Pages"): result.get("numberOfPages", {}).get("value", ""),
+                ("Idioma" if lang == "Español" else "Language"): (
+                    "Español" if result.get("abstract", {}).get("xml:lang", "") == "es" 
+                    else "English" if result.get("abstract", {}).get("xml:lang", "") == "en" 
+                    else "Desconocido"
+                ),
             }
             # Tomar solo el primer conjunto de resultados
             break
@@ -294,30 +309,249 @@ def get_book_details(title):
         return {}
     
 
-# Función para extraer frases clave y entidades nombradas
-def procesarPregunta(text):
-    # Procesar el texto con spaCy
-    doc = nlp(text)
-
-    # Extraer entidades nombradas (NER)
-    entities = [ent.text.lower() for ent in doc.ents]
-
-    # Extraer palabras clave basadas en el análisis sintáctico
-    keywords = [token.text.lower() for token in doc if token.pos_ in ["NOUN", "PROPN"] and token.text not in string.punctuation]
-
-    # Combinar entidades y palabras clave
-    all_keywords = list(set(entities + keywords))
-
-    return all_keywords
-
 def hay_conexion():
     try:
         socket.create_connection(("8.8.8.8", 53), timeout=5)
         return True
     except OSError:
         return False
+    
+def procesarPregunta(pregunta):
+    # Definir patrones para entidades clave
+    patrones = [
+        [{"LOWER": "sistemas"}, {"LOWER": "operativos"}],  # Detectar "sistemas operativos"
+        [{"LOWER": "colaborador"}],  
+        [{"LOWER": "redes"}],  # Detectar "redes"
+        [{"LOWER": "robótica"}],  # Detectar "Robótica"
+        [{"LOWER": "inteligencia"}, {"LOWER": "artificial"}],  # Detectar "Inteligencia Artificial"
+        [{"LOWER": "programación"}],  # Detectar "programación"
+        [{"LOWER": "base"}, {"LOWER": "de"}, {"LOWER": "datos"}],  # Detectar "base de datos"
+        [{"LOWER": "ingeniería"}, {"LOWER": "de"}, {"LOWER": "software"}],
+        [{"LOWER": "simulación"}],  # Detectar "simulación"
+        [{"LOWER": "sistema"}], 
+        [{"LOWER": "libros"}],  # Detectar "libros"
+        [{"LOWER": "tesis"}],  
+        [{"LOWER": "introducción"}, {"LOWER": "a"}, {"LOWER": "la"}, {"LOWER": "programación"}], 
+        [{"LOWER": "anónimo"}],
+        [{"LOWER": "investigación"}],
+        [{"LOWER": "computación"}],
+        [{"LOWER": "ingles"}],
+        [{"LOWER": "algoritmos"}],
+        [{"LOWER": "ciberseguridad"}],  # Detectar "ciberseguridad"
+        [{"LOWER": "ágiles"}],
+        [{"LOWER": "web"}],
+        [{"LOWER": "informática"}],
 
+    ]
+    matcher.add("EntidadesClave", patrones)
+
+    # Procesar la pregunta
+    doc = nlp(pregunta)
+
+    # Encontrar coincidencias con el Matcher
+    matches = matcher(doc)
+
+    # Extraer entidades clave del Matcher
+    temas = [doc[start:end].text for match_id, start, end in matches]
+
+    # Si no hay coincidencias con el Matcher, realizar una búsqueda manual
+    if len(temas) == 0:
+        # Definir una lista de lenguajes de programación y otros temas
+        temas_clave = [
+            "java", "python", "c++", "javascript", "ruby", "php", "go", "rust", "swift", "kotlin", "scala",
+        ]
+        
+        # Procesar la pregunta en minúsculas
+        doc_lower = nlp(pregunta.lower())
+        
+        # Extraer entidades clave manualmente
+        for token in doc_lower:
+            if token.text in temas_clave:
+                temas.append(token.text)
+            elif token.text + " " + doc_lower[token.i + 1].text in temas_clave:  # Detectar frases compuestas
+                temas.append(token.text + " " + doc_lower[token.i + 1].text)
+
+    # Ordenar los temas: priorizar "ciberseguridad" sobre "investigación" y colocar "libros" al final
+    temas_ordenados = [tema for tema in temas if tema.lower() == "ciberseguridad"] + \
+                    [tema for tema in temas if tema.lower() != "ciberseguridad" and tema.lower() != "libros"] + \
+                    [tema for tema in temas if tema.lower() == "libros"]
+    
+    return temas_ordenados
+
+def procesarPreguntaIngles(pregunta):
+    # Crear un Matcher
+    matcher = Matcher(nlp2.vocab)
+
+    # Definir patrones para entidades clave en inglés
+    patrones = [
+        [{"LOWER": "operating"}, {"LOWER": "systems"}],  # Detectar "operating systems"
+        [{"LOWER": "collaborator"}],  
+        [{"LOWER": "networks"}],  # Detectar "networks"
+        [{"LOWER": "robotics"}],  # Detectar "robotics"
+        [{"LOWER": "artificial"}, {"LOWER": "intelligence"}],  # Detectar "artificial intelligence"
+        [{"LOWER": "programming"}],  # Detectar "programming"
+        [{"LOWER": "database"}],  # Detectar "database"
+        [{"LOWER": "software"}, {"LOWER": "engineering"}],  # Detectar "software engineering"
+        [{"LOWER": "simulation"}],  # Detectar "simulation"
+        [{"LOWER": "system"}], 
+        [{"LOWER": "books"}],  # Detectar "books"
+        [{"LOWER": "thesis"}],  
+        [{"LOWER": "introduction"}, {"LOWER": "to"}, {"LOWER": "programming"}],  # Detectar "introduction to programming"
+        [{"LOWER": "anonymous"}],
+        [{"LOWER": "research"}],
+        [{"LOWER": "computer"}, {"LOWER": "science"}],  # Detectar "computer science"
+        [{"LOWER": "english"}],
+        [{"LOWER": "algorithms"}],
+        [{"LOWER": "cybersecurity"}],  # Detectar "cybersecurity"
+        [{"LOWER": "agile"}],
+        [{"LOWER": "web"}],
+        [{"LOWER": "informatics"}],  # Detectar "informatics"
+    ]
+    matcher.add("EntidadesClave", patrones)
+
+    # Procesar la pregunta
+    doc = nlp2(pregunta)
+
+    # Encontrar coincidencias con el Matcher
+    matches = matcher(doc)
+
+    # Extraer entidades clave del Matcher
+    temas = [doc[start:end].text for match_id, start, end in matches]
+
+    # Si no hay coincidencias con el Matcher, realizar una búsqueda manual
+    if len(temas) == 0:
+        # Definir una lista de lenguajes de programación y otros temas en inglés
+        temas_clave = [
+            "java", "python", "c++", "javascript", "ruby", "php", "go", "rust", "swift", "kotlin", "scala",
+        ]
+        
+        # Procesar la pregunta en minúsculas
+        doc_lower = nlp2(pregunta.lower())
+        
+        # Extraer entidades clave manualmente
+        for token in doc_lower:
+            if token.text in temas_clave:
+                temas.append(token.text)
+            elif token.text + " " + doc_lower[token.i + 1].text in temas_clave:  # Detectar frases compuestas
+                temas.append(token.text + " " + doc_lower[token.i + 1].text)
+
+    # Ordenar los temas: priorizar "cybersecurity" sobre "research" y colocar "books" al final
+    temas_ordenados = [tema for tema in temas if tema.lower() == "cybersecurity"] + \
+                    [tema for tema in temas if tema.lower() != "cybersecurity" and tema.lower() != "books"] + \
+                    [tema for tema in temas if tema.lower() == "books"]
+
+    return temas_ordenados
+
+property_labels = {
+    "Colaborador": {
+        "Español": "Colaborador",
+        "English": "Collaborator"
+    },
+    "Instancia": {
+        "Español": "Instancia",
+        "English": "Instance"
+    },
+    "Nombre": {
+        "Español": "Nombre",
+        "English": "Name"
+    },
+    "Carnet": {
+        "Español": "Carnet",
+        "English": "Card"
+    },
+    "Área de colaboracion": {
+        "Español": "Área de colaboración",
+        "English": "Collaboration Area"
+    },
+    "Año de Ingreso": {
+        "Español": "Año de Ingreso",
+        "English": "Year of Admission"
+    },
+    "Código SIS": {
+        "Español": "Código SIS",
+        "English": "SIS Code"
+    },
+    "Email": {
+        "Español": "Email",
+        "English": "Email"
+    },
+    "Año de ingreso docente": {
+        "Español": "Año de ingreso docente",
+        "English": "Year of Faculty Admission"
+    },
+    "Departamento": {
+        "Español": "Departamento",
+        "English": "Department"
+    },
+    "Cargo": {
+        "Español": "Cargo",
+        "English": "Position"
+    },
+    "Categoria": {
+        "Español": "Categoría",
+        "English": "Category"
+    },
+    "Area de estudio": {
+        "Español": "Área de estudio",
+        "English": "Field of Study"
+    },
+    "Autor": {
+        "Español": "Autor",
+        "English": "Author"
+    },
+    "Institucion": {
+        "Español": "Institución",
+        "English": "Institution"
+    },
+    "Ubicacion": {
+        "Español": "Ubicación",
+        "English": "Location"
+    },
+    "Capacidad": {
+        "Español": "Capacidad",
+        "English": "Capacity"
+    },
+    "Palabra Clave": {
+        "Español": "Palabra Clave",
+        "English": "Keyword"
+    },
+    "Visualizaciones": {
+        "Español": "Visualizaciones",
+        "English": "Views"
+    },
+    "Resumen": {
+        "Español": "Resumen",
+        "English": "Summary"
+    },
+    "Tamaño de archivo": {
+        "Español": "Tamaño de archivo",
+        "English": "File Size"
+    },
+    "Titulo": {
+        "Español": "Título",
+        "English": "Title"
+    },
+    "Formato": {
+        "Español": "Formato",
+        "English": "Format"
+    },
+    "Fecha de publicacion": {
+        "Español": "Fecha de publicación",
+        "English": "Publication Date"
+    },
+    "Idioma": {
+        "Español": "Idioma",
+        "English": "Language"
+    },
+    "Estado": {
+        "Español": "Estado",
+        "English": "Status"
+    },
+    'No se encontraron resultados.': {
+        'Español': 'No se encontraron resultados.',
+        'English': 'No results found.'
+    }
+}
 
 if __name__ == '__main__':
     app.run(debug=True)
-    

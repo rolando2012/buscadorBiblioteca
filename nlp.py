@@ -1,68 +1,73 @@
 import spacy
-from nltk.corpus import stopwords
-import string
+from spacy.matcher import Matcher
 
-# Cargar el modelo de spaCy para español
+# Cargar el modelo pequeño de spaCy
 nlp = spacy.load("es_core_news_sm")
 
-# Descargar stopwords de NLTK
-import nltk
-#nltk.download('stopwords')
-stop_words = set(stopwords.words('spanish'))
+# Crear un Matcher
+matcher = Matcher(nlp.vocab)
 
-# Función para preprocesar texto
-def preprocess_text(text):
-    # Tokenización y análisis con spaCy
-    doc = nlp(text.lower())
+# Definir patrones para entidades clave
+patrones = [
+    [{"LOWER": "sistemas"}, {"LOWER": "operativos"}],  # Detectar "sistemas operativos"
+    [{"LOWER": "colaborador"}],  
+    [{"LOWER": "redes"}],  # Detectar "redes"
+    [{"LOWER": "robótica"}],  # Detectar "Robótica"
+    [{"LOWER": "inteligencia"}, {"LOWER": "artificial"}],  # Detectar "Inteligencia Artificial"
+    [{"LOWER": "programación"}],  # Detectar "programación"
+    [{"LOWER": "base"}, {"LOWER": "de"}, {"LOWER": "datos"}],  # Detectar "base de datos"
+    [{"LOWER": "ingeniería"}, {"LOWER": "de"}, {"LOWER": "software"}],
+    [{"LOWER": "simulación"}],  # Detectar "simulación"
+    [{"LOWER": "sistema"}], 
+    [{"LOWER": "libros"}],  # Detectar "libros"
+    [{"LOWER": "tesis"}],  
+    [{"LOWER": "introducción"}, {"LOWER": "a"}, {"LOWER": "la"}, {"LOWER": "programación"}], 
+    [{"LOWER": "anónimo"}],
+    [{"LOWER": "investigación"}],
+    [{"LOWER": "computación"}],
+    [{"LOWER": "ingles"}],
+    [{"LOWER": "algoritmos"}],
+    [{"LOWER": "ciberseguridad"}],  # Detectar "ciberseguridad"
+    [{"LOWER": "ágiles"}],
+    [{"LOWER": "web"}],
+    [{"LOWER": "informática"}],
 
-    # Eliminar puntuación y stopwords
-    tokens = [token.text for token in doc if token.text not in string.punctuation and token.text not in stop_words]
+]
+matcher.add("EntidadesClave", patrones)
 
-    return " ".join(tokens)
+# Pregunta del usuario
+pregunta = '¿Qué libros hay para el área de estudio de la Informática ?'
+# pregunta = "¿Qué libros están disponibles sobre Java?"
 
-# Función para extraer frases clave y entidades nombradas
-def extract_phrases_and_entities(text):
-    # Procesar el texto con spaCy
-    doc = nlp(text)
+# Procesar la pregunta
+doc = nlp(pregunta)
 
-    # Extraer entidades nombradas (NER)
-    entities = [ent.text.lower() for ent in doc.ents]
+# Encontrar coincidencias con el Matcher
+matches = matcher(doc)
 
-    # Extraer palabras clave basadas en el análisis sintáctico
-    keywords = [token.text.lower() for token in doc if token.pos_ in ["NOUN", "PROPN"] and token.text not in string.punctuation]
+# Extraer entidades clave del Matcher
+temas = [doc[start:end].text for match_id, start, end in matches]
 
-    # Combinar entidades y palabras clave
-    all_keywords = list(set(entities + keywords))
+# Si no hay coincidencias con el Matcher, realizar una búsqueda manual
+if len(temas) == 0:
+    # Definir una lista de lenguajes de programación y otros temas
+    temas_clave = [
+        "java", "python", "c++", "javascript", "ruby", "php", "go", "rust", "swift", "kotlin", "scala",
+    ]
+    
+    # Procesar la pregunta en minúsculas
+    doc_lower = nlp(pregunta.lower())
+    
+    # Extraer entidades clave manualmente
+    for token in doc_lower:
+        if token.text in temas_clave:
+            temas.append(token.text)
+        elif token.text + " " + doc_lower[token.i + 1].text in temas_clave:  # Detectar frases compuestas
+            temas.append(token.text + " " + doc_lower[token.i + 1].text)
 
-    return all_keywords
-
-# Ejemplo de pregunta en español
-pregunta = '¿Qué libros cubren la teoría de la computación?'
-
-sinRevelancia = ['libros','practica','recurso', 'tema', 'trabajos']
-
-# Preprocesar la pregunta
-pregunta_procesada = preprocess_text(pregunta)
-print("Pregunta procesada:", pregunta_procesada)
-# Extraer frases clave y entidades
-palabras_clave = extract_phrases_and_entities(pregunta)
-res = palabras_clave[0]
-if palabras_clave[0].find("¿")==0:
-    palabras_clave = palabras_clave[:-1]
-    res = palabras_clave[0]
-else:
-    for palabra in sinRevelancia:
-        if palabra == palabras_clave[0]:
-            if(palabras_clave[1].find("¿")==0):
-                res = palabras_clave[2]
-            else:
-                res = palabras_clave[1]
-            break
-
-print("Palabras clave extraídas:", palabras_clave)
-print("res: ", res)
-
-"""
-1. cuando tenga un signo de puntuacion invertir
-2. si es libro, recurso, practica, tesis, etc, siguiente
-"""
+# Ordenar los temas: priorizar "ciberseguridad" sobre "investigación" y colocar "libros" al final
+temas_ordenados = [tema for tema in temas if tema.lower() == "ciberseguridad"] + \
+                  [tema for tema in temas if tema.lower() != "ciberseguridad" and tema.lower() != "libros"] + \
+                  [tema for tema in temas if tema.lower() == "libros"]
+# Imprimir los temas detectados
+print(temas_ordenados)

@@ -5,10 +5,7 @@ from SPARQLWrapper import SPARQLWrapper, JSON
 import json
 import unicodedata
 import spacy
-import nltk
-#nltk.download('stopwords')
-from nltk.corpus import stopwords
-import string
+from spacy.matcher import Matcher
 import socket
 
 DBPEDIA_ENDPOINT = "http://dbpedia.org/sparql"
@@ -17,8 +14,8 @@ app = Flask(__name__)
 # Cargar el modelo de spaCy para español
 nlp = spacy.load("es_core_news_sm")
 
-#nltk.download('stopwords')
-stop_words = set(stopwords.words('spanish'))
+# Crear un Matcher
+matcher = Matcher(nlp.vocab)
 
 # Cargar el archivo JSON
 with open('./ontologia/bibliotecaDigital.jsonld', 'r', encoding='utf-8') as f:
@@ -40,7 +37,9 @@ def search():
     query = request.form['query']
     langSel = request.form['lang']
 
-    if query.find("?")>-1:
+    aux = len(query.split(" "))
+
+    if aux >4:
         res = procesarPregunta(query)
         query = res[0]
 
@@ -302,21 +301,7 @@ def get_book_details(title, lang):
         return {}
     
 
-# Función para extraer frases clave y entidades nombradas
-def procesarPregunta(text):
-    # Procesar el texto con spaCy
-    doc = nlp(text)
 
-    # Extraer entidades nombradas (NER)
-    entities = [ent.text.lower() for ent in doc.ents]
-
-    # Extraer palabras clave basadas en el análisis sintáctico
-    keywords = [token.text.lower() for token in doc if token.pos_ in ["NOUN", "PROPN"] and token.text not in string.punctuation]
-
-    # Combinar entidades y palabras clave
-    all_keywords = list(set(entities + keywords))
-
-    return all_keywords
 
 def hay_conexion():
     try:
@@ -324,6 +309,68 @@ def hay_conexion():
         return True
     except OSError:
         return False
+    
+def procesarPregunta(pregunta):
+    # Definir patrones para entidades clave
+    patrones = [
+        [{"LOWER": "sistemas"}, {"LOWER": "operativos"}],  # Detectar "sistemas operativos"
+        [{"LOWER": "colaborador"}],  
+        [{"LOWER": "redes"}],  # Detectar "redes"
+        [{"LOWER": "robótica"}],  # Detectar "Robótica"
+        [{"LOWER": "inteligencia"}, {"LOWER": "artificial"}],  # Detectar "Inteligencia Artificial"
+        [{"LOWER": "programación"}],  # Detectar "programación"
+        [{"LOWER": "base"}, {"LOWER": "de"}, {"LOWER": "datos"}],  # Detectar "base de datos"
+        [{"LOWER": "ingeniería"}, {"LOWER": "de"}, {"LOWER": "software"}],
+        [{"LOWER": "simulación"}],  # Detectar "simulación"
+        [{"LOWER": "sistema"}], 
+        [{"LOWER": "libros"}],  # Detectar "libros"
+        [{"LOWER": "tesis"}],  
+        [{"LOWER": "introducción"}, {"LOWER": "a"}, {"LOWER": "la"}, {"LOWER": "programación"}], 
+        [{"LOWER": "anónimo"}],
+        [{"LOWER": "investigación"}],
+        [{"LOWER": "computación"}],
+        [{"LOWER": "ingles"}],
+        [{"LOWER": "algoritmos"}],
+        [{"LOWER": "ciberseguridad"}],  # Detectar "ciberseguridad"
+        [{"LOWER": "ágiles"}],
+        [{"LOWER": "web"}],
+        [{"LOWER": "informática"}],
+
+    ]
+    matcher.add("EntidadesClave", patrones)
+
+    # Procesar la pregunta
+    doc = nlp(pregunta)
+
+    # Encontrar coincidencias con el Matcher
+    matches = matcher(doc)
+
+    # Extraer entidades clave del Matcher
+    temas = [doc[start:end].text for match_id, start, end in matches]
+
+    # Si no hay coincidencias con el Matcher, realizar una búsqueda manual
+    if len(temas) == 0:
+        # Definir una lista de lenguajes de programación y otros temas
+        temas_clave = [
+            "java", "python", "c++", "javascript", "ruby", "php", "go", "rust", "swift", "kotlin", "scala",
+        ]
+        
+        # Procesar la pregunta en minúsculas
+        doc_lower = nlp(pregunta.lower())
+        
+        # Extraer entidades clave manualmente
+        for token in doc_lower:
+            if token.text in temas_clave:
+                temas.append(token.text)
+            elif token.text + " " + doc_lower[token.i + 1].text in temas_clave:  # Detectar frases compuestas
+                temas.append(token.text + " " + doc_lower[token.i + 1].text)
+
+    # Ordenar los temas: priorizar "ciberseguridad" sobre "investigación" y colocar "libros" al final
+    temas_ordenados = [tema for tema in temas if tema.lower() == "ciberseguridad"] + \
+                    [tema for tema in temas if tema.lower() != "ciberseguridad" and tema.lower() != "libros"] + \
+                    [tema for tema in temas if tema.lower() == "libros"]
+    # Imprimir los temas detectados
+    return temas_ordenados
 
 property_labels = {
     "Colaborador": {

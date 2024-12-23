@@ -183,3 +183,52 @@ small {
 .custom-select.open .options {
   display: block;
 }
+
+/* carga */
+#pantalla-carga {
+  max-width: 800px;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  height: 300px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Animación del logo o spinner */
+.spinner {
+  border: 6px solid #f3d2ad; /* Fondo del spinner */
+  border-top: 6px solid #9a5723; /* Color del spinner */
+  border-bottom: 6px solid #9a5723; /* Color del spinner */
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  animation: girar 1s linear infinite;
+}
+
+.spinner img{
+  width: 70px;
+  height: auto;
+  animation: girar_inversa 0.8s linear infinite;
+}
+
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes girar_inversa {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}

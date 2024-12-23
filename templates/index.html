@@ -13,7 +13,7 @@
         <img src="../static/images/libros.png" alt="iconolibro" id="libros" />
         <img src="../static/images/titulosinfondo.png" alt="ONTOFLOW" />
       </div>
-      <form action="/search" method="post">
+      <form id="searchForm" action="/search" method="post">
         <input
           type="text"
           name="query"
@@ -52,6 +52,15 @@
 
         <button type="submit" id="submitButton">Buscar</button>
       </form>
+      
+      <div class="container">
+        <div id="pantalla-carga">
+          <div class="spinner">
+            <img class="cara_castor" src="../static/images/cara_castor.png" alt="castor">
+          </div>
+        </div>
+      </div>
+
     </div>
     <script>
       function toggleDropdown() {
@@ -96,6 +105,15 @@
         if (!customSelect.contains(event.target)) {
           customSelect.classList.remove("open");
         }
+      });
+
+      // Selecciona el formulario
+      const form = document.getElementById('searchForm');
+      const pantallaCarga = document.getElementById('pantalla-carga');
+
+      // Muestra la pantalla de carga al enviar el formulario
+      form.addEventListener('submit', () => {
+        pantallaCarga.style.display = 'flex';
       });
     </script>
   </body>

@@ -19,7 +19,7 @@
           />
         </div>
       </aside>
-      <section class="derecha">
+      <section class="derecha" id="derecha">
         <div class="buscador">
           <form id="searchForm" action="/search" method="post">
             <input
@@ -67,7 +67,10 @@
             </button>
           </form>
         </div>
-        <main class="container">
+        <div id="pantalla-carga">
+          <div class="spinner"><img class="cara_castor" src="../static/images/cara_castor.png" alt="castor"></div>
+        </div>
+        <main class="container" id="container">
           <h2>Local</h2>
           {% if results %}
           <ul>
@@ -203,6 +206,18 @@
               window.location.href = link.href;
             }
       }
+
+      // Selecciona el formulario
+      const form = document.getElementById('searchForm');
+      const pantallaCarga = document.getElementById('pantalla-carga');
+      const container = document.getElementById('container');
+
+      // Muestra la pantalla de carga al enviar el formulario
+      form.addEventListener('submit', () => {
+        pantallaCarga.style.display = 'flex';
+        container.style.display = 'none';
+
+      });
     </script>
   </body>
 </html>

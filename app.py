@@ -548,8 +548,12 @@ property_labels = {
         "English": "Status"
     },
     'No se encontraron resultados.': {
-        'Español': 'No se encontraron resultados.',
-        'English': 'No results found.'
+        'Español': 'No se encontraron resultados locales.',
+        'English': 'No local results found.'
+    },
+    'No se encontraron resultados DBpedia': {
+        'Español': 'No se encontraron resultados en DBpedia.',
+        'English': 'No DBpedia results found.'
     }
 }
 

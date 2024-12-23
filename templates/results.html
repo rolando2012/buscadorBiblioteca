@@ -72,7 +72,7 @@
         </div>
         <main class="container" id="container">
           <h2>Local</h2>
-          {% if results %}
+          {% if results.local %}
           <ul>
             {% for result in results.local %}
             <li>
@@ -114,7 +114,7 @@
           {% elif offline %}
           <p>{{offline}}</p>
           {% else %}
-          <p>No se encontraron resultados en DBpedia.</p>
+          <p>{{ property_labels['No se encontraron resultados DBpedia'][lang] }}</p>
           {% endif %}
 
           <div class="contCastor">

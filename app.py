@@ -20,7 +20,8 @@ nlp2 = spacy.load("en_core_web_sm")
 # Crear un Matcher
 matcher = Matcher(nlp.vocab)
 
-# Cargar el archivo JSON
+# Cargar el archivo JSONld
+# Es un archivo JSON con conceptos de ontología, usa la sintaxis de RFD
 with open('./ontologia/bibliotecaDigital.jsonld', 'r', encoding='utf-8') as f:
     ontology_data = json.load(f)
 
@@ -42,7 +43,7 @@ def search():
 
     aux = len(query.split(" "))
 
-    if aux >4:
+    if aux > 4:
         if langSel == "Español":
             res = procesarPregunta(query)
             query = res[0]
@@ -77,7 +78,7 @@ def details(instance):
             matching_instance = entry
             break
 
-     # Si no se encuentra, buscar por el rdfs:label
+    # Si no se encuentra, buscar por el rdfs:label
     if not matching_instance:
         for entry in ontology_data:
             labels = entry.get("http://www.w3.org/2000/01/rdf-schema#label", [])
@@ -111,7 +112,7 @@ def dbpedia_details(title):
         return "No se encontraron detalles para este libro."
 
 
-#funcion buscar en json
+# funcion buscar en json
 def buscar_resultado(query, data, langSel):
     query = query.lower()
     results = []
@@ -308,8 +309,6 @@ def get_book_details(title, lang):
         return {}
     
 
-
-
 def hay_conexion():
     try:
         socket.create_connection(("8.8.8.8", 53), timeout=5)
@@ -409,10 +408,6 @@ def procesarPreguntaIngles(pregunta):
         [{"LOWER": "informatics"}],  # Detectar "informatics"
     ]
     matcher.add("EntidadesClave", patrones)
-
-    # Pregunta del usuario en inglés
-    pregunta = 'What books are available for the study area of Informatics?'
-    # pregunta = "What books are available about Java?"
 
     # Procesar la pregunta
     doc = nlp2(pregunta)
